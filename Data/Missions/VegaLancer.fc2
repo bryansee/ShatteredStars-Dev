@@ -1,0 +1,285 @@
+$Name: VegaLancer
+$Type: single
++Description:
+ XSTR("Come explore... VEGA!", -1)
+$end_multi_text
+$Flags: 0
+
+
++Starting Ships: ( "GTF Perseus" )
+
++Starting Weapons: ( "Subach HL-7"  "Mekhu HL-7"  "Akheton SDG"  "Morning Star"  "Prometheus R"  "Prometheus S"  "Maxim"  "UD-8 Kayser"  "Circe"  "Lamprey"  "Rockeye"  "Tempest"  "Hornet"  "Tornado"  "Harpoon"  "Trebuchet"  "TAG-A"  "TAG-B"  "Piranha"  "Stiletto II"  "Infyrno"  "Cyclops"  "Rebel Bomb"  "Helios"  "EMP Adv." )
+
+
+$Mission: vega_norica.fs2
++Flags: 0
++Main Hall: 0
++Formula: ( cond
+   (
+      ( is-previous-event-true 
+         "vega_norica.fs2" 
+         "Go to Tampere" 
+      )
+      ( next-mission "vega_tampere.fs2" )
+   )
+   (
+      ( is-previous-event-true 
+         "vega_norica.fs2" 
+         "Go to Forsyth" 
+      )
+      ( next-mission "vega_forsyth.fs2" )
+   )
+   (
+      ( is-previous-event-true 
+         "vega_norica.fs2" 
+         "Go to Polemos" 
+      )
+      ( next-mission "vega_polemos.fs2" )
+   )
+   (
+      ( is-previous-event-true 
+         "vega_norica.fs2" 
+         "Go to Deneb Node" 
+      )
+      ( next-mission "vega_denebnode.fs2" )
+   )
+   (
+      ( is-previous-event-true 
+         "vega_norica.fs2" 
+         "Go to BetaAq Node" 
+      )
+      ( next-mission "vega_betaaquilaenode.fs2" )
+   )
+   ( ( true ) ( next-mission "vega_norica.fs2" ) )
+)
+
++Level: 0
++Position: 4
+
+$Mission: vega_tampere.fs2
++Flags: 0
++Main Hall: 0
++Formula: ( cond
+   (
+      ( is-previous-event-true 
+         "vega_tampere.fs2" 
+         "Go to Norica" 
+      )
+      ( next-mission "vega_norica.fs2" )
+   )
+   (
+      ( is-previous-event-true 
+         "vega_tampere.fs2" 
+         "Go to Forsyth" 
+      )
+      ( next-mission "vega_forsyth.fs2" )
+   )
+   (
+      ( is-previous-event-true 
+         "vega_tampere.fs2" 
+         "Go to Polemos" 
+      )
+      ( next-mission "vega_polemos.fs2" )
+   )
+   (
+      ( is-previous-event-true 
+         "vega_tampere.fs2" 
+         "Go to Deneb Node" 
+      )
+      ( next-mission "vega_denebnode.fs2" )
+   )
+   (
+      ( is-previous-event-true 
+         "vega_tampere.fs2" 
+         "Go to BetaAq Node" 
+      )
+      ( next-mission "vega_betaaquilaenode.fs2" )
+   )
+   ( ( true ) ( next-mission "vega_tampere.fs2" ) )
+)
+
++Level: 1
++Position: 0
+
+$Mission: vega_forsyth.fs2
++Flags: 0
++Main Hall: 0
++Formula: ( cond
+   (
+      ( is-previous-event-true 
+         "vega_forsyth.fs2" 
+         "Go to Tampere" 
+      )
+      ( next-mission "vega_tampere.fs2" )
+   )
+   (
+      ( is-previous-event-true 
+         "vega_forsyth.fs2" 
+         "Go to Norica" 
+      )
+      ( next-mission "vega_norica.fs2" )
+   )
+   (
+      ( is-previous-event-true 
+         "vega_forsyth.fs2" 
+         "Go to Polemos" 
+      )
+      ( next-mission "vega_polemos.fs2" )
+   )
+   (
+      ( is-previous-event-true 
+         "vega_forsyth.fs2" 
+         "Go to Deneb Node" 
+      )
+      ( next-mission "vega_denebnode.fs2" )
+   )
+   (
+      ( is-previous-event-true 
+         "vega_forsyth.fs2" 
+         "Go to BetaAq Node" 
+      )
+      ( next-mission "vega_betaaquilaenode.fs2" )
+   )
+   ( ( true ) ( next-mission "vega_forsyth.fs2" ) )
+)
+
++Level: 1
++Position: 2
+
+$Mission: vega_polemos.fs2
++Flags: 0
++Main Hall: 0
++Formula: ( cond
+   (
+      ( is-previous-event-true 
+         "vega_polemos.fs2" 
+         "Go to Tampere" 
+      )
+      ( next-mission "vega_tampere.fs2" )
+   )
+   (
+      ( is-previous-event-true 
+         "vega_polemos.fs2" 
+         "Go to Forsyth" 
+      )
+      ( next-mission "vega_forsyth.fs2" )
+   )
+   (
+      ( is-previous-event-true 
+         "vega_polemos.fs2" 
+         "Go to Norica" 
+      )
+      ( next-mission "vega_norica.fs2" )
+   )
+   (
+      ( is-previous-event-true 
+         "vega_polemos.fs2" 
+         "Go to Deneb Node" 
+      )
+      ( next-mission "vega_denebnode.fs2" )
+   )
+   (
+      ( is-previous-event-true 
+         "vega_polemos.fs2" 
+         "Go to BetaAq Node" 
+      )
+      ( next-mission "vega_betaaquilaenode.fs2" )
+   )
+   ( ( true ) ( next-mission "vega_polemos.fs2" ) )
+)
+
++Level: 1
++Position: 4
+
+$Mission: vega_denebnode.fs2
++Flags: 0
++Main Hall: 0
++Formula: ( cond
+   (
+      ( is-previous-event-true 
+         "vega_denebnode.fs2" 
+         "Go to Tampere" 
+      )
+      ( next-mission "vega_tampere.fs2" )
+   )
+   (
+      ( is-previous-event-true 
+         "vega_denebnode.fs2" 
+         "Go to Forsyth" 
+      )
+      ( next-mission "vega_forsyth.fs2" )
+   )
+   (
+      ( is-previous-event-true 
+         "vega_denebnode.fs2" 
+         "Go to Polemos" 
+      )
+      ( next-mission "vega_polemos.fs2" )
+   )
+   (
+      ( is-previous-event-true 
+         "vega_denebnode.fs2" 
+         "Go to Norica" 
+      )
+      ( next-mission "vega_norica.fs2" )
+   )
+   (
+      ( is-previous-event-true 
+         "vega_denebnode.fs2" 
+         "Go to BetaAq Node" 
+      )
+      ( next-mission "vega_betaaquilaenode.fs2" )
+   )
+   ( ( true ) ( next-mission "vega_denebnode.fs2" ) )
+)
+
++Level: 1
++Position: 6
+
+$Mission: vega_betaaquilaenode.fs2
++Flags: 0
++Main Hall: 0
++Formula: ( cond
+   (
+      ( is-previous-event-true 
+         "vega_betaaquilaenode.fs2" 
+         "Go to Tampere" 
+      )
+      ( next-mission "vega_tampere.fs2" )
+   )
+   (
+      ( is-previous-event-true 
+         "vega_betaaquilaenode.fs2" 
+         "Go to Forsyth" 
+      )
+      ( next-mission "vega_forsyth.fs2" )
+   )
+   (
+      ( is-previous-event-true 
+         "vega_betaaquilaenode.fs2" 
+         "Go to Polemos" 
+      )
+      ( next-mission "vega_polemos.fs2" )
+   )
+   (
+      ( is-previous-event-true 
+         "vega_betaaquilaenode.fs2" 
+         "Go to Deneb Node" 
+      )
+      ( next-mission "vega_denebnode.fs2" )
+   )
+   (
+      ( is-previous-event-true 
+         "vega_betaaquilaenode.fs2" 
+         "Go to Norica" 
+      )
+      ( next-mission "vega_norica.fs2" )
+   )
+   ( ( true ) ( next-mission "vega_betaaquilaenode.fs2" ) )
+)
+
++Level: 1
++Position: 8
+
+#End
+

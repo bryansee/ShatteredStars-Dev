@@ -1,0 +1,72 @@
+#SPECIES DEFS
+
+;------------------------
+; GRW
+;------------------------
+$Species_Name:	GRW
+$Default IFF:	Friendly
+$FRED Color:	( 0, 128, 212 )
+	+Debris_Texture:	debris01a
+	+Shield_Hit_ani:	shieldhit01a
+$ThrustAnims:
+	+Pri_Normal:	<none>
+	+Pri_Afterburn:	<none>
+	+Sec_Normal: thruster02-01a
+	+Sec_Afterburn: thruster02-02a
+	+Ter_Normal: thruster03-01a
+	+Ter_Afterburn: thruster03-02a
+	+Dist_Normal:	thruster03-01
+	+Dist_Afterburn:	thruster03-01a
+$ThrustGlows:
+	+Normal: thrusterglow01
+	+Afterburn: thrusterglow01a
+$AwacsMultiplier: 1.00
+$Countermeasure Type:	GRW CM
+
+;------------------------
+; OSA
+;------------------------
+$Species_Name: OSA
+$Default IFF: Friendly
+$FRED Color: ( 144, 0, 212 )
+	+Debris_Texture: debris01b
+	+Shield_Hit_ani: shieldhit02a
+$ThrustAnims:
+	+Pri_Normal: <none>
+	+Pri_Afterburn: <none>
+	+Sec_Normal: thruster02-01a
+	+Sec_Afterburn: thruster02-02a
+	+Ter_Normal: thruster03-01a
+	+Ter_Afterburn: thruster03-02a
+	+Dist_Normal:	thruster03-01
+	+Dist_Afterburn:	thruster03-01a
+$ThrustGlows:
+	+Normal: thrusterglow01
+	+Afterburn: thrusterglow01a
+$AwacsMultiplier: 1.00
+$Countermeasure Type:	OSA CM
+
+;------------------------
+; Authority
+;------------------------
+$Species_Name:	Authority
+$Default IFF:	Hostile
+$FRED Color:	( 144, 0, 0 )
+	+Debris_Texture:	debris01c
+	+Shield_Hit_ani:	shieldhit03a
+$ThrustAnims:
+	+Pri_Normal:	<none>
+	+Pri_Afterburn:	<none>
+	+Sec_Normal: thruster02-01a
+	+Sec_Afterburn: thruster02-02a
+	+Ter_Normal: thruster03-01a
+	+Ter_Afterburn: thruster03-03a
+	+Dist_Normal:	thruster03-01
+	+Dist_Afterburn:	thruster03-01a
+$ThrustGlows:
+	+Normal: thrusterglow01
+	+Afterburn: thrusterglow03a
+$AwacsMultiplier: 2.00
+$Countermeasure Type:	Authority CM
+
+#END

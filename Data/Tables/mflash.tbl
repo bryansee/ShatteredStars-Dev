@@ -1,0 +1,134 @@
+#Muzzle flash types
+
+;; small muzzle flash
+$Mflash:
++name:			mflash_small		;; whatever you want to name it
+
++blob_name:		expmissilehit1					;; anim name, offset from muzzle, radius
++blob_offset:	1.0 
++blob_radius:	6.0					
+
++blob_name:		expmissilehit1					;; anim name, offset from muzzle, radius
++blob_offset:	4.5
++blob_radius:	4.0					
+
++blob_name:		expmissilehit1					;; anim name, offset from muzzle, radius
++blob_offset:	6.0
++blob_radius:	3.0					
+
++blob_name:		expmissilehit1					;; anim name, offset from muzzle, radius
++blob_offset:	8.5
++blob_radius:	3.0					
+
+$Mflash:
++name:			vijaya_muzzle		;; saracen specific, compensates for external model FP
++blob_name: ASCmuzzle		
++blob_offset:	0.0 
++blob_radius:	1.3	
+
+$Mflash:
++name: 		Ymuzzle
++blob_name: 	Ymuzzle
++blob_offset: 	1.0
++blob_radius: 	4.0
++blob_name: 	Ymuzzle
++blob_offset:	 2.0
++blob_radius: 	3.0
++blob_name: 	Ymuzzle
++blob_offset: 	2.5
++blob_radius: 	2.5
++blob_name: 	Ymuzzle
++blob_offset: 	3.5
++blob_radius: 	2.0
+
+$Mflash:
++name: 			railgun_murugan
++blob_name: 	exp06b
++blob_offset: 	0.0
++blob_radius: 	15.0
++blob_name: 	exp06b
++blob_offset: 	5.0
++blob_radius: 	30.0
++blob_name: 	exp06b
++blob_offset: 	12.5
++blob_radius: 	45.0
++blob_name: 	exp06b
++blob_offset: 	27.5
++blob_radius: 	90.0
++blob_name: 	exp06b
++blob_offset: 	42.5
++blob_radius: 	90.0
+
+$Mflash:
++name: 			massdriver_murugan
++blob_name: 	exp06
++blob_offset: 	0.0
++blob_radius: 	5.0
++blob_name: 	exp06
++blob_offset: 	5.0
++blob_radius: 	10.0
++blob_name: 	exp06
++blob_offset: 	12.5
++blob_radius: 	15.0
++blob_name: 	exp06
++blob_offset: 	27.5
++blob_radius: 	30.0
++blob_name: 	exp06
++blob_offset: 	42.5
++blob_radius: 	30.0
+
+$Mflash:
++name: 			PRPointDefFlash
++blob_name: 	BMuzzle
++blob_offset: 	0.0
++blob_radius: 	3.5
++blob_name: 	BMuzzle
++blob_offset: 	2.0
++blob_radius: 	3.5
++blob_name: 	BMuzzle
++blob_offset: 	3.0
++blob_radius: 	3.0
++blob_name: 	BMuzzle
++blob_offset: 	4.0
++blob_radius: 	2.5
++blob_name: 	BMuzzle
++blob_offset: 	4.5
++blob_radius: 	2.0
+
+$Mflash:
++name: 			PRMedFlash
++blob_name: 	BMuzzle
++blob_offset: 	0.0
++blob_radius: 	15.0
++blob_name: 	BMuzzle
++blob_offset: 	2.5
++blob_radius: 	15.0
++blob_name: 	BMuzzle
++blob_offset: 	6.25
++blob_radius: 	12.0
++blob_name: 	BMuzzle
++blob_offset: 	13.75
++blob_radius: 	10.0
++blob_name: 	BMuzzle
++blob_offset: 	21.25
++blob_radius: 	7.5
+
+$Mflash:
++name: 			PRHeavyFlash
++blob_name: 	BMuzzle
++blob_offset: 	0.0
++blob_radius: 	35.0
++blob_name: 	BMuzzle
++blob_offset: 	9.0
++blob_radius: 	35.0
++blob_name: 	BMuzzle
++blob_offset: 	12.5
++blob_radius: 	30.0
++blob_name: 	BMuzzle
++blob_offset: 	17.5
++blob_radius: 	24.0
++blob_name: 	BMuzzle
++blob_offset: 	23.5
++blob_radius: 	18.0
+
+#end

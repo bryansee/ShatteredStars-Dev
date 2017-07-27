@@ -1,0 +1,342 @@
+; background bitmaps - random stuff
+; $Bitmap is for a bitmap which should use the intensity == alpha blending mode
+; $BitmapX is for a bitmap which should use 0, 255, 0 == transparent, and no blending otherwise
+
+
+#end
+
+; sun bitmaps and lights - NOTE all $Suns must have a $Sunglow and a $SunRGBI!
+
+$Sun:		SolMars
+$Sunglow:	SunGlow
+$SunRGBI:   0.810 0.778 0.770 1.0
+$Flare:
+	+FlareCount:	6
+$FlareTexture1: SolCorona001
+$FlareTexture2: SolCorona002
+$FlareTexture3: Corona003
+$FlareTexture4: Corona004
+$FlareTexture5: Corona005
+$FlareTexture6: Corona006
+$FlareGlow1:
+	+FlareTexture:	1
+	+FlarePos:		0.0
+	+FlareScale:	5
+$FlareGlow2:
+	+FlareTexture:	2
+	+FlarePos:		0.1
+	+FlareScale:	16
+$FlareGlow3:
+	+FlareTexture:	3
+	+FlarePos:		0.3
+	+FlareScale:	2
+$FlareGlow4:
+	+FlareTexture:	4
+	+FlarePos:		0.6
+	+FlareScale:	1
+$FlareGlow5:
+	+FlareTexture:	5
+	+FlarePos:		1.2
+	+FlareScale:	6
+$FlareGlow6:
+	+FlareTexture:	6
+	+FlarePos:		1.8
+	+FlareScale:	4
+
+;This is the Sun for Jupiter distance. I=d^-1/2
+;Use scale 0.04 in mission bitmap scale for this sun to get it's visual size right.
+$Sun:		SolJupiter
+$Sunglow:	SunGlow
+$SunRGBI:	0.447 0.429 0.425 1.0
+$Flare:
+	+FlareCount:	6
+$FlareTexture1: SolCorona001
+$FlareTexture2: SolCorona002
+$FlareTexture3: Corona003
+$FlareTexture4: Corona004
+$FlareTexture5: Corona005
+$FlareTexture6: Corona006
+$FlareGlow1:
+	+FlareTexture:	1
+	+FlarePos:		0.0
+	+FlareScale:	5
+$FlareGlow2:
+	+FlareTexture:	2
+	+FlarePos:		0.1
+	+FlareScale:	16
+$FlareGlow3:
+	+FlareTexture:	3
+	+FlarePos:		0.3
+	+FlareScale:	2
+$FlareGlow4:
+	+FlareTexture:	4
+	+FlarePos:		0.6
+	+FlareScale:	1
+$FlareGlow5:
+	+FlareTexture:	5
+	+FlarePos:		1.2
+	+FlareScale:	6
+$FlareGlow6:
+	+FlareTexture:	6
+	+FlarePos:		1.8
+	+FlareScale:	4
+
+$Sun:		SolSaturn
+$Sunglow:	SunGlow
+$SunRGBI:   0.323 0.310 0.307 1.0
+$Flare:
+	+FlareCount:	6
+$FlareTexture1: SolCorona001
+$FlareTexture2: SolCorona002
+$FlareTexture3: Corona003
+$FlareTexture4: Corona004
+$FlareTexture5: Corona005
+$FlareTexture6: Corona006
+$FlareGlow1:
+	+FlareTexture:	1
+	+FlarePos:		0.0
+	+FlareScale:	5
+$FlareGlow2:
+	+FlareTexture:	2
+	+FlarePos:		0.1
+	+FlareScale:	16
+$FlareGlow3:
+	+FlareTexture:	3
+	+FlarePos:		0.3
+	+FlareScale:	2
+$FlareGlow4:
+	+FlareTexture:	4
+	+FlarePos:		0.6
+	+FlareScale:	1
+$FlareGlow5:
+	+FlareTexture:	5
+	+FlarePos:		1.2
+	+FlareScale:	6
+$FlareGlow6:
+	+FlareTexture:	6
+	+FlarePos:		1.8
+	+FlareScale:	4
+
+$Sun:		SolUranus
+$Sunglow:	SunGlow
+$SunRGBI:   0.224 0.215 0.212 1.0
+$Flare:
+	+FlareCount:	6
+$FlareTexture1: SolCorona001
+$FlareTexture2: SolCorona002
+$FlareTexture3: Corona003
+$FlareTexture4: Corona004
+$FlareTexture5: Corona005
+$FlareTexture6: Corona006
+$FlareGlow1:
+	+FlareTexture:	1
+	+FlarePos:		0.0
+	+FlareScale:	5
+$FlareGlow2:
+	+FlareTexture:	2
+	+FlarePos:		0.1
+	+FlareScale:	16
+$FlareGlow3:
+	+FlareTexture:	3
+	+FlarePos:		0.3
+	+FlareScale:	2
+$FlareGlow4:
+	+FlareTexture:	4
+	+FlarePos:		0.6
+	+FlareScale:	1
+$FlareGlow5:
+	+FlareTexture:	5
+	+FlarePos:		1.2
+	+FlareScale:	6
+$FlareGlow6:
+	+FlareTexture:	6
+	+FlarePos:		1.8
+	+FlareScale:	4
+
+$Sun:		SolNeptune
+$Sunglow:	SunGlow
+$SunRGBI:   0.183 0.175 0.173 1.0
+$Flare:
+	+FlareCount:	6
+$FlareTexture1: SolCorona001
+$FlareTexture2: SolCorona002
+$FlareTexture3: Corona003
+$FlareTexture4: Corona004
+$FlareTexture5: Corona005
+$FlareTexture6: Corona006
+$FlareGlow1:
+	+FlareTexture:	1
+	+FlarePos:		0.0
+	+FlareScale:	5
+$FlareGlow2:
+	+FlareTexture:	2
+	+FlarePos:		0.1
+	+FlareScale:	16
+$FlareGlow3:
+	+FlareTexture:	3
+	+FlarePos:		0.3
+	+FlareScale:	2
+$FlareGlow4:
+	+FlareTexture:	4
+	+FlarePos:		0.6
+	+FlareScale:	1
+$FlareGlow5:
+	+FlareTexture:	5
+	+FlarePos:		1.2
+	+FlareScale:	6
+$FlareGlow6:
+	+FlareTexture:	6
+	+FlarePos:		1.8
+	+FlareScale:	4
+
+
+$Sun:		SolKuiper
+$Sunglow:	SunGlow
+$SunRGBI:   0.141 0.136 0.134 1.0
+$Flare:
+	+FlareCount:	6
+$FlareTexture1: SolCorona001
+$FlareTexture2: SolCorona002
+$FlareTexture3: Corona003
+$FlareTexture4: Corona004
+$FlareTexture5: Corona005
+$FlareTexture6: Corona006
+$FlareGlow1:
+	+FlareTexture:	1
+	+FlarePos:		0.0
+	+FlareScale:	5
+$FlareGlow2:
+	+FlareTexture:	2
+	+FlarePos:		0.1
+	+FlareScale:	16
+$FlareGlow3:
+	+FlareTexture:	3
+	+FlarePos:		0.3
+	+FlareScale:	2
+$FlareGlow4:
+	+FlareTexture:	4
+	+FlarePos:		0.6
+	+FlareScale:	1
+$FlareGlow5:
+	+FlareTexture:	5
+	+FlarePos:		1.2
+	+FlareScale:	6
+$FlareGlow6:
+	+FlareTexture:	6
+	+FlarePos:		1.8
+	+FlareScale:	4
+
+
+$Sun:		SunSol
+$Sunglow:	SunGlow
+$SunRGBI:	1.0 0.96 0.95 1.0
+$Flare:
+	+FlareCount:	6
+$FlareTexture1: SolCorona001
+$FlareTexture2: SolCorona002
+$FlareTexture3: Corona003
+$FlareTexture4: Corona004
+$FlareTexture5: Corona005
+$FlareTexture6: Corona006
+$FlareGlow1:
+	+FlareTexture:	1
+	+FlarePos:		0.0
+	+FlareScale:	5
+$FlareGlow2:
+	+FlareTexture:	2
+	+FlarePos:		0.1
+	+FlareScale:	16
+$FlareGlow3:
+	+FlareTexture:	3
+	+FlarePos:		0.3
+	+FlareScale:	2
+$FlareGlow4:
+	+FlareTexture:	4
+	+FlarePos:		0.6
+	+FlareScale:	1
+$FlareGlow5:
+	+FlareTexture:	5
+	+FlarePos:		1.2
+	+FlareScale:	6
+$FlareGlow6:
+	+FlareTexture:	6
+	+FlarePos:		1.8
+	+FlareScale:	4
+
+
+;This is a dummy sun with empty graphics, no glare and no flares.
+;Use this to create a sun light source without graphics on top of the skybox.
+$Sun:		SunSolDummy
+$Sunglow:	SunSolDummy
+$SunRGBI:	1.0 0.96 0.95 1.0
+$NoGlare:
+
+$Sun:		JupiterLight
+$Sunglow:	JupiterLight
+$SunRGBI:	0.067 0.065 0.061 0.5
+$NoGlare:
+
+$Sun:		EuropaLight
+$Sunglow:	EuropaLight
+$SunRGBI:	0.067 0.061 0.048 0.5
+$NoGlare:
+
+$Sun:		SaturnLight
+$Sunglow:	SaturnLight
+$SunRGBI:	0.091 0.083 0.078 0.2
+$NoGlare:
+
+$Sun:		RingLight
+$Sunglow:	RingLight
+$SunRGBI:	0.040 0.039 0.040 0.2
+$NoGlare:
+
+$Sun:		EarthBrown
+$Sunglow:	EarthBrown
+$SunRGBI:	0.34 0.31 0.25 0.5
+$NoGlare:
+
+$Sun:		EarthWhite
+$Sunglow:	EarthWhite
+$SunRGBI:	0.67 0.67 0.68 0.5
+$NoGlare:
+
+$Sun:		EarthSpecular
+$Sunglow:	EarthSpecular
+$SunRGBI:	0.469 0.478 0.494 1.0
+$NoGlare:
+
+$Sun:		EarthGreen
+$Sunglow:	EarthGreen
+$SunRGBI:	0.18 0.22 0.14 0.5
+$NoGlare:
+
+$Sun:		EarthBlue
+$Sunglow:	EarthBlue
+$SunRGBI:	0.20 0.34 0.51 0.5
+$NoGlare:
+
+$Sun:		NeptuneBlue
+$Sunglow:	NeptuneBlue
+$SunRGBI:	0.033 0.042 0.067 0.5
+$NoGlare:
+
+#end
+
+; debris .ani's for NON-nebula mode. NOTE : there must always be 4 of these
+$Debris:	debris01
+$Debris:	debris02
+$Debris:	debris03
+$Debris:	debris04
+
+#end
+
+; debris .ani's for nebula mode. NOTE : there must always be 4 of these
+$DebrisNeb:	gas
+$DebrisNeb:	gas
+$DebrisNeb:	gas
+$DebrisNeb:	gas
+
+#end
+
+#end

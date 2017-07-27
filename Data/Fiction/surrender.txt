@@ -1,0 +1,48 @@
+COMMAND BRIEFING 1
+Welcome to the Aquitaine
+This is Admiral Petrarch, commanding officer of the GTD Aquitaine. For those squadrons joining us here in Vega, welcome aboard.
+With a complement of 150 combat spacecraft, the Aquitaine serves as flagship of the GTVA 3rd Fleet, based in the Capella system. You join an elite crew of 10,000, the finest officers and enlisted personnel serving the Alliance today.
+
+COMMAND BRIEFING 2
+The Neo-Terran Front
+After 18 months of fighting, Admiral Bosch's Neo-Terran Front has become the most significant threat to regional security since the Great War ended 32 years ago.
+The NTF demands the independence of their systems and the revocation of the Beta Aquilae Convention, or BETAC. The BETAC treaty centralized power in the GTVA as the supreme authority in Terran-Vasudan space.
+
+COMMAND BRIEFING 3
+The Ideology of Neo-Terra
+Integral to NTF ideology is Bosch's vision of Neo-Terra, a utopian society where the lost grandeur of Earth will be restored. Bosch and his followers oppose any alliance with the Vasudans as a threat to the future of the human race.
+The rebels are entrenched in Polaris, Regulus, and Sirius. But before we hit these strongholds, we must secure Epsilon Pegasi, Alpha Centauri, and Deneb. These contested systems are now the focal point of allied operations.
+
+COMMAND BRIEFING 4
+The Battle of Deneb
+Allied Command has ordered the Aquitaine into the Deneb system. There we will reinforce the 13th Vasudan Battle Group, led by the GVD Psamtik.
+Both the NTF and the GTVA have sustained heavy casualties in the battle for Deneb. In the past seventy-two hours, we have lost the GVC Andromeda, the GTC Trafalgar, and over 15 fighter wings. Command anticipates the arrival of the Aquitaine and the Psamtik will shift the battle for Deneb in our favor and force the NTF to withdraw to Sirius.
+
+MISSION BRIEFING 1
+This is Captain Loukakis, squadron leader of the 53rd Hammerheads. At 0320 hours, the Aquitaine entered the Deneb system. Admiral Petrarch launched fighter and bomber wings as part of an all-out attack against NTF positions throughout the system. He has kept the Hammerheads on standby, until now.
+
+MISSION BRIEFING 2
+A situation is developing near the inhabited planet of Cygnus Prime. We have over 100,000 Vasudan refugees fleeing their colonies in transports. Allied ships are rescuing the Vasudans as quickly as possible, though the logistics of this operation leave many refugees still vulnerable to rebel attack.
+
+MISSION BRIEFING 3
+At 0545, we received a distress signal from a refugee convoy 900 clicks, or kilometers, from the outer orbit of Cygnus Prime. The Vasudans responded with a wing of Serapis fighters, designated Epsilon, which have just called in for reinforcements. Alpha wing, you're going in.
+
+MISSION BRIEFING 4
+Because these transports do not have jump drives, you must protect the convoy until a recovery ship arrives. With all warships engaged and other convoys in dire need of protection, we do not know when a craft will become available. Command will keep you updated and send in reinforcements as needed.
+
+DEBRIEFING 1
+Good work, pilot. You held off the rebel attack and saved both Vasudan transports from destruction. Your squadmates and I all agree: you'll make a fine addition to the 53rd Hammerheads. Command reports that 75 percent of the refugees have been recovered with few casualties. The remaining 25 percent are under allied protection and will be rescued shortly. We have also won major victories against the NTF. The NTD Jacobus and the NTC Hengst have been destroyed, and our blockades of the Alpha Centauri and Sirius jump nodes has isolated the rebel fleet. Furthermore, 600,000 ground troops will soon land on the surface of Cygnus Prime in our effort to retake the planet. Prepare for your next mission, pilot. The battle for Deneb is not over yet.
+
+DEBRIEFING 2
+As officers of the GTVA, we have sworn to protect all citizens of the Alliance. The destruction of the Iota transport is unfortunate, pilot. If this were not your first sortie, I would recommend your immediate transfer out of the fighter corps. We'll give you another chance.
+Command reports heavy casualties among the Vasudan refugee convoys. Only 50 percent have been recovered, and the survivors remain at great risk.
+Our efforts to drive the rebels out of Deneb have stalled. Though we destroyed the NTC Hengst, we have lost the GTC Coriolanus and the GVC Mirage. Blockade runners continue to supply the rebel fleet, and the operation to liberate Cygnus Prime has been delayed.
+The Alliance remains committed to this counter-insurgency effort, though the battle for Deneb will not be won without sacrifice.
+
+DEBRIEFING 3
+As officers of the GTVA, we have sworn to protect all citizens of the Alliance. The destruction of both Iota transports is a travesty, pilot. You have disgraced the 53rd Hammerheads, and I will recommend your immediate discharge from the fighter corps.
+The Alliance's offensive is now in shambles. Only 25 percent of the Vasudan refugees have been recovered, while the NTF continues to massacre thousands without mercy.
+Command reports we have lost the GTD Aeneas, the GTC Coriolanus, and the GVC Mirage. Our efforts to blockade the Alpha Centauri and Sirius jump nodes have failed. The Security Council will order the fleet to withdraw from Deneb and negotiate terms with the NTF.
+
+DEBRIEFING 4
+You did not have authorization to return to base, pilot. Your actions jeopardized the lives of those involved in this mission and the GTVA's objectives in this theatre. Desertion is grounds for a court martial, and you are confined to quarters pending your preliminary hearing. Until a military court decides otherwise, you are hereby stripped of your wings and all privileges bestowed upon you as an officer of the Galactic Terran-Vasudan Alliance.

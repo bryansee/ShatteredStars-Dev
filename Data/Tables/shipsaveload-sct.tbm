@@ -1,0 +1,753 @@
+#Conditional Hooks
+
+$Application: FS2_Open
+$On Gameplay Start: [
+--table for delayed loading after ship creation
+active_mainloader = {}
+]
+
+$Application: FS2_Open
+$On Game Init:
+[
+--[[
+ship save/load script by Admiral MS
+script uses "," "&" ":" and "§" for data seperation. weapon and subsystem data should not contain any of these or the script failes
+see readme for instructions how to use this script
+]]
+shipsaveload_version = "b"
+--definitions for savefile
+path_shipsave = "data/scripts/"
+--stuff for status loader
+shipclass_statusloader = "Shipsave"
+position_statusloader = ba.createVector(-2e5,-1e5,-1e5)
+
+--functions
+function deleteshipsavefile()		--deletes savefile, is called in fred
+	if (mn.SEXPVariables['filename']:isValid()) then
+		filename = mn.SEXPVariables['filename'].Value
+		else
+		filename = mn.getMissionFilename()
+	end
+	if (cf.fileExists(filename,path_shipsave,true)) then
+		cf.deleteFile(filename,path_shipsave)
+	end
+end
+
+function saveexist()				--checks if there is a savefile, is called in fred
+	if (mn.SEXPVariables['saveexist']:isValid()) then
+		if (mn.SEXPVariables['filename']:isValid()) then
+			filename = mn.SEXPVariables['filename'].Value
+		else
+			filename = mn.getMissionFilename()
+		end
+		local var = mn.SEXPVariables['saveexist']
+		if (cf.fileExists(filename,path_shipsave,true) and tostring(var.Type) == "SEXPVAR_TYPE_NUMBER") then
+			var.Value = 1
+		else
+			var.Value = 0
+		end
+	end
+end
+
+function deleteship(shipname)		--deletes a ship entry in the savefile, is called in fred
+	local data = {}
+	data = loadshipfile()
+	local pos = 0
+	if (shipname == "var" and mn.SEXPVariables['loadship']:isValid()) then
+		shipname = mn.SEXPVariables['loadship'].Value
+	end
+	if (data[1][1] ~= -1) then
+		pos = findship(shipname,data[1])
+	end
+	if (pos > 0) then		-- removing entry from table
+		table.remove(data[1],pos)
+		table.remove(data,pos+1)
+		local length = #data[1]
+		saveshipfile(data,length)
+	else
+		ba.print("saveload - del: ship '"..name.."' not found in savefile")
+	end
+end
+
+function svsp(shipname)
+	saveship(shipname)
+end
+
+function saveship(shipname)		--main function for saving shipdata, is called in fred
+	local data = {}
+	data = loadshipfile()
+	local pos = 0
+	if (shipname == "var" and mn.SEXPVariables['loadship']:isValid()) then
+		shipname = mn.SEXPVariables['loadship'].Value
+	end
+	if (data[1][1] ~= -1) then
+		pos = findship(shipname,data[1])
+	else
+		pos = -2
+	end
+	local length = 1
+	if (pos == -2) then
+		pos = 1
+	elseif (pos == -1) then
+		pos = #data[1]+1
+		length = pos
+	else
+		length = #data[1]
+	end
+	data[1][pos] = shipname
+	data[pos+1] = shipdatacollect(shipname)
+	saveshipfile(data,length)
+end
+
+function svar(name) --save a sexp-variable
+--t=="n" (number) or t=="s" (string)
+	local data = {}
+	local t = "s" --SEXPVAR_TYPE_STRING
+	data = loadshipfile()
+	local tempb = data[0]
+	local temp = {}
+	local temparr = {}
+	local found = 0
+	if mn.SEXPVariables[name]:isValid() then
+		local var = mn.SEXPVariables[name]
+		local vart = tostring(var.Type)
+		local val = var.Value
+		if vart == "SEXPVAR_TYPE_NUMBER" then
+			t = "n"
+			val = tonumber(val)
+			if not val then
+				ba.print("saveload - svar: data type disagreement in var '"..name.."'")
+				return
+			end
+		else
+			val = tostring(val)
+		end
+		tempb = Split(tempb, "§")
+		if string.find(tempb[2], ",") then
+			temp = Split(tempb[2], "&")
+			found = #temp + 1
+			for i=1,#temp do
+				temparr[i] = Split(temp[i], ",")
+				if temparr[i][1] == name then
+					found = i
+				end
+			end
+		else
+			found = 1
+		end
+		temparr[found] = {}
+		
+		temparr[found][1] = name
+		temparr[found][2] = t
+		temparr[found][3] = tostring(val)
+		temp[found] = table.concat(temparr[found],",")
+			
+		data[0] = table.concat(temp,"&")
+		data[0] = "§"..data[0]
+		
+		saveshipfile(data,#data[1])
+	else
+		ba.print("saveload - svar: target variable '"..name.."' not found")
+	end
+end
+
+function ldsp(shipname,typ,stat,targetship)
+	loadship(shipname,typ,stat,targetship)	
+end
+
+function loadship(shipname,typ,stat,targetship)		--main function to load shipdata, is called in fred
+	local data = {}
+	data = loadshipfile()
+	local pos = 0
+	local shipnameactive = shipname
+	if (shipname == "var" and mn.SEXPVariables['loadship']:isValid()) then
+		shipnameactive = mn.SEXPVariables['loadship'].Value
+	end
+	if (data[1][1] ~= -1) then
+		pos = findship(shipnameactive,data[1])
+	end
+	if (targetship == "var" and mn.SEXPVariables['loadship2']:isValid()) then
+		targetship = mn.SEXPVariables['loadship2'].Value
+	end
+	if (type(targetship) == "string") then
+		shipnameactive = targetship
+	end
+	if (pos > 0) then
+		shipdatainsert(data[pos+1],shipnameactive,typ,stat,shipname)
+	end
+end
+
+function lvar(name,newname)
+	if not newname then
+		newname = name
+	end
+	local data = {}
+	local t = "s" --SEXPVAR_TYPE_STRING
+	data = loadshipfile()
+	local tempb = data[0]
+	local temp = {}
+	local temparr = {}
+	local found = 0
+	if mn.SEXPVariables[newname]:isValid() then
+		local var = mn.SEXPVariables[newname]
+		local vart = tostring(var.Type)
+		if vart == "SEXPVAR_TYPE_NUMBER" then
+			t = "n"
+		end
+		tempb = Split(tempb, "§")
+		if string.find(tempb[2], ",") then
+			temp = Split(tempb[2], "&")
+			for i=1,#temp do
+				temparr[i] = Split(temp[i], ",")
+				if tostring(temparr[i][1]) == name and temparr[i][2] == t then
+					found = i
+					if t =="n" then
+						temparr[i][3] = tonumber(temparr[i][3])
+					end
+				end
+			end
+		end
+		
+		if found > 0 then
+			var.Value = temparr[found][3]
+		else
+			ba.print("saveload - lvar: no variable '"..name.."' found or target variable of wrong type")
+		end
+	else
+		ba.print("saveload - lvar: target variable '"..newname.."' not found")
+	end
+	
+end
+
+function cpsp(shipname,stat,targetname)	--copies the data of one ship to another ship without saving, uses all data. Orders will have to wait until after the code freeze
+	if not shipname or not stat or not targetname then
+		ba.print("saveload - cpsp: missing arguments")
+		return
+	end
+	if (shipname == "var" and mn.SEXPVariables['loadship']:isValid()) then
+		shipname = mn.SEXPVariables['loadship'].Value
+	end
+	if (targetname == "var" and mn.SEXPVariables['loadship2']:isValid()) then
+		targetname = mn.SEXPVariables['loadship2'].Value
+	end
+	local playertarget = false
+	if hv.Player.Target and hv.Player.Target:isValid() and hv.Player.Target.Name == shipname then
+		playertarget = true
+	end
+	local shipstring = shipdatacollect(shipname)
+	shipdatainsert(shipstring,targetname,3,stat,targetname,1)
+	local ship = mn.Ships[shipname]
+	local target = mn.Ships[targetname]
+	if playertarget then
+		hv.Player.Target = target
+	end
+	if ship:isValid() and target:isValid() then
+		target.Physics = ship.Physics
+	end
+end
+
+function saveshipfile(data,length)		--stores data into the savefile
+	if (mn.SEXPVariables['filename']:isValid()) then
+		filename = mn.SEXPVariables['filename'].Value
+	else
+		filename = mn.getMissionFilename()
+	end
+	local file = cf.openFile(filename,"w",path_shipsave)
+	file:write(data[0].."\n")
+	if data[1][1] == -1 then
+		file:write("\n")
+	else
+		local initblock = table.concat(data[1],",",1,length)
+		file:write(initblock.."\n")
+		for i=1,length do
+			file:write(data[i+1].."\n")
+		end
+	end
+	file:close()
+end
+
+function loadshipfile()		--loads savefile and splits the shiplist
+	if (mn.SEXPVariables['filename']:isValid()) then
+		filename = mn.SEXPVariables['filename'].Value
+		else
+		filename = mn.getMissionFilename()
+	end
+	local data = {}
+	data[1] = {}
+	if (cf.fileExists(filename,path_shipsave,true)) then
+		local file = cf.openFile(filename,"r",path_shipsave)
+		local temp = file:read("*l")
+		if (temp == "") then
+			data[0] = "§"
+			data[1][1] = -1
+		elseif string.find(temp, "§") == 1 then
+			data[0] = temp
+			temp = file:read("*l")
+			if (temp == "") then
+				data[1][1] = -1
+			else
+				data[1] = Split(temp,",")
+				local n = #data[1]
+				for i=1,n do
+					data[i+1] = file:read("*l")
+				end
+			end
+		else
+			data[0] = "§"
+			data[1] = Split(temp,",")
+			local n = #data[1]
+			for i=1,n do
+				data[i+1] = file:read("*l")
+			end
+		end
+		file:close()
+	else
+		data[0] = "§"
+		data[1][1] = -1
+	end
+	return data
+end
+
+function findship(shipname,data)		--finds the specified ship in the shiplist
+local n = #data
+local pos = -1
+for i=1,n do
+	if (data[i] == shipname) then
+		pos = i
+		break
+	end
+end
+return pos
+end
+
+function Split(str, sep, maxNb)		--splits strings
+    -- Eliminate bad cases...
+    if string.find(str, sep) == nil then
+        return { str }
+    end
+    if maxNb == nil or maxNb < 1 then
+        maxNb = 0    -- No limit
+    end
+    local result = {}
+    local pat = "(.-)" .. sep .. "()"
+    local nb = 0
+    local lastPos
+    for part, pos in string.gmatch(str, pat) do
+        nb = nb + 1
+        result[nb] = part
+        lastPos = pos
+        if nb == maxNb then break end
+    end
+    -- Handle the last field
+    if nb ~= maxNb then
+        result[nb + 1] = string.sub(str, lastPos)
+    end
+    return result
+end
+
+function shipdatacollect(shipname)		--shipdata collector function including string creation
+local ship = mn.Ships[shipname]		--ship handle
+local shipdata = {}
+shipdata[1] = {}
+if (ship:isValid() and (ship:hasShipExploded() == 0)) then		--ship existent and not exploding	
+	shipdata[1][1] = 1
+	shipdata[1][2] = ship.Class.Name		--ship class
+	shipdata[1][3] = ship.Team.Name		-- team
+	shipdata[1][4] = ship.HitpointsMax		--user defined max hp
+	shipdata[1][5] = ship.HitpointsLeft		--hp left
+	if (ship.CountermeasureClass:isValid()) then
+		shipdata[1][6] = ship.CountermeasuresLeft
+	else
+		shipdata[1][6] = -1
+	end
+	if (ship.AfterburnerFuelMax > 0) then
+		shipdata[1][7] = ship.AfterburnerFuelLeft
+	else
+		shipdata[1][7] = -1
+	end
+	if (ship.WeaponEnergyMax > 0) then
+		shipdata[1][8] = ship.WeaponEnergyLeft
+	else
+		shipdata[1][8] = -1
+	end
+	shields = ship.Shields	
+	if (shields:isValid()) then		--shield data in case there is a shield, otherwise -1
+		shipdata[1][9] = shields.CombinedMax
+		shipdata[1][10] = shields[1]
+		shipdata[1][11] = shields[2]
+		shipdata[1][12] = shields[3]
+		shipdata[1][13] = shields[4]
+		else
+		shipdata[1][9] = -1
+		shipdata[1][10] = -1
+		shipdata[1][11] = -1
+		shipdata[1][12] = -1
+		shipdata[1][13] = -1
+	end
+	ns = #ship		--# subsystems
+	shipdata[2] = {}
+	if (ns > 0) then
+		shipdata[2][1] = ns
+		for i=1,ns do
+			shipdata[2][1+(2*i-1)] = ship[i].HitpointsLeft		--hp subsystem
+			shipdata[2][1+2*i] = weaponsdatacollect(ship[i],2)		--for turrets, only primaries und secondaries
+		end
+		else
+		shipdata[2][1] = -1		--no subsystems
+	end
+	shipdata[3] = weaponsdatacollect(ship,1)		--normal weapons, primaries, secondaries, tertiaries
+	shipdata[4] = {}
+	for i=1,3 do
+		shipdata[4][i] = ship.Position[i]
+	end
+	for i=1,9 do
+		shipdata[4][i+3] = ship.Orientation[i]
+	end
+	for i=1,3 do
+		shipdata[4][i+12] = ship.Physics.Velocity[i]
+	end
+	for i=1,3 do
+		shipdata[4][i+15] = ship.Physics.RotationalVelocity[i]
+	end
+	else
+	if (mn.evaluateSEXP("(is-destroyed-delay !0! !"..shipname.."!)")) then
+		shipdata[1][1] = -2		--ship destroyed
+		elseif (mn.evaluateSEXP("(has-departed-delay !0! !"..shipname.."!)")) then
+		shipdata[1][1] = -1		--ship departed
+		else
+		shipdata[1][1] = -3		--ship handle invalid, ship-vanish used or something like it
+	end
+end
+local savestring = createshipstring(shipdata,shipname)
+return savestring
+end
+
+function shipdatainsert(shipstring,shipname,typ,stat,loadname,loc)
+if not loc then
+	loc = 0
+end
+local shipdata = {}
+local ship = mn.Ships[shipname]		--ship handle
+local stathold = 0
+shipdata = shipstringsplitter(shipstring)		-- create shipdata array and fill it
+local position_loader = position_statusloader + ba.createVector(math.random(-500,500),math.random(-500,500),math.random(-500,500)) --random position for statusloader
+if loc == 1 and shipdata[1][1] == 1 then
+	if ship.Class.Name ~= shipdata[1][2] then
+		ship.Class = tb.ShipClasses[shipdata[1][2]]
+	end
+elseif ship:isValid() and shipdata[1][1] == 1 and ship.Class.Name ~= shipdata[1][2] then
+	ship.Class = tb.ShipClasses[shipdata[1][2]]
+	stathold = 1
+	table.insert(active_mainloader,{start_time = mn.getMissionTime(),ship = shipname,statcall = stat,typecall = typ,loadn = loadname})
+end
+if (ship:isValid() and stathold ==0) then
+	if (shipdata[1][1] == 1) then		--ship was ingame or wasn't arriving while saving
+		if (ship.Team.Name ~= shipdata[1][3]) then
+			local nothing = mn.runSEXP("(change-iff !"..shipdata[1][3].."! !"..shipname.."!)")
+		end
+		ship.HitpointsMax = shipdata[1][4]
+		ship.HitpointsLeft = shipdata[1][5]
+		if (shipdata[1][6] > -1) then
+			ship.CountermeasuresLeft = shipdata[1][6]
+		end
+		if (typ == 2 or typ == "2" or typ == 3 or typ == "3") then
+			if (ship.AfterburnerFuelMax > 0) then
+				ship.AfterburnerFuelLeft = shipdata[1][7]
+			end
+			if (ship.WeaponEnergyMax > 0) then
+				ship.WeaponEnergyLeft = shipdata[1][8]
+			end
+			shields=ship.Shields
+			if (shields:isValid() and (shipdata[1][9] > 0)) then		--ship has shields and save contains shields
+				shields.CombinedMax = shipdata[1][9]
+				shields[1] = shipdata[1][10]
+				shields[2] = shipdata[1][11]
+				shields[3] = shipdata[1][12]
+				shields[4] = shipdata[1][13]
+			end
+		end
+		if (shipdata[2][1] > 0) then		--ship has subsystems?
+			for i=1,shipdata[2][1] do
+				local turretname = "none"
+				if ship[i]:getModelName() ~= nil then
+					turretname = ship[i]:getModelName()
+					else
+					turretname = ship[i].Name
+				end
+				if ship[i].HitpointsMax > 0 then
+					local percentageleft = shipdata[2][1+(2*i-1)] / ship[i].HitpointsMax * 100
+					if percentageleft > 0 then
+						mn.runSEXP("(set-subsystem-strength !"..shipname.."! !"..turretname.."! !"..percentageleft.."! !true!)")
+						else
+						mn.runSEXP("(destroy-subsys-instantly !"..shipname.."! !"..turretname.."!)")
+					end
+				end
+				weaponsinsert(shipdata[2][1+2*i],ship[i],2)	--turrets loader, only primaries and secondaries
+			end
+		end
+		weaponsinsert(shipdata[3],ship,1)		--ships weapons, primaries, secondaries and tertiaries
+		if ((typ == 3 or typ == "3") and stathold == 0) then
+			ship.Position = ba.createVector(shipdata[4][1],shipdata[4][2],shipdata[4][3])
+			local ori = {}
+			for i=1,9 do
+				ori[i] = shipdata[4][i+3]
+			end
+			ship.Orientation = ba.createOrientation(ori[1],ori[2],ori[3],ori[4],ori[5],ori[6],ori[7],ori[8],ori[9])
+			--[[local vec = ba.createVector(0,0,0)
+			for i=1,3 do
+				vec[i] = shipdata[4][i+12]
+			end
+			ship.Physics.Velocity = vec
+			for i=1,3 do
+				vec[i] = shipdata[4][i+15]
+			end
+			ship.Physics.RotationalVelocity = vec]]
+		end
+		else
+		if (shipdata[1][1] == -1 and (stat == 3 or stat == "3" or stat == 4 or stat == "4")) then		--recreate departed status
+			mn.runSEXP("(set-departure-info !"..shipname.."! !Hyperspace! !<no anchor>! !0! !false!)")
+			ship:warpOut(ship)
+			elseif (shipdata[1][1] == -2 and (stat == 3 or stat == "3" or stat == 4 or stat == "4")) then		--recreate destroyed status
+			mn.runSEXP("(destroy-instantly !"..shipname.."!)")
+			elseif (stat ~= 2 or stat ~= "2") then		--ship-vanish the ship
+			local nothing = mn.runSEXP("(ship-vanish !"..shipname.."!)")
+		end
+	end
+	elseif ((stat == 4 or stat == "4") and stathold == 0) then
+	if (shipdata[1][1] == -1) then
+		ship = mn.createShip(shipname,tb.ShipClasses[shipclass_statusloader],ba.createOrientation(1,0,0,0,1,0,0,0,1),ba.createVector(0,0,0))
+		mn.runSEXP("(set-departure-info !"..shipname.."! !Hyperspace! !<no anchor>! !0! !false!)")
+		ship:warpOut(ship)
+		elseif (shipdata[1][1] == -2) then
+		ship = mn.createShip(shipname,tb.ShipClasses[shipclass_statusloader],ba.createOrientation(1,0,0,0,1,0,0,0,1),position_loader)
+		mn.runSEXP("(destroy-instantly !"..shipname.."!)")
+		else
+	end
+end
+end
+
+function booltostring(boolValue)		--tool function booleans to strings
+	if (boolValue == true) then
+		return "1"
+		elseif (boolValue == false) then
+		return "0"
+		else
+		return "-3"
+   end
+end
+
+function stringtobool(stringValue)		--tool function to recreate booleans
+	if (stringValue == "1" or stringValue == 1) then
+		return true
+		elseif (stringValue == "0" or stringValue == 0) then
+		return false
+		else
+		return nil
+	end
+end
+
+function weaponsdatacollect(object,typ)		--weapondata to array
+	local array = {}
+	bank = object.PrimaryBanks		--handle primaries
+	array[1] = weaponbankdatacollect(bank)
+	bank = object.SecondaryBanks		--handle secondaries
+	array[2] = weaponbankdatacollect(bank)
+	if (typ == 1) then		--1=main weapons, 2=turrets
+		bank = object.TertiaryBanks
+		array[3] = weaponbankdatacollect(bank)
+		else
+		array[3] ={}
+		array[3][1] = -2
+	end
+	return array
+end
+
+function weaponbankdatacollect(bank)		--weaponbankdata to array
+local array = {}
+if (bank:isValid()) then
+	n = #bank		--number of weapons in bank
+	if (n > 0) then
+		array[1] = n
+		array[2] = booltostring(bank.Linked)		--linked
+		array[3] = booltostring(bank.DualFire)		--dual fire
+		for j=1,n do
+			array[3+j] = {}
+			wbank=bank[j] 	--weaponbank handle
+			array[3+j][1] = wbank.WeaponClass.Name		--weapon class name
+			array[3+j][2] = booltostring(wbank.Armed)		--weapon active
+			array[3+j][3] = wbank.AmmoMax
+			if (array[3+j][3] > 0) then
+				array[3+j][4] = wbank.AmmoLeft
+				else
+				array[3+j][4] = -1
+			end
+		end
+		else
+		array[1]=-1		--no weapons in bank
+	end
+	else
+	array[1]=-2		--invalid bank, should not happen
+end
+return array
+end
+
+function weaponsinsert(array,object,typ)		--transfers weapondata from array to object
+	if (array[1][1] > 0) then
+		bank=object.PrimaryBanks		--handle primaries
+		weaponbankinsert(bank,array[1],1)
+	end
+	if (array[2][1] > 0) then
+		bank=object.SecondaryBanks		--handle secondaries
+		weaponbankinsert(bank,array[2],2)
+	end
+	if ((typ == 1) and (array[3][1] > 0)) then		--1=main weapons, 2=turrets
+		bank=object.TertiaryBanks
+		weaponbankinsert(bank,array[3],0)
+	end
+end
+
+function weaponbankinsert(bank,array,typ)		--array to weaponbankdata
+if (bank:isValid()) then
+	bank.Linked = stringtobool(array[2])		--linked
+	bank.DualFire = stringtobool(array[3])		--dual fire
+	for j=1,array[1] do
+		wbank=bank[j] 	--weaponbank handle
+		if (wbank.WeaponClass.Name ~= array[3+j][1]) then		--prevent it from doing unnecessary stuff
+			wbank.WeaponClass = tb.WeaponClasses[array[3+j][1]]		--weapon class
+		end
+		if (stringtobool(array[3+j][2])) then
+			wbank.Armed = stringtobool(array[3+j][2])		--weapon active
+		end
+		wbank.AmmoMax = array[3+j][3] 
+		if (array[3+j][3] > 0) then
+			wbank.AmmoLeft = array[3+j][4]
+		end
+	end
+end
+end
+
+function createshipstring(shipdata,name)		--shipstrig creation for savefile
+local savestring = (shipdata[1][1]..",")
+local addstring = ""
+if (shipdata[1][1] == 1) then
+	savestring = (savestring..table.concat(shipdata[1],",",2,13)..",")		--basic data
+	savestring = (savestring..":")
+	savestring = (savestring..shipdata[2][1].."&")		--number of subsystems
+	if (shipdata[2][1]>0) then
+		for i=1,shipdata[2][1] do		--subsystems and turret data
+			savestring = (savestring..shipdata[2][1+(2*i-1)].."§")
+			addstring = createweaponstring(shipdata[2][1+(2*i)])
+			savestring = (savestring..addstring.."&")
+		end
+	end
+	savestring = (savestring..":")
+	addstring = createweaponstring(shipdata[3])		--weapons
+	savestring = (savestring..addstring..":")
+	savestring = (savestring..table.concat(shipdata[4],",",1,18))		--position and orientation
+	else
+	savestring = (savestring..":::")
+end
+return savestring
+end
+
+function createweaponstring(array)		--weaponstring creation for savefile
+local savestring = ""		--returns an empty string in any case
+for j=1,3 do
+	if (array[j][1] > 0) then
+		savestring = (savestring..array[j][1]..","..array[j][2]..","..array[j][3]..",")		--number, linked, dualfire
+		for k=1,array[j][1] do
+			savestring = (savestring..array[j][3+k][1]..","..array[j][3+k][2]..","..array[j][3+k][3]..",")		--weaponclass, ammomax, ammoleft
+			savestring = (savestring..array[j][3+k][4])
+			if (j ~= 3) then		--splitter wont like me without this
+				savestring = (savestring..",")
+			end
+		end
+		else
+		savestring = (savestring..array[j][1])
+		if (j ~= 3) then		--splitter wont like me without this
+			savestring = (savestring..",")
+		end
+	end
+end
+return savestring
+end
+
+function shipstringsplitter(shipstring)		--splits shipstring into shipdata array
+local temp = {}		--temporary array
+local subtemp = {}		--more temporary array 
+local subtempint = {}		--and one more cause i like it
+local shipdata = {}		--what i actually want to have
+temp = Split(shipstring,":")
+shipdata[1] = {}
+shipdata[1] = Split(temp[1],",")
+shipdata[1][1] = tonumber(shipdata[1][1])		--need something like (if string = a number then change string to number) in the split function
+if (shipdata[1][1] == 1) then
+	for m=4,13 do
+		shipdata[1][m] = tonumber(shipdata[1][m])
+	end
+	shipdata[2] = {}
+	subtemp = Split(temp[2],"&")
+	shipdata[2][1] = tonumber(subtemp[1])
+	if (shipdata[2][1] > 0) then
+		for i=1,shipdata[2][1] do
+			subtempint = Split(subtemp[i+1],"§")
+			shipdata[2][1+(2*i-1)] = tonumber(subtempint[1])
+			shipdata[2][1+(2*i)] = weaponstringsplitter(subtempint[2])
+		end
+	end
+	shipdata[3] = weaponstringsplitter(temp[3])
+	shipdata[4] = Split(temp[4],",")
+	for m=1,12 do
+		shipdata[4][m] = tonumber(shipdata[4][m])
+	end
+end
+return shipdata
+end
+
+function weaponstringsplitter(subtempint)		--splits weapondata into array
+local array = {}
+local temp = {}
+local l = 1
+local n = 0
+temp = Split(subtempint,",")
+for j=1,3 do
+	array[j] = {}
+	array[j][1] = tonumber(temp[l])
+	if (array[j][1] > 0) then
+		array[j][2] = tonumber(temp[l+1])
+		array[j][3] = tonumber(temp[l+2])
+		l = l + 3
+		for k=1,array[j][1] do
+			array[j][k+3] = {}
+			array[j][k+3][1] = temp[l]
+			array[j][k+3][2] = tonumber(temp[l+1])
+			array[j][k+3][3] = tonumber(temp[l+2])
+			array[j][k+3][4] = tonumber(temp[l+3])
+			l = l + 4
+		end
+		else
+		l = l + 1
+	end
+end
+return array
+end
+]
+
+$State: GS_STATE_GAME_PLAY
+$On Frame:[
+if (table.maxn(active_mainloader)) > 0 then
+	for i=1,table.maxn(active_mainloader) do
+		local time_elapsed = mn.getMissionTime() - active_mainloader[i].start_time
+		if (time_elapsed >= 0.05) then
+			local targetname = active_mainloader[i].ship
+			local typecall = active_mainloader[i].typecall
+			local statcall = active_mainloader[i].statcall
+			local loadname = active_mainloader[i].loadn
+			loadship(loadname,typecall,statcall,targetname)
+			table.remove(active_mainloader,i)
+			break
+		end
+	end
+end
+]
+#end

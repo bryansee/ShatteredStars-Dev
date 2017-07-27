@@ -1,0 +1,2499 @@
+#Default Player Ship
+$Name: GRF Caranayodhin
+#End
+#Engine Wash Info
+
+;; NOTE:  The default MUST be the first entry in the list of engine wash info
+
+$Name: Default
+$Angle: 10.0
+$Radius Mult: 1.2
+$Length: 400
+$Intensity:	1.0
+
+$Name: Default100
+$Angle: 12.0
+$Radius Mult: 1.2
+$Length: 100
+$Intensity:	1.0
+
+$Name: Default150
+$Angle: 10.0
+$Radius Mult: 1.2
+$Length: 150
+$Intensity:	1.0
+
+$Name: Default200
+$Angle: 10.0
+$Radius Mult: 1.2
+$Length: 200
+$Intensity:	1.0
+
+$Name: Default300
+$Angle: 8.0
+$Radius Mult: 1.2
+$Length: 300
+$Intensity:	1.0
+
+$Name: Default500
+$Angle: 7.0
+$Radius Mult: 1.2
+$Length: 500
+$Intensity:	1.0
+
+$Name: Default700
+$Angle: 7.0
+$Radius Mult: 1.2
+$Length: 700
+$Intensity:	1.0
+
+$Name: Default800
+$Angle: 6.0
+$Radius Mult: 1.2
+$Length: 800
+$Intensity:	1.0
+
+$Name: Default900
+$Angle: 6.0
+$Radius Mult: 1.2
+$Length: 900
+$Intensity:	1.0
+
+$Name: Default1000
+$Angle: 5.0
+$Radius Mult: 1.2
+$Length: 1000
+$Intensity:	1.0
+
+$Name: Default1100
+$Angle: 5.0
+$Radius Mult: 1.2
+$Length: 1100
+$Intensity:	1.0
+
+$Name: Default1500
+$Angle: 5.0
+$Radius Mult: 1.2
+$Length: 1500
+$Intensity:	1.0
+
+#End
+
+#Ship Classes
+
+$Name: GRF Caranayodhin
+$Short name: GRSSFight
+$Species: GRW
++Type: XSTR("Space Superiority", -1)
++Maneuverability: XSTR("Very High", -1)
++Armor: XSTR("Light", 2941)
++Manufacturer: XSTR(" ", -1)
++Description: XSTR( " ", -1)
+$end_multi_text
++Tech Description:
+XSTR("The third of next-generation fighters entering the Empire's service, the Charlatan is a magnificent interceptor strikecraft. It is with little doubt the fastest fighter ever created by our artisans, capable of outpacing or hunting down any counterpart regardless of its make or affiliation. The Charlatan is also comparable to the Corybant in terms of firepower and system efficiency, making it a vastly capable combatant in extensive engagements. As movements are made to make the Corybant a standard in superiority, such is likely for the Charlatan in the role of interception. ", -1)
+$end_multi_text
++Length: 29 m
++Gun Mounts: 6
++Missile Banks: 2
+$POF file: GRF_Caranayodhin.pof
+$Detail distance: (0)
+$Density: 2
+$Damp: 0.10
+$Rotdamp: 0.30
+$Max Velocity: 0.0, 0.0, 482.0
+$Rotation time: 2.5, 2.2, 2.5
+$Rear Velocity: 482.0
+$Forward accel: 16.5
+$Forward decel: 11.5
+$Slide accel: 15.0
+$Slide decel: 15.0
+$Glide:							YES
+	+Dynamic Glide Cap:			YES
+	+Glide Accel Mult:			-1
+$Use Newtonian Dampening:		YES
+$Autoaim FOV:					30
+	+Converging Autoaim
+	+Minimum Distance:			250.0
+$Convergence:					
+	+Automatic
+$Warpin Type:					Hyperspace
+$Warpout Type:					Hyperspace
+$Expl inner rad: 30.0
+$Expl outer rad: 70.0
+$Expl damage: 15.0
+$Expl blast: 1000.0
+$Expl Propagates: NO
+$Shockwave Speed: 0.0
+$Allowed PBanks: ( "Spatha" "Shashka" "Trishula" ) ( "Spatha" "Shashka" "Trishula" ) ;( "Gadha" "Stambhana" "Parashuh" "Parashuh Mod 1" "Bhushundi" "Karavaala" "Pallavha" )
+$Allowed Dogfight PBanks: ( "Spatha" "Shashka" "Trishula" ) ( "Spatha" "Shashka" "Trishula" )
+$Default PBanks: ( "Spatha" "Shashka" )
+$PBank Capacity: ( 160, 160 )
+$Allowed SBanks: ( "Meteor" "Comet" "Glaive" "Atgeir" "Voulge" "Sibyna" "Bardiche" ) ;( "Nirbhay" "Chaya" "Kalusa" "Krodha" "Kuttaka" "Bhajayati" )
+$Allowed Dogfight SBanks: ( "Meteor" "Comet" "Glaive" "Atgeir" "Voulge" "Sibyna" "Bardiche" )
+$Default SBanks: ( "Comet" "Meteor" )
+$SBank Capacity: ( 40, 40 )
+$Shields: 600
+$Shield Color: 255 255 75
+$Power Output: 4.0
+$Max Oclk Speed: 514.0
+$Max Weapon Eng: 80.0
+$Hitpoints: 600
+$Armor Type: 				Light Armor 100
+$Shield Armor Type:			Light Shields 100
+$Flags: ( "player_ship" "default_player_ship" "fighter" "generate icon" "show ship" "in tech database" "in tech database multi" )
+$AI Class: Captain
+$Afterburner: YES
+ +Aburn Max Vel: 0.0, 0.0, 1400.0
+ +Aburn For accel: 4.8
+	+Aburn Max Reverse Vel: 1400.0
+	+Aburn Rev accel: 7.0
+ +Aburn Fuel: 300.0
+ +Aburn Burn Rate: 0.55
+ +Aburn Rec Rate: 0.35
+$Trails:
+	+Bitmap:	ABtrail
+	+Width:		1.0
+	+Alpha:		1.0
+	+Life:		2
+$Countermeasures: 25
+$Scan time: 2000
+$EngineSnd: 129
+$Closeup_pos: 0.0, 0.0, -30
+$Closeup_zoom: 0.5
+;$Ship_icon none
+;$Ship_overhead: none
+$Score: 8
+$Trail:
+ +Offset: 0.00 7.07 -11.9
+ +Start Width: 0.1
+ +End Width: 0.05
+ +Start Alpha: 1.0
+ +End Alpha: 0.0
+ +Max Life: 2.0
+ +Spew Time: 60
+ +Bitmap: Contrail01
+$Trail:
+ +Offset: 8.20 -4.72 -10.4
+ +Start Width: 0.1
+ +End Width: 0.05
+ +Start Alpha: 1.0
+ +End Alpha: 0.0
+ +Max Life: 2.0
+ +Spew Time: 60
+ +Bitmap: Contrail01
+$Trail:
+ +Offset: -8.20 -4.72 -10.4
+ +Start Width: 0.1
+ +End Width: 0.05
+ +Start Alpha: 1.0
+ +End Alpha: 0.0
+ +Max Life: 2.0
+ +Spew Time: 60
+ +Bitmap: Contrail01
+$Trail:
+ +Offset: 12.45 0.00 -6.40
+ +Start Width: 0.1
+ +End Width: 0.05
+ +Start Alpha: 1.0
+ +End Alpha: 0.0
+ +Max Life: 2.0
+ +Spew Time: 60
+ +Bitmap: Contrail01
+$Trail:
+ +Offset: -12.45 0.00 -6.40
+ +Start Width: 0.1
+ +End Width: 0.05
+ +Start Alpha: 1.0
+ +End Alpha: 0.0
+ +Max Life: 2.0
+ +Spew Time: 60
+ +Bitmap: Contrail01
+$Subsystem: communication, 10, 0
+$Subsystem: navigation, 10, 0
+$Subsystem: weapons, 20, 0
+$Subsystem: sensors, 10, 0
+$Subsystem: engine, 15, 0
+
+$Name:                  GRCv Kshatriya
+$Short name:		GRCorvette
+$Species:               GRW
++Tech Description:
+XSTR("The GRC Senaya class was developed as one of the most powerful long-range cruisers. Not centered around fighting defensively like the Heraklion, these cruisers were built instead for conflicts where victory is absolute. Speed is the Gordia's key strength, rather than overwhelming firepower or an incredibly thick hull. Because of this trait, Gordias are capable of encircling and wearing down the enemy before eventually destroying them. This tactic is most effective within the presence of our larger, more powerful vessels such as the Pylos destroyer for fire support. The Elders have noted this as an effective method in the most recent of conflicts. The Gordia will remain a choice for future ages to come.", -1)
+$end_multi_text
+$POF file:              GRCv_Kshatriya.pof
+$Detail distance:       (0, 2600, 5500, 8000)
+$Show damage:           YES
+$Damage Lightning Type:			None
+$Debris:
+	+Lightning Arc Percent:		0.0
+$Density:               1
+$Damp:                  0.2
+$Rotdamp:               1.0
+$Max Velocity:          376.0, 376.0, 376.0
+$Rotation time:         170.0, 170.0, 170.0
+$Rear Velocity:         0.0
+$Forward accel:         15.0
+$Forward decel:         10.0
+$Slide accel:           0.0
+$Slide decel:           0.0
+$Glide:							YES
+	+Dynamic Glide Cap:			YES
+$Use Newtonian Dampening:		YES
+$Warpin Type:			Hyperspace
+$Warpout Type:			Hyperspace
+$Expl inner rad:        100.0
+$Expl outer rad:        600.0
+$Expl damage:           200.0
+$Expl blast:            2000.0
+$Expl Propagates:       YES           
+$Shockwave Speed:       600.0
+$Shockwave Count:	2
+$Default PBanks:        ()
+$Default SBanks:        ()
+$SBank Capacity:        ()
+$Shields: 10000
+$Shield Color: 255 255 75
+$Power Output:          90.0
+$Max Oclk Speed:        369.0
+$Max Weapon Eng:        100.0
+$Hitpoints:             70000
+$Armor Type:		Heavy Armor 100
+$Shield Armor Type:			Heavy Shields 100
+$Flags:                 ( "cruiser" "generate icon" "surface shields" "in tech database" "in tech database multi" )
+$AI Class:              Captain
+$Afterburner:           NO
+$Countermeasures:       0
+$Scan time:             12000
+$EngineSnd:				134                   ;; Engine sound of ship
+$Closeup_pos:           0.0, 0.0, -420
+$Closeup_zoom:          0.5
+$Score:				    250
+$Subsystem: turret01,5,1.0
+	$Default PBanks:        ( "Authority A-F BeamSlash" )
+        $Flags: 		( "check hull" )
+$Subsystem: turret02,5,1.0
+	$Default PBanks:        ( "Authority A-F BeamSlash" )
+        $Flags: 		( "check hull" )
+$Subsystem: turret03,5,1.0
+	$Default PBanks:        ( "Authority A-F BeamSlash" )
+        $Flags: 		( "check hull" )
+$Subsystem: turret04,4,0.0 
+	$Default PBanks: 	( "CW88mm-PLC" )
+        $Flags: 		( "check hull" )
+$Subsystem: turret05,4,0.0 
+	$Default PBanks: 	( "CW88mm-PLC" )
+        $Flags: 		( "check hull" )
+$Subsystem: turret06,4,0.0 
+	$Default PBanks: 	( "CW88mm-PLC" )
+        $Flags: 		( "check hull" )
+$Subsystem: turret07,4,0.0 
+	$Default PBanks: 	( "CW88mm-PLC" )
+        $Flags: 		( "check hull" )
+$Subsystem: turret08,4,0.0 
+	$Default PBanks: 	( "CW88mm-PLC" )
+        $Flags: 		( "check hull" )
+$Subsystem: turret09,4,0.0 
+	$Default PBanks: 	( "CW88mm-PLC" )
+        $Flags: 		( "check hull" )
+$Subsystem: turret10,4,0.0 
+	$Default PBanks: 	( "CW88mm-PLC" )
+        $Flags: 		( "check hull" )
+$Subsystem: turret11,4,0.0 
+	$Default PBanks: 	( "CW88mm-PLC" )
+        $Flags: 		( "check hull" )
+$Subsystem: turret12,4,0.0 
+	$Default PBanks: 	( "CW88mm-PLC" )
+        $Flags: 		( "check hull" )
+$Subsystem: turret13,4,0.0 
+	$Default PBanks: 	( "CW88mm-PLC" )
+        $Flags: 		( "check hull" )
+$Subsystem: turret14,4,0.0 
+	$Default PBanks: 	( "GRW A-F Beam" )
+        $Flags: 		( "check hull" )
+$Subsystem:                     sensors,                        5,0.0
+$Subsystem:                     communication,  3,0.0
+$Subsystem:                     weapons,                        10,0.0
+$Subsystem:                     fin,              2.5,0.0
+$Subsystem:                     engine01,                 7.5,0.0
+	$Engine Wash: 				Default100
+$Subsystem:                     engine02,                 7.5,0.0
+	$Engine Wash: 				Default100
+$Subsystem:                     engine03,                 7.5,0.0
+	$Engine Wash: 				Default100
+
+
+$Name: GRS Caarayat
+$Short name: GRSupport
+$Species: GRW
++Tech Description:
+XSTR("This is a support ship. This ship rearms and repairs the subsystems of our fighters and bombers. This technology has never been seen used by other races. It is fast and manoeuverable, a necessity when trying to dock with fighters in the heat of battle. If any of these ships go down in battle, beware of its massive explosion.", -1)
+$end_multi_text
+$POF file: GRS_Caarayat.pof
+$Detail distance: (0, 1300, 2500, 8000)
+$Damage Lightning Type:			None
+$Debris:
+	+Lightning Arc Percent:		0.0
+$Density: 1
+$Damp:                          0.2
+$Rotdamp:                       0.3
+$Max Velocity:          30.0, 30.0, 490.0
+$Rotation time:         1.5, 1.5, 1.5
+$Rear Velocity:         490.0
+$Forward accel:         1.25
+$Forward decel:         0.25
+$Slide accel:           1.0
+$Slide decel:           1.0
+$Glide:							YES
+	+Dynamic Glide Cap:			YES
+$Use Newtonian Dampening:		YES
+$Warpin Type:					Hyperspace
+$Warpout Type:					Hyperspace
+$Expl inner rad: 100.0
+$Expl outer rad: 200.0
+$Expl damage: 300.0
+$Expl blast: 4000.0
+$Expl Propagates: NO
+$Shockwave Speed: 0.0
+$Default PBanks: ()
+$Default SBanks: ()
+$SBank Capacity: ()
+$Power Output: 1.0
+$Max Oclk Speed: 120.0
+$Max Weapon Eng: 0.0
+$Hitpoints: 500
+$Armor Type: 				Medium Armor 100
+$Shield Armor Type:			Medium Shields 100
+$Flags: ( "repair_rearm" "generate icon" "in tech database" "in tech database multi" )
+$AI Class: Captain
+$Afterburner: NO
+$Countermeasures: 0
+$Scan time: 2000
+$EngineSnd: 135
+$Closeup_pos: 0.0, 1.0, -55
+$Closeup_zoom: 0.5
+$Score: 10
+$Subsystem: communication, 10, 0.0
+$Subsystem: engines, 30, 0.0
+$Subsystem: sensors, 10, 0.0
+
+
+$Name:		OSCv Excursor
+$Short name:				OSCorvette
+$Species:				OSA
+	+Tech Description:		XSTR( "The Andraste was first sighted by reconnaisance probes in the Kuiper Belt during the civil war in Sol. Her hull geometry and scan signature led Third Fleet operators to believe that the Gaian Effort had somehow managed to procure a state-of-the-art Alliance Hyperion cruiser. Subsequent scan data of this vessel clarified the ship's true form and capabilities. 
+
+The cruiser-sized Andraste is the meridian of Gaian Effort ingenuity in adversity. A fast and well-armed vessel, her design combines the powerful engine array of a Federation light frigate with the hull and reactor of an Alliance cruiser, utilising Effort weapons technology - nuclear-tipped slug drivers, plasma turrets and heavy fusion missiles. Like most major Gaian Effort assets she is equipped with highly sensitive subspace sensors to allow safe navigation of the remote Kuiper Belt reaches.
+
+Only one vessel of this type has been encountered so far, under the flag of Shepherd Iseult Vass of Greenfly Cell. It is unknown whether more of these ships exist - Federation intelligence believes that this particular vessel was salvaged from derelict hulls and incrementally upgraded rather than designed and built indigenously.", -1 )
+$end_multi_text
+$POF file:					URCv Excursor.pof
+$Detail distance: 			(0,500)
+$Density:					1
+$Damp:						0.2
+$Rotdamp:					2.0
+$Max Velocity:				395.0, 395.0, 395.0
+$Rotation time:				80.0, 80.0, 80.0
+$Rear Velocity:				0.0
+$Forward accel:				8.0
+$Forward decel:				4.0
+$Slide accel:				0.0
+$Slide decel:				0.0
+$Warpin Type:				Hyperspace
+$Warpin Start Sound:		Hyperspace_Exit
+$Warpin End Sound:			Hyperspace_Lighter
+$Warpin Speed:				300
+$Warpin Time:				3.0
+$Warpin Decel Exp:			1.0
+$Warpin Radius:				4000
+$Warpout Type:				Hyperspace
+$Warpout Start Sound:		Hyperspace_Start
+$Warpout End Sound:			Hyperspace_Lighter
+$Warpout Engage Time:		1.0
+$Warpout Speed:				300
+$Warpout Time:				2.0
+$Warpout Accel Exp:			1.0
+$Warpout Radius:			4000
+$Expl inner rad:			150.0
+$Expl outer rad:			750.0
+$Expl damage:				200.0
+$Expl blast:				11000.0
+$Expl Propagates:			YES
+$Shockwave Speed:			195.0
+$Shockwave Count:			2
+$Shields:					0
+$Power Output:				100.0
+$Max Oclk Speed:			80.0
+$Max Weapon Eng:			100.0
+$Hitpoints: 					39000
+$Armor Type: 					Heavy Armor 100
+$Flags: 					( "cruiser" )
+$AI Class:					Captain
+$Afterburner:				NO
+$Countermeasures:			0
+$Scan time:					2000
+$EngineSnd:					128
+$Closeup_pos:				0.0, 0.0, -600
+$Closeup_zoom:				0.5
+$Score:						500
+$Subsystem: 	rotatora, 			100, 16
+$Subsystem: 	communication, 	8, 0.0
+$Subsystem: 	sensors, 			8, 0.0
+$Subsystem: 	navigation, 		8, 0.0
+$Subsystem: 	weapons, 			8, 0.0
+$Subsystem: 	engine, 			15, 0.0
+	$Engine Wash: 				Default100
+$Subsystem: Turret01, 3.0, 3.0
+	$Default PBanks: ( "CW88mm-PLC" )
+	$Turret Base RotationSnd: 	256
+	$Turret Gun RotationSnd: 	257
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Flags:						( "check hull" "reset when idle" )
+	$animation: triggered
+	$type: initial
+	+relative_angle:			80,0,0
+$Subsystem: Turret02, 3.0, 3.0
+	$Default PBanks: ( "CW88mm-PLC" )
+	$Turret Base RotationSnd: 	256
+	$Turret Gun RotationSnd: 	257
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Flags:						( "check hull" "reset when idle" )
+	$animation: triggered
+	$type: initial
+	+relative_angle:			80,0,0
+$Subsystem: Turret03, 3.0, 3.0
+	$Default PBanks: ( "CW88mm-PLC" )
+	$Turret Base RotationSnd: 	256
+	$Turret Gun RotationSnd: 	257
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Flags:						( "check hull" "reset when idle" )
+	$animation: triggered
+	$type: initial
+	+relative_angle:			80,0,0
+$Subsystem: Turret04, 3.0, 3.0
+	$Default PBanks: ( "CW88mm-PLC" )
+	$Turret Base RotationSnd: 	256
+	$Turret Gun RotationSnd: 	257
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Flags:						( "check hull" "reset when idle" )
+	$animation: triggered
+	$type: initial
+	+relative_angle:			80,0,0
+$Subsystem: Turret05, 3.0, 3.0
+	$Default PBanks: ( "CW88mm-PLC" )
+	$Turret Base RotationSnd: 	256
+	$Turret Gun RotationSnd: 	257
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Flags:						( "check hull" "reset when idle" )
+	$animation: triggered
+	$type: initial
+	+relative_angle:			80,0,0
+$Subsystem: Turret06, 3.0, 3.0
+	$Default PBanks: ( "CW88mm-PLC" )
+	$Turret Base RotationSnd: 	256
+	$Turret Gun RotationSnd: 	257
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Flags:						( "check hull" "reset when idle" )
+	$animation: triggered
+	$type: initial
+	+relative_angle:			80,0,0
+$Subsystem: Turret07, 3.0, 3.0
+	$Default PBanks: ( "CW88mm-PLC" )
+	$Turret Base RotationSnd: 	256
+	$Turret Gun RotationSnd: 	257
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Flags:						( "check hull" "reset when idle" )
+	$animation: triggered
+	$type: initial
+	+relative_angle:			80,180,0
+$Subsystem: Turret08, 3.0, 3.0
+	$Default PBanks: ( "CW88mm-PLC" )
+	$Turret Base RotationSnd: 	256
+	$Turret Gun RotationSnd: 	257
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Flags:						( "check hull" "reset when idle" )
+	$animation: triggered
+	$type: initial
+	+relative_angle:			80,180,0
+$Subsystem: Turret09, 1.0, 3.0
+	$Default PBanks: ( "CmnWlth PDTurret" )
+	$Turret Base RotationSnd: 	256
+	$Turret Gun RotationSnd: 	257
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Flags:						( "check hull" "reset when idle" )
+	$animation: triggered
+	$type: initial
+	+relative_angle:			80,0,0
+$Subsystem: Turret10, 1.0, 3.0
+	$Default PBanks: ( "CmnWlth PDTurret" )
+	$Turret Base RotationSnd: 	256
+	$Turret Gun RotationSnd: 	257
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Flags:						( "check hull" "reset when idle" )
+	$animation: triggered
+	$type: initial
+	+relative_angle:			80,180,0
+$Subsystem: Turret11, 1.0, 3.0
+	$Default PBanks: ( "CmnWlth PDTurret" )
+	$Turret Base RotationSnd: 	256
+	$Turret Gun RotationSnd: 	257
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Flags:						( "check hull" "reset when idle" )
+	$animation: triggered
+	$type: initial
+	+relative_angle:			80,180,0
+$Subsystem: Turret12, 1.0, 3.0
+	$Default PBanks: ( "CmnWlth PDTurret" )
+	$Turret Base RotationSnd: 	256
+	$Turret Gun RotationSnd: 	257
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Flags:						( "check hull" "reset when idle" )
+	$animation: triggered
+	$type: initial
+	+relative_angle:			80,0,0
+$Subsystem: Turret13, 4.0, 1.0
+	$Default PBanks: ( "88mm Arclite cannon" )
+	$Flags:						( "check hull" )
+$Subsystem: Turret14, 4.0, 1.0
+	$Default PBanks: ( "88mm Arclite cannon" )
+	$Flags:						( "check hull" )
+$Subsystem: Turret15, 2.0, 1.0
+	$Default SBanks: ( "Harrier" )
+	$Flags:						( "check hull" )
+$Subsystem: Turret16, 2.0, 1.0
+	$Default SBanks: ( "Harrier" )
+	$Flags:						( "check hull" )
+
+$Name:		OSD Olympia
+$Short name:				OSDestroyer
+$Species:				OSA
+	+Tech Description:		XSTR( "The Olympia is the standard Destroyer of the Republic navy. The Olympia was constructed at the Luna shipyards by the Ariel Aerospace corperation. First introduced in 2165, the Olympia was designed to counter the colonial vessels which where heavier armoured than the Republics Halbred corvettes. The Olympia proved to be a match against the Colonial navy and help end the mining Guild war of 2170. Since then the Olympia has found it self patrolling shipping routes, protecting convoys against Raider incursions. The destroyer is armed with 12 VLS Hammer torpedos, 2 88mm Arclite Plasma Cannons, 1 CW88mm Gauss Cannon and 9 CQWS enplacements. The Hull is comprised of several layers of armour for defense. The Olympia is also equiped with a Standard mk3 Cold Fusion Reactor, Shockpoint Drive systems to allow it to make its own Shockjumps into Subspace. The Olympia is also has the new Grav drive, a section of the vessel that rotates to provide gravity for the crew, unlike the halbred Corvettes which had a small grav field generated by the ships reactor.", -1 )
+$end_multi_text
+$POF file:					Oylmpia.pof
+$Detail distance: 			(0, 2000, 8000)
+$Density:					1
+$Damp:						0.2
+$Rotdamp:					2.0
+$Max Velocity:				375.0, 375.0, 375.0
+$Rotation time:				200.0, 200.0, 160.0
+$Rear Velocity:				0.0
+$Forward accel:				8.0
+$Forward decel:				4.0
+$Slide accel:				0.0
+$Slide decel:				0.0
+$Warpin Type:				Hyperspace
+$Warpin Start Sound:		Hyperspace_Exit
+$Warpin End Sound:			Hyperspace_Lighter
+$Warpin Speed:				300
+$Warpin Time:				3.0
+$Warpin Decel Exp:			1.0
+$Warpin Radius:				4000
+$Warpout Type:				Hyperspace
+$Warpout Start Sound:		Hyperspace_Start
+$Warpout End Sound:			Hyperspace_Lighter
+$Warpout Engage Time:		1.0
+$Warpout Speed:				300
+$Warpout Time:				2.0
+$Warpout Accel Exp:			1.0
+$Warpout Radius:			4000
+$Expl inner rad:			150.0
+$Expl outer rad:			750.0
+$Expl damage:				200.0
+$Expl blast:				11000.0
+$Expl Propagates:			YES
+$Shockwave Speed:			195.0
+$Shockwave Count:			2
+$Shields:					0
+$Power Output:				100.0
+$Max Oclk Speed:			80.0
+$Max Weapon Eng:			100.0
+$Hitpoints: 					67000
+$Armor Type: 					Heavy Armor 100
+$Flags: 					( "corvette" )
+$AI Class:					Captain
+$Afterburner:				NO
+$Countermeasures:			0
+$Scan time:					2000
+$EngineSnd:					128
+$Closeup_pos:				0.0, 0.0, -1500
+$Closeup_zoom:				0.5
+$Score:						500
+$Subsystem: 	communication, 	8, 0.0
+$Subsystem: 	bridge, 	8, 0.0
+$Subsystem: 	sensors, 			8, 0.0
+$Subsystem: 	navigation, 		8, 0.0
+$Subsystem: 	weapons, 			8, 0.0
+$Subsystem: 	CrewRotationhub, 	8, 0.0
+$Subsystem: 	engine01, 			15, 0.0
+	$Engine Wash: 				Default100
+$Subsystem: 	engine02, 			15, 0.0
+	$Engine Wash: 				Default100
+$Subsystem: Turret01, 4.0, 3.0
+	$Default PBanks: ( "CW88mm-PLC" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret02, 4.0, 3.0
+	$Default PBanks: ( "88mm Arclite cannon" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret03, 4.0, 3.0
+	$Default sBanks: ( "Warhammer" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret04, 4.0, 3.0
+	$Default sBanks: ( "Warhammer" ) 
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret05, 4.0, 3.0
+	$Default sBanks: ( "Warhammer" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret06, 4.0, 3.0
+	$Default PBanks: ( "CW88mm-PLC" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret07, 4.0, 3.0
+	$Default PBanks: ( "88mm Arclite cannon" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret08, 4.0, 3.0
+	$Default PBanks: ( "CmnWlth PDTurret" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret09, 4.0, 3.0
+	$Default PBanks: ( "CmnWlth PDTurret" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret10, 4.0, 3.0
+	$Default PBanks: ( "CmnWlth PDTurret" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret11, 4.0, 3.0
+	$Default PBanks: ( "CmnWlth PDTurret" )
+	$Flags:						( "check hull"  "use multiple guns")
+$Subsystem: Turret12, 4.0, 3.0
+	$Default PBanks: ( "CmnWlth PDTurret" )
+	$Flags:						( "check hull"  "use multiple guns")
+$Subsystem: Turret13, 4.0, 3.0
+	$Default PBanks: ( "CmnWlth PDTurret" )
+	$Flags:						( "check hull"  "use multiple guns")
+$Subsystem: Turret14, 4.0, 3.0
+	$Default PBanks: ( "CmnWlth PDTurret" )
+	$Flags:						( "check hull"  "use multiple guns")
+$Subsystem: Turret15, 4.0, 3.0
+	$Default PBanks: ( "CmnWlth PDTurret" )
+	$Flags:						( "check hull"  "use multiple guns")
+$Subsystem: Turret16, 4.0, 3.0
+	$Default PBanks: ( "CmnWlth PDTurret" )
+	$Flags:						( "check hull"  "use multiple guns")
+
+$Name:		OSD Minnow
+$Short name:				OSDestRefit
+$Species:				OSA
+	+Tech Description:		XSTR( "The Minnow class destroyer is an refit of the Olympia class destroyers. The Minnow has been fitted with 2 of the new Phalanx Particle beam cannons for an extra punch. These new weapons come at the expense of removing the VLS Torpedos and has less muntions for her Plasma Cannons, which reduces her operational effectiveness. The Phalanx Cannons are also tied into the ships reactor and Shockdrive and as such the weapons can only fire for very short periods of time but when firing the cannon is devastating. The Minnow is primarly designed for testing of new systems to be intergrated into the Tempest class Frigates. Despite these short comings the Minnow has proved an effective vessel when supporting Olympia Destroyers and Halbred corvettes. ", -1 )
+$end_multi_text
+$POF file:					Minnow.pof
+$Detail distance: 			(0, 2000, 8000)
+$Density:					1
+$Damp:						0.2
+$Rotdamp:					2.0
+$Max Velocity:				375.0, 375.0, 375.0
+$Rotation time:				200.0, 200.0, 160.0
+$Rear Velocity:				0.0
+$Forward accel:				8.0
+$Forward decel:				4.0
+$Slide accel:				0.0
+$Slide decel:				0.0
+$Warpin Type:				Hyperspace
+$Warpin Start Sound:		Hyperspace_Exit
+$Warpin End Sound:			Hyperspace_Lighter
+$Warpin Speed:				300
+$Warpin Time:				3.0
+$Warpin Decel Exp:			1.0
+$Warpin Radius:				4000
+$Warpout Type:				Hyperspace
+$Warpout Start Sound:		Hyperspace_Start
+$Warpout End Sound:			Hyperspace_Lighter
+$Warpout Engage Time:		1.0
+$Warpout Speed:				300
+$Warpout Time:				2.0
+$Warpout Accel Exp:			1.0
+$Warpout Radius:			4000
+$Expl inner rad:			150.0
+$Expl outer rad:			750.0
+$Expl damage:				200.0
+$Expl blast:				11000.0
+$Expl Propagates:			YES
+$Shockwave Speed:			195.0
+$Shockwave Count:			2
+$Shields:					0
+$Power Output:				100.0
+$Max Oclk Speed:			80.0
+$Max Weapon Eng:			100.0
+$Hitpoints: 					72000
+$Armor Type: 					Heavy Armor 100
+$Flags: 					( "corvette" )
+$AI Class:					Captain
+$Afterburner:				NO
+$Countermeasures:			0
+$Scan time:					2000
+$EngineSnd:					128
+$Closeup_pos:				0.0, 0.0, -1500
+$Closeup_zoom:				0.5
+$Score:						500
+$Subsystem: 	communication, 	8, 0.0
+$Subsystem: 	bridge, 	8, 0.0
+$Subsystem: 	sensors, 			8, 0.0
+$Subsystem: 	navigation, 		8, 0.0
+$Subsystem: 	weapons, 			8, 0.0
+$Subsystem: 	CrewRotationhub, 	8, 0.0
+$Subsystem: 	engine01, 			15, 0.0
+	$Engine Wash: 				Default100
+$Subsystem: 	engine02, 			15, 0.0
+	$Engine Wash: 				Default100
+$Subsystem: Turret01, 4.0, 3.0
+	$Default PBanks: ( "CW120mm-PLC" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret02, 4.0, 3.0
+	$Default PBanks: ( "88mm Arclite cannon" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret03, 4.0, 3.0
+	$Default pBanks: ( "CmnWlth PDTurret" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret04, 4.0, 3.0
+	$Default pBanks: ( "CmnWlth PDTurret" ) 
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret06, 4.0, 3.0
+	$Default PBanks: ( "CW medium Turret" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret07, 4.0, 3.0
+	$Default PBanks: ( "CW120mm-PLC" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret08, 4.0, 3.0
+	$Default PBanks: ( "CmnWlth PDTurret" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret09, 4.0, 3.0
+	$Default PBanks: ( "CmnWlth PDTurret" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret10, 4.0, 3.0
+	$Default PBanks: ( "CmnWlth PDTurret" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret11, 4.0, 3.0
+	$Default PBanks: ( "CW medium Turret" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret12, 4.0, 3.0
+	$Default PBanks: ( "Light Particle Beam" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret13, 4.0, 3.0
+	$Default PBanks: ( "Light Particle Beam" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret14, 4.0, 3.0
+	$Default PBanks: ( "CW120mm-PLC" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret15, 4.0, 3.0
+	$Default PBanks: ( "CmnWlth PDTurret" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret16, 4.0, 3.0
+	$Default PBanks: ( "CmnWlth PDTurret" )
+	$Flags:						( "check hull" "use multiple guns" )
+
+$Name:		OSSC Donnager
+$Short name:				RepublicSciFrigate1
+$Species:				OSA
+	+Tech Description:		XSTR( "The Donnager is an explorer class vessel, designed to map out uncharted systems, asteroid fields and nebula's. It is equipped with all the latest scientific equipment the Republic has to offer. The Donnager class also acts as research outpost, to test out new weapon systems, engine designs, special projects and any other research which is deemed to much of a risk to a planets population. For this reason the Donnager is only armed with minimal weapons, mainly for protection against asteroids.
+
+The Donnager can also act as a colony ship, a large transport vessel due to its modular design. The science hub can be removed and replace with another crewhub, or cargo pods. This makes the donnager very versatile design and has found its way into many of the Republics ship designs. ", -1 )
+$end_multi_text
+$POF file:					URDonnager01.pof
+$Detail distance: 			(0, 2000, 8000)
+$Density:					1
+$Damp:						0.2
+$Rotdamp:					2.0
+$Max Velocity:				0.0, 0.0, 365.0
+$Rotation time:				200.0, 200.0, 160.0
+$Rear Velocity:				0.0
+$Forward accel:				8.0
+$Forward decel:				4.0
+$Slide accel:				0.0
+$Slide decel:				0.0
+$Warpin Type:				Hyperspace
+$Warpin Start Sound:		Hyperspace_Exit
+$Warpin End Sound:			Hyperspace_Lighter
+$Warpin Speed:				300
+$Warpin Time:				3.0
+$Warpin Decel Exp:			1.0
+$Warpin Radius:				4000
+$Warpout Type:				Hyperspace
+$Warpout Start Sound:		Hyperspace_Start
+$Warpout End Sound:			Hyperspace_Lighter
+$Warpout Engage Time:		1.0
+$Warpout Speed:				300
+$Warpout Time:				2.0
+$Warpout Accel Exp:			1.0
+$Warpout Radius:			4000
+$Expl inner rad:			150.0
+$Expl outer rad:			750.0
+$Expl damage:				200.0
+$Expl blast:				11000.0
+$Expl Propagates:			YES
+$Shockwave Speed:			195.0
+$Shockwave Count:			2
+$Shields:					0
+$Power Output:				100.0
+$Max Oclk Speed:			80.0
+$Max Weapon Eng:			100.0
+$Hitpoints:					110000
+$Armor Type: 					Heavy Armor 100
+$Flags: 					( "capital" )
+$AI Class:					Captain
+$Afterburner:				NO
+$Countermeasures:			0
+$Scan time:					2000
+$EngineSnd:					128
+$Closeup_pos:				0.0, 0.0, -1500
+$Closeup_zoom:				0.5
+$Score:						500
+$Subsystem: 	communication, 	8, 0.0
+$Subsystem: 	bridge, 	8, 0.0
+$Subsystem: 	sensors, 			8, 0.0
+$Subsystem: 	navigation, 		8, 0.0
+$Subsystem: 	weapons, 			8, 0.0
+$Subsystem: 	engine01, 			15, 0.0
+	$Engine Wash: 				Default100
+$Subsystem: 	engine02, 			15, 0.0
+	$Engine Wash: 				Default100
+$Subsystem: 	engine03, 			15, 0.0
+	$Engine Wash: 				Default100
+$Subsystem: 	radar01,  		3, 4.0
+$Subsystem: 	radar02,  		3, 4.0
+$Subsystem: 	CrewHub01, 	8, 0.0
+$Subsystem: 	CrewHub02, 	8, 0.0
+$Subsystem: 	ScienceHub01, 	8, 0.0
+$Subsystem: Turret01, 4.0, 3.0
+	$Default PBanks: ( "CW medium Turret" )
+	$Flags:						( "check hull" )
+$Subsystem: Turret02, 4.0, 3.0
+	$Default PBanks: ( "CmnWlth PDTurret" )
+	$Flags:						( "check hull" )
+$Subsystem: Turret03, 4.0, 3.0
+	$Default PBanks: ( "CW medium Turret" )
+	$Flags:						( "check hull" )
+$Subsystem: Turret04, 4.0, 3.0
+	$Default PBanks: ( "CmnWlth PDTurret" )
+	$Flags:						( "check hull" )
+$Subsystem: Turret05, 4.0, 3.0
+	$Default PBanks: ( "CmnWlth PDTurret" )
+	$Flags:						( "check hull" )
+
+
+$Name:		OSFg Tempest
+$Short name:				RepublicFrigate1
+$Species:				OSA
+	+Tech Description:		XSTR( "The Tempest class Frigate commissioned in 2178, is the designed to replace the Olympia and Minnow class Destroyers as the mainstay of the Republic fleet. The Tempests design can be traced back to the Olympia space frame. Ariel Aerospace Corp found that the frame was a sound design, so they decided to upscale the frame. The Tempest is designed to be a sledgehammer, to jump in and devastate the enemy in the opening salvo. To achieve this the Tempest is armed with 4 frontal and 2 rear Phalanx particle beam cannons power by 2 arc reactors and the Shockpoint drive. 1 heavy Arclite Gauss Cannon, 1 CW120, 7 CW88mm Plasma cannons and 2 Hammer torpedo launchers. She is also armed with multiple Close Quarter Weapon System's should hostile vessels get in to close. The only issue raised so far with the design is in the minimal anti-fighter defence and slow speed, but this is compinsated by an escort of Olympia destroyers. So far at aleast 2 dozen of these vessels have been produced at the Luna shipyards with more on order as tensions rise between the United Human Republic and the Colonial Alliance. When a Tempest appears in system you know the Republic means business. ", -1 )
+$end_multi_text
+$POF file:					Tempest.pof
+$Detail distance: 			(0, 2000, 8000)
+$Density:					1
+$Damp:						0.2
+$Rotdamp:					2.0
+$Max Velocity:				365.0, 365.0, 365.0
+$Rotation time:				200.0, 200.0, 160.0
+$Rear Velocity:				0.0
+$Forward accel:				8.0
+$Forward decel:				4.0
+$Slide accel:				0.0
+$Slide decel:				0.0
+$Warpin Type:				Hyperspace
+$Warpin Start Sound:		Hyperspace_Exit
+$Warpin End Sound:			Hyperspace_Lighter
+$Warpin Speed:				300
+$Warpin Time:				3.0
+$Warpin Decel Exp:			1.0
+$Warpin Radius:				4000
+$Warpout Type:				Hyperspace
+$Warpout Start Sound:		Hyperspace_Start
+$Warpout End Sound:			Hyperspace_Lighter
+$Warpout Engage Time:		1.0
+$Warpout Speed:				300
+$Warpout Time:				2.0
+$Warpout Accel Exp:			1.0
+$Warpout Radius:			4000
+$Expl inner rad:			150.0
+$Expl outer rad:			750.0
+$Expl damage:				200.0
+$Expl blast:				11000.0
+$Expl Propagates:			YES
+$Shockwave Speed:			195.0
+$Shockwave Count:			2
+$Shields:					0
+$Power Output:				100.0
+$Max Oclk Speed:			80.0
+$Max Weapon Eng:			100.0
+$Hitpoints:					140000
+$Armor Type: 					Heavy Armor 100
+$Flags: 					( "capital" )
+$AI Class:					Captain
+$Afterburner:				NO
+$Countermeasures:			0
+$Scan time:					2000
+$EngineSnd:					128
+$Closeup_pos:				0.0, 0.0, -1500
+$Closeup_zoom:				0.5
+$Score:						500
+$Subsystem: 	communications, 	8, 0.0
+$Subsystem: 	CrewHub01, 	8, 0.0
+$Subsystem: 	bridge, 	8, 0.0
+$Subsystem: 	sensors, 			8, 0.0
+$Subsystem: 	navigation, 		8, 0.0
+$Subsystem: 	weapons, 			8, 0.0
+$Subsystem: 	Reactor, 			15, 0.0
+	$Engine Wash: 				Default100
+$Subsystem: 	Reactor02, 			15, 0.0
+	$Engine Wash: 				Default100
+$Subsystem: 	engine01, 			15, 0.0
+	$Engine Wash: 				Default100
+$Subsystem: 	engine02, 			15, 0.0
+	$Engine Wash: 				Default100
+$Subsystem: 	radar01,  		3, 4.0
+$Subsystem: Turret01, 4.0, 3.0
+	$Default PBanks: ( "light Particle Beam" )
+	$Flags:						( "check hull" )
+$Subsystem: Turret02, 4.0, 3.0
+	$Default PBanks: ( "light Particle Beam" )
+	$Flags:						( "check hull" )
+$Subsystem: Turret03, 4.0, 3.0
+	$Default PBanks: ( "light Particle Beam" )
+	$Flags:						( "check hull" )
+$Subsystem: Turret04, 4.0, 3.0
+	$Default PBanks: ( "light Particle Beam" )
+	$Flags:						( "check hull" )
+$Subsystem: Turret05, 4.0, 3.0
+	$Default PBanks: ( "light Particle Beam" )
+	$Flags:						( "check hull" )
+$Subsystem: Turret06, 4.0, 3.0
+	$Default PBanks: ( "light Particle Beam" )
+	$Flags:						( "check hull" )
+$Subsystem: Turret07, 4.0, 3.0
+	$Default PBanks: ( "CW120mm-PLC" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret08, 4.0, 3.0
+	$Default PBanks: ( "120mm Arclite cannon" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret09, 4.0, 3.0
+	$Default PBanks: ( "CW120mm-PLC" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret10, 4.0, 3.0
+	$Default pBanks: ( "CW88mm-PLC" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret11, 4.0, 3.0
+	$Default pBanks: ( "CW88mm-PLC" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret12, 4.0, 3.0
+	$Default PBanks: ( "CW88mm-PLC" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret13, 4.0, 3.0
+	$Default PBanks: ( "CW88mm-PLC" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret14, 4.0, 3.0
+	$Default PBanks: ( "CW88mm-PLC" )
+		$Flags:					( "check hull" "use multiple guns" )
+$Subsystem: Turret15, 4.0, 3.0
+	$Default PBanks: ( "CW88mm-PLC" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret16, 4.0, 3.0
+	$Default PBanks: ( "CmnWlth PDTurret" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret17, 4.0, 3.0
+	$Default PBanks: ( "CmnWlth PDTurret" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret18, 4.0, 3.0
+	$Default PBanks: ( "grw burst flak" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret19, 4.0, 3.0
+	$Default PBanks: ( "grw burst flak" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret20, 4.0, 3.0
+	$Default PBanks: ( "cw medium Turret" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret22, 4.0, 3.0
+	$Default PBanks: ( "grw burst flak" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret23, 4.0, 3.0
+	$Default PBanks: ( "CmnWlth PDTurret" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret24, 4.0, 3.0
+	$Default PBanks: ( "grw burst flak" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret25, 4.0, 3.0
+	$Default PBanks: ( "cw medium Turret" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret26, 4.0, 3.0
+	$Default PBanks: ( "grw burst flak" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret27, 4.0, 3.0
+	$Default pBanks: ( "CmnWlth PDTurret" )
+	$Flags:						( "check hull" )
+$Subsystem: Turret29, 4.0, 3.0
+	$Default pBanks: ( "CmnWlth PDTurret" )
+	$Flags:						( "check hull" )
+$Subsystem: Turret30, 4.0, 3.0
+	$Default sBanks: ( "hammer" )
+	$Flags:						( "check hull" )
+$Subsystem: Turret31, 4.0, 3.0
+	$Default sBanks: ( "hammer" )
+	$Flags:						( "check hull" )
+
+
+$Name:		OSFg Heracles
+$Short name:				CmnCarrierFrig
+$Species:				OSA
+	+Tech Description:		XSTR( "United Human Republic's small Carrier, based off the Tempest's hull frame. Most of the heavy weapons from the Tempest have been stripped out for hangerbays, repair and rearm facilitys.", -1 )
+$end_multi_text
+$POF file:					Heracles.pof
+$Detail distance: 			(0, 2000, 8000)
+$Density:					1
+$Damp:						0.2
+$Rotdamp:					2.0
+$Max Velocity:				385.0, 385.0, 385.0
+$Rotation time:				200.0, 200.0, 160.0
+$Rear Velocity:				0.0
+$Forward accel:				8.0
+$Forward decel:				4.0
+$Slide accel:				0.0
+$Slide decel:				0.0
+$Warpin Type:				Hyperspace
+$Warpin Start Sound:		Hyperspace_Exit
+$Warpin End Sound:			Hyperspace_Lighter
+$Warpin Speed:				300
+$Warpin Time:				3.0
+$Warpin Decel Exp:			1.0
+$Warpin Radius:				4000
+$Warpout Type:				Hyperspace
+$Warpout Start Sound:		Hyperspace_Start
+$Warpout End Sound:			Hyperspace_Lighter
+$Warpout Engage Time:		1.0
+$Warpout Speed:				300
+$Warpout Time:				2.0
+$Warpout Accel Exp:			1.0
+$Warpout Radius:			4000
+$Expl inner rad:			150.0
+$Expl outer rad:			750.0
+$Expl damage:				200.0
+$Expl blast:				11000.0
+$Expl Propagates:			YES
+$Shockwave Speed:			195.0
+$Shockwave Count:			2
+$Shields:					0
+$Power Output:				100.0
+$Max Oclk Speed:			80.0
+$Max Weapon Eng:			100.0
+$Hitpoints:					120000
+$Armor Type: 					Heavy Armor 100
+$Flags: 					( "capital" )
+$AI Class:					Captain
+$Afterburner:				NO
+$Countermeasures:			0
+$Scan time:					2000
+$EngineSnd:					128
+$Closeup_pos:				0.0, 0.0, -1500
+$Closeup_zoom:				0.5
+$Score:						500
+$Subsystem: 	communication, 	8, 0.0
+$Subsystem: 	crewhub01, 	8, 0.0
+$Subsystem: 	crewhub02, 	8, 0.0
+$Subsystem: 	bridge, 	8, 0.0
+$Subsystem: 	Reactor, 	8, 0.0
+$Subsystem: 	sensors,
+$Subsystem: 	navigation, 		8, 0.0
+$Subsystem: 	weapons, 			8, 0.0
+$Subsystem: 	fighterbay01, 	8, 0.0
+$Subsystem: 	fighterbay02, 	8, 0.0
+$Subsystem: 	engine01, 			15, 0.0
+	$Engine Wash: 				Default100
+$Subsystem: 	engine02, 			15, 0.0
+	$Engine Wash: 				Default100
+$Subsystem: 	radar01,  		3, 4.0
+$Subsystem: 	radar02,  		3, 4.0
+$Subsystem: Turret01, 4.0, 3.0
+	$Default sBanks: ( "Warhammer" )
+	$Flags:						( "check hull")
+$Subsystem: Turret02, 4.0, 3.0
+	$Default sBanks: ( "Warhammer" )
+	$Flags:						( "check hull")
+$Subsystem: Turret03, 4.0, 3.0
+	$Default SBanks: ( "Hammer" )
+	$Flags:						( "check hull")
+$Subsystem: Turret04, 4.0, 3.0
+	$Default SBanks: ( "CW88mm-PLC" )
+	$Flags:						( "check hull")
+$Subsystem: Turret05, 4.0, 3.0
+	$Default PBanks: ( "CW88mm-PLC" )
+	$Flags:						( "check hull")
+$Subsystem: Turret06, 4.0, 3.0
+	$Default PBanks: ( "CW88mm-PLC" )
+	$Flags:						( "check hull")
+$Subsystem: Turret07, 4.0, 3.0
+	$Default PBanks: ( "CmnWlth PDTurret" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret08, 4.0, 3.0
+	$Default PBanks: ( "CmnWlth PDTurret" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret09, 4.0, 3.0
+	$Default PBanks: ( "CmnWlth PDTurret" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret10, 4.0, 3.0
+	$Default pBanks: ( "CmnWlth PDTurret" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret11, 4.0, 3.0
+	$Default sBanks: ( "Hammer" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret12, 4.0, 3.0
+	$Default PBanks: ( "CW120mm-PLC" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret13, 4.0, 3.0
+	$Default PBanks: ( "CmnWlth PDTurret" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret14, 4.0, 3.0
+	$Default PBanks: ( "grw burst flak" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret15, 4.0, 3.0
+	$Default PBanks: ( "grw burst flak" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret16, 4.0, 3.0
+	$Default PBanks: ( "cw medium Turret" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret17, 4.0, 3.0
+	$Default PBanks: ( "CmnWlth PDTurret" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret18, 4.0, 3.0
+	$Default PBanks: ( "cw medium Turret" )
+	$Flags:						( "check hull" "use multiple guns")
+$Subsystem: Turret19, 4.0, 3.0
+	$Default PBanks: ( "CmnWlth PDTurret" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret20, 4.0, 3.0
+	$Default PBanks: ( "cw medium Turret" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret21, 4.0, 3.0
+	$Default PBanks: ( "grw burst flak" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret22, 4.0, 3.0
+	$Default PBanks: ( "cw medium Turret" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret23, 4.0, 3.0
+	$Default PBanks: ( "CmnWlth PDTurret" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret24, 4.0, 3.0
+	$Default PBanks: ( "grw burst flak" )
+	$Flags:						( "check hull" "use multiple guns" )
+$Subsystem: Turret25, 4.0, 3.0
+	$Default PBanks: ( "cw medium Turret" )
+	$Flags:						( "check hull" "use multiple guns" )
+
+
+$Name: 		AuF Skjoldr
+$Short name: 				AuInterceptF
+$Species: 					Authority
+	+Type: 					XSTR( "Advanced Interceptor", -1 )
+	+Maneuverability: 		XSTR( "Good", -1 )
+	+Armor: 				XSTR( "Average", -1 )
+	+Manufacturer: 			XSTR( "The Authority", -1 )
+	+Description: 			XSTR( " ", -1 )
+$end_multi_text
+	+Tech Description:		XSTR( "We believe that the AuF Enforcer is a fast and deadly craft.  It has a smaller weapons payload than the Berserker, but it has greater staying power than its sibling, which leads us to believe the Enforcer's primary role is interception and surgical strike missions in dense anti-fighter environments.  Once the shields of an Enforcer are down, the fighter can be taken down easily with missiles.", -1 )
+$end_multi_text
+	+Length: 				17 m
+	+Gun Mounts: 			4 (4, 2)
+	+Missile Banks:			2 (80, 40)
+$POF file:						AuF_Skjoldr.pof
+$Detail distance:				(0, 180, 300, 1100)
+$ND:							144 234 237
+$ND:							60 231 239
+$ND:							78 151 156
+$ND:							30 179 189
+$Damage Lightning Type:			None
+$Debris:
+	+Lightning Arc Percent:		0.0
+$Density:						1
+$Damp:							2.0
+$Rotdamp:						0.33
+$Max Velocity:					488.0, 488.0, 488.0
+$Rotation time:					2.8, 2.8, 2.8
+$Rear Velocity:					488.0
+$Forward accel:					10.4
+$Forward decel:					8.4
+$Slide accel:					4.0
+$Slide decel:					4.0
+$Glide:							YES
+	+Dynamic Glide Cap:			YES
+	+Glide Accel Mult:			-1
+$Use Newtonian Dampening:		YES
+$Autoaim FOV:					1
+	+Converging Autoaim
+	+Minimum Distance:			750.0
+$Convergence:					
+	+Automatic
+$Warpin Type:					Hyperspace
+$Warpout Type:					Hyperspace
+$Expl inner rad:				25.0
+$Expl outer rad:				75.0
+$Expl damage:					25.0
+$Expl blast:					1000.0
+$Expl Propagates:				NO
+$Vaporize Percent Chance:		50.0
+$Shockwave Speed:				0.0
+$Weapon Model Draw Distance:	100
+$Allowed PBanks:        ( "Spatha" "Shashka" ) ( "Spatha" "Shashka" )
+$Allowed Dogfight PBanks:        ( "Spatha" "Shashka" ) ( "Spatha" "Shashka" )
+$Default PBanks:				( "Spatha" "Spatha" )
+$Allowed SBanks: ( "Meteor" "Comet" "Glaive" "Atgeir" "Voulge" "Sibyna" "Bardiche" ) ( "Meteor" "Comet" "Glaive" "Atgeir" "Voulge" "Sibyna" "Bardiche" )
+$Allowed Dogfight SBanks: ( "Meteor" "Comet" "Glaive" "Atgeir" "Voulge" "Sibyna" "Bardiche" ) ( "Meteor" "Comet" "Glaive" "Atgeir" "Voulge" "Sibyna" "Bardiche" )
+$Default SBanks:				( "Meteor" "Meteor" )
+$SBank Capacity:				( 30, 60 )
+$Shields:						375
+$Shield Color:					100 100 255
+$Power Output:					3.0
+$Max Oclk Speed:				602.0
+$Max Weapon Eng:				150.0
+$Hitpoints:						350
+$Support Hull Repair Rate:		0.0
+$Armor Type:					Light Armor 100
+$Shield Armor Type:			Light Shields 100
+$Flags:							( "player_ship" "fighter" "generate icon" "show ship" "surface shields" )
+$AI Class:						Captain
+$Afterburner:					YES
+	+Aburn Max Vel:		0.0, 0.0, 1200.0
+	+Aburn For accel:	7.5
+	+Aburn Fuel:		420.0
+	+Aburn Burn Rate:	0.5
+	+Aburn Rec Rate:	0.0
+$Trails:
+	+Bitmap:	ABTrail
+	+Width:		1.0
+	+Alpha:		1.0
+	+Life:		1
+$Countermeasure Type: 			Authority CM
+$Countermeasures:				25
+$Scan time:						2000
+$EngineSnd:						126
+$Closeup_pos:					0.0, 0.0, -30
+$Closeup_zoom:					0.5
+$Score:							12
+$Trail:
+	+Offset:		6.2 -1.27 1.35
+	+Start Width:	0.25
+	+End Width:		0.05
+	+Start Alpha:	1.0
+	+End Alpha:		0.0
+	+Max Life:		1.0
+	+Spew Time:		120
+	+Bitmap:		Contrail01
+$Trail:
+	+Offset:		-6.2 -1.27 1.35
+	+Start Width:	0.25
+	+End Width:		0.05
+	+Start Alpha:	1.0
+	+End Alpha:		0.0
+	+Max Life:		1.0
+	+Spew Time:		120
+	+Bitmap:		Contrail01
+$Trail:
+	+Offset:		4.0 2.37 -5.05
+	+Start Width:	0.25
+	+End Width:		0.05
+	+Start Alpha:	1.0
+	+End Alpha:		0.0
+	+Max Life:		1.0
+	+Spew Time:		120
+	+Bitmap:		Contrail01
+$Trail:
+	+Offset:		-4.0 2.37 -5.05
+	+Start Width:	0.25
+	+End Width:		0.05
+	+Start Alpha:	1.0
+	+End Alpha:		0.0
+	+Max Life:		1.0
+	+Spew Time:		120
+	+Bitmap:		Contrail01
+$Trail:
+	+Offset:		3.9 -1.6 -1.4
+	+Start Width:	0.25
+	+End Width:		0.05
+	+Start Alpha:	1.0
+	+End Alpha:		0.0
+	+Max Life:		1.0
+	+Spew Time:		120
+	+Bitmap:		Contrail01
+$Trail:
+	+Offset:		-3.9 -1.6 -1.4
+	+Start Width:	0.25
+	+End Width:		0.05
+	+Start Alpha:	1.0
+	+End Alpha:		0.0
+	+Max Life:		1.0
+	+Spew Time:		120
+	+Bitmap:		Contrail01
+$Trail:
+	+Offset:		0.0 -2.52 -2.68
+	+Start Width:	0.25
+	+End Width:		0.05
+	+Start Alpha:	1.0
+	+End Alpha:		0.0
+	+Max Life:		1.0
+	+Spew Time:		120
+	+Bitmap:		Contrail01
+$Subsystem:		sensors, 			10, 0.0
+$Subsystem:		communication, 		10, 0.0
+$Subsystem:		weapons, 			10, 0.0
+$Subsystem:		navigation, 		10, 0.0
+$Subsystem:		engine, 			35, 0.0
+
+
+$Name:                          AuF Gladiator
+$Short name:					AuAdvAsltFight
+$Species:                       Authority
+	+Type:						XSTR("Advanced Assault", -1)
+	+Maneuverability:			XSTR("Average", -1)
+	+Armor:						XSTR("Heavy", -1)
+	+Manufacturer:				XSTR("The Authority", -1)
+	+Description:				XSTR(" ", -1)
+$end_multi_text
+	+Tech Description:
+XSTR("First encountered in the Upsilon Andromedae system by the GRCa Shivaji, the AuF Gladiator appears to be the Authority's advanced assault fighter. It boasts two caverous secondary banks and eight primary gun points. The Gladiator is extremely well defended against our weapons, with thick armor and powerful shielding that we've never seen before. We've also observed that the Gladiator possess the ability to outrun our fighters, as well as advanced stealth and cloaking capabilities. Despite its shortcomings, the Gladiator is primarily deployed in heavy assault and defense roles, where its eight primary hardpoints can be put to use against hardened targets, and its missile capacity can suppress fighters with ease.", -1)
+$end_multi_text
+	+Length:          32 m
+	+Gun Mounts:      8 (4, 4)
+	+Missile Banks:   2 (100, 100)
+
+$POF file:                      AuF_Gladiator.pof
+$Detail distance:				(0, 300, 600, 1200)
+$Show damage:					YES
+$Damage Lightning Type:			None
+$Debris:
+	+Lightning Arc Percent:		0.0
+$Density:                       1
+$Damp:                          2.5
+$Rotdamp:                       0.4
+$Banking Constant:				0.52
+$Max Velocity:					222.0, 222.0, 473.0                  ;; in x/y/z -- z only specified forward.  use special tokens for backward movement
+$Rotation time:					3.4, 3.8, 3.4
+$Rear Velocity:					473.0
+$Forward accel:					18.0
+$Forward decel:					9.55
+$Slide accel:					2.0
+$Slide decel:					2.0
+$Glide:							YES
+	+Dynamic Glide Cap:			YES
+	+Glide Accel Mult:			-1
+$Use Newtonian Dampening:		YES
+$Autoaim FOV:					1
+	+Converging Autoaim
+	+Minimum Distance:			750.0
+$Convergence:					
+	+Automatic
+$Warpin Type:					Hyperspace
+$Warpout Type:					Hyperspace
+$Expl inner rad:				25.0
+$Expl outer rad:				75.0
+$Expl damage:					25.0
+$Expl blast:					1000.0
+$Expl Propagates:				NO			;; If set to Yes, then when the ship dies, the explosion propagates through it.
+$Vaporize Percent Chance:		50.0
+$Shockwave Speed:				0.0			;; speed shockwave expands at, 0 means no shockwave
+$Allowed PBanks:        ( "Spatha" "Shashka" ) ( "Spatha" "Shashka" )
+$Allowed Dogfight PBanks:        ( "Spatha" "Shashka" ) ( "Spatha" "Shashka" )
+$Default PBanks:				( "Spatha" "Shashka" )
+$Allowed SBanks: ( "Meteor" "Comet" "Glaive" "Atgeir" "Voulge" "Sibyna" "Bardiche" ) ( "Meteor" "Comet" "Glaive" "Atgeir" "Voulge" "Sibyna" "Bardiche" )
+$Allowed Dogfight SBanks: ( "Meteor" "Comet" "Glaive" "Atgeir" "Voulge" "Sibyna" "Bardiche" ) ( "Meteor" "Comet" "Glaive" "Atgeir" "Voulge" "Sibyna" "Bardiche" )
+$Default SBanks:				( "Comet" "Meteor" )
+$SBank Capacity:				( 100, 100 )
+$Shields:						700
+$Shield Color:					50 50 255
+$Power Output:					5.5
+$Max Oclk Speed:				578.0
+$Max Weapon Eng:				250.0
+$Hitpoints:                     350
+$Armor Type: 					Light Armor 100
+$Shield Armor Type:			Light Shields 100
+$Flags:                         ( "player_ship" "fighter" "generate icon" "show ship" "surface shields" )
+$AI Class:                      Captain
+$Afterburner:					YES
+	+Aburn Max Vel:				0.0, 0.0, 1080.0
+	+Aburn For accel:			7.5
+	+Aburn Fuel:				360.0
+	+Aburn Burn Rate:			0.45
+	+Aburn Rec Rate:			0.0
+$Countermeasure Type: 			Authority CM
+$Countermeasures:				25
+$Scan time:                     2000
+$EngineSnd:						126                   ;; Engine sound of ship
+$Closeup_pos:					0.0, 0.0, -40
+$Closeup_zoom:					0.5
+$Score:							12
+
+$Subsystem:                     Sensors,                            10,0.0
+$Subsystem:                     Communication, 					10,0.0
+$Subsystem:                     Weapons,                            10,0.0
+$Subsystem:                     Navigation,                     	10,0.0
+$Subsystem:                     Engine01,                         	35,0.0
+$Subsystem:                     Engine02,                         	35,0.0
+
+
+$Name:                          AuF Starstrider
+$Short name:                    TFight2t-03
+$Species:                       Authority
++Type:                          XSTR("Advanced Stealth Interceptor", 2981)
++Maneuverability:               XSTR("Good", 2982)
++Armor:                         XSTR("Average", 2983)
++Manufacturer:                  XSTR("The Authority", 2984)
++Description:					XSTR(" ", 2985)
+$end_multi_text
++Tech Description:
+XSTR("The Starstrider is a new and unprecedented fighter design. As a stealth fighter, one would expect this ship to be poorly armed, but it is in fact very lethal: it can carry almost any laser, projectile and missile in existance. It also has unprecedented speed for any ship, maxing out at around 250 meters per second. This diversity of firepower and excessive speed is curtailed by a small weapons energy, light shielding, and light armour. Given the appropriate adjustments, it can double as a stealth bomber.", -1)
+$end_multi_text
++Length:						12 m
++Gun Mounts:					1
++Missile Banks:					2
+
+$POF file:                      		AuF_Starstrider.pof
+$Detail distance:				(0)
+$Show damage:					YES
+$Damage Lightning Type:			None
+$Debris:
+	+Lightning Arc Percent:		0.0
+$Density:                       		1
+$Damp:                          		0.75
+$Rotdamp:                       		0.35
+$Max Velocity:					0.0, 0.0, 502.0                  ;; in x/y/z -- z only specified forward.  use special tokens for backward movement
+$Rotation time:					3.8, 3.8, 3.8
+$Rear Velocity:					0.0
+$Forward accel:					13.0
+$Forward decel:					10.0
+$Slide accel:					0.0
+$Slide decel:					0.0
+$Glide:							YES
+	+Dynamic Glide Cap:			YES
+	+Glide Accel Mult:			-1
+$Use Newtonian Dampening:		YES
+$Autoaim FOV:					1
+	+Converging Autoaim
+	+Minimum Distance:			750.0
+$Convergence:					
+	+Automatic
+$Warpin Type:					Hyperspace
+$Warpout Type:					Hyperspace
+$Expl inner rad:				25.0
+$Expl outer rad:				150.0
+$Expl damage:					100.0
+$Expl blast:					1000.0
+$Expl Propagates:				YES                       ;; If set to Yes, then when the ship dies, the explosion propagates through it.
+$Vaporize Percent Chance:		50.0
+$Shockwave Speed:				25.0                      ;; speed shockwave expands at, 0 means no shockwave
+$Shockwave Count:				1
+$Allowed PBanks:        ( "Spatha" "Shashka" )
+$Allowed Dogfight PBanks:        ( "Spatha" "Shashka" )
+$Default PBanks:				( "Spatha" )
+$Allowed SBanks: ( "Meteor" "Comet" "Glaive" "Atgeir" "Voulge" "Sibyna" "Bardiche" ) ( "Meteor" "Comet" "Glaive" "Atgeir" "Voulge" "Sibyna" "Bardiche" )
+$Allowed Dogfight SBanks: ( "Meteor" "Comet" "Glaive" "Atgeir" "Voulge" "Sibyna" "Bardiche" ) ( "Meteor" "Comet" "Glaive" "Atgeir" "Voulge" "Sibyna" "Bardiche" )
+$Default SBanks:				( "Comet" "Comet" )
+$SBank Capacity:				( 40, 40 )
+$Shields:                       		350
+$Shield Color:					100 175 255
+$Power Output:					2.0
+$Max Oclk Speed:				624.0
+$Max Weapon Eng:				100.0
+$Hitpoints:                     200
+$Armor Type: 					Light Armor 100
+$Shield Armor Type:			Light Shields 100
+$Flags:                         		( "fighter" "generate icon" "show ship" "surface shields" )
+$AI Class:                      		Captain
+$Afterburner:					YES
+	+Aburn Max Vel:			0.0, 0.0, 1300.0
+	+Aburn For accel:       8.0
+	+Aburn Fuel:            330.0
+	+Aburn Burn Rate:       65.0
+	+Aburn Rec Rate:        30.0
+$Countermeasure Type: 			Authority CM
+$Countermeasures:			40
+$Scan time:                 		2000
+$EngineSnd:				126                   ;; Engine sound of ship
+$Closeup_pos:			0.0, 0.0, -40
+$Closeup_zoom:			0.5
+$Score:				14
+$Trail:
+	+Offset:		6.51 -1.76 -3.37
+	+Start Width:	0.25
+	+End Width:		0.05
+	+Start Alpha:	1.0
+	+End Alpha:		0.0
+	+Max Life:		1.0
+	+Spew Time:		120
+	+Bitmap:		Contrail01
+$Trail:
+	+Offset:		-6.51 -1.76 -3.37
+	+Start Width:	0.25
+	+End Width:		0.05
+	+Start Alpha:	1.0
+	+End Alpha:		0.0
+	+Max Life:		1.0
+	+Spew Time:		120
+	+Bitmap:		Contrail01
+$Trail:
+	+Offset:		0 -4.30 -5.08
+	+Start Width:	0.25
+	+End Width:		0.05
+	+Start Alpha:	1.0
+	+End Alpha:		0.0
+	+Max Life:		1.0
+	+Spew Time:		120
+	+Bitmap:		Contrail01
+$Subsystem:                     sensors,                        10,0.0
+$Subsystem:                     communications,					10,0.0
+$Subsystem:                     weapons,                        10,0.0
+$Subsystem:                     navigation,                     10,0.0
+$Subsystem:                     engine,                         35,0.0
+
+
+$Name: 		AuF Streltsy
+$Short name:					TIntDraco
+$Species: 						Authority
+	+Type: 						XSTR("Interceptor", -1)
+	+Maneuverability:			XSTR("High", -1)
+	+Armor: 					XSTR("Average", -1)
+	+Manufacturer:				XSTR("The Authority", -1)
+	+Description:				XSTR(" ", -1)
+$end_multi_text
+	+Tech Description:			XSTR( "Initial encounters with the AuF Arrowhead were reported on many occassions, leading us to believe that this craft more of a heavy reconnaissance fighter that we presumed to be the Authority's best.", -1 )
+$end_multi_text
+	+Length:					22 Meters
+	+Gun Mounts:				4 (4)
+	+Missile Banks:				2 (40, 40)
+$POF file: 						AuF_Streltsy.pof
+$Detail distance: 				(0, 30, 350, 800)
+$Damage Lightning Type:			None
+$Debris:
+	+Lightning Arc Percent:		0.0
+$Density: 						1
+$Damp: 							1.50
+$Rotdamp: 						0.25
+$Max Velocity: 					240.0, 240.0, 480.0
+$Rotation time: 				3.1, 3.1, 2.1
+$Rear Velocity: 				480.0
+$Forward accel: 				13.2
+$Forward decel: 				10.2
+$Slide accel: 					1.0
+$Slide decel: 					0.5
+$Glide:							YES
+	+Dynamic Glide Cap:			YES
+	+Glide Accel Mult:			-1
+$Use Newtonian Dampening:		YES
+$Autoaim FOV:					1
+	+Converging Autoaim
+	+Minimum Distance:			750.0
+$Convergence:					
+	+Automatic
+$Warpin Type:					Hyperspace
+$Warpout Type:					Hyperspace
+$Expl inner rad: 				25.0
+$Expl outer rad: 				75.0
+$Expl damage: 					25.0
+$Expl blast: 					1000.0
+$Expl Propagates: 				NO
+$Vaporize Percent Chance:		50.0
+$Shockwave Speed: 				0.0
+$Weapon Model Draw Distance:	100
+$Allowed PBanks:        ( "Spatha" "Shashka" )
+$Allowed Dogfight PBanks:        ( "Spatha" "Shashka" )
+$Default PBanks:        ( "Spatha" )
+$Allowed SBanks: ( "Meteor" "Comet" "Glaive" "Atgeir" "Voulge" "Sibyna" "Bardiche" ) ( "Meteor" "Comet" "Glaive" "Atgeir" "Voulge" "Sibyna" "Bardiche" )
+$Allowed Dogfight SBanks: ( "Meteor" "Comet" "Glaive" "Atgeir" "Voulge" "Sibyna" "Bardiche" ) ( "Meteor" "Comet" "Glaive" "Atgeir" "Voulge" "Sibyna" "Bardiche" )
+$Default SBanks: 				( "Comet" "Comet" )
+$SBank Capacity: 				( 40, 40 )
+$Shields: 						375
+$Shield Color:					100 100 255
+$Power Output: 					2.0
+$Max Oclk Speed: 				580.0
+$Max Weapon Eng: 				150.0
+$Hitpoints: 					290
+$Support Hull Repair Rate: 		0.0
+$Armor Type: 					Light Armor 100
+$Shield Armor Type:			Light Shields 100
+$Flags: 						( "player_ship" "fighter" "generate icon" "surface shields" "show ship" )
+$AI Class: 						Captain
+$Afterburner: YES
+	+Aburn Max Vel:		0.0, 0.0, 1300.0
+	+Aburn For accel:	7.0
+	+Aburn Fuel:		500.0
+	+Aburn Burn Rate:	0.4
+	+Aburn Rec Rate:	0.0
+$Trails:
+	+Bitmap:	ABTrail
+	+Width:		1.0
+	+Alpha:		1.0
+	+Life:		1
+$Countermeasure Type: 			Authority CM
+$Countermeasures: 				40
+$Scan time:						2200
+$EngineSnd:						126
+$Closeup_pos: 					0.0, 0.0, -20
+$Closeup_zoom: 					0.55
+$Score:							15
+
+;$Glowpoint overrides: ( "blue_glow4_small_20:1" "red_glow_20:2" "green_glow_20:3" "red_glow_20:4" )
+$Subsystem: 	engines, 			40, 0.0
+$Subsystem: 	weapons, 			10, 0.0
+$Subsystem: 	sensors, 			10, 0.0
+$Subsystem: 	communications, 	10, 0.0
+$Subsystem: 	navigation, 		10, 0.0
+
+
+$Subsystem:				wingL,0,2
+$Alt Damage Popup Subsystem Name:       name
+$Flags:  ( "untargetable" "carry no damage" )	
+$animation:			triggered
+	$type:			Afterburner
+	+delay:			0
+	+reverse_delay:         3000
+        +relative_angle:        0,61,0
+	+velocity:		100,100,100
+	+acceleration:	        100,100,100
+	+time:			1000           
+
+$Subsystem:				wingR,0,2
+$Alt Damage Popup Subsystem Name:       name
+$Flags:  ( "untargetable" "carry no damage" )	
+$animation:			triggered
+	$type:			Afterburner
+	+delay:			0
+	+reverse_delay:         3000
+        +relative_angle:        0,-61,0 
+	+velocity:		100,100,100
+	+acceleration:	        100,100,100
+	+time:			1000    
+
+
+$Subsystem:				wingL1,0,2
+$Alt Damage Popup Subsystem Name:       name
+$Flags:  ( "untargetable" "carry no damage" )	
+$animation:			triggered
+	$type:			Afterburner
+	+delay:			0
+	+reverse_delay:         3000
+        +relative_angle:        0,61,0
+	+velocity:		100,100,100
+	+acceleration:	        100,100,100
+	+time:			1000           
+
+$Subsystem:				wingR1,0,2
+$Alt Damage Popup Subsystem Name:       name
+$Flags:  ( "untargetable" "carry no damage" )	
+$animation:			triggered
+	$type:			Afterburner
+	+delay:			0
+	+reverse_delay:         3000
+        +relative_angle:        0,-61,0 
+	+velocity:		100,100,100
+	+acceleration:	        100,100,100
+	+time:			1000  
+
+
+$Subsystem:				wingL2,0,2
+$Alt Damage Popup Subsystem Name:       name
+$Flags:  ( "untargetable" "carry no damage" )	
+$animation:			triggered
+	$type:			Afterburner
+	+delay:			0
+	+reverse_delay:         3000
+        +relative_angle:        0,61,0
+	+velocity:		100,100,100
+	+acceleration:	        100,100,100
+	+time:			1000           
+
+$Subsystem:				wingR2,0,2
+$Alt Damage Popup Subsystem Name:       name
+$Flags:  ( "untargetable" "carry no damage" )	
+$animation:			triggered
+	$type:			Afterburner
+	+delay:			0
+	+reverse_delay:         3000
+        +relative_angle:        0,-61,0 
+	+velocity:		100,100,100
+	+acceleration:	        100,100,100
+	+time:			1000  
+
+
+$Subsystem:				wingL3,0,2
+$Alt Damage Popup Subsystem Name:       name
+$Flags:  ( "untargetable" "carry no damage" )	
+$animation:			triggered
+	$type:			Afterburner
+	+delay:			0
+	+reverse_delay:         3000
+        +relative_angle:        0,61,0
+	+velocity:		100,100,100
+	+acceleration:	        100,100,100
+	+time:			1000           
+
+$Subsystem:				wingR3,0,2
+$Alt Damage Popup Subsystem Name:       name
+$Flags:  ( "untargetable" "carry no damage" )	
+$animation:			triggered
+	$type:			Afterburner
+	+delay:			0
+	+reverse_delay:         3000
+        +relative_angle:        0,-61,0 
+	+velocity:		100,100,100
+	+acceleration:	        100,100,100
+	+time:			1000  
+
+
+$Name:					AuB Raptor
+$Short name:            AuAssaultBomb
+$Species:				Authority
++Tech Description:
+XSTR("The GTB Stheno is the Alliance's Nephilim.  This monstrosity took many of the design aspects of the Medusa, and purposed them for objectives greater than that of the Ursa.  With the heaviest shielding ever fielded on a GTVA craft, advanced armor, decent thrusters, 10 primary hardpoints and 4 missile bays, the Stheno tears through capital formations with unprecedented efficiency.", -1)
+$end_multi_text
++Length:          50 m
++Gun Mounts:      10
++Missile Banks:   4
+
+$POF file:                      AuB_Raptor.pof
+$Detail distance:       (0, 150, 550, 1300)
+$Show damage:           YES
+$Damage Lightning Type:			None
+$Debris:
+	+Lightning Arc Percent:		0.0
+$Density:               1
+$Damp:                  1.2
+$Rotdamp:               0.55
+$Max Velocity:          0.0, 0.0, 477.0
+$Rotation time:         4.5, 5.0, 5.0
+$Rear Velocity:         462.0
+$Forward accel:         36.0
+$Forward decel:         27.0
+$Slide accel:           36.0
+$Slide decel:           27.0
+$Glide:							YES
+	+Dynamic Glide Cap:			YES
+	+Glide Accel Mult:			-1
+$Use Newtonian Dampening:		YES
+$Autoaim FOV:					1
+	+Converging Autoaim
+	+Minimum Distance:			750.0
+$Convergence:					
+	+Automatic
+$Warpin Type:					Hyperspace
+$Warpout Type:					Hyperspace
+$Expl inner rad:        100.0
+$Expl outer rad:        175.0
+$Expl damage:           50.0
+$Expl blast:            2000.0
+$Expl Propagates:       NO                                                      ;; If set to Yes, then when the ship dies, the explosion propagates through it.
+$Vaporize Percent Chance:		50.0
+$Shockwave Speed:       0.0                                             ;; speed shockwave expands at, 0 means no shockwave
+$Allowed PBanks:        ( "Spatha" "Shashka" ) ( "Spatha" "Shashka" ) ( "Spatha" "Shashka" )
+$Allowed Dogfight PBanks:        ( "Spatha" "Shashka" ) ( "Spatha" "Shashka" ) ( "Spatha" "Shashka" )
+$Default PBanks:        ( "Spatha" "Spatha" "Spatha" )
+$Allowed SBanks: ( "Meteor" "Comet" "Glaive" "Atgeir" "Voulge" "Sibyna" "Bardiche" ) ( "Meteor" "Comet" "Glaive" "Atgeir" "Voulge" "Sibyna" "Bardiche" ) ( "Meteor" "Comet" "Glaive" "Atgeir" "Voulge" "Sibyna" "Bardiche" ) ( "Meteor" "Comet" "Glaive" "Atgeir" "Voulge" "Sibyna" "Bardiche" )
+$Allowed Dogfight SBanks: ( "Meteor" "Comet" "Glaive" "Atgeir" "Voulge" "Sibyna" "Bardiche" ) ( "Meteor" "Comet" "Glaive" "Atgeir" "Voulge" "Sibyna" "Bardiche" ) ( "Meteor" "Comet" "Glaive" "Atgeir" "Voulge" "Sibyna" "Bardiche" ) ( "Meteor" "Comet" "Glaive" "Atgeir" "Voulge" "Sibyna" "Bardiche" )
+$Default SBanks:        ( "Bardiche" "Comet" "Voulge" "Sibyna" )
+$SBank Capacity:        ( 160, 120, 120, 160 )
+$Shields:               1250
+$Shield Color:			100 100 255
+$Power Output:          6.5
+$Max Oclk Speed:        509.0
+$Max Weapon Eng:        350.0
+$Hitpoints:                     950
+$Armor Type: 					Light Armor 100
+$Shield Armor Type:			Light Shields 100
+$Flags:                         ( "player_ship" "bomber" "generate icon" "show ship" )
+$AI Class:                      Captain
+$Afterburner:           YES
+	+Aburn Max Vel: 0.0, 0.0, 1295.0
+	+Aburn For accel:       7.0
+	+Aburn Fuel:            300.0
+	+Aburn Burn Rate:       0.8
+	+Aburn Rec Rate:        0.0
+$Countermeasure Type: 			Authority CM
+$Countermeasures:       50
+$Scan time:                     2000
+$EngineSnd:       127                   ;; Engine sound of ship
+$Closeup_pos:           0.0, 0.0, -69
+$Closeup_zoom:          0.5
+$Score:                 50
+
+
+
+$Subsystem:                     communication, 10,     0.0
+$Subsystem:                     navigation,                     10,     0.0
+$Subsystem:                     weapons,                                20,     0.0
+$Subsystem:                     sensors,                                10,     0.0
+$Subsystem:                     Engine01,                         25,     0.0
+$Subsystem:                     Engine02,                         25,     0.0
+$Subsystem:                     Engine03,                         35,     0.0
+$Subsystem:                     Engine04,                         35,     0.0
+$Subsystem:                     turret01-base, 5, 1.0
+	$Default PBanks:        ( "Spatha" )
+$Subsystem:                     turret02-base, 5, 1.0
+	$Default PBanks:        ( "Spatha" )
+$Subsystem:                     turret03-base, 5, 1.0
+	$Default PBanks:        ( "Spatha" )
+$Subsystem:                     turret04-base, 5, 1.0
+	$Default PBanks:        ( "Spatha" )
+
+
+$Name: 		AuFg Condor
+$Short name: 				AuMRFrig
+$Species: 					Authority
+	+Tech Description:		XSTR( "The Phoenix Rising multirole frigate is the brainchild of Alisa Deinhart.  The ship's primary armament is 6 Tiger Claw VLS Launchers that give it unrivaled tactical versatility and long range engagement capability.  This powerful weapons platform is defended by an intense phalanx of plasma, laser and EMP weaponry.  The engines are specially designed to optimize output impulse and efficiency, making the Phoenix Rising is the fastest Authority warship to date.", -1 )
+$end_multi_text
+$POF file: 					AuFg_Condor.pof
+$Detail distance: 			(0, 3000, 7000, 12000)
+$Damage Lightning Type:			None
+$Debris:
+	+Lightning Arc Percent:		0.0
+$Density: 					1.2
+$Damp: 					0.4
+$Rotdamp: 					2.4
+$Max Velocity: 				368.0, 368.0, 368.0
+$Rotation time: 			120.0, 120.0, 120.0
+$Rear Velocity: 			0.0
+$Forward accel: 			16.0
+$Forward decel: 			8.0
+$Slide accel: 			0.0
+$Slide decel: 			0.0
+$Glide:							YES
+	+Dynamic Glide Cap:			YES
+$Use Newtonian Dampening:		YES
+$Warpin Type:					Hyperspace
+$Warpout Type:					Hyperspace
+$Expl inner rad: 			400.0
+$Expl outer rad: 			1200.0
+$Expl damage: 			250.0
+$Expl blast: 			12500.0
+$Expl Propagates: 		YES
+$Shockwave Speed: 		280.0
+$Shockwave Count: 		3
+$Default PBanks: 			()
+$Default SBanks: 			()
+$SBank Capacity: 			()
+$Shields: 				70000
+$Shield Color:					100 100 255
+$Power Output: 			100.0
+$Max Oclk Speed: 			375.0
+$Max Weapon Eng: 			100.0
+$Hitpoints: 				70000
+$Armor Type: 					Heavy Armor 100
+$Shield Armor Type:    Heavy Shields 100
+$Flags: 					( "frigate" "big damage" "dont collide invisible" "generate icon" )
+$AI Class: 					Captain
+$Afterburner: 				NO
+$Countermeasures: 			0
+$Scan time: 				2000
+$EngineSnd: 				128
+$Closeup_pos: 				0.0, 0.0, -1800
+$Closeup_zoom: 				0.5
+$Score: 					500
+$Subsystem: 	engine01, 			20, 0.0
+	$Engine Wash: 				Default800
+$Subsystem: 	engine02, 			20, 0.0
+	$Engine Wash: 				Default800
+$Subsystem: 	engine03, 			30, 0.0
+	$Engine Wash: 				Default800
+$Subsystem: 	engine04, 			30, 0.0
+	$Engine Wash: 				Default800
+$Subsystem: 	fighterbay01, 		7, 0.0
+$Subsystem: 	fighterbay02, 		7, 0.0
+$Subsystem: 	Navigation, 		5, 0.0
+$Subsystem: 	Sensors, 			5, 0
+$Subsystem: 	Weapons, 			10, 0
+$Subsystem: 	Communication, 		5, 0
+$Subsystem: 	Bridge, 		5, 0
+$Subsystem: 	turret01-base, 			10.0, 4.0
+	$Default PBanks: 			( "Dragon Pulse" )
+	$Turret Base RotationSnd: 	254
+	$Turret Gun RotationSnd: 	255
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Flags: 					( "fire down normals" "check hull" "salvo mode" "collide submodel" )
+	$animation: 				triggered
+	$type: 						initial
+		+relative_angle: 		90,180,0
+$Subsystem: 	turret02-base,  			10.0, 4.0
+	$Default PBanks: 			( "Dragon Pulse" )
+	$Turret Base RotationSnd: 	254
+	$Turret Gun RotationSnd: 	255
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Flags: 					( "fire down normals" "check hull" "salvo mode" "collide submodel" )
+	$animation: 				triggered
+	$type: 						initial
+		+relative_angle: 		90,180,0
+$Subsystem: 	turret03,  			10.0, 1.0
+	$Default SBanks: 			( "Ranseur" "Ranseur" "Ranseur" "Ranseur" )
+	$Flags: 					( "fire down normals" )
+
+$Subsystem: 	turret04,  			10.0, 1.0
+	$Default SBanks: 			( "Ranseur" "Ranseur" "Ranseur" "Ranseur" )
+	$Flags: 					( "fire down normals" )
+
+$Subsystem: 	turret05,  			10.0, 1.0
+	$Default SBanks: 			( "Sovnya" "Sovnya" "Sovnya" "Sovnya" )
+	$Flags: 					( "fire down normals" )
+
+$Subsystem: 	turret06,  			10.0, 1.0
+	$Default SBanks: 			( "Sovnya" "Sovnya" "Sovnya" "Sovnya" )
+	$Flags: 					( "fire down normals" )
+
+$Subsystem: 	turret07,  			10.0, 1.0
+	$Default SBanks: 			( "Diamondback" "Diamondback" "Diamondback" "Diamondback" ) 	
+	$Flags: 					( "fire down normals" )
+
+$Subsystem: 	turret08,  			10.0, 1.0
+	$Default SBanks: 			( "Diamondback" "Diamondback" "Diamondback" "Diamondback" ) 	
+	$Flags: 					( "fire down normals" )
+
+$Subsystem: 	turret09-base,  			5.0, 2.0
+	$Default PBanks: 			( "Kestrel PD Pulse" )
+	$Flags: 					( "check hull" "collide submodel" )
+$Subsystem: 	turret10-base,  			5.0, 2.0
+	$Default PBanks: 			( "Kestrel PD Pulse" )
+	$Flags: 					( "check hull" "collide submodel" )
+$Subsystem: 	turret11-base,  			5.0, 2.0
+	$Default PBanks: 			( "Falcon Pulse" )
+	$Flags: 					( "check hull" "collide submodel" )
+$Subsystem: 	turret12-base,  			5.0, 2.0
+	$Default PBanks: 			( "Falcon Pulse" )
+	$Flags: 					( "check hull" "collide submodel" )
+$Subsystem: 	turret13-base,  			5.0, 2.0
+	$Default PBanks: 			( "Falcon Pulse" )
+	$Flags: 					( "check hull" "collide submodel" )
+$Subsystem: 	turret14-base,  			5.0, 2.0
+	$Default PBanks: 			( "Falcon Pulse" )
+	$Flags: 					( "check hull" "collide submodel" )
+$Subsystem: 	turret15-base,  			5.0, 2.0
+	$Default PBanks: 			( "Falcon Pulse" )
+	$Flags: 					( "check hull" "collide submodel" )
+$Subsystem: 	turret16-base,  			5.0, 2.0
+	$Default PBanks: 			( "Falcon Pulse" )
+	$Flags: 					( "check hull" "collide submodel" )
+$Subsystem: 	turret17,  			5.0, 1.0
+	$Default PBanks: 			( "Authority A-F BeamSlash" )
+	$Flags: 					( "check hull" )
+$Subsystem: 	turret18,  			5.0, 1.0
+	$Default PBanks: 			( "Authority A-F BeamSlash" )
+	$Flags: 					( "check hull" )
+$Subsystem: 	turret19,  			5.0, 1.0
+	$Default PBanks: 			( "Authority A-F BeamSlash" )
+	$Flags: 					( "check hull" )
+$Subsystem: 	turret20,  			5.0, 1.0
+	$Default PBanks: 			( "Authority A-F BeamSlash" )
+	$Flags: 					( "check hull" )
+$Subsystem: 	turret21,  			5.0, 1.0
+	$Default PBanks: 			( "Authority A-F BeamSlash" )
+	$Flags: 					( "check hull" )
+$Subsystem: 	turret22,  			5.0, 1.0
+	$Default PBanks: 			( "Authority A-F BeamSlash" )
+	$Flags: 					( "check hull" )
+$Subsystem: 	turret23,  			5.0, 1.0
+	$Default PBanks: 			( "Authority A-F BeamSlash" )
+	$Flags: 					( "check hull" )
+$Subsystem: 	turret24,  			5.0, 1.0
+	$Default PBanks: 			( "Specter EMP" )
+	$Flags: 					( "check hull" )
+$Subsystem: 	turret25,  			5.0, 1.0
+	$Default PBanks: 			( "Specter EMP" )
+	$Flags: 					( "check hull" )
+$Subsystem: 	turret26,  			5.0, 1.0
+	$Default PBanks: 			( "Specter EMP" )
+	$Flags: 					( "check hull" )
+$Subsystem: 	turret27,  			5.0, 1.0
+	$Default PBanks: 			( "Specter EMP" )
+	$Flags: 					( "check hull" )
+$Subsystem: 	turret28,  			5.0, 1.0
+	$Default PBanks: 			( "Specter EMP" )
+	$Flags: 					( "check hull" )
+$Subsystem: 	turret29,  			5.0, 1.0
+	$Default PBanks: 			( "Specter EMP" )
+	$Flags: 					( "check hull" )
+$Subsystem: 	turret30,  			5.0, 1.0
+	$Default PBanks: 			( "Kestrel PD Pulse" )
+	$Flags: 					( "check hull" )
+$Subsystem: 	turret31,  			5.0, 1.0
+	$Default PBanks: 			( "Kestrel PD Pulse" )
+	$Flags: 					( "check hull" )
+$Subsystem: 	turret32,  			5.0, 1.0
+	$Default PBanks: 			( "Falcon Pulse" )
+	$Flags: 					( "check hull" )
+$Subsystem: 	turret33,  			5.0, 1.0
+	$Default PBanks: 			( "Falcon Pulse" )
+	$Flags: 					( "check hull" )
+$Subsystem:		FB1DB,		0.0, 8.0
+	$Flags:				( "untargetable" )
+	$animation:			triggered
+	$type:				fighterbay
+		+delay:			0
+		+reverse_delay:		6000
+		+relative_angle:		0.000, 0.000, 90.000
+		+velocity:			60, 60, 60
+		+acceleration:		40, 40, 40
+		+time:			2000
+$Subsystem:		FB1DT,		0.0, 8.0
+	$Flags:				( "untargetable" )
+	$animation:			triggered
+	$type:				fighterbay
+		+delay:			0
+		+reverse_delay:		6000
+		+relative_angle:		0.000, 0.000, -90.000
+		+velocity:			60, 60, 60
+		+acceleration:		40, 40, 40
+		+time:			2000
+$Subsystem:		FB2DB,		0.0, 8.0
+	$Flags:				( "untargetable" )
+	$animation:			triggered
+	$type:				fighterbay
+		+delay:			0
+		+reverse_delay:		6000
+		+relative_angle:		0.000, 0.000, -90.000
+		+velocity:			60, 60, 60
+		+acceleration:		40, 40, 40
+		+time:			2000
+$Subsystem:		FB2DT,		0.0, 8.0
+	$Flags:				( "untargetable" )
+	$animation:			triggered
+	$type:				fighterbay
+		+delay:			0
+		+reverse_delay:		6000
+		+relative_angle:		0.000, 0.000, 90.000
+		+velocity:			60, 60, 60
+		+acceleration:		40, 40, 40
+		+time:			2000
+
+
+$Name: 		AuFg Vulture
+$Short name: 					AuStrikeFg
+$Species: 						Authority
+	+Tech Description:			XSTR( "The Authority ", -1 )
+$end_multi_text
+$POF file: 						AuFg_Vulture.pof
+$Detail distance: 				(0, 2875, 5752, 11507)
+$Damage Lightning Type:			none
+$Debris:
+	+Min Lifetime:				80
+	+Max Lifetime:				600
+	+Min Hitpoints:				2000
+	+Max Hitpoints:				8000
+	+Lightning Arc Percent:		0.0
+$Density: 						1.2
+$Damp: 							0.4
+$Rotdamp: 						2.4
+$Max Velocity: 					359.0, 359.0, 359.0
+$Rotation time: 				125.0, 125.0, 125.0
+$Rear Velocity: 				0.0
+$Forward accel: 				8.0
+$Forward decel: 				4.0
+$Slide accel: 					0.0
+$Slide decel: 					0.0
+$Glide:							YES
+	+Dynamic Glide Cap:			YES
+$Use Newtonian Dampening:		YES
+$Warpin Type:					Hyperspace
+$Warpout Type:					Hyperspace
+$Expl inner rad: 				300.0
+$Expl outer rad: 				900.0
+$Expl damage: 					250.0
+$Expl blast: 					12500.0
+$Expl Propagates: 				YES
+$Shockwave Speed: 				280.0
+$Shockwave Count: 				3
+$Default PBanks: 				()
+$Default SBanks: 				()
+$SBank Capacity: 				()
+$Shields: 						80000
+$Shield Color:					100 100 255
+$Power Output: 					100.0
+$Max Oclk Speed: 				60.0
+$Max Weapon Eng: 				100.0
+$Hitpoints: 					75000
+$Armor Type: 					Heavy Armor 100
+$Flags: 						( "frigate" "big damage" "generate icon" )
+$AI Class: 						Captain
+$Afterburner: 					NO
+$Countermeasures: 				0
+$Scan time: 					2000
+$EngineSnd: 					128
+$Closeup_pos: 					0.0, 0.0, -1800
+$Closeup_zoom: 					0.5
+$Score: 						500
+$Subsystem: 	Engine01a, 			20, 0.0
+	$Engine Wash: 				Default500
+	$Flags:						( "collide submodel" )
+$Subsystem: 	Engine02a, 			20, 0.0
+	$Engine Wash: 				Default500
+	$Flags:						( "collide submodel" )
+$Subsystem: 	Engine03a, 			20, 0.0
+	$Engine Wash: 				Default500
+	$Flags:						( "collide submodel" )
+	
+$Subsystem: 	slider1a,  			5.0, 0.0
+$Subsystem: 	slider2a,  			5.0, 0.0
+$Subsystem: 	slider3a,  			5.0, 0.0
+$Subsystem: 	slider4a,  			5.0, 0.0
+$Subsystem: 	slider5la,  			5.0, 0.0
+$Subsystem: 	slider5ra,  			5.0, 0.0
+$Subsystem: 	slider6la,  			5.0, 0.0
+$Subsystem: 	slider6ra,  			5.0, 0.0
+$Subsystem: 	slider7la,  			5.0, 0.0
+$Subsystem: 	slider7ra,  			5.0, 0.0
+$Subsystem: 	slider8la,  			5.0, 0.0
+$Subsystem: 	slider8ra,  			5.0, 0.0
+	
+
+$Subsystem: 	Navigation, 		7, 0.0
+$Subsystem: 	Sensors, 			7, 0
+$Subsystem: 	Weapons, 			10, 0
+$Subsystem: 	Communications, 	7, 0
+$Subsystem: 	Reactor, 			15, 0
+
+$Subsystem: 	turret01-base, 			10.0, 1.0
+	$Alt Subsystem Name:		Mass Driver
+	$Default PBanks: 			( "Dragon Pulse") ;( "SmallRailgun" )
+	$Turret Base RotationSnd: 	254
+	$Turret Gun RotationSnd: 	255
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Flags: 					( "check hull" "salvo mode" "fire on target" "target requires fov" )
+	$animation:				triggered
+	$type:					initial
+		+relative_angle:	75, 0, 0
+$Subsystem: 	turret02-base,  		10.0, 1.0
+	$Alt Subsystem Name:		Mass Driver
+	$Default PBanks: 			( "Dragon Pulse") ;( "SmallRailgun" )
+	$Turret Base RotationSnd: 	254
+	$Turret Gun RotationSnd: 	255
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Flags: 					( "check hull" "salvo mode" "fire on target" "target requires fov" )
+	$animation:				triggered
+	$type:					initial
+		+relative_angle:	75, 0, 0
+$Subsystem: 	turret03-base,  		10.0, 1.0
+	$Alt Subsystem Name:		Mass Driver
+	$Default PBanks: 			( "Dragon Pulse") ;( "SmallRailgun" )
+	$Turret Base RotationSnd: 	254
+	$Turret Gun RotationSnd: 	255
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Flags: 					( "check hull" "salvo mode" "fire on target" "target requires fov" )
+	$animation:				triggered
+	$type:					initial
+		+relative_angle:	75, 0, 0
+$Subsystem: 	turret04-base,  		10.0, 1.0
+	$Alt Subsystem Name:		Mass Driver
+	$Default PBanks: 			( "Dragon Pulse") ;( "SmallRailgun" )
+	$Turret Base RotationSnd: 	254
+	$Turret Gun RotationSnd: 	255
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Flags: 					( "check hull" "salvo mode" "fire on target" "target requires fov")
+	$animation:				triggered
+	$type:					initial
+		+relative_angle:	75, 0, 0
+
+$Subsystem: 	turret05,  		8.0, 0.0
+	$Alt Subsystem Name:		VLS CIWS Launcher
+	$Default SBanks: 			( "Comet#CIWS" )
+	$Flags: 					( "check hull" "use multiple guns" "fire down normals" )
+$Subsystem: 	turret06,  		8.0, 0.0
+	$Alt Subsystem Name:		VLS CIWS Launcher
+	$Default SBanks: 			( "Comet#CIWS" )
+	$Flags: 					( "check hull" "use multiple guns" "fire down normals" )
+$Subsystem: 	turret07,  		8.0, 0.0
+	$Alt Subsystem Name:		VLS CIWS Launcher
+	$Default SBanks: 			( "Comet#CIWS" )
+	$Flags: 					( "check hull" "use multiple guns" "fire down normals" )
+	
+$Subsystem: 	turret08-base,  		5.0, 1.0
+	$Alt Subsystem Name:		CIWS Gun
+	$Default PBanks: 			( "Specter EMP" )
+	$Turret Base RotationSnd: 	254
+	$Turret Gun RotationSnd: 	255
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Max Turrets per Target:	6
+		$ROF:
+		+Multiplier:			4
+	$Flags: 					( "check hull" "use multiple guns" "fire on target" "target requires fov")
+	$animation:				triggered
+	$type:					initial
+		+relative_angle:	75, 0, 0
+$Subsystem: 	turret09-base,  		5.0, 1.0
+	$Alt Subsystem Name:		CIWS Gun
+	$Default PBanks: 			( "Specter EMP" )
+	$Turret Base RotationSnd: 	254
+	$Turret Gun RotationSnd: 	255
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Max Turrets per Target:	6
+		$ROF:
+		+Multiplier:			4
+	$Flags: 					( "check hull" "use multiple guns" "fire on target" "target requires fov")
+	$animation:				triggered
+	$type:					initial
+		+relative_angle:	75, 0, 0
+$Subsystem: 	turret10-base,  		5.0, 1.0
+	$Alt Subsystem Name:		CIWS Gun
+	$Default PBanks: 			( "Specter EMP" )
+	$Turret Base RotationSnd: 	254
+	$Turret Gun RotationSnd: 	255
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Max Turrets per Target:	6
+		$ROF:
+		+Multiplier:			4
+	$Flags: 					( "check hull" "use multiple guns" "fire on target" "target requires fov")
+	$animation:				triggered
+	$type:					initial
+		+relative_angle:	75, 0, 0
+$Subsystem: 	turret11-base,  		5.0, 1.0
+	$Alt Subsystem Name:		CIWS Gun
+	$Default PBanks: 			( "Specter EMP" )
+	$Turret Base RotationSnd: 	254
+	$Turret Gun RotationSnd: 	255
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Max Turrets per Target:	6
+	$ROF:
+		+Multiplier:			4
+	$Flags: 					( "check hull" "use multiple guns" "fire on target" "target requires fov")
+	$animation:				triggered
+	$type:					initial
+		+relative_angle:	75, 0, 0
+$Subsystem: 	turret12-base,  		5.0, 1.0
+	$Alt Subsystem Name:		CIWS Gun
+	$Default PBanks: 			( "Specter EMP" )
+	$Turret Base RotationSnd: 	254
+	$Turret Gun RotationSnd: 	255
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Max Turrets per Target:	6
+	$ROF:
+		+Multiplier:			4
+	$Flags: 					( "check hull" "use multiple guns" "fire on target" "target requires fov")
+	$animation:				triggered
+	$type:					initial
+		+relative_angle:	75, 0, 0
+$Subsystem: 	turret13-base,  		5.0, 1.0
+	$Alt Subsystem Name:		CIWS Gun
+	$Default PBanks: 			( "Specter EMP" )
+	$Turret Base RotationSnd: 	254
+	$Turret Gun RotationSnd: 	255
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Max Turrets per Target:	6
+	$ROF:
+		+Multiplier:			4
+	$Flags: 					( "check hull" "use multiple guns" "fire on target" "target requires fov")
+	$animation:				triggered
+	$type:					initial
+		+relative_angle:	75, 0, 0
+$Subsystem: 	turret14-base,  		5.0, 1.0
+	$Alt Subsystem Name:		CIWS Gun
+	$Default PBanks: 			( "Specter EMP" )
+	$Turret Base RotationSnd: 	254
+	$Turret Gun RotationSnd: 	255
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Max Turrets per Target:	6
+	$ROF:
+		+Multiplier:			4
+	$Flags: 					( "check hull" "use multiple guns" "fire on target" "target requires fov")
+	$animation:				triggered
+	$type:					initial
+		+relative_angle:	75, 0, 0
+$Subsystem: 	turret15-base,  		5.0, 1.0
+	$Alt Subsystem Name:		CIWS Gun
+	$Default PBanks: 			( "Specter EMP" )
+	$Turret Base RotationSnd: 	254
+	$Turret Gun RotationSnd: 	255
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Max Turrets per Target:	6
+	$ROF:
+		+Multiplier:			4
+	$Flags: 					( "check hull" "use multiple guns" "fire on target" "target requires fov")
+	$animation:				triggered
+	$type:					initial
+		+relative_angle:	75, 0, 0
+$Subsystem: 	turret16-base,  		5.0, 1.0
+	$Alt Subsystem Name:		CIWS Gun
+	$Default PBanks: 			( "Specter EMP" )
+	$Turret Base RotationSnd: 	254
+	$Turret Gun RotationSnd: 	255
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Max Turrets per Target:	6
+	$ROF:
+		+Multiplier:			4
+	$Flags: 					( "check hull" "use multiple guns" "fire on target" "target requires fov")
+	$animation:				triggered
+	$type:					initial
+		+relative_angle:	75, 0, 0
+$Subsystem: 	turret17-base,  		5.0, 1.0
+	$Alt Subsystem Name:		CIWS Gun
+	$Default PBanks: 			( "Specter EMP" )
+	$Turret Base RotationSnd: 	254
+	$Turret Gun RotationSnd: 	255
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Max Turrets per Target:	6
+	$ROF:
+		+Multiplier:			4
+	$Flags: 					( "check hull" "use multiple guns" "fire on target" "target requires fov")
+	$animation:				triggered
+	$type:					initial
+		+relative_angle:	75, 0, 0
+$Subsystem: 	turret18-base,  		5.0, 1.0
+	$Alt Subsystem Name:		CIWS Gun
+	$Default PBanks: 			( "Specter EMP" )
+	$Turret Base RotationSnd: 	254
+	$Turret Gun RotationSnd: 	255
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Max Turrets per Target:	6
+	$ROF:
+		+Multiplier:			4
+	$Flags: 					( "check hull" "use multiple guns" "fire on target" "target requires fov")
+	$animation:				triggered
+	$type:					initial
+		+relative_angle:	75, 0, 0
+$Subsystem: 	turret19-base,  		5.0, 1.0
+	$Alt Subsystem Name:		CIWS Gun
+	$Default PBanks: 			( "Specter EMP" )
+	$Turret Base RotationSnd: 	254
+	$Turret Gun RotationSnd: 	255
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Max Turrets per Target:	6
+	$ROF:
+		+Multiplier:			4
+	$Flags: 					( "check hull" "use multiple guns" "fire on target" "target requires fov")
+	$animation:				triggered
+	$type:					initial
+		+relative_angle:	75, 0, 0		
+		
+$Subsystem: 	turret20a,  		20.0, 0.0
+	$Alt Subsystem Name:		Railgun
+	$Default PBanks: 			( "Gryphon Pulse" );( "Railgun#Murugan" )
+	$Turret Base RotationSnd: 	254
+	$Turret Gun RotationSnd: 	255
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Flags: 					( "check hull" "fire on target" "target requires fov" "collide submodel")
+$Subsystem: 	turret21a,  		20.0, 0.0
+	$Alt Subsystem Name:		Railgun
+	$Default PBanks: 			( "Gryphon Pulse" );( "Railgun#Murugan" )
+	$Turret Base RotationSnd: 	254
+	$Turret Gun RotationSnd: 	255
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Flags: 					( "check hull" "fire on target" "target requires fov" "collide submodel")
+
+
+$Name: AuS Redeemer
+$Short name: AuSupport
+$Species: Authority
++Tech Description:
+XSTR("This is a support ship. This ship rearms and repairs the subsystems of our fighters and bombers. This technology has never been seen used by other races. It is fast and manoeuverable, a necessity when trying to dock with fighters in the heat of battle. If any of these ships go down in battle, beware of its massive explosion.", -1)
+$end_multi_text
+$POF file: AuS_Redeemer.pof
+$Detail distance: (0, 1300, 2500, 8000)
+$Damage Lightning Type:			None
+$Debris:
+	+Lightning Arc Percent:		0.0
+$Density: 1
+$Damp:                          0.2
+$Rotdamp:                       0.3
+$Max Velocity:          30.0, 30.0, 490.0
+$Rotation time:         1.5, 1.5, 1.5
+$Rear Velocity:         490.0
+$Forward accel:         1.25
+$Forward decel:         0.25
+$Slide accel:           1.0
+$Slide decel:           1.0
+$Glide:							YES
+	+Dynamic Glide Cap:			YES
+$Use Newtonian Dampening:		YES
+$Warpin Type:					Hyperspace
+$Warpout Type:					Hyperspace
+$Expl inner rad: 100.0
+$Expl outer rad: 200.0
+$Expl damage: 300.0
+$Expl blast: 4000.0
+$Expl Propagates: NO
+$Shockwave Speed: 0.0
+$Default PBanks: ()
+$Default SBanks: ()
+$SBank Capacity: ()
+$Power Output: 1.0
+$Max Oclk Speed: 120.0
+$Max Weapon Eng: 0.0
+$Hitpoints: 500
+$Armor Type: 				Medium Armor 100
+$Shield Armor Type:			Medium Shields 100
+$Flags: ( "repair_rearm" "generate icon" )
+$AI Class: Captain
+$Afterburner: NO
+$Countermeasures: 0
+$Scan time: 2000
+$EngineSnd: 135
+$Closeup_pos: 0.0, 1.0, -55
+$Closeup_zoom: 0.5
+$Score: 10
+$Subsystem: communication, 10, 0.0
+$Subsystem: engines, 30, 0.0
+$Subsystem: sensors, 10, 0.0
+
+
+#End
+
+;$Player Ship Precedence: (
+;	"GTF Ulysses"
+;	"GTF Hercules"
+;	"GTB Medusa"
+;	"GTB Ursa"
+;)

@@ -1,0 +1,1153 @@
+#Mission Info
+
+$Version: 0.10
+$Name:  XSTR("shiptest", -1)
+$Author: Windows User
+$Created: 07/26/17 at 22:11:39
+$Modified: 07/28/17 at 00:41:41
+$Notes:
+This is a FRED2_OPEN created mission.
+$End Notes:
+
+$Mission Desc:
+ XSTR("Put mission description here
+", -1)
+$end_multi_text
++Game Type Flags: 1
++Flags: 128
++Fog Near Mult: 1.000000
+
++Fog Far Mult: 1.000000
+
++Disallow Support: 0
++Hull Repair Ceiling: 0.000000
++Subsystem Repair Ceiling: 100.000000
+
++Viewer pos: 0.000000, 2832.856689, -4846.844727
++Viewer orient:
+	1.000000, 0.000000, -0.000000,
+	0.000000, 0.866025, 0.500000,
+	0.000000, -0.500000, 0.866025
+
+$Starting wing names: ( "Brahma" "Vishnu" "Krishna" )
+$Squadron wing names: ( "Brahma" "Vishnu" "Krishna" "Rama" "Arjuna" )
+$Team-versus-team wing names: ( "Brahma" "Vishnu" )
+
+$AI Profile: SS
+
+#Command Briefing
+
+#Briefing
+$start_briefing
+$num_stages: 0
+$end_briefing
+
+#Debriefing_info
+
+$Num stages: 0
+
+#Players		;! 1 total
+
+$Starting Shipname: Brahma 1
+$Ship Choices: (
+	"GRF Caranayodhin"	5
+)
+
++Weaponry Pool: (
+	"Spatha"	20
+	"Shashka"	20
+	"Meteor"	660
+	"Comet"	564
+	"Glaive"	500
+	"Atgeir"	500
+	"Voulge"	500
+	"Sibyna"	500
+	"Bardiche"	500
+	"Trishula"	8
+)
+
+#Objects		;! 32 total
+
+$Name: Brahma 1		;! Object #0
+$Class: GRF Caranayodhin
+$Team: Friendly
+$Location: -22.155327, -0.000610, -927.688232
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 100
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "player-start" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Brahma 2		;! Object #1
+$Class: GRF Caranayodhin
+$Team: Friendly
+$Location: -293.647064, 0.000000, -816.750244
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 100
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Brahma 3		;! Object #2
+$Class: GRF Caranayodhin
+$Team: Friendly
+$Location: 107.344894, 0.000031, -890.940308
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 100
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Brahma 4		;! Object #3
+$Class: GRF Caranayodhin
+$Team: Friendly
+$Location: 221.216003, 0.000000, -798.553223
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 100
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Arjuna 1		;! Object #4
+$Class: GRF Caranayodhin
+$Team: Friendly
+$Location: -389.920074, 0.000000, -1092.221680
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 100
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Arjuna 2		;! Object #5
+$Class: GRF Caranayodhin
+$Team: Friendly
+$Location: -541.460205, 0.000061, -725.588623
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 100
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Arjuna 3		;! Object #6
+$Class: GRF Caranayodhin
+$Team: Friendly
+$Location: 361.775421, 0.000000, -1182.095703
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 100
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Arjuna 4		;! Object #7
+$Class: GRF Caranayodhin
+$Team: Friendly
+$Location: 554.338501, 0.000000, -809.539917
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 100
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Arjuna 5		;! Object #8
+$Class: GRF Caranayodhin
+$Team: Friendly
+$Location: -126.337952, 0.000000, -1164.187012
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 100
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Arjuna 6		;! Object #9
+$Class: GRF Caranayodhin
+$Team: Friendly
+$Location: 140.204514, -0.000061, -1211.196777
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 100
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: GRCv Kshatriya 10		;! Object #10
+$Class: GRCv Kshatriya
+$Team: Friendly
+$Location: -648.229065, -0.000366, -1527.528198
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$AI Goals: ( goals ( ai-chase "AuFg Condor 20" 200 ) )
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 100
++Initial Hull: 100
++Subsystem: Pilot
++Subsystem: turret01
++Subsystem: turret02
++Subsystem: turret03
++Subsystem: turret04
++Subsystem: turret05
++Subsystem: turret06
++Subsystem: turret07
++Subsystem: turret08
++Subsystem: turret09
++Subsystem: turret10
++Subsystem: turret11
++Subsystem: turret12
++Subsystem: turret13
++Subsystem: turret14
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 250
+
+$Name: GRCv Kshatriya 11		;! Object #11
+$Class: GRCv Kshatriya
+$Team: Friendly
+$Location: 698.540283, 0.000000, -1690.492188
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$AI Goals: ( goals ( ai-chase "AuFg Condor 20" 200 ) )
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 100
++Initial Hull: 100
++Subsystem: Pilot
++Subsystem: turret01
++Subsystem: turret02
++Subsystem: turret03
++Subsystem: turret04
++Subsystem: turret05
++Subsystem: turret06
++Subsystem: turret07
++Subsystem: turret08
++Subsystem: turret09
++Subsystem: turret10
++Subsystem: turret11
++Subsystem: turret12
++Subsystem: turret13
++Subsystem: turret14
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 250
+
+$Name: Alpha 1		;! Object #12
+$Class: AuB Raptor
+$Team: Hostile
+$Location: -2744.855957, 0.000000, 2877.859375
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Subsystem: turret01-base
++Subsystem: turret02-base
++Subsystem: turret03-base
++Subsystem: turret04-base
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 50
+
+$Name: Alpha 2		;! Object #13
+$Class: AuB Raptor
+$Team: Hostile
+$Location: -2222.740723, 0.000000, 2130.997070
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Subsystem: turret01-base
++Subsystem: turret02-base
++Subsystem: turret03-base
++Subsystem: turret04-base
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 50
+
+$Name: Alpha 3		;! Object #14
+$Class: AuB Raptor
+$Team: Hostile
+$Location: -2836.242920, 0.000000, 2153.224609
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Subsystem: turret01-base
++Subsystem: turret02-base
++Subsystem: turret03-base
++Subsystem: turret04-base
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 50
+
+$Name: Alpha 4		;! Object #15
+$Class: AuB Raptor
+$Team: Hostile
+$Location: -3627.716064, 0.000000, 2312.085938
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Subsystem: turret01-base
++Subsystem: turret02-base
++Subsystem: turret03-base
++Subsystem: turret04-base
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 50
+
+$Name: Bravo 1		;! Object #16
+$Class: AuF Gladiator
+$Team: Hostile
+$Location: 1155.009155, 0.000000, 3202.946289
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Bravo 2		;! Object #17
+$Class: AuF Gladiator
+$Team: Hostile
+$Location: 621.348816, 0.000000, 2598.460938
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Bravo 3		;! Object #18
+$Class: AuF Gladiator
+$Team: Hostile
+$Location: 1231.523071, 0.000000, 2452.979004
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Bravo 4		;! Object #19
+$Class: AuF Gladiator
+$Team: Hostile
+$Location: 2326.619385, 0.000000, 2851.750488
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: AuFg Condor 20		;! Object #20
+$Class: AuFg Condor
+$Team: Hostile
+$Location: 2561.282715, 0.000000, -28.515625
+$Orientation:
+	0.229285, 0.043550, 0.972385,
+	-0.133636, 0.990948, -0.012871,
+	-0.964142, -0.126995, 0.233030
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 100
++Initial Hull: 100
++Subsystem: Pilot
++Subsystem: turret01-base
++Subsystem: turret02-base
++Subsystem: turret03
++Subsystem: turret04
++Subsystem: turret05
++Subsystem: turret06
++Subsystem: turret07
++Subsystem: turret08
++Subsystem: turret09-base
++Subsystem: turret10-base
++Subsystem: turret11-base
++Subsystem: turret12-base
++Subsystem: turret13-base
++Subsystem: turret14-base
++Subsystem: turret15-base
++Subsystem: turret16-base
++Subsystem: turret17
++Subsystem: turret18
++Subsystem: turret19
++Subsystem: turret20
++Subsystem: turret21
++Subsystem: turret22
++Subsystem: turret23
++Subsystem: turret24
++Subsystem: turret25
++Subsystem: turret26
++Subsystem: turret27
++Subsystem: turret28
++Subsystem: turret29
++Subsystem: turret30
++Subsystem: turret31
++Subsystem: turret32
++Subsystem: turret33
+$Arrival Location: Hyperspace
++Arrival Delay: 66
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "don't-collide-invisible" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 500
+
+$Name: Rama 1		;! Object #21
+$Class: GRF Caranayodhin
+$Team: Friendly
+$Location: -9.599480, -0.000244, -1572.106201
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Rama 2		;! Object #22
+$Class: GRF Caranayodhin
+$Team: Friendly
+$Location: -252.078796, -0.000244, -1833.906738
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Rama 3		;! Object #23
+$Class: GRF Caranayodhin
+$Team: Friendly
+$Location: -175.750763, -0.000244, -1619.051270
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Rama 4		;! Object #24
+$Class: GRF Caranayodhin
+$Team: Friendly
+$Location: 12.751350, -0.000244, -1772.968262
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Rama 5		;! Object #25
+$Class: GRF Caranayodhin
+$Team: Friendly
+$Location: 225.642944, -0.000244, -1755.302490
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Rama 6		;! Object #26
+$Class: GRF Caranayodhin
+$Team: Friendly
+$Location: 220.566895, -0.000244, -1674.361816
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Charlie 1		;! Object #27
+$Class: AuF Skjoldr
+$Team: Hostile
+$Location: -3582.978516, 0.000000, 98.400391
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Charlie 2		;! Object #28
+$Class: AuF Skjoldr
+$Team: Hostile
+$Location: -3756.376465, 0.000000, -314.024414
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Charlie 3		;! Object #29
+$Class: AuF Skjoldr
+$Team: Hostile
+$Location: -4092.966064, 0.000000, 438.657715
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Charlie 4		;! Object #30
+$Class: AuF Skjoldr
+$Team: Hostile
+$Location: -3291.688232, 0.000000, -436.607910
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: AuFg Vulture 31		;! Object #31
+$Class: AuFg Vulture
+$Team: Hostile
+$Location: -163.720001, 0.000000, 496.391113
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Subsystem: turret01-base
++Subsystem: turret02-base
++Subsystem: turret03-base
++Subsystem: turret04-base
++Subsystem: turret05
++Subsystem: turret06
++Subsystem: turret07
++Subsystem: turret08-base
++Subsystem: turret09-base
++Subsystem: turret10-base
++Subsystem: turret11-base
++Subsystem: turret12-base
++Subsystem: turret13-base
++Subsystem: turret14-base
++Subsystem: turret15-base
++Subsystem: turret16-base
++Subsystem: turret17-base
++Subsystem: turret18-base
++Subsystem: turret19-base
++Subsystem: Turret20a
++Subsystem: Turret21a
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Use Table Score:
++Score: 500
+
+#Wings		;! 6 total
+
+$Name: Brahma
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Brahma 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 4 total
+	"Brahma 1"
+	"Brahma 2"
+	"Brahma 3"
+	"Brahma 4"
+)
+$AI Goals: ( goals ( ai-chase-any 50 ) )
++Hotkey: 0
++Flags: ( )
+
+$Name: Arjuna
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Arjuna 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 6 total
+	"Arjuna 1"
+	"Arjuna 2"
+	"Arjuna 3"
+	"Arjuna 4"
+	"Arjuna 5"
+	"Arjuna 6"
+)
+$AI Goals: ( goals ( ai-chase-ship-class "GRF Caranayodhin" 50 ) )
++Flags: ( )
+
+$Name: Alpha
+$Waves: 10
+$Wave Threshold: 0
+$Special Ship: 0		;! Alpha 1
+
+$Arrival Location: Near Ship
++Arrival Distance: 15337
+$Arrival Anchor: <any friendly>
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 4 total
+	"Alpha 1"
+	"Alpha 2"
+	"Alpha 3"
+	"Alpha 4"
+)
+$AI Goals: ( goals ( ai-chase-ship-class "GRCv Kshatriya" 200 ) ( ai-chase-any 100 ) )
++Flags: ( )
++Wave Delay Min: 27
++Wave Delay Max: 75
+
+$Name: Bravo
+$Waves: 10
+$Wave Threshold: 0
+$Special Ship: 0		;! Bravo 1
+
+$Arrival Location: Near Ship
++Arrival Distance: 16325
+$Arrival Anchor: <any friendly>
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 4 total
+	"Bravo 1"
+	"Bravo 2"
+	"Bravo 3"
+	"Bravo 4"
+)
+$AI Goals: ( goals ( ai-chase-any 200 ) )
++Flags: ( )
++Wave Delay Min: 16
++Wave Delay Max: 48
+
+$Name: Rama
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Rama 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 6 total
+	"Rama 1"
+	"Rama 2"
+	"Rama 3"
+	"Rama 4"
+	"Rama 5"
+	"Rama 6"
+)
+$AI Goals: ( goals ( ai-chase-any 50 ) )
++Hotkey: 2
++Flags: ( )
+
+$Name: Charlie
+$Waves: 10
+$Wave Threshold: 0
+$Special Ship: 0		;! Charlie 1
+
+$Arrival Location: Near Ship
++Arrival Distance: 9745
+$Arrival Anchor: <any friendly>
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 4 total
+	"Charlie 1"
+	"Charlie 2"
+	"Charlie 3"
+	"Charlie 4"
+)
+$AI Goals: ( goals ( ai-chase-any 200 ) )
++Flags: ( )
++Wave Delay Min: 22
++Wave Delay Max: 77
+
+#Events		;! 0 total
+
+
+#Goals		;! 1 total
+
+$Type: Primary
++Name: Goal name
+$MessageNew:  XSTR("Mission goal text", -1)
+$end_multi_text
+$Formula: ( has-departed-delay 0 "Brahma 1" ) 
+
+#Waypoints		;! 0 lists total
+
+
+#Messages		;! 0 total
+
+
+#Reinforcements		;! 0 total
+
+
+#Background bitmaps		;! 0 total
+
+$Num stars: 0
+$Ambient light level: 7895160
+
+$Bitmap List:
+$Sun: SolUranus
++Angles: 2.670354 1.169371 0.034907
++Scale: 1.000000
+
+#Asteroid Fields
+
+#Music
+
+$Event Music: None
+$Briefing Music: None
+
+#End
+

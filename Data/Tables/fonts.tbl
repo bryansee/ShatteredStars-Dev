@@ -1,0 +1,15 @@
+#Fonts
+
+$TrueType: Font01.ttf
+ +Name: Rajdhani-Regular-18
+ +Size: 18
+
+$TrueType: Font02.ttf
+ +Name: Exo-Bold-24
+ +Size: 24
+
+$TrueType: Font03.ttf
+ +Name: Teko-Medium-16
+ +Size: 16
+
+#End

@@ -1,0 +1,211 @@
+#Glowpoint overrides
+
+$Name: red_glow
++light
+$Light radius multiplier: 5.0
+$Light color: 255,49,49
+
+$Name: red_glow_10
++light
+$Light radius multiplier: 10.0
+$Light color: 255,49,49
+
+$Name: red_glow_15
++light
+$Light radius multiplier: 15.0
+$Light color: 255,49,49
+
+$Name: red_glow_20
++light
+$Light radius multiplier: 20.0
+$Light color: 255,49,49
+
+$Name: red_glow_30
++light
+$Light radius multiplier: 30.0
+$Light color: 255,49,49
+
+$Name: red_glow_40
++light
+$Light radius multiplier: 40.0
+$Light color: 255,49,49
+
+$Name: red_glow_50
++light
+$Light radius multiplier: 50.0
+$Light color: 255,49,49
+
+$Name: blue_glow4_small
++light
+$Light radius multiplier: 5.0
+$Light color: 70,70,255
+
+$Name: blue_glow4_small_10
++light
+$Light radius multiplier: 10.0
+$Light color: 70,70,255
+
+$Name: blue_glow4_small_15
++light
+$Light radius multiplier: 15.0
+$Light color: 70,70,255
+
+$Name: blue_glow4_small_20
++light
+$Light radius multiplier: 20.0
+$Light color: 70,70,255
+
+$Name: blue_glow4_small_30
++light
+$Light radius multiplier: 30.0
+$Light color: 70,70,255
+
+$Name: blue_glow4_small_40
++light
+$Light radius multiplier: 40.0
+$Light color: 70,70,255
+
+$Name: blue_glow4_small_50
++light
+$Light radius multiplier: 40.0
+$Light color: 70,70,255
+
+$Name: green_glow
++light
+$Light radius multiplier: 5.0
+$Light color: 67,255,67
+
+$Name: green_glow_10
++light
+$Light radius multiplier: 10.0
+$Light color: 67,255,67
+
+$Name: green_glow_15
++light
+$Light radius multiplier: 15.0
+$Light color: 67,255,67
+
+$Name: green_glow_20
++light
+$Light radius multiplier: 20.0
+$Light color: 67,255,67
+
+$Name: green_glow_30
++light
+$Light radius multiplier: 30.0
+$Light color: 67,255,67
+
+$Name: yellow_glow
++light
+$Light radius multiplier: 5.0
+$Light color: 252,255,104
+
+$Name: yellow_glow_10
++light
+$Light radius multiplier: 10.0
+$Light color: 252,255,104
+
+$Name: yellow_glow_15
++light
+$Light radius multiplier: 15.0
+$Light color: 252,255,104
+
+$Name: yellow_glow_20
++light
+$Light radius multiplier: 20.0
+$Light color: 252,255,104
+
+$Name: yellow_glow_30
++light
+$Light radius multiplier: 30.0
+$Light color: 252,255,104
+
+$Name: yellow_glow_40
++light
+$Light radius multiplier: 40.0
+$Light color: 252,255,104
+
+$Name: yellow_glow_50
++light
+$Light radius multiplier: 50.0
+$Light color: 252,255,104
+
+$Name: teal_glow
++light
+$Light radius multiplier: 5.0
+$Light color: 100,218,255
+
+$Name: teal_glow_10
++light
+$Light radius multiplier: 10.0
+$Light color: 100,218,255
+
+$Name: teal_glow_15
++light
+$Light radius multiplier: 15.0
+$Light color: 100,218,255
+
+$Name: teal_glow_20
++light
+$Light radius multiplier: 20.0
+$Light color: 100,218,255
+
+$Name: teal_glow_30
++light
+$Light radius multiplier: 30.0
+$Light color: 100,218,255
+
+$Name: white_glow
++light
+$Light radius multiplier: 5.0
+$Light color: 255,255,255
+
+$Name: white_glow_10
++light
+$Light radius multiplier: 10.0
+$Light color: 255,255,255
+
+$Name: white_glow_15
++light
+$Light radius multiplier: 15.0
+$Light color: 255,255,255
+
+$Name: white_glow_20
++light
+$Light radius multiplier: 15.0
+$Light color: 255,255,255
+
+$Name: orange_glow
++light
+$Light radius multiplier: 5.0
+$Light color: 255,153,83
+
+$Name: orange_glow_30
++light
+$Light radius multiplier: 30.0
+$Light color: 255,153,83
+
+$Name: orange_glow_50
++light
+$Light radius multiplier: 50.0
+$Light color: 255,153,83
+
+$Name: engine_tev
+$Texture: none
++light
+$Light radius multiplier: 15.0
+$Light color: 148,173,255
+
+$Name: engine_uef
+$Texture: none
++light
+$Light radius multiplier: 22.0
+$Light color: 156,245,255
+
+$Name: white_glow_nopoint
+$Texture: none
++light
+$Light radius multiplier: 10.0
+$Light color: 255,255,255
+
+#End

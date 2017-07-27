@@ -1,0 +1,3152 @@
+#Primary Weapons
+
+
+$Name:		Trishula
+	+Title:							XSTR( "GRW Trishula Flak Gun", -1 )
+	+Description:					XSTR( "Flak Weapon
+	Metastable Vacuum Constellation", -1 )
+$end_multi_text
+	+Tech Title:					XSTR( "GRW Trishula Flak Gun", -1 )
+	+Tech Anim:						Tech_GTW-5_Prometheus_S
+	+Tech Description:				XSTR( "The GRW Trishula Flak Gun is developed as a derivative of our current warship-mounted flak systems. It invokes metastable probability constellations out of the quantum vacuum. When perturbed, they decay, triggering a destructive local vacuum event. Notably effective against warheads.", -1 )
+$end_multi_text
+$Model File:						none
+@Laser Bitmap:						Shashka
+@Laser Glow:						Shashka_Glow
+@Laser Color:						110, 30, 255
+@Laser Color2:						10, 30, 255
+@Laser Length:						13.0
+@Laser Head Radius:					0.30
+@Laser Tail Radius:					0.30
+$Mass:								0.2
+$Velocity:							1000.0
+$Fire Wait:							0.25
+$Damage:							15
+$Damage Type: 						NormalFlak
+$Blast Force:						25.0
+$Inner Radius:						10.0
+$Outer Radius:						25.0
+$Shockwave Speed:					0.0
+$Armor Factor:						1.0
+$Shield Factor:						1.0
+$Subsystem Factor:					0.2
+$Lifetime:							1.8
+$Energy Consumed:					0.3
+$Cargo Size:						0.30
+$Homing:							NO
+$LaunchSnd:							116
+$ImpactSnd:							88
+$Rearm Rate:						20.0
++Weapon Range:						1800
+$Flags: 							( "player allowed" "Flak" "Ballistic" "render flak" "ciws" "cycle" )
+$Impact Explosion: 					Exp20
+$Impact Explosion Radius: 			35.0
+$Piercing Impact Explosion: 		exp06
+$Piercing Impact Radius: 			7.5
+$Piercing Impact Velocity: 			10
+$Piercing Impact Splash Velocity: 	-10
+$Piercing Impact Variance: 			20000
+$Piercing Impact Particles: 		5
+$Muzzleflash: 						Bmuzzle
+;$Pspew:
+;	+Count:		2
+;	+Time:		1
+;	+Vel:		0
+;	+Radius:	0.50
+;	+Life:		0.0125
+;	+Scale:		0.025
+;	+Bitmap:	Kayser_Particle
+
+
+$Name:		Spatha
+	+Tech Title:					XSTR( "Bulldog", -1 )
+	+Tech Anim:						Tech_Subach_HL-7
+	+Tech Description:				XSTR( "Authority Spatha directed-energy weapon systems emit highly focused energy, transferring that energy in particle bursts to a target to damage it. Recently, they appear to contain sophisticated quantum computational systems which allow the burst to be programmed on the atomic level. The resultant attack can actually alter the probabilistic waveforms of baryonic matter and trigger zero-point energy microbursts. This system is used by the Haalaahala to devastating effect.", -1 )
+$end_multi_text
+$Model File:						none
+@Laser Bitmap:						Spatha
+@Laser Glow:						Spatha_Glow
+@Laser Color:						250, 250, 250
+@Laser Color2:						150, 150, 150
+@Laser Length:						10.0
+@Laser Head Radius:					0.90
+@Laser Tail Radius:					0.90
+$Velocity:							1350.0
+$Fire Wait:							0.23
+$Damage:							16
+$Damage Type: 						NormalWeapon
+$Armor Factor:						1.0
+$Shield Factor:						1.0
+$Subsystem Factor:					0.4
+$Lifetime:							1.83
+$Energy Consumed:					0.25
+$Cargo Size:						0.0
+$Homing:							NO
+$LaunchSnd:							100
+$ImpactSnd:							85
++Weapon Range:						1125
+$Flags: 							( "cycle" "player allowed" "Supercap" )
+$Trail:
+	+Start Width:	0.35
+	+End Width:		0.1
+	+Start Alpha:	0.4
+	+End Alpha:		0.0
+	+Max Life:		0.07
+	+Bitmap:		Spatha_Trail
+$Icon:								iconflail
+$Anim:								Flail2
+;$Impact Effect:						BulldogImpact
+;$Piercing Impact Effect:			BulldogPImpact
+$Muzzleflash: 						Rmuzzle
+
+
+$Name: Shashka
+	+Tech Title:					XSTR( "Badger", -1 )
+	+Tech Anim:						Tech_Subach_HL-7
+	+Tech Description:				XSTR( "Authority Badger weapons are an improved version of the Bulldog. Analysis of captured Authority fighters has revealed that these weapons are incredibly sophisticated on the technological level, capable of outmatching even our best weapons systems.", -1 )
+$end_multi_text
+$Model File: none
+@Laser Bitmap:						Shashka
+@Laser Glow:						Shashka_Glow
+@Laser Color:						250, 250, 250
+@Laser Color2:						150, 150, 150
+@Laser Length:						10.0
+@Laser Head Radius:					0.90
+@Laser Tail Radius:					0.90
+$Mass:								0.25
+$Velocity: 1100.0
+$Fire Wait: 0.18
+$Damage:							22
+$Damage Type: 						NormalWeapon
+$Detonation Range:					1234
+$Armor Factor:						1.0
+$Shield Factor:						1.0
+$Subsystem Factor:					0.4
+$Lifetime:							1.83
+$Energy Consumed:					1.0
+$Cargo Size:						0.0
+$Homing:							NO
+$LaunchSnd:							103
+$ImpactSnd:							85
++Weapon Range:						1125
+$Flags: ( "cycle" "player allowed" "stream" "Supercap" )
+$Trail:
+	+Start Width:	0.35
+	+End Width:		0.1
+	+Start Alpha:	0.4
+	+End Alpha:		0.0
+	+Max Life:		0.07
+	+Bitmap:		Shashka_Trail
+$Icon:								iconflail
+$Anim:								Flail2
+;$Impact Effect:						BadgerImpact
+;$Piercing Impact Effect:			BadgerPImpact
+$Muzzleflash: 	Rmuzzle
+
+$Name:		CmnWlth PDTurret
+$Model File:						none
+@Laser Bitmap:						gattler
+@Laser Glow:						Prometheus_Glow
+@Laser Color: 						250, 180, 50
+@Laser Color2: 						0, 5, 0
+@Laser Length:						6.0
+@Laser Head Radius:					3.0
+@Laser Tail Radius:					3.0
+$Mass:								0.1
+$Velocity:							750.0
+$Fire Wait:							2.0
+$Damage:							15
+$Damage Type: 						NormalWeapon
+$Armor Factor:						1.0
+$Shield Factor:						1.0
+$Subsystem Factor:					0.25
+$Lifetime:							2.05
+$Energy Consumed:					0.30
+$Cargo Size:						0.0
+$Homing:							NO
+$LaunchSnd:							310
+$ImpactSnd:							85
++Weapon Range:						1400
+$Flags: 							( "Big Ship" )
+$Impact Explosion: 					ExpMissileHit1
+$Impact Explosion Radius: 			6.0
+$Piercing Impact Explosion: 		exp06
+$Piercing Impact Radius: 			3.0
+$Piercing Impact Velocity: 			10
+$Piercing Impact Splash Velocity: 	-2.5
+$Piercing Impact Variance: 			0.01
+$Piercing Impact Particles: 		5
+$Muzzleflash: 						Cmuzzle_small
+$Burst Shots:						10
+$Burst Delay: 						100
+$Burst Flags: 						( "fast firing" )
+
+$Name:		CW medium Turret
+$Model File:						none
+@Laser Bitmap:						gattler
+@Laser Glow:						Prometheus_Glow
+@Laser Color: 						250, 180, 50
+@Laser Color2: 						0, 5, 0
+@Laser Length:						20.0
+@Laser Head Radius:					9.0
+@Laser Tail Radius:					9.0
+$Mass:								0.4
+$Velocity: 							700.0
+$Fire Wait:							1.0
+$Damage: 							25
+$Damage Type: 						NormalWeapon
+$Armor Factor:						1.0
+$Shield Factor:						1.0
+$Subsystem Factor:					0.25
+$Lifetime:							4.4
+$Energy Consumed:					0.30
+$Cargo Size:						0.0
+$Homing:							NO
+$LaunchSnd:							111
+$ImpactSnd:							85
++Weapon Range: 						1100
+$Flags:								( "Big Ship" )
+$Impact Explosion: 					ExpMissileHit1
+$Impact Explosion Radius: 			2.0
+$Piercing Impact Explosion: 		exp06
+$Piercing Impact Radius: 			10.0
+$Piercing Impact Velocity: 			10
+$Piercing Impact Splash Velocity: 	-2.5
+$Piercing Impact Variance: 			0.01
+$Piercing Impact Particles:			5
+$Muzzleflash: 						Gmuzzle
+
+$Name:		CW88mm-PLC
+$Model File:						none
+@Laser Bitmap:						EA_mediumpulse
+@Laser Glow:						Prometheus_Glow
+@Laser Color: 						250, 180, 50
+@Laser Color2: 						0, 5, 0
+@Laser Length:						50.0
+@Laser Head Radius:					10.00
+@Laser Tail Radius:					10.00
+$Mass:								2.0
+$Velocity:							2000.0
+$Fire Wait:							10.0
+$Damage:							70
+$Damage Type: 						HugeWeapon
+$Blast Force:						100.0
+$Inner Radius:						20.0
+$Outer Radius:						30.0
+$Shockwave Speed:					0.0
+$Armor Factor:						1.0
+$Shield Factor:						0.25
+$Subsystem Factor:					0.25
+$Lifetime:							1.2
+$Energy Consumed:					0.0
+$Cargo Size:						1.0
+$Homing:							NO
+$Swarm:           2
++SwarmWait:          1.9
+$LaunchSnd:							322
+$ImpactSnd:							88
++Weapon Range:						3500
+$Flags: 							( "Huge" "big ship" "same turret cooldown" )
+$Trail:
+	+Start Width:	7.5
+	+End Width:		15.0
+	+Start Alpha:	0.5
+	+End Alpha:		0.0
+	+Max Life:			2.0
+	+Bitmap:			Missiletrail101
+$Impact Explosion: 					exp04
+$Impact Explosion Radius: 			30.0
+$Piercing Impact Explosion: 		exp06
+$Piercing Impact Radius: 			15.0
+$Piercing Impact Velocity: 			200
+$Piercing Impact Splash Velocity: 	-10
+$Piercing Impact Variance: 			0.01
+$Piercing Impact Particles: 		10
+$Muzzleflash: 						gattlerturret_solaris
+
+$Name:		CW120mm-PLC
+$Model File:						none
+@Laser Bitmap:						EA_mediumpulse
+@Laser Glow:						Prometheus_Glow
+@Laser Color: 						250, 180, 50
+@Laser Color2: 						0, 5, 0
+@Laser Length:						40.0
+@Laser Head Radius:					15.00
+@Laser Tail Radius:					15.00
+$Mass:								2.0
+$Velocity:							2000.0
+$Fire Wait:							10.0
+$Damage:							100
+$Damage Type: 						HugeWeapon
+$Blast Force:						100.0
+$Inner Radius:						20.0
+$Outer Radius:						30.0
+$Shockwave Speed:					0.0
+$Armor Factor:						1.0
+$Shield Factor:						0.25
+$Subsystem Factor:					0.25
+$Lifetime:							1.2
+$Energy Consumed:					0.0
+$Cargo Size:						1.0
+$Homing:							NO
+$Swarm:           3
++SwarmWait:          0.2
+$LaunchSnd:							322
+$ImpactSnd:							88
++Weapon Range:						3500
+$Flags: 							( "Huge" "big ship" "same turret cooldown" )
+$Trail:
+	+Start Width:	7.5
+	+End Width:		15.0
+	+Start Alpha:	0.5
+	+End Alpha:		0.0
+	+Max Life:			2.0
+	+Bitmap:			Missiletrail101
+$Impact Explosion: 					exp04
+$Impact Explosion Radius: 			30.0
+$Piercing Impact Explosion: 		exp06
+$Piercing Impact Radius: 			15.0
+$Piercing Impact Velocity: 			200
+$Piercing Impact Splash Velocity: 	-10
+$Piercing Impact Variance: 			0.01
+$Piercing Impact Particles: 		10
+$Muzzleflash: 						gattlerturret_solaris
+
+$Name:		88mm Arclite cannon
+$Model File:						none
+@Laser Bitmap: 						massdriver_bitmap
+@Laser Glow: 						Maxim_Glow
+@Laser Color:						250, 200, 50
+@Laser Color2:						255, 200, 10
+@Laser Length:						8.0
+@Laser Head Radius:					15.00
+@Laser Tail Radius:					15.00
+$Mass:								2.0
+$Velocity:							3000.0
+$Fire Wait:							10.0
+$Damage:							600
+$Damage Type: 						HugeWeapon
+$Blast Force:						100.0
+$Inner Radius:						20.0
+$Outer Radius:						30.0
+$Shockwave Speed:					0.0
+$Armor Factor:						1.0
+$Shield Factor:						0.25
+$Subsystem Factor:					0.25
+$Lifetime:							1.2
+$Energy Consumed:					0.0
+$Cargo Size:						1.0
+$Homing:							NO
+$LaunchSnd:							324
+$ImpactSnd:							88
++Weapon Range:						3500
+$Flags: 							( "Huge" "big ship" "particle spew" "same turret cooldown" )
+$Trail:
+	+Start Width:	11.5
+	+End Width:		17.5
+	+Start Alpha:	1.0
+	+End Alpha:		0.0
+	+Max Life:		0.4
+	+Bitmap:		Missiletrail101
+$Impact Explosion: 					exp04
+$Impact Explosion Radius: 			30.0
+$Piercing Impact Explosion: 		exp06
+$Piercing Impact Radius: 			15.0
+$Piercing Impact Velocity: 			200
+$Piercing Impact Splash Velocity: 	-10
+$Piercing Impact Variance: 			0.01
+$Piercing Impact Particles: 		10
+$Muzzleflash: 						massdriver_sanctus
+$Pspew:
+	+Count:		6
+	+Time:		1
+	+Vel:		0.0
+	+Radius:	0.55
+	+Life:		0.1
+	+Scale:		1.0
+	+Bitmap:	Particle_blue
+
+$Name:		120mm Arclite cannon
+$Model File:						none
+@Laser Bitmap:						Archer_Bitmap
+@Laser Glow:						Kayser_Glow
+@Laser Color:						20, 20, 220
+@Laser Color2:						20, 20, 150
+@Laser Length:						8.0
+@Laser Head Radius:					30.00
+@Laser Tail Radius:					30.00
+$Mass:								2.0
+$Velocity:							3000.0
+$Fire Wait:							20.0
+$Damage:							300
+$Damage Type: 						HugeWeapon
+$Blast Force:						100.0
+$Inner Radius:						20.0
+$Outer Radius:						30.0
+$Shockwave Speed:					0.0
+$Armor Factor:						1.0
+$Shield Factor:						0.25
+$Subsystem Factor:					0.25
+$Lifetime:							1.2
+$Energy Consumed:					0.0
+$Cargo Size:						1.0
+$Homing:							NO
+$Swarm:           2
++SwarmWait:          3.2
+$LaunchSnd:							324
+$ImpactSnd:							88
++Weapon Range:						3500
+$Flags: 							( "Huge" "big ship" "particle spew")
+$Trail:
+	+Start Width:	16.5
+	+End Width:		25.5
+	+Start Alpha:	1.0
+	+End Alpha:		0.0
+	+Max Life:		0.4
+	+Bitmap:		Missiletrail101
+$Impact Explosion: 					exp04
+$Impact Explosion Radius: 			90.0
+$Piercing Impact Explosion: 		exp06
+$Piercing Impact Radius: 			15.0
+$Piercing Impact Velocity: 			200
+$Piercing Impact Splash Velocity: 	-10
+$Piercing Impact Variance: 			0.01
+$Piercing Impact Particles: 		10
+$Muzzleflash: 						massdriver_narayana
+$Pspew:
+	+Count:		6
+	+Time:		1
+	+Vel:		0.0
+	+Radius:	0.55
+	+Life:		0.1
+	+Scale:		1.0
+	+Bitmap:	Particle_blue
+
+$Name:		Kestrel PD Pulse
++Tech Title: 						XSTR( "PD-3 Laser", -1 )
+	+Tech Anim: 					none
+	+Tech Description: 				XSTR( "The PD-3 Kestrel is the main CIWS for the Phoenix Rising frigate.  With enhanced sensor suites and powerful magnetic bottles, this weapon provides extremely effective close-in defense.  Captain Deinhart uses this to her advantage, wielding her ship as an antifighter shield. ", -1 )
+$end_multi_text
+$Model File:						none
+@Laser Bitmap:						PRPulse1
+@Laser Glow:						Prometheus_Glow
+@Laser Color: 						50, 180, 250
+@Laser Color2: 						0, 5, 0
+@Laser Length: 						18.0
+@Laser Head Radius: 					3.00
+@Laser Tail Radius: 					3.00
+$Mass:								0.01
+$Velocity:							700.0
+$Fire Wait:							1.0
+$Damage:							15
+$Armor Factor:						1.0
+$Shield Factor:						0.25
+$Subsystem Factor:					0.25
+$Lifetime:							4.0
+$Energy Consumed:					0.30
+$Cargo Size:						0.0
+$Homing:							NO
+$LaunchSnd:							111
+$ImpactSnd:							85
++Weapon Range:						2000
+$Flags: 							( "same turret cooldown" "cycle" )
+$Impact Explosion: 					exp04
+$Impact Explosion Radius: 			2.0
+$Piercing Impact Explosion: 			exp06
+$Piercing Impact Radius:			12.0
+$Piercing Impact Velocity: 			40
+$Piercing Impact Splash Velocity: 		-10
+$Piercing Impact Variance: 			0.01
+$Piercing Impact Particles: 			10
+$Muzzleflash: 						PRPointDefFlash
+$FOF: 							0.5
+$Burst Shots: 						12
+$Burst Delay: 						200
+$Burst Flags: 						( "fast firing" )
+
+$Name:		Specter EMP
++Tech Title: 						XSTR( "EM-2 Specter EMP Disruptor", -1 )
+	+Tech Anim: 					none
+	+Tech Description: 				XSTR( "The EM-2 Specter provides enhanced CIWS coverage for the Phoenix Rising, disrupting hostile targetting and stopping bombs before impact.", -1 )
+$end_multi_text
+$Model File:						none
+@Laser Bitmap:						PRPulse1
+@Laser Glow:						Prometheus_Glow
+@Laser Color: 						50, 180, 250
+@Laser Color2: 						0, 5, 0
+@Laser Length: 						3.0
+@Laser Head Radius: 				2.0
+@Laser Tail Radius: 				2.0
+$Mass:								0.01
+$Velocity:							750.0
+$Fire Wait:							3.0
+$Damage:							50
+$Blast Force:						10.0
+$Inner Radius: 						6.0
+$Outer Radius:						12.5
+$Armor Factor:						0.50
+$Shield Factor:						2.50
+$Subsystem Factor:					1.25
+$Lifetime:							2.2
+$Energy Consumed:						0.30
+$Cargo Size:						0.0
+$Homing:							NO
+$LaunchSnd:							111
+$ImpactSnd:							85
++Weapon Range:						2000
+$Flags: 							( "same turret cooldown" "cycle" )
+$Impact Explosion: 					exp04
+$Impact Explosion Radius: 			1.0
+$Piercing Impact Explosion: 			exp06
+$Piercing Impact Radius:			12.0
+$Piercing Impact Velocity: 			40
+$Piercing Impact Splash Velocity: 		-10
+$Piercing Impact Variance: 			0.01
+$Piercing Impact Particles: 			10
+$Muzzleflash: 						PRPointDefFlash
+$EMP Intensity: 						20
+$EMP Time:							16
+$FOF: 							0.3
+$Burst Shots: 						3
+$Burst Delay: 						100
+$Burst Flags: 						( "fast firing" )
+
+$Name:		Falcon Pulse
++Tech Title: 						XSTR( "MP-5 Falcon Pulse Laser", -1 )
+	+Tech Anim: 					none
+	+Tech Description: 				XSTR( "The MP-5 is an intermediate weapon on the Phoenix Rising frigate.  The weapon is of sufficient caliber to be a threat to capital ships, yet is small enough to engage fighter threats.", -1 )
+$end_multi_text
+$Model File:						none
+@Laser Bitmap:						PRPulse1
+@Laser Glow:						Prometheus_Glow
+@Laser Color: 						0, 180, 250
+@Laser Color2: 						0, 5, 0
+@Laser Length: 						36.0
+@Laser Head Radius: 					6.0
+@Laser Tail Radius: 					6.0
+$Mass:								0.6
+$Velocity:							900.0
+$Fire Wait:							4.0
+$Damage:							150
+$Armor Factor:						1.0
+$Shield Factor:						0.25
+$Subsystem Factor:					0.25
+$Lifetime:							5.0
+$Energy Consumed:					0.30
+$Cargo Size:						0.0
+$Homing:							NO
+$LaunchSnd:							111
+$ImpactSnd:							85
+$Flags: 							( "same turret cooldown" "cycle" )
+$Impact Explosion: 					exp04
+$Impact Explosion Radius: 			6.0
+$Piercing Impact Explosion: 			exp06
+$Piercing Impact Radius:			12.0
+$Piercing Impact Velocity: 			40
+$Piercing Impact Splash Velocity: 		-10
+$Piercing Impact Variance: 			0.01
+$Piercing Impact Particles: 			10
+$Muzzleflash: 						PRMedFlash
+$FOF: 								0.5
+$Burst Shots: 						12
+$Burst Delay: 						250
+$Burst Flags: 						( "fast firing" )
+
+$Name:		Gryphon Pulse
++Tech Title: 						XSTR( "HP-11 Laser", -1 )
+	+Tech Anim: 					none
+	+Tech Description: 				XSTR( "The HP-11 Gryphon serves as the Phoenix Rising's primary direct fire weapon system, primarily tasked with punching through armor plating.", -1 )
+$end_multi_text
+$Model File:						none
+@Laser Bitmap:						PRPulse1
+@Laser Glow:						Prometheus_Glow
+@Laser Color: 						0, 0, 250
+@Laser Color2: 						0, 0, 0
+@Laser Length: 						96.0
+@Laser Head Radius: 				12.0
+@Laser Tail Radius: 				12.0
+$Mass:								0.5
+$Velocity:							1250.0
+$Fire Wait:							10.0
+$Damage:							350
+$Armor Factor:						1.0
+$Shield Factor:						0.25
+$Subsystem Factor:					0.25
+$Lifetime:							9.6
+$Energy Consumed:					0.30
+$Cargo Size:						0.0
+$Homing:							NO
+$LaunchSnd:							111
+$ImpactSnd:							85
++Weapon Range:						11750
+$Flags: 							( "Big Ship" "same turret cooldown" "cycle" "Huge" )
+$Trail:
+	+Start Width:	11
+	+End Width:		0
+	+Start Alpha:	1.0
+	+End Alpha:		0.0
+	+Max Life:		0.5
+	+Bitmap: 		Beam-dBlue
+$Impact Explosion: 					exp04
+$Impact Explosion Radius: 			24.0
+$Piercing Impact Explosion: 		exp06
+$Piercing Impact Radius:			12.0
+$Piercing Impact Velocity: 			40
+$Piercing Impact Splash Velocity: 	-10
+$Piercing Impact Variance: 			0.01
+$Piercing Impact Particles: 		10
+$Muzzleflash: 						PRHeavyFlash
+$FOF: 								0.1
+$Burst Shots: 						12
+$Burst Delay: 						400
+$Burst Flags: 						( "fast firing" )
+
+$Name:		Dragon Pulse
++Tech Title: 						XSTR( "HP-13 Dragon Pulse Laser", -1 )
+	+Tech Anim: 					none
+	+Tech Description: 				XSTR( "The HP-13 Dragon serves as a replacement for the Phoenix Rising's primary direct fire weapon system.", -1 )
+$end_multi_text
+$Model File:						none
+@Laser Bitmap:						PRPulse1
+@Laser Glow:						Prometheus_Glow
+@Laser Color: 						0, 0, 250
+@Laser Color2: 						0, 0, 0
+@Laser Length: 						96.0
+@Laser Head Radius: 				12.0
+@Laser Tail Radius: 				12.0
+$Mass:								0.5
+$Velocity:							1250.0
+$Fire Wait:							5.0
+$Damage:							175
+$Armor Factor:						1.0
+$Shield Factor:						0.25
+$Subsystem Factor:					0.25
+$Lifetime:							9.6
+$Energy Consumed:					0.30
+$Cargo Size:						0.0
+$Homing:							NO
+$LaunchSnd:							111
+$ImpactSnd:							85
++Weapon Range:						11750
+$Flags: 							( "Big Ship" "same turret cooldown" "cycle" "Huge" )
+$Trail:
+	+Start Width:	11
+	+End Width:		0
+	+Start Alpha:	1.0
+	+End Alpha:		0.0
+	+Max Life:		0.25
+	+Bitmap: 		Beam-dBlue
+$Impact Explosion: 					exp04
+$Impact Explosion Radius: 			24.0
+$Piercing Impact Explosion: 		exp06
+$Piercing Impact Radius:			12.0
+$Piercing Impact Velocity: 			40
+$Piercing Impact Splash Velocity: 	-10
+$Piercing Impact Variance: 			0.01
+$Piercing Impact Particles: 		10
+$Muzzleflash: 						PRHeavyFlash
+$FOF: 								0.1
+$Burst Shots: 						12
+$Burst Delay: 						400
+$Burst Flags: 						( "fast firing" )
+
+
+
+
+$Name:					GRW Flak 
++Title:					Flak
++Tech Description:				XSTR("Colonial Flak.  Designed to be fired from the same guns that fire Heavy Mount Arty these rounds lay down an anti-missile/fighter wall.", -1)
+$end_multi_text
+@Laser Bitmap: Prometheus_Glow
+@Laser Glow: blue_glow4
+@Laser Color: 0, 255, 0
+@Laser Color2: 50, 255, 50
+@Laser Length: 20.0
+@Laser Head Radius: 6.0
+@Laser Tail Radius: 6.0
+$Mass:					0.0001
+$Velocity:				2600.0          
+$Fire Wait:				1.25            
++Max Delay:				1.0
++Min Delay:				0.0
+$Damage:				75
+$Damage Type:				NormalFlak
+$Detonation Range:			5000
+$Detonation Radius:			50.0
+$Blast Force:				2275.0
+$Inner Radius:				30.0
+$Outer Radius:				105.0
+$Armor Factor:				1.0
+$Shield Factor:						1.0
+$Subsystem Factor:			0.3
+$Lifetime Min:				10.0
+$Lifetime Max:				11.0
+$LaunchSnd:							116
+$ImpactSnd:							117
+$Rearm Rate:				100
++Weapon Range:				5000        
++Weapon Min Range:			1250
+$Flags:					( "big ship" "cycle" "stream" "ballistic" "small only" 
+					  "same turret cooldown"  "flak" "Supercap" "render flak" "particle spew" ) 
+$Trail:
+	+Start Width:	3.5
+	+End Width:		0.0
+	+Start Alpha:	1.0
+	+End Alpha:		0.0
+	+Max Life:		0.10
+	+Bitmap:		Flak_trail
+$Impact Explosion:			Exp20
+$Impact Explosion Radius:		25
+$Dinky impact explosion:		none
+$Dinky impact Explosion Radius:		0.0
+$Piercing Impact Explosion:			exp06
+$Piercing Impact Radius:			7.5
+$Piercing Impact Velocity: 			10
+$Piercing Impact Splash Velocity:	-10
+$Piercing Impact Variance:			20000
+$Piercing Impact Particles:			5
+$Muzzleflash:						standardflak
+$FOF:					12 
+$Burst Shots:				6
+$Burst Delay:				1
+$Burst Flags:				( "fast firing" )
+
+
+$Name:					GRW Heavy Flak 
++Title:					Hvy Flak
++Tech Description:				XSTR("CIWS Flak rounds are fired from point defense arrays on capital ships.  They have longer range then KEW rounds but are inaccurate and designed to work as part of a larger defense field.",-1)
+$end_multi_text
+@Laser Bitmap: Prometheus_Glow
+@Laser Glow: blue_glow4
+@Laser Color: 0, 255, 0
+@Laser Color2: 50, 255, 50
+@Laser Length: 20.0
+@Laser Head Radius: 6.0
+@Laser Tail Radius: 6.0
+$Mass:					0.0001
+$Velocity:				3200.0          
+$Fire Wait:				1.25            
++Max Delay:				1.0
++Min Delay:				0.0
+$Damage:				75
+$Damage Type:				NormalFlak
+$Detonation Range:			7500
+$Detonation Radius:			66.0
+$Blast Force:				2925.0
+$Inner Radius:				40.0
+$Outer Radius:				140.0
+$Armor Factor:				1.0
+$Shield Factor:						1.0
+$Subsystem Factor:			0.3
+$Lifetime Min:				10.0
+$Lifetime Max:				11.0
+$LaunchSnd:				113
+$ImpactSnd:				114
+$Rearm Rate:				100
++Weapon Range:				7500        
++Weapon Min Range:			1500
+$Flags:					( "big ship" "cycle" "stream" "ballistic" "small only" 
+					  "same turret cooldown"  "flak" "Supercap" "render flak" "particle spew" ) 
+$Impact Explosion:					Exp20
+$Impact Explosion Radius:			45.0
+$Dinky impact explosion:		none
+$Dinky impact Explosion Radius:		0.0
+$Piercing Impact Explosion:			exp06
+$Piercing Impact Radius:			7.5
+$Piercing Impact Velocity:			10
+$Piercing Impact Splash Velocity:	-10
+$Piercing Impact Variance:			20000
+$Piercing Impact Particles:			5
+$Muzzleflash:						standardflak
+$Pspew:
+	+Count:		2
+	+Time:		1
+	+Vel:		0
+	+Radius:	3.50
+	+Life:		0.0125
+	+Scale:		0.025
+	+Bitmap:	Cmuzzle_0001
+$FOF:					12
+$Burst Shots:				8
+$Burst Delay:				1
+$Burst Flags:				( "fast firing" )
+
+
+$Name:		GRW Burst Flak
+@Laser Bitmap: Prometheus_Glow
+@Laser Glow: blue_glow4
+@Laser Color: 0, 255, 0
+@Laser Color2: 50, 255, 50
+@Laser Length: 20.0
+@Laser Head Radius: 6.0
+@Laser Tail Radius: 6.0
+$Mass:								1.0
+$Velocity:							3000.0
+$Fire Wait:							2.0
++Max Delay:				1.0
++Min Delay:				0.0
+$Damage:							40
+$Damage Type: 						NormalFlak
+$Detonation Range:			5600
+$Detonation Radius:			40.0
+$Blast Force:						20.0
+$Inner Radius:						10.0
+$Outer Radius:						15.0
+$Shockwave Speed:					0.0
+$Armor Factor:						1.0
+$Shield Factor:						1.0
+$Subsystem Factor:					0.25
+$Lifetime:							1.17
+$Energy Consumed:					0.0
+$Cargo Size:						1.0
+$Homing:							NO
+$LaunchSnd:							116
+$ImpactSnd:							117
+$Rearm Rate:				100
++Weapon Range:				3300        
++Weapon Min Range:			800
+$Flags: 							( "Big Ship" "cycle" "stream" "ballistic" "small only" "same turret cooldown" "Flak" "Supercap" "render flak" "particle spew" )
+$Trail:
+	+Start Width:	3.0
+	+End Width:		0.0
+	+Start Alpha:	1.0
+	+End Alpha:		0.0
+	+Max Life:		0.10
+	+Bitmap:		Flak_trail
+$Impact Explosion: 					Exp20
+$Impact Explosion Radius: 			12.5
+$Piercing Impact Explosion: 		exp06
+$Piercing Impact Radius: 			7.5
+$Piercing Impact Velocity: 			10
+$Piercing Impact Splash Velocity: 	-10
+$Piercing Impact Variance: 			20000
+$Piercing Impact Particles: 		5
+$Muzzleflash: 						standardflak
+$Pspew:
+	+Count:		2
+	+Time:		1
+	+Vel:		0
+	+Radius:	2.0
+	+Life:		0.0125
+	+Scale:		0.025
+	+Bitmap:	Cmuzzle_0001
+$FOF: 								5.0
+$Shots:								12
+
+
+$Name:					GRW Flak#CIWS
++Title:					CIWS Flak
++Tech Description:				XSTR("CIWS Flak rounds are fired from point defense arrays on capital ships.  They have longer range then KEW rounds but are inaccurate and designed to work as part of a larger defense field.",-1)
+$end_multi_text
+@Laser Bitmap: Prometheus_Glow
+@Laser Glow: blue_glow4
+@Laser Color: 0, 255, 0
+@Laser Color2: 50, 255, 50
+@Laser Length: 20.0
+@Laser Head Radius: 6.0
+@Laser Tail Radius: 6.0
+$Mass:					0.0001
+$Velocity:				2000.0         
+$Fire Wait:				0.25       
++Max Delay:				0.5
++Min Delay:				0.0
+$Damage:				50
+$Damage Type:				NormalFlak
+$Detonation Range:			2800
+$Detonation Radius:			25.0
+$Blast Force:				100.0
+$Inner Radius:				15.0
+$Outer Radius:				40.0
+$Armor Factor:				1.0
+$Shield Factor:						1.0
+$Subsystem Factor:			0.7
+$Lifetime Min:				3.0
+$Lifetime Max:				6.0      
+$LaunchSnd:							116
+$ImpactSnd:							117
+$Rearm Rate:				100
++Weapon Range:				2800        
++Weapon Min Range:			800
+$Flags:					( "big ship" "cycle" "stream" "ballistic" "small only" 
+					  "same turret cooldown" "flak" "Supercap" "render flak" "particle spew" "ciws" ) 
+$Trail:
+	+Start Width:	3.5
+	+End Width:		0.0
+	+Start Alpha:	1.0
+	+End Alpha:		0.0
+	+Max Life:		0.10
+	+Bitmap:		Flak_trail
+$Impact Explosion:			Exp20
+$Impact Explosion Radius:		25
+$Dinky impact explosion:		none
+$Dinky impact Explosion Radius:		0.0
+$Piercing Impact Explosion:			exp06
+$Piercing Impact Radius:			7.5
+$Piercing Impact Velocity: 			10
+$Piercing Impact Splash Velocity:	-10
+$Piercing Impact Variance:			20000
+$Piercing Impact Particles:			5
+$Muzzleflash:						standardflak
+$Pspew:
+	+Count:		2
+	+Time:		1
+	+Vel:		0
+	+Radius:	3.50
+	+Life:		0.0125
+	+Scale:		0.025
+	+Bitmap:	Cmuzzle_0001
+$FOF:					10 
+
+
+$Name:					GRW Heavy Flak#CIWS
++Title:					CIWS Hvy Flak
++Tech Description:				XSTR("CIWS Flak rounds are fired from point defense arrays on capital ships.  They have longer range then KEW rounds but are inaccurate and designed to work as part of a larger defense field.",-1)
+$end_multi_text
+@Laser Bitmap: Prometheus_Glow
+@Laser Glow: blue_glow4
+@Laser Color: 0, 255, 0
+@Laser Color2: 50, 255, 50
+@Laser Length: 20.0
+@Laser Head Radius: 6.0
+@Laser Tail Radius: 6.0
+$Mass:					0.0001
+$Velocity:				2800.0         
+$Fire Wait:				0.25         
++Max Delay:				0.5
++Min Delay:				0.0
+$Damage:				60
+$Damage Type:				NormalFlak
+$Detonation Range:			4200
+$Detonation Radius:			40.0
+$Blast Force:				125.0
+$Inner Radius:				17.5
+$Outer Radius:				45.0
+$Armor Factor:				1.0
+$Shield Factor:						1.0
+$Subsystem Factor:			0.7
+$Lifetime Min:				3.0
+$Lifetime Max:				6.0      
+$LaunchSnd:							116
+$ImpactSnd:							117
+$Rearm Rate:				100
++Weapon Range:				4200        
++Weapon Min Range:			800
+$Flags:					( "big ship" "cycle" "stream" "ballistic" "small only" "same turret cooldown" "flak" "Supercap" "render flak" "particle spew" "ciws" )
+$Impact Explosion:					Exp20
+$Impact Explosion Radius:			45
+$Dinky impact explosion:		none
+$Dinky impact Explosion Radius:		0.0
+$Piercing Impact Explosion:			exp06
+$Piercing Impact Radius:			7.5
+$Piercing Impact Velocity:			10
+$Piercing Impact Splash Velocity:	-10
+$Piercing Impact Variance:			20000
+$Piercing Impact Particles:			5
+$Muzzleflash:						standardflak
+$Pspew:
+	+Count:		2
+	+Time:		1
+	+Vel:		0
+	+Radius:	3.50
+	+Life:		0.0125
+	+Scale:		0.025
+	+Bitmap:	Cmuzzle_0001
+$FOF:					10 
+
+
+$Name:		GRW Burst Flak#CIWS
+@Laser Bitmap: Prometheus_Glow
+@Laser Glow: blue_glow4
+@Laser Color: 0, 255, 0
+@Laser Color2: 50, 255, 50
+@Laser Length: 20.0
+@Laser Head Radius: 6.0
+@Laser Tail Radius: 6.0
+$Mass:								1.0
+$Velocity:							1500.0
+$Fire Wait:							1.0
++Max Delay:				0.5
++Min Delay:				0.0
+$Damage:							40
+$Damage Type: 						NormalFlak
+$Shockwave Damage Type:				Shockwave
+$Blast Force:						20.0
+$Inner Radius:						10.0
+$Outer Radius:						15.0
+$Shockwave Speed:					0.0
+$Armor Factor:						1.0
+$Shield Factor:						1.0
+$Subsystem Factor:					0.25
+$Lifetime:							1.17
+$Energy Consumed:					0.0
+$Cargo Size:						1.0
+$Homing:							NO
+$LaunchSnd:							116
+$ImpactSnd:							117
+$Rearm Rate:				100
++Weapon Range:				3300        
++Weapon Min Range:			800
+$Flags: 							( "Big Ship" "cycle" "stream" "ballistic" "small only" "same turret cooldown" "Flak" "Supercap" "render flak" "particle spew" "ciws" )
+$Trail:
+	+Start Width:	3.0
+	+End Width:		0.0
+	+Start Alpha:	1.0
+	+End Alpha:		0.0
+	+Max Life:		0.10
+	+Bitmap:		Flak_trail
+$Impact Explosion: 					Exp20
+$Impact Explosion Radius: 			12.5
+$Piercing Impact Explosion: 		exp06
+$Piercing Impact Radius: 			7.5
+$Piercing Impact Velocity: 			10
+$Piercing Impact Splash Velocity: 	-10
+$Piercing Impact Variance: 			20000
+$Piercing Impact Particles: 		5
+$Muzzleflash: 						standardflak
+$Pspew:
+	+Count:		2
+	+Time:		1
+	+Vel:		0
+	+Radius:	2.0
+	+Life:		0.0125
+	+Scale:		0.025
+	+Bitmap:	Cmuzzle_0001
+$FOF: 								5.0
+$Shots:								12
+
+
+
+
+$Name:					Human Flak 
++Title:					Flak
++Tech Description:				XSTR("Colonial Flak.  Designed to be fired from the same guns that fire Heavy Mount Arty these rounds lay down an anti-missile/fighter wall.", -1)
+$end_multi_text
+@Laser Bitmap: Prometheus_Glow
+@Laser Glow: blue_glow4
+@Laser Color: 0, 255, 0
+@Laser Color2: 50, 255, 50
+@Laser Length: 20.0
+@Laser Head Radius: 6.0
+@Laser Tail Radius: 6.0
+$Mass:					0.0001
+$Velocity:				2600.0          
+$Fire Wait:				1.25            
++Max Delay:				1.0
++Min Delay:				0.0
+$Damage:				75
+$Damage Type:				NormalFlak
+$Detonation Range:			5000
+$Detonation Radius:			50.0
+$Blast Force:				2275.0
+$Inner Radius:				30.0
+$Outer Radius:				105.0
+$Armor Factor:				1.0
+$Shield Factor:						1.0
+$Subsystem Factor:			0.3
+$Lifetime Min:				10.0
+$Lifetime Max:				11.0
+$LaunchSnd:							116
+$ImpactSnd:							117
+$Rearm Rate:				100
++Weapon Range:				5000        
++Weapon Min Range:			1250
+$Flags:					( "big ship" "cycle" "stream" "ballistic" "small only" 
+					  "same turret cooldown"  "flak" "Supercap" "render flak" "particle spew" ) 
+$Trail:
+	+Start Width:	3.5
+	+End Width:		0.0
+	+Start Alpha:	1.0
+	+End Alpha:		0.0
+	+Max Life:		0.10
+	+Bitmap:		Flak_trail
+$Impact Explosion:			Exp20
+$Impact Explosion Radius:		25
+$Dinky impact explosion:		none
+$Dinky impact Explosion Radius:		0.0
+$Piercing Impact Explosion:			exp06
+$Piercing Impact Radius:			7.5
+$Piercing Impact Velocity: 			10
+$Piercing Impact Splash Velocity:	-10
+$Piercing Impact Variance:			20000
+$Piercing Impact Particles:			5
+$Muzzleflash:						standardflak
+$FOF:					12 
+$Burst Shots:				6
+$Burst Delay:				1
+$Burst Flags:				( "fast firing" )
+
+
+$Name:					Human Heavy Flak 
++Title:					Hvy Flak
++Tech Description:				XSTR("CIWS Flak rounds are fired from point defense arrays on capital ships.  They have longer range then KEW rounds but are inaccurate and designed to work as part of a larger defense field.",-1)
+$end_multi_text
+@Laser Bitmap: Prometheus_Glow
+@Laser Glow: blue_glow4
+@Laser Color: 0, 255, 0
+@Laser Color2: 50, 255, 50
+@Laser Length: 20.0
+@Laser Head Radius: 6.0
+@Laser Tail Radius: 6.0
+$Mass:					0.0001
+$Velocity:				3200.0          
+$Fire Wait:				1.25            
++Max Delay:				1.0
++Min Delay:				0.0
+$Damage:				75
+$Damage Type:				NormalFlak
+$Detonation Range:			7500
+$Detonation Radius:			66.0
+$Blast Force:				2925.0
+$Inner Radius:				40.0
+$Outer Radius:				140.0
+$Armor Factor:				1.0
+$Shield Factor:						1.0
+$Subsystem Factor:			0.3
+$Lifetime Min:				10.0
+$Lifetime Max:				11.0
+$LaunchSnd:				113
+$ImpactSnd:				114
+$Rearm Rate:				100
++Weapon Range:				7500        
++Weapon Min Range:			1500
+$Flags:					( "big ship" "cycle" "stream" "ballistic" "small only" 
+					  "same turret cooldown"  "flak" "Supercap" "render flak" "particle spew" ) 
+$Impact Explosion:					Exp20
+$Impact Explosion Radius:			45.0
+$Dinky impact explosion:		none
+$Dinky impact Explosion Radius:		0.0
+$Piercing Impact Explosion:			exp06
+$Piercing Impact Radius:			7.5
+$Piercing Impact Velocity:			10
+$Piercing Impact Splash Velocity:	-10
+$Piercing Impact Variance:			20000
+$Piercing Impact Particles:			5
+$Muzzleflash:						standardflak
+$Pspew:
+	+Count:		2
+	+Time:		1
+	+Vel:		0
+	+Radius:	3.50
+	+Life:		0.0125
+	+Scale:		0.025
+	+Bitmap:	Cmuzzle_0001
+$FOF:					12
+$Burst Shots:				8
+$Burst Delay:				1
+$Burst Flags:				( "fast firing" )
+
+
+$Name:		Human Burst Flak
+@Laser Bitmap: Prometheus_Glow
+@Laser Glow: blue_glow4
+@Laser Color: 0, 255, 0
+@Laser Color2: 50, 255, 50
+@Laser Length: 20.0
+@Laser Head Radius: 6.0
+@Laser Tail Radius: 6.0
+$Mass:								1.0
+$Velocity:							3000.0
+$Fire Wait:							2.0
++Max Delay:				1.0
++Min Delay:				0.0
+$Damage:							40
+$Damage Type: 						NormalFlak
+$Detonation Range:			5600
+$Detonation Radius:			40.0
+$Blast Force:						20.0
+$Inner Radius:						10.0
+$Outer Radius:						15.0
+$Shockwave Speed:					0.0
+$Armor Factor:						1.0
+$Shield Factor:						1.0
+$Subsystem Factor:					0.25
+$Lifetime:							1.17
+$Energy Consumed:					0.0
+$Cargo Size:						1.0
+$Homing:							NO
+$LaunchSnd:							116
+$ImpactSnd:							117
+$Rearm Rate:				100
++Weapon Range:				3300        
++Weapon Min Range:			800
+$Flags: 							( "Big Ship" "cycle" "stream" "ballistic" "small only" "same turret cooldown" "Flak" "Supercap" "render flak" "particle spew" )
+$Trail:
+	+Start Width:	3.0
+	+End Width:		0.0
+	+Start Alpha:	1.0
+	+End Alpha:		0.0
+	+Max Life:		0.10
+	+Bitmap:		Flak_trail
+$Impact Explosion: 					Exp20
+$Impact Explosion Radius: 			12.5
+$Piercing Impact Explosion: 		exp06
+$Piercing Impact Radius: 			7.5
+$Piercing Impact Velocity: 			10
+$Piercing Impact Splash Velocity: 	-10
+$Piercing Impact Variance: 			20000
+$Piercing Impact Particles: 		5
+$Muzzleflash: 						standardflak
+$Pspew:
+	+Count:		2
+	+Time:		1
+	+Vel:		0
+	+Radius:	2.0
+	+Life:		0.0125
+	+Scale:		0.025
+	+Bitmap:	Cmuzzle_0001
+$FOF: 								5.0
+$Shots:								12
+
+
+$Name:					Human Flak#CIWS
++Title:					CIWS Flak
++Tech Description:				XSTR("CIWS Flak rounds are fired from point defense arrays on capital ships.  They have longer range then KEW rounds but are inaccurate and designed to work as part of a larger defense field.",-1)
+$end_multi_text
+@Laser Bitmap: Prometheus_Glow
+@Laser Glow: blue_glow4
+@Laser Color: 0, 255, 0
+@Laser Color2: 50, 255, 50
+@Laser Length: 20.0
+@Laser Head Radius: 6.0
+@Laser Tail Radius: 6.0
+$Mass:					0.0001
+$Velocity:				2000.0         
+$Fire Wait:				0.25       
++Max Delay:				0.5
++Min Delay:				0.0
+$Damage:				50
+$Damage Type:				NormalFlak
+$Detonation Range:			2800
+$Detonation Radius:			25.0
+$Blast Force:				100.0
+$Inner Radius:				15.0
+$Outer Radius:				40.0
+$Armor Factor:				1.0
+$Shield Factor:						1.0
+$Subsystem Factor:			0.7
+$Lifetime Min:				3.0
+$Lifetime Max:				6.0      
+$LaunchSnd:							116
+$ImpactSnd:							117
+$Rearm Rate:				100
++Weapon Range:				2800        
++Weapon Min Range:			800
+$Flags:					( "big ship" "cycle" "stream" "ballistic" "small only" 
+					  "same turret cooldown" "flak" "Supercap" "render flak" "particle spew" "ciws" ) 
+$Trail:
+	+Start Width:	3.5
+	+End Width:		0.0
+	+Start Alpha:	1.0
+	+End Alpha:		0.0
+	+Max Life:		0.10
+	+Bitmap:		Flak_trail
+$Impact Explosion:			Exp20
+$Impact Explosion Radius:		25
+$Dinky impact explosion:		none
+$Dinky impact Explosion Radius:		0.0
+$Piercing Impact Explosion:			exp06
+$Piercing Impact Radius:			7.5
+$Piercing Impact Velocity: 			10
+$Piercing Impact Splash Velocity:	-10
+$Piercing Impact Variance:			20000
+$Piercing Impact Particles:			5
+$Muzzleflash:						standardflak
+$Pspew:
+	+Count:		2
+	+Time:		1
+	+Vel:		0
+	+Radius:	3.50
+	+Life:		0.0125
+	+Scale:		0.025
+	+Bitmap:	Cmuzzle_0001
+$FOF:					10 
+
+
+$Name:					Human Heavy Flak#CIWS
++Title:					CIWS Hvy Flak
++Tech Description:				XSTR("CIWS Flak rounds are fired from point defense arrays on capital ships.  They have longer range then KEW rounds but are inaccurate and designed to work as part of a larger defense field.",-1)
+$end_multi_text
+@Laser Bitmap: Prometheus_Glow
+@Laser Glow: blue_glow4
+@Laser Color: 0, 255, 0
+@Laser Color2: 50, 255, 50
+@Laser Length: 20.0
+@Laser Head Radius: 6.0
+@Laser Tail Radius: 6.0
+$Mass:					0.0001
+$Velocity:				2800.0         
+$Fire Wait:				0.25         
++Max Delay:				0.5
++Min Delay:				0.0
+$Damage:				60
+$Damage Type:				NormalFlak
+$Detonation Range:			4200
+$Detonation Radius:			40.0
+$Blast Force:				125.0
+$Inner Radius:				17.5
+$Outer Radius:				45.0
+$Armor Factor:				1.0
+$Shield Factor:						1.0
+$Subsystem Factor:			0.7
+$Lifetime Min:				3.0
+$Lifetime Max:				6.0      
+$LaunchSnd:							116
+$ImpactSnd:							117
+$Rearm Rate:				100
++Weapon Range:				4200        
++Weapon Min Range:			800
+$Flags:					( "big ship" "cycle" "stream" "ballistic" "small only" "same turret cooldown" "flak" "Supercap" "render flak" "particle spew" "ciws" )
+$Impact Explosion:					Exp20
+$Impact Explosion Radius:			45
+$Dinky impact explosion:		none
+$Dinky impact Explosion Radius:		0.0
+$Piercing Impact Explosion:			exp06
+$Piercing Impact Radius:			7.5
+$Piercing Impact Velocity:			10
+$Piercing Impact Splash Velocity:	-10
+$Piercing Impact Variance:			20000
+$Piercing Impact Particles:			5
+$Muzzleflash:						standardflak
+$Pspew:
+	+Count:		2
+	+Time:		1
+	+Vel:		0
+	+Radius:	3.50
+	+Life:		0.0125
+	+Scale:		0.025
+	+Bitmap:	Cmuzzle_0001
+$FOF:					10 
+
+
+$Name:		Human Burst Flak#CIWS
+@Laser Bitmap: Prometheus_Glow
+@Laser Glow: blue_glow4
+@Laser Color: 0, 255, 0
+@Laser Color2: 50, 255, 50
+@Laser Length: 20.0
+@Laser Head Radius: 6.0
+@Laser Tail Radius: 6.0
+$Mass:								1.0
+$Velocity:							1500.0
+$Fire Wait:							1.0
++Max Delay:				0.5
++Min Delay:				0.0
+$Damage:							40
+$Damage Type: 						NormalFlak
+$Shockwave Damage Type:				Shockwave
+$Blast Force:						20.0
+$Inner Radius:						10.0
+$Outer Radius:						15.0
+$Shockwave Speed:					0.0
+$Armor Factor:						1.0
+$Shield Factor:						1.0
+$Subsystem Factor:					0.25
+$Lifetime:							1.17
+$Energy Consumed:					0.0
+$Cargo Size:						1.0
+$Homing:							NO
+$LaunchSnd:							116
+$ImpactSnd:							117
+$Rearm Rate:				100
++Weapon Range:				3300        
++Weapon Min Range:			800
+$Flags: 							( "Big Ship" "cycle" "stream" "ballistic" "small only" "same turret cooldown" "Flak" "Supercap" "render flak" "particle spew" "ciws" )
+$Trail:
+	+Start Width:	3.0
+	+End Width:		0.0
+	+Start Alpha:	1.0
+	+End Alpha:		0.0
+	+Max Life:		0.10
+	+Bitmap:		Flak_trail
+$Impact Explosion: 					Exp20
+$Impact Explosion Radius: 			12.5
+$Piercing Impact Explosion: 		exp06
+$Piercing Impact Radius: 			7.5
+$Piercing Impact Velocity: 			10
+$Piercing Impact Splash Velocity: 	-10
+$Piercing Impact Variance: 			20000
+$Piercing Impact Particles: 		5
+$Muzzleflash: 						standardflak
+$Pspew:
+	+Count:		2
+	+Time:		1
+	+Vel:		0
+	+Radius:	2.0
+	+Life:		0.0125
+	+Scale:		0.025
+	+Bitmap:	Cmuzzle_0001
+$FOF: 								5.0
+$Shots:								12
+
+
+$Name:                          GRW A-F Beam
+$Model File:                    none ; laser1-1.pof
+@Laser Bitmap:                  laserglow01
+@Laser Color:					136, 243, 249
+@Laser Length:					0.0
+@Laser Head Radius:				0.60
+@Laser Tail Radius:				0.60
+$Mass:                          100.0
+$Velocity:                      1000.0          ;; speed of the weapon (initially) -- may or may not change
+$Fire Wait:                     5.5             ;; in seconds
+$Damage:                        14				;; NOTE: for beam weapons this is kind of a "continuous" damage applied every few fractions of a second that the beam is on.
+$Damage Type:		NormalWeapon
+$Armor Factor:                  1.0
+$Shield Factor:                 1.0
+$Subsystem Factor:              1.0
+$Lifetime:                      50.0            ;; How long this thing lives
+$Energy Consumed:               0.30            ;; Energy used when fired
+$Cargo Size:                    0.0             ;; Amount of space taken up in weapon cargo
+$Homing:                        NO
+$LaunchSnd:                     124             ;; The sound it makes when fired
+$ImpactSnd:                     88             ;; The sound it makes when it hits something
++Weapon Range:					1800			;; Limit to range at which weapon will actively target object
+$Flags:                         ("Big Ship" "beam")
+$Impact Explosion:			exp04
+$Impact Explosion Radius: 			5
+$BeamInfo:
+	+Type:						3				;; 0 - 4 are valid #'s
+	+Life:			  			1.9				;; how long it lasts once the beam is actually firing
+	+Warmup:		  			1000			;; warmup time in ms
+	+Warmdown:					1000			;; warmdown time in ms
+	+Radius:								10.0		;20.0
+	+PCount:								24		;12
+	+PRadius:								2.4		;1.2
+	+PAngle:					65.0			;; angle of the random "cone" where the particles are generated
+	+PAni:						particle_blue	;; particle ani
+	+Miss Factor:				1.9 1.8 1.7 1.6 1.5		;; magic # - higher == miss more (only really applicable to type 0 and type 3 beams)
+	+BeamSound:					149				;; the looping beam-firing sound
+	+WarmupSound:				150				;; associated warmup sound
+	+WarmdownSound:				161				;; associated warmdown sound
+	+Muzzleglow:				BlueBeamGlow2	;; muzzle glow bitmap
+	+Shots:						2				;; only used for TYPE 3 beams
+	+ShrinkFactor:				0.0			;; what percentage of lifetime where beam starts shrinking (0.1 == 10% life left)
+	+ShrinkPct:					0.0			;; what percentage of max width we subtract per second
+	+BeamWidth: 							10.0
+	+Beam Piercing Effect:					exp06
+	+Beam Piercing Radius: 					5.0
+	+Beam Piercing Effect Velocity:			25
+	+Beam Piercing Splash Effect Velocity:	-2.5
+	+Beam Piercing Effect Variance: 		0.01
+	$Section:
+		+Width:			2.0
+		+Texture:		BlueBeam3Core
+		+RGBA Inner:	255 255 255 255
+		+RGBA Outer:	150 150 150 10
+		+Flicker:		0.0
+		+Zadd:			8
+		+Tile Factor:	12, 1
+		+Translation:	-18
+	$Section:
+		+Width:			3.0
+		+Texture:		BlueBeam4Core
+		+RGBA Inner:	160 160 0 255
+		+RGBA Outer:	60 60 0 10
+		+Flicker:		0.05
+		+Zadd:			6
+		+Tile Factor:	12, 1
+		+Translation:	-13
+	$Section:
+		+Width:			4.0
+		+Texture:		BlueBeam2CoreHaze
+		+RGBA Inner:	255 255 255 255
+		+RGBA Outer:	150 150 150 10
+		+Flicker:		0.2
+		+Zadd:			4
+		+Tile Factor:	12, 1
+		+Translation:	-7
+	$Section:
+		+Width:			5.0
+		+Texture:		BBlueHaze2
+		+RGBA Inner:	255 0 0 255
+		+RGBA Outer:	60 0 0 10
+		+Flicker:		0.1
+		+Zadd:			2
+		+Tile Factor:	12, 1
+		+Translation:	-3
+	$Section:
+		+Width:			8.0
+		+Texture:		BlueFade
+		+RGBA Inner:	255 255 255 255
+		+RGBA Outer:	150 150 150 10
+		+Flicker:		0.35
+		+Zadd:			1
+
+
+$Name:                        Heavy Particle Beam
+$Model File:                  none
+@Laser Bitmap:                none
+@Laser Color:                 200, 100, 30
+@Laser Length:                0.0
+@Laser Head Radius:           0.0
+@Laser Tail Radius:           0.0
+$Mass:                        100.0
+$Velocity:                    2000.0
+$Fire Wait:                   16.0
+$Damage:                      800
+$Armor Factor:                1.0
+$Shield Factor:               1.0
+$Subsystem Factor:            0.5
+$Lifetime:                    4.0
+$Energy Consumed:             0.0
+$Cargo Size:                  0.0
+$Homing:                      NO
+$LaunchSnd:                   TEI_Shot
+$ImpactSnd:                   88
++Weapon Range:                4800
+$Flags:                       ( "huge" "beam" "no pierce shields" )
+$Impact Explosion:              exp04
+$Impact Explosion Radius:       50.0
+$BeamInfo:
+      +Type:                        0
+      +Life:                        2
+      +Warmup:                      2000
+      +Warmdown:                    500
+      +Radius:                      45.0
+      +PCount:                      0
+      +PRadius:                     0.0
+      +PAngle:                      0.0
+      +PAni:                        particleexp01
+      +Miss Factor:                 1.0 1.2 1.5 1.7 2.1
+      +BeamSound:                   147
+      +WarmupSound:                 154 ;->temp uses X-ray sample
+      +WarmdownSound:               159 ;->temp uses X-ray sample
+      +Muzzleglow:                  orange_glow
+      +Shots:                       0
+      +ShrinkFactor:                0.0
+      +ShrinkPct:                   0.0
+   +Range:           5280
+   +Attenuation:        0.1
+      $Section:
+            +Width:                   30.2
+            +Texture:                 Abbombertrail
+            +RGBA Inner:              0 0 0 0
+            +RGBA Outer:              0 0 0 0
+            +Flicker:                 0.0
+            +Zadd:                    0.0
+      $Section:
+            +Width:                   15.0
+            +Texture:                 AbTrail
+            +RGBA Inner:              0 0 0 0
+            +RGBA Outer:              0 0 0 0
+            +Flicker:                 0.3
+            +Zadd:                    1.0
+      $Section:
+            +Width:                   9.0
+            +Texture:                 Abbombertrail
+            +RGBA Inner:              0 0 0 0
+            +RGBA Outer:              0 0 0 0
+            +Flicker:                 0.1
+            +Zadd:                    2.0
+
+$Name:                        Light Particle Beam
+$Model File:                  none
+@Laser Bitmap:                none
+@Laser Color:                 200, 100, 30
+@Laser Length:                0.0
+@Laser Head Radius:           0.0
+@Laser Tail Radius:           0.0
+$Mass:                        100.0
+$Velocity:                    2000.0
+$Fire Wait:                   16.0
+$Damage:                      150
+$Armor Factor:                1.0
+$Shield Factor:               1.0
+$Subsystem Factor:            0.5
+$Lifetime:                    2.5
+$Energy Consumed:             0.0
+$Cargo Size:                  0.0
+$Homing:                      NO
+$LaunchSnd:                   TEI_Shot
+$ImpactSnd:                   88
++Weapon Range:                4800
+$Flags:                       ( "huge" "beam" "no pierce shields" )
+$Impact Explosion:              exp04
+$Impact Explosion Radius:       50.0
+$BeamInfo:
+      +Type:                        0
+      +Life:                        3.0
+      +Warmup:                      2000
+      +Warmdown:                    500
+      +Radius:                      25.0
+      +PCount:                      0
+      +PRadius:                     0.0
+      +PAngle:                      0.0
+      +PAni:                        particleexp01
+      +Miss Factor:                 1.0 1.2 1.5 1.7 2.1
+      +BeamSound:                   147
+      +WarmupSound:                 154 ;->temp uses X-ray sample
+      +WarmdownSound:               159 ;->temp uses X-ray sample
+      +Muzzleglow:                  orange_glow
+      +Shots:                       0
+      +ShrinkFactor:                0.0
+      +ShrinkPct:                   0.0
+   +Range:           5280
+   +Attenuation:        0.1
+      $Section:
+            +Width:                   22.2
+            +Texture:                 Abbombertrail
+            +RGBA Inner:              0 0 0 0
+            +RGBA Outer:              0 0 0 0
+            +Flicker:                 0.0
+            +Zadd:                    0.0
+      $Section:
+            +Width:                   8.0
+            +Texture:                 AbTrail
+            +RGBA Inner:              0 0 0 255
+            +RGBA Outer:              0 0 0 255
+            +Flicker:                 0.3
+            +Zadd:                    1.0
+      $Section:
+            +Width:                   2.0
+            +Texture:                 Abbombertrail
+            +RGBA Inner:              0 0 0 255
+            +RGBA Outer:              0 0 0 255
+            +Flicker:                 0.1
+            +Zadd:                    2.0
+
+$Name:                        Light Particle BeamSLASH
+$Model File:                  none
+@Laser Bitmap:                none
+@Laser Color:                 200, 30, 30
+@Laser Length:                0.0
+@Laser Head Radius:           0.0
+@Laser Tail Radius:           0.0
+$Mass:                        100.0
+$Velocity:                    2000.0
+$Fire Wait:                   16.0
+$Damage:                      150
+$Armor Factor:                1.0
+$Shield Factor:               1.0
+$Subsystem Factor:            0.5
+$Lifetime:                    2.5
+$Energy Consumed:             0.0
+$Cargo Size:                  0.0
+$Homing:                      NO
+$LaunchSnd:                   TEI_Shot
+$ImpactSnd:                   88
++Weapon Range:                4800
+$Flags:                       ( "huge" "beam" "no pierce shields" )
+$Impact Explosion:              exp04
+$Impact Explosion Radius:       30.0
+$BeamInfo:
+      +Type:                        1
+      +Life:                        2.5
+      +Warmup:                      2000
+      +Warmdown:                    500
+      +Radius:                      25.0
+      +PCount:                      0
+      +PRadius:                     0.0
+      +PAngle:                      0.0
+      +PAni:                        particleexp01
+      +Miss Factor:                 1.0 1.2 1.5 1.7 2.1
+      +BeamSound:                   147
+      +WarmupSound:                 154 ;->temp uses X-ray sample
+      +WarmdownSound:               159 ;->temp uses X-ray sample
+      +Muzzleglow:                  orange_glow
+      +Shots:                       0
+      +ShrinkFactor:                0.0
+      +ShrinkPct:                   0.0
+   +Range:           5280
+   +Attenuation:        0.1
+      $Section:
+            +Width:                   22.2
+            +Texture:                 Abbombertrail
+            +RGBA Inner:              0 0 0 0
+            +RGBA Outer:              0 0 0 0
+            +Flicker:                 0.0
+            +Zadd:                    0.0
+      $Section:
+            +Width:                   8.0
+            +Texture:                 AbTrail
+            +RGBA Inner:              0 0 0 255
+            +RGBA Outer:              0 0 0 255
+            +Flicker:                 0.3
+            +Zadd:                    1.0
+      $Section:
+            +Width:                   2.0
+            +Texture:                 Abbombertrail
+            +RGBA Inner:              0 0 0 255
+            +RGBA Outer:              0 0 0 255
+            +Flicker:                 0.1
+            +Zadd:                    2.0
+
+
+$Name:			Authority A-F Beam
+$Model File:                    none ; laser1-1.pof
+@Laser Bitmap:                  laserglow01
+@Laser Color:			250, 30, 30
+@Laser Length:			0.0
+@Laser Head Radius:		0.60
+@Laser Tail Radius:		0.60
+$Mass:                          4.0
+$Velocity:                      1000.0          ;; speed of the weapon (initially) -- may or may not change
+$Fire Wait:                     5.0             ;; in seconds
+$Damage:                        17
+$Damage Type:		NormalWeapon
+$Armor Factor:                  1.0
+$Shield Factor:                 1.0
+$Subsystem Factor:              1.0
+$Lifetime:                      50.0            ;; How long this thing lives
+$Energy Consumed:               0.30            ;; Energy used when fired
+$Cargo Size:                    0.0             ;; Amount of space taken up in weapon cargo
+$Homing:                        NO
+$LaunchSnd:                     124         	;; The sound it makes when fired
+$ImpactSnd:                     88        		;; The sound it makes when it hits something
++Weapon Range:					2100			;; Limit to range at which weapon will actively target object
+$Flags:                         ( "Big Ship" "beam" )
+$Impact Explosion:			exp04
+$Impact Explosion Radius:	5.0
+$BeamInfo:
+	+Type:			3			;; 0 - 4 are valid #'s
+	+Life:			3.5			;; how long it lasts once the beam is actually firing
+	+Warmup:		1000			;; warmup time in ms
+	+Warmdown:		1000			;; warmdown time in ms
+	+Radius:								5.0		;20.0
+	+PCount:								12		;12
+	+PRadius:								1.5		;1.2
+	+PAngle:		65.0			;; angle of the random "cone" where the particles are generated
+	+PAni:									particle_Blue
+	+Miss Factor:				6.0 5.0 4.0 3.0 1.5 	;; magic # - higher == miss more (only really applicable to type 0 and type 3 beams)
+	+BeamSound:			179			;; the looping beam-firing sound
+	+WarmupSound:		182			;; associated warmup sound
+	+WarmdownSound:		189			;; associated warmdown sound
+	+Muzzleglow:							BlueBeamGlow2
+	+Shots:				3			;; only used for TYPE 3 beams
+	+ShrinkFactor:		0.0			;; what
+	+ShrinkPct:			0.0			;; what percentage of max width we subtract per second
+	+Range:									3000
+	+Beam Piercing Effect:					exp06
+	+Beam Piercing Radius:					3.5
+	+Beam Piercing Effect Velocity:			25
+	+Beam Piercing Splash Effect Velocity:	-2.5
+	+Beam Piercing Effect Variance:			0.01
+	$Section:
+		+Width:			2.0
+		+Texture:		BlueBeam3Core
+		+RGBA Inner:	255 255 255 255
+		+RGBA Outer:	150 150 150 10
+		+Flicker:		0.0
+		+Zadd:			8
+		+Tile Factor:	12, 1
+		+Translation:	-18
+	$Section:
+		+Width:			3.0
+		+Texture:		BlueBeam4Core
+		+RGBA Inner:	160 160 0 255
+		+RGBA Outer:	60 60 0 10
+		+Flicker:		0.05
+		+Zadd:			6
+		+Tile Factor:	12, 1
+		+Translation:	-13
+	$Section:
+		+Width:			4.0
+		+Texture:		BlueBeam2CoreHaze
+		+RGBA Inner:	255 255 255 255
+		+RGBA Outer:	150 150 150 10
+		+Flicker:		0.2
+		+Zadd:			4
+		+Tile Factor:	12, 1
+		+Translation:	-7
+	$Section:
+		+Width:			5.0
+		+Texture:		BBlueHaze2
+		+RGBA Inner:	255 0 0 255
+		+RGBA Outer:	60 0 0 10
+		+Flicker:		0.1
+		+Zadd:			2
+		+Tile Factor:	12, 1
+		+Translation:	-3
+	$Section:
+		+Width:			8.0
+		+Texture:		BlueFade
+		+RGBA Inner:	255 255 255 255
+		+RGBA Outer:	150 150 150 10
+		+Flicker:		0.35
+		+Zadd:			1
+
+
+$Name:		Authority A-F BeamSlash
+$Model File:						none
+@Laser Bitmap:						laserglow01
+@Laser Color: 						88, 176, 249
+@Laser Length:						0.0
+@Laser Head Radius:					0.30
+@Laser Tail Radius:					0.30
+$Mass:								100.0
+$Velocity:							1000.0
+$Fire Wait:							2.0
+$Damage:							15
+$Armor Factor:						1.0
+$Shield Factor:						1.0
+$Subsystem Factor:					0.25
+$Lifetime:							2.1
+$Energy Consumed:						0.30
+$Cargo Size:						0.0
+$Homing:							NO
+$LaunchSnd:							124
+$ImpactSnd:							88
++Weapon Range:						2500
+$Flags: 							( "beam" "cycle" )
+$Impact Explosion: 					exp04
+$Impact Explosion Radius: 			4
+$BeamInfo:
+	+Type:									1
+	+Life:									1.0
+	+Warmup:								0
+	+Warmdown:								0
+	+Radius:								10.0
+	+PCount:								24
+	+PRadius:								2.4
+	+PAngle:								65.0
+	+PAni:									particle_Blue
+	+Miss Factor:							1.5 1.6 1.7 1.8 1.9
+	+BeamSound:								145
+	+WarmupSound:							-1
+	+WarmdownSound:							-1
+	+Muzzleglow:							BlueBeamGlow2
+	+Shots:									1
+	+ShrinkFactor:							0.0
+	+ShrinkPct:								0.0
+	+Range:									3000
+	+BeamWidth: 							8.0
+;	+Beam Flash Effect: 					capflash
+;	+Beam Flash Radius: 					2.0
+	+Beam Piercing Effect: 					exp06
+	+Beam Piercing Radius: 					2.0
+	+Beam Piercing Effect Velocity: 		10
+	+Beam Piercing Splash Effect Velocity: 	-1
+	+Beam Piercing Effect Variance: 		0.01
+	$Section:
+		+Width:			2.0
+		+Texture:		BlueBeam3Core
+		+RGBA Inner:	255 255 255 255
+		+RGBA Outer:	150 150 150 10
+		+Flicker:		0.0
+		+Zadd:			8
+		+Tile Factor:	12, 1
+		+Translation:	-18
+	$Section:
+		+Width:			3.0
+		+Texture:		BlueBeam4Core
+		+RGBA Inner:	160 160 0 255
+		+RGBA Outer:	60 60 0 10
+		+Flicker:		0.05
+		+Zadd:			6
+		+Tile Factor:	12, 1
+		+Translation:	-13
+	$Section:
+		+Width:			4.0
+		+Texture:		BlueBeam2CoreHaze
+		+RGBA Inner:	255 255 255 255
+		+RGBA Outer:	150 150 150 10
+		+Flicker:		0.2
+		+Zadd:			4
+		+Tile Factor:	12, 1
+		+Translation:	-7
+	$Section:
+		+Width:			5.0
+		+Texture:		BBlueHaze2
+		+RGBA Inner:	255 0 0 255
+		+RGBA Outer:	60 0 0 10
+		+Flicker:		0.1
+		+Zadd:			2
+		+Tile Factor:	12, 1
+		+Translation:	-3
+	$Section:
+		+Width:			8.0
+		+Texture:		BlueFade
+		+RGBA Inner:	255 255 255 255
+		+RGBA Outer:	150 150 150 10
+		+Flicker:		0.35
+		+Zadd:			1
+
+#End
+
+#Secondary Weapons
+
+$Name:                                 Meteor
++Title:                                XSTR("TM-5D Mora Swarm Missile", -1)
++Description:
+XSTR(
+"Standard Issue
+Swarm Type
+All-Purpose Missile", -1)
+$end_multi_text
++Tech Title:				   XSTR("TM-5D Mora", -1)
++Tech Description:
+XSTR(
+"The GTM-5D Mora is an improvement on the old Hornet missile so popular during the Great War.  It grants pilots the ability to determine swarm size as they see fit, allowing the pilot to be as efficient as possible with their munitions.", -1)
+$end_multi_text
+$Model File:									Mora.pof
+$Mass:									0.1
+$Velocity:								1900.0
+$Fire Wait:								0.25
+$Damage:								25.0                                      ;; damage applied when within inner radius
+$Blast Force:							0.2
+$Inner Radius:							10.0													;; radius at which damage is full (0 for impact only)
+$Outer Radius:							20.0													;; max radius for attenuated damage (0 for impact only)
+$Shockwave Speed:						0                                         ;; velocity of shockwave.  0 for none.
+$Armor Factor:							2.0
+$Shield Factor:							1.0
+$Subsystem Factor:						0.3
+$Lifetime:								7.0
+$Energy Consumed:						0.0													;; Energy used when fired
+$Cargo Size:							1.0													;; Amount of space taken up in weapon cargo
+$Homing:								YES
+	;; the following indented fields are only required when $Homing is YES
+	+Type:								ASPECT												;; Legal: HEAT, ASPECT
+	+Turn Time:							0.80
+	+Min Lock Time:						1.0													;; Minimum lock time (in seconds)
+	+Lock Pixels/Sec:					40                                        ;; Pixels moved per sec while locking
+	+Catch-up Pixels/Sec:				100													;; Pixels moved per sec while catching up
+	+Catch-up Penalty:					30														;; Extra pixels to move after catching up
+$Swarm:									1
+$LaunchSnd:								102                                       ;; The sound it makes when fired
+$ImpactSnd:								88                                        ;; The sound it makes when it hits something
+$FlyBySnd:								-1
+$Rearm Rate:							1.0													;; number of missiles/sec that are rearmed
+$Flags:									( "player allowed" )                   ;;      
+$Trail:												;; Trail cannot be set if Exhaust is set	
+	+Start Width:          				0.25                                      ;; Width of trail nearest missile
+	+End Width:            				0.5                                       ;; Width of trail before it "evaporates"
+	+Start Alpha:	       				1.0
+	+End Alpha:							0.0
+	+Max Life:							1.5                                       ;; how many seconds before trail disappears
+	+Bitmap:							MissileTrail03										;; Bitmap used to draw trail
+$Icon:									iconHornet
+$Anim:									hornet
+$Impact Explosion:						ExpMissileHit1
+$Impact Explosion Radius:				5.0
+
+
+$Name:                                  Comet
++Title:                                 XSTR("TM-21 Macana", -1)
++Description:
+XSTR(
+"Standard Issue
+Fast Target Lock", -1)
+$end_multi_text
++Tech Title:				   XSTR("TM-21 Macana", -1)
++Tech Description:
+XSTR(
+"The Macana is the next missile to fill the role of the famed Harpoon.  Using similar guidance systems coupled with a depleted uranium core, advanced explosives and a more powerful motor, the Macana is slated to replace the Harpoon.  Tactical simulations have shown the Macana to be a very well rounded missile, and many pilots who have the Macana available refuse to fly without it.", -1)
+$end_multi_text
+$Model File:							Macana.pof
+$Mass:									15.0
+$Velocity:								1700.0
+$Fire Wait:								2.0
+$Damage:								120													;; damage applied when within inner radius
+$Blast Force:							60.0
+$Inner Radius:							20.0                                       ;; radius at which damage is full (0 for impact only)
+$Outer Radius:							40.0                                       ;; max radius for attenuated damage 
+$Shockwave Speed:						0                                         ;; velocity of shockwave.  0 for none.
+$Armor Factor:							1.0
+$Shield Factor:							0.8
+$Subsystem Factor:						1.2
+$Lifetime:								5.0
+$Energy Consumed:						0.0													;; Energy used when fired
+$Cargo Size:							2.5													;; Amount of space taken up in weapon cargo
+$Homing:								YES
+	;; the following indented fields are only required when $Homing is YES
+	+Type:								ASPECT												;; Legal: HEAT, ASPECT
+	+Turn Time:							1.5
+	+Min Lock Time:						2.0													;; Minimum lock time (in seconds)
+	+Lock Pixels/Sec:					100                                        ;; Pixels moved per sec while locking
+	+Catch-up Pixels/Sec:				120													;; Pixels moved per sec while catching up
+	+Catch-up Penalty:					30														;; Extra pixels to move after catching up
+$LaunchSnd:								91                                        ;; The sound it makes when fired
+$ImpactSnd:								88                                        ;; The sound it makes when it hits something
+$FlyBySnd:								-1
+$Rearm Rate:							2.0													;; number of missiles/sec that are rearmed
+$Flags:									( "player allowed" )
+$Trail:																			;; Trail cannot be set if Exhaust is set
+	+Start Width:  						0.25                                      ;; Width of trail nearest missile
+	+End Width:            				0.5                                       ;; Width of trail before it "evaporates"
+	+Start Alpha:						1.0
+	+End Alpha:							0.0
+	+Max Life:             				0.7
+	+Bitmap:							MissileTrail01										;; Bitmap used to draw trail
+$Icon:									iconCrossbow
+$Anim:									cross
+$Impact Explosion:						ExpMissileHit1
+$Impact Explosion Radius:				7.0
+
+
+; ----------------------------------------------------------------------------------
+; Karambit
+;
+$Name:                                 Glaive
++Title:                                XSTR("GTM-47d Karambit", -1)
++Description:
+XSTR(
+"Tactical DU Penetrator
+Antisubsystem missile", -1)
+$end_multi_text
++Tech Title:				   XSTR("GTM-47d Karambit", -1)
++Tech Description:
+XSTR(
+"The GTM-47d Karambit was created to improve on a weakness in the Stiletto II design: its interceptability.  The Karambit is a high velocity Depleted Uranium Kinetic Energy antisubsystem weapon that uses sheer impact force to punch through even the thickest of armor.  Given that its primary role is speed, it has very low maneuverability, and cannot turn to intercept targets as well as the Stiletto II. Despite this, even the most advanced CWIS guns fielded by the Alliance are hard-pressed to stop a Karambit missile.  Many pilots affectionally call it 'The Duke.'", -1)
+$end_multi_text
+$Model File:								Karambit.pof
+$Mass:                                 10.0
+$Velocity:                             1280.0
+$Fire Wait:                            3.0
+$Damage:                               1025                                             ;; damage applied when within inner radius
+$Damage Type: 						PunctureWeapon
+$Blast Force:									40.0
+$Inner Radius:									20.0                                     ;; radius at which damage is full (0 for impact only)
+$Outer Radius:									40.0                                     ;; max radius for attenuated damage (0 for impact only)
+$Shockwave Speed:								0                                               ;; velocity of shockwave.  0 for none.
+$Armor Factor:									0.5
+$Shield Factor:								0.0
+$Subsystem Factor:							1.0
+$Lifetime:                             25.0
+$Energy Consumed:								0.0
+$Cargo Size:									8.0
+$Homing:                               YES
+	+Type:										HEAT                                    ;; Legal: HEAT, ASPECT
+	+Turn Time:									4.0
+	+View Cone:									60.0                                    ;; See 70/2 = 35 degrees from ahead to maintain lock.
+$LaunchSnd:                            95
+$ImpactSnd:                            88
+$FlyBySnd:                             -1
+$Rearm Rate:									1.2
+$Flags:                                ( "player allowed" "Huge" "Puncture"                           ;;      Puncture = punches through armor to subsystem.
+													"Bomb" )                                       ;; Bomb = can be targeted       
+$Icon:                                 iconStilettoII
+$Anim:                                 still
+$Impact Explosion:                     ExpMissileHit1
+$Impact Explosion Radius:					16.0
+
+
+$Name:                                 Atgeir
++Title:                                XSTR("GTM-48a Atgeir", -1)
++Description:
+XSTR(
+"Tactical Shaped Charge
+Antisubsystem weapon", -1)
+$end_multi_text
++Tech Title:				   XSTR("GTM-48a Atgeir", -1)
++Tech Description:
+XSTR(
+"The GTM-48a Atgier is a highly effective antisubsystem missile, utilizing a powerful shaped charge to puncture armor and critically damage subsystems.  Its motor is nowhere near as powerful as the Karambit's, but compensates with highly advanced targetting, allowing rapid deployment and off-axis attack options.", -1)
+$end_multi_text
+$Model File:								Atgeir.pof
+$Mass:                                 10.0
+$Velocity:                             1320.0
+$Fire Wait:                            1.5
+$Damage:                               775                                             ;; damage applied when within inner radius
+$Damage Type: 						PunctureWeapon
+$Blast Force:									40.0
+$Inner Radius:									20.0                                     ;; radius at which damage is full (0 for impact only)
+$Outer Radius:									40.0                                     ;; max radius for attenuated damage (0 for impact only)
+$Shockwave Speed:								0                                               ;; velocity of shockwave.  0 for none.
+$Armor Factor:									0.30
+$Shield Factor:								0.0
+$Subsystem Factor:							1.5
+$Lifetime:                             25.0
+$Energy Consumed:								0.0
+$Cargo Size:									8.0
+$Homing:                               YES
+	+Type:										HEAT                                    ;; Legal: HEAT, ASPECT
+	+Turn Time:									1.0
+	+View Cone:									120.0                                    ;; See 70/2 = 35 degrees from ahead to maintain lock.
+$LaunchSnd:                            95
+$ImpactSnd:                            88
+$FlyBySnd:                             -1
+$Rearm Rate:									1.2
+$Flags:                                ( "player allowed" "Huge" "Puncture"                           ;;      Puncture = punches through armor to subsystem.
+													"Bomb" )                                       ;; Bomb = can be targeted       
+$Icon:                                 iconStilettoII
+$Anim:                                 still
+$Impact Explosion:                     ExpMissileHit1
+$Impact Explosion Radius:					24.0
+
+
+$Name:                                  Voulge
++Title:                                 XSTR("TM-59 Yari", -1)
++Description:
+XSTR(
+"Enhanced long range
+high yield
+anti-bomber weapon", -1)
+$end_multi_text
++Tech Title:				   XSTR("TM-59 Yari", -1)
++Tech Description:
+XSTR(
+"The new TM-59 Yari is a continuation of the Trebuchet concept for long range missile interception.  With an enlarged motor and warhead, the Yari is heavier than the trebuchet, but has a greater effect on bomber formations than its predecessor.  It grants fighters the ability to effectively engage hostile bombers at 4,750 meters, greatly enhancing convoy survivability.", -1)
+$end_multi_text
+$Model File:									Yari.pof
+$Mass:											20.0
+$Velocity:										1680.0
+$Fire Wait:										6.0
+$Damage:										400														;; damage applied when within inner radius
+$Blast Force:									160.0
+$Inner Radius:									30.0														;; radius at which damage is full (0 for impact only)
+$Outer Radius:									60.0														;; max radius for attenuated damage (0 for impact only)
+$Shockwave Speed:									0                                            ;; velocity of shockwave.  0 for none.
+$Armor Factor:									1.0
+$Shield Factor:									0.5
+$Subsystem Factor:								2.4
+$Lifetime:										18.0
+$Energy Consumed:								0.0														;; Energy used when fired
+$Cargo Size:									8.0														;; Amount of space taken up in weapon cargo
+$Homing:										YES
+	;; the following indented fields are only required when $Homing is YES
+	+Type:										ASPECT													;; Legal: HEAT, ASPECT
+	+Turn Time:									4.0
+	+Min Lock Time:								4.0														;; Minimum lock time (in seconds)
+	+Lock Pixels/Sec:								80                                           ;; Pixels moved per sec while locking
+	+Catch-up Pixels/Sec:							120												;; Pixels moved per sec while catching up
+	+Catch-up Penalty:							15															;; Extra pixels to move after catching up
+$LaunchSnd:										92                                           ;; The sound it makes when fired
+$ImpactSnd:										88                                           ;; The sound it makes when it hits something
+$FlyBySnd:										-1
+$Rearm Rate:									0.33														;; number of missiles/sec that are rearmed
+$Flags:											( "player allowed" "Bomber+" "huge")
+$Trail:																										;; Trail cannot be set if Exhaust is set
+	+Start Width:								0.25                                         ;; Width of trail nearest missile
+	+End Width:									0.7                                          ;; Width of trail before it "evaporates"
+	+Start Alpha:								1.0
+	+End Alpha:									0.0
+	+Max Life:									0.3                                          ;; how many seconds before trail disappears
+	+Bitmap:									MissileTrail01											;; Bitmap used to draw trail
+$Icon:											iconTrebuchet
+$Anim:											trebuchet
+$Impact Explosion:								ExpMissileHit1
+$Impact Explosion Radius:						15.0
+
+
+$Name:                                  Sibyna
++Title:                                 XSTR("GTM-59a Sibyna", -1)
++Description:
+XSTR(
+"Long Range
+Fast Intercept
+Multipurpose Missile", -1)
+$end_multi_text
++Tech Title:				   XSTR("GTM-59 Sibyna", -1)
++Tech Description:
+XSTR(
+"The new GTM-59 Sibyna takes the Trebuchet line of defensive missiles to its logical conclusion.  Featuring a massive motor and powerful payload, the Sibyna can engage all types of threats at long range, and deal with them in short order.  The one downside to the Sibyna is that its large turning radius effectively nullifies it as a short-ranged weapon.  It is primarily employed as the first tier of antibomber defense.", -1)
+$end_multi_text
+$Model File:									Sibyna.pof
+$Mass:											30.0
+$Velocity:										1520.0
+$Fire Wait:										8.0
+$Damage:										475														;; damage applied when within inner radius
+$Blast Force:									160.0
+$Inner Radius:									20.0														;; radius at which damage is full (0 for impact only)
+$Outer Radius:									40.0														;; max radius for attenuated damage (0 for impact only)
+$Shockwave Speed:									0                                            ;; velocity of shockwave.  0 for none.
+$Armor Factor:									0.9
+$Shield Factor:									0.5
+$Subsystem Factor:								2.4
+$Lifetime:										18.0
+$Energy Consumed:								0.0														;; Energy used when fired
+$Cargo Size:									8.0														;; Amount of space taken up in weapon cargo
+$Homing:										YES
+	;; the following indented fields are only required when $Homing is YES
+	+Type:										ASPECT													;; Legal: HEAT, ASPECT
+	+Turn Time:									8.0
+	+Min Lock Time:								3.5														;; Minimum lock time (in seconds)
+	+Lock Pixels/Sec:								70                                           ;; Pixels moved per sec while locking
+	+Catch-up Pixels/Sec:							120												;; Pixels moved per sec while catching up
+	+Catch-up Penalty:							15															;; Extra pixels to move after catching up
+$LaunchSnd:										92                                           ;; The sound it makes when fired
+$ImpactSnd:										88                                           ;; The sound it makes when it hits something
+$FlyBySnd:										-1
+$Rearm Rate:									0.33														;; number of missiles/sec that are rearmed
+$Flags:											( "player allowed" "Bomber+" "huge")
+$Trail:																										;; Trail cannot be set if Exhaust is set
+	+Start Width:								0.25                                         ;; Width of trail nearest missile
+	+End Width:									0.7                                          ;; Width of trail before it "evaporates"
+	+Start Alpha:								1.0
+	+End Alpha:									0.0
+	+Max Life:									0.3                                          ;; how many seconds before trail disappears
+	+Bitmap:									MissileTrail01											;; Bitmap used to draw trail
+$Icon:											iconTrebuchet
+$Anim:											trebuchet
+$Impact Explosion:								ExpMissileHit1
+$Impact Explosion Radius:						15.0
+
+
+$Name:                                  @Bardiche
++Title:                                 XSTR("GTM-SIM 6 Masakari", -1)
++Description:
+XSTR(
+"Prototype
+Long-Range Anti-Bomber
+High Payload", 3350)
+$end_multi_text
++Tech Title:				XSTR("GTM-SIM 6 Masakari", -1)
++Tech Anim:					   Tech_GTM-55_Trebuchet
++Tech Description:
+XSTR(
+"The SIM 6 Masakari missile is a nuclear-tipped anti-bomber weapon. With flight characteristics similar to the Trebuchet but with higher warhead yield, it is a potent weapon against any bomber. It's only drawback is its size, longer lock time and slower turning rate.", -1)
+$end_multi_text
+$Model File:			SIM-6N.pof
+$Mass:				20.0
+$Velocity:			2240.0
+$Fire Wait:			6.0
+$Damage:			700			;; damage applied when within inner radius
+$Blast Force:		160.0
+$Inner Radius:		20.0		;; radius at which damage is full (0 for impact only)
+$Outer Radius:		50.0		;; max radius for attenuated damage (0 for impact only)
+$Shockwave Speed:		20               ;; velocity of shockwave.  0 for none.
+$Armor Factor:		0.9
+$Shield Factor:		0.5
+$Subsystem Factor:	2.4
+$Lifetime:			18.0
+$Energy Consumed:		0.0		;; Energy used when fired
+$Cargo Size:		14.0		;; Amount of space taken up in weapon cargo
+$Homing:			YES		;; the following indented fields are only required when $Homing is YES
+	+Type:				ASPECT		;; Legal: HEAT, ASPECT
+	+Turn Time:				8.5
+	+Min Lock Time:			3.5		;; Minimum lock time (in seconds)
+	+Lock Pixels/Sec:			50              ;; Pixels moved per sec while locking
+	+Catch-up Pixels/Sec:		120		;; Pixels moved per sec while catching up
+	+Catch-up Penalty:		15		;; Extra pixels to move after catching up
+$LaunchSnd:				92              ;; The Sound it makes when fired
+$ImpactSnd:				88		;; The sound it makes when it hits something
+$FlyBySnd:				-1
+$Rearm Rate:			0.33		;; number of missiles/sec that are rearmed
+$Flags:				( "player allowed" "Bomber+" "huge")
+$Trail:				;; Trail cannot be set if Exhaust is set
+	+Start Width:			0.25                                         ;; Width of trail	Nearest missile
+	+End Width:			0.7                                          ;; Width of trail before it "evaporates"
+	+Start Alpha:			1.0
+	+End Alpha:			0.0
+	+Max Life:			0.3                                          ;; how many seconds before trail disappears
+	+Bitmap:			MissileTrail01				;; Bitmap used to draw trail
+$Icon:				iconTrebuchet
+$Anim:				trebuchet
+$Impact Explosion:		ExpMissileHit1
+$Impact Explosion Radius:	20.0
+
+$Name: 		Warhammer
+$Model File:						UEM_Apocalypse.pof
+$POF target LOD:					0
+$Mass:								20.0
+$Velocity:							300.0
+$Fire Wait:							30.0
+$Damage:							500
+$Damage Type: 						HugeWeapon
+$Arm radius: 						350
+$Shockwave Damage Type:				Shockwave
+$Blast Force:    					500.0
+$Inner Radius: 						50.0
+$Outer Radius:						100.0
+$Shockwave Speed: 					50
+$Shockwave name:            	    shockwave01
+$Dinky shockwave:
+	+Blast Force: 		50
+	+Inner Radius: 		5
+	+Outer Radius: 		15
+	+Shockwave Speed: 	0.0
+$Armor Factor:						1.0
+$Shield Factor:						0.1
+$Subsystem Factor:					0.5
+$Lifetime: 							48.0
+$Energy Consumed: 					0.0
+$Cargo Size:						2.5
+$Homing:  							YES
+	+Type: 					ASPECT
+	+Turn Time:  			0.20
+	+View Cone:				360.0
+	+Min Lock Time:			4.0
+	+Lock Pixels/Sec: 		25
+	+Catch-up Pixels/Sec: 	10
+	+Catch-up Penalty: 		15
+$Swarm:								2
+	+SwarmWait:		2.0
+$Free Flight Time: 					1.0
+$LaunchSnd:							326
+$ImpactSnd:							101
+$FlyBySnd:							-1
+$Rearm Rate:						0.02
++Weapon Range: 						4000
+$Flags:								(  "Huge" "Big Ship" "No Dumbfire" "bomb" "particle spew" "same turret cooldown" "no lifeleft penalty" "cycle" )
+$Trail:
+	+Start Width:	5.0
+	+End Width:		20.25
+	+Start Alpha:	1.0
+	+End Alpha:		0.0
+	+Max Life:		4.0
+	+Bitmap: 		Missiletrail101
+$Impact Explosion:					ExpMissileHit1
+$Impact Explosion Radius:			7.76
+$Dinky impact explosion: 			ExpMissileHit1
+$Dinky impact explosion radius: 	30.76
+$Piercing Impact Explosion: 		exp04
+$Piercing Impact Radius: 			3.88
+$Piercing Impact Velocity: 			25
+$Piercing Impact Splash Velocity: 	-25
+$Piercing Impact Variance: 			20000
+$Piercing Impact Particles:			10
+$Muzzleflash: 						massdriver_sanctus
+$Burst Shots: 						1
+$Burst Delay: 						15000
+$Burst Flags: 						( "fast firing" )
+$Thruster Flame Effect:				missilethruster01
+$Thruster Glow Effect:				missileglow01
+
+$Name: 		CW Hellfire
+$Model File:						UEM_WarhammerB.pof
+$POF target LOD:					0
+$Mass:								2.0
+$Velocity:							1900.0
+$Fire Wait:							10.0
+$Damage:							115
+$Damage Type: 						normalWeapon
+$Blast Force:    					300.0
+$Inner Radius: 						30.0
+$Outer Radius:						60.0
+$Shockwave Speed: 					0
+$Armor Factor:						1.0
+$Shield Factor:						0.1
+$Subsystem Factor:					2.5
+$Lifetime: 							48.0
+$Energy Consumed: 					0.0
+$Cargo Size:						2.5
+$Homing:  							YES
+	+Type: 					ASPECT
+	+Turn Time:  			0.1
+	+View Cone:				360.0
+	+Min Lock Time:			4.0
+	+Lock Pixels/Sec: 		25
+	+Catch-up Pixels/Sec: 	10
+	+Catch-up Penalty: 		15
+$Swarm:								4
+	+SwarmWait:		0.6
+$Free Flight Time: 					1.0
+$LaunchSnd:							326
+$ImpactSnd:							101
+$FlyBySnd:							-1
+$Rearm Rate:						0.02
++Weapon Range: 						4000
+$Flags:								(  "Huge" "Big Ship" "No Dumbfire" "bomb" "particle spew" "same turret cooldown" "no lifeleft penalty" "cycle" )
+$Trail:
+	+Start Width:	5.0
+	+End Width:		20.25
+	+Start Alpha:	1.0
+	+End Alpha:		0.0
+	+Max Life:		4.0
+	+Bitmap: 		MissileTrail01
+$Impact Explosion:					ExpMissileHit1
+$Impact Explosion Radius:			20.76
+$Dinky impact explosion: 			ExpMissileHit1
+$Dinky impact explosion radius: 	7.76
+$Piercing Impact Explosion: 		exp04
+$Piercing Impact Radius: 			3.88
+$Piercing Impact Velocity: 			25
+$Piercing Impact Splash Velocity: 	-25
+$Piercing Impact Variance: 			20000
+$Piercing Impact Particles:			10
+$Muzzleflash: 						massdriver_sanctus
+$Thruster Flame Effect:				missilethruster01
+$Thruster Glow Effect:				missileglow01
+
+$Name: 		Hammer
+$Model File:						UEM_WarhammerB.pof
+$POF target LOD:					0
+$Mass:								20.0
+$Velocity:							500.0
+$Fire Wait:							20.0
+$Damage:							170
+$Damage Type: 						HugeWeapon
+$Arm radius: 						350
+$Shockwave Damage Type:				Shockwave
+$Blast Force:    					500.0
+$Inner Radius: 						50.0
+$Outer Radius:						100.0
+$Shockwave Speed: 					50
+$Shockwave name:            	    shockwave01
+$Dinky shockwave:
+	+Blast Force: 		50
+	+Inner Radius: 		5
+	+Outer Radius: 		15
+	+Shockwave Speed: 	0.0
+$Armor Factor:						1.0
+$Shield Factor:						0.1
+$Subsystem Factor:					0.5
+$Lifetime: 							48.0
+$Energy Consumed: 					0.0
+$Cargo Size:						2.5
+$Homing:  							YES
+	+Type: 					ASPECT
+	+Turn Time:  			0.20
+	+View Cone:				360.0
+	+Min Lock Time:			4.0
+	+Lock Pixels/Sec: 		25
+	+Catch-up Pixels/Sec: 	10
+	+Catch-up Penalty: 		15
+$Swarm:								5
+	+SwarmWait:		2.0
+$Free Flight Time: 					1.0
+$LaunchSnd:							326
+$ImpactSnd:							101
+$FlyBySnd:							-1
+$Rearm Rate:						0.02
++Weapon Range: 						4000
+$Flags:								(  "Huge" "Big Ship" "No Dumbfire" "bomb" "particle spew" "same turret cooldown" "no lifeleft penalty" "cycle" )
+$Trail:
+	+Start Width:	5.0
+	+End Width:		20.25
+	+Start Alpha:	1.0
+	+End Alpha:		0.0
+	+Max Life:		4.0
+	+Bitmap: 		MissileTrail01
+$Impact Explosion:					ExpMissileHit1
+$Impact Explosion Radius:			20.76
+$Dinky impact explosion: 			ExpMissileHit1
+$Dinky impact explosion radius: 	7.76
+$Piercing Impact Explosion: 		exp04
+$Piercing Impact Radius: 			3.88
+$Piercing Impact Velocity: 			25
+$Piercing Impact Splash Velocity: 	-25
+$Piercing Impact Variance: 			20000
+$Piercing Impact Particles:			10
+$Muzzleflash: 						massdriver_sanctus
+$Thruster Flame Effect:				missilethruster01
+$Thruster Glow Effect:				missileglow01
+
+$Name: 		Harrier
+$Model File:						UEM_WarhammerB.pof
+$POF target LOD:					0
+$Mass:								20.0
+$Velocity:							300.0
+$Fire Wait:							20.0
+$Damage:							130
+$Damage Type: 						HugeWeapon
+$Arm radius: 						350
+$Shockwave Damage Type:				Shockwave
+$Blast Force:    					500.0
+$Inner Radius: 						50.0
+$Outer Radius:						100.0
+$Shockwave Speed: 					50
+$Shockwave name:            	    shockwave01
+$Dinky shockwave:
+	+Blast Force: 		50
+	+Inner Radius: 		5
+	+Outer Radius: 		15
+	+Shockwave Speed: 	0.0
+$Armor Factor:						1.0
+$Shield Factor:						0.1
+$Subsystem Factor:					0.5
+$Lifetime: 							48.0
+$Energy Consumed: 					0.0
+$Cargo Size:						2.5
+$Homing:  							YES
+	+Type: 					ASPECT
+	+Turn Time:  			0.20
+	+View Cone:				360.0
+	+Min Lock Time:			4.0
+	+Lock Pixels/Sec: 		25
+	+Catch-up Pixels/Sec: 	10
+	+Catch-up Penalty: 		15
+$Swarm:								2
+	+SwarmWait:		2.0
+$Free Flight Time: 					1.0
+$LaunchSnd:							326
+$ImpactSnd:							101
+$FlyBySnd:							-1
+$Rearm Rate:						0.02
++Weapon Range: 						4000
+$Flags:								(  "Huge" "Big Ship" "No Dumbfire" "bomb" "particle spew" "same turret cooldown" "no lifeleft penalty" "cycle" )
+$Trail:
+	+Start Width:	5.0
+	+End Width:		20.25
+	+Start Alpha:	1.0
+	+End Alpha:		0.0
+	+Max Life:		4.0
+	+Bitmap: 		MissileTrail01
+$Impact Explosion:					ExpMissileHit1
+$Impact Explosion Radius:			20.76
+$Dinky impact explosion: 			ExpMissileHit1
+$Dinky impact explosion radius: 	7.76
+$Piercing Impact Explosion: 		exp04
+$Piercing Impact Radius: 			3.88
+$Piercing Impact Velocity: 			25
+$Piercing Impact Splash Velocity: 	-25
+$Piercing Impact Variance: 			20000
+$Piercing Impact Particles:			10
+$Muzzleflash: 						massdriver_sanctus
+$Thruster Flame Effect:				missilethruster01
+$Thruster Glow Effect:				missileglow01
+
+$Name:                                  Comet#CIWS
+$Model File:							Macana.pof
+$Mass:									15.0
+$Velocity:								1100.0
+$Fire Wait:								5.0
+$Damage:								120													;; damage applied when within inner radius
+$Blast Force:							60.0
+$Inner Radius:							20.0                                       ;; radius at which damage is full (0 for impact only)
+$Outer Radius:							40.0                                       ;; max radius for attenuated damage 
+$Shockwave Speed:						0                                         ;; velocity of shockwave.  0 for none.
+$Armor Factor:							1.0
+$Shield Factor:							0.8
+$Subsystem Factor:						1.2
+$Lifetime:								5.0
+$Energy Consumed:						0.0													;; Energy used when fired
+$Cargo Size:							2.5													;; Amount of space taken up in weapon cargo
+$Homing:								YES
+	;; the following indented fields are only required when $Homing is YES
+	+Type:								ASPECT												;; Legal: HEAT, ASPECT
+	+Turn Time:							1.0
+	+Min Lock Time:						2.0													;; Minimum lock time (in seconds)
+	+Lock Pixels/Sec:					100                                        ;; Pixels moved per sec while locking
+	+Catch-up Pixels/Sec:				120													;; Pixels moved per sec while catching up
+	+Catch-up Penalty:					30														;; Extra pixels to move after catching up
+$Swarm:									9
+	+SwarmWait:							0.25
+$LaunchSnd:								91                                        ;; The sound it makes when fired
+$ImpactSnd:								88                                        ;; The sound it makes when it hits something
+$FlyBySnd:								-1
+$Rearm Rate:							2.0													;; number of missiles/sec that are rearmed
+$Flags:									( "ciws" "bomber+")
+$Trail:																			;; Trail cannot be set if Exhaust is set
+	+Start Width:  						0.25                                      ;; Width of trail nearest missile
+	+End Width:            				0.5                                       ;; Width of trail before it "evaporates"
+	+Start Alpha:						1.0
+	+End Alpha:							0.0
+	+Max Life:             				0.7
+	+Bitmap:							MissileTrail01										;; Bitmap used to draw trail
+$Icon:									iconCrossbow
+$Anim:									cross
+$Impact Explosion:						ExpMissileHit1
+$Impact Explosion Radius:				7.0
+
+
+$Name:					Ahlspiess
++Title:					XSTR("GTM Standard Missile 13", -1)
++Description:
+XSTR(
+"Special Issue
+Capital-Based Cruise Missile
+Antimatter Warhead", 3393)
+$end_multi_text
++Tech Title:				XSTR("GTM Standard Missile 13", -1)
++Tech Anim:				Tech_Helios
++Tech Description:
+XSTR(
+"The GTM Standard Missile 13 is a ship-based Kinetic Kill Missile. It was designed as a first strike weapon against capital subsystems, intended to smash through armor plating and severely damage, if not completely vaporize, the targeted subststems. The weapon performs admirably in its intended role, and can go well beyond that. Its targetting system allows it to track smaller targets and engage them with minimal collateral damage, making it an excellent precision guided weapon.", -1)
+$end_multi_text
+$Model File:			SM-13.pof
+$Mass:				15500.0
+$Velocity:				1100.0
+$Fire Wait:				30.0
+$Damage:                      1000		;; damage applied when within inner radius
+$Blast Force:                 20.0
+$Inner Radius:			1.0		;; radius at which damage is full (0 for impact only)
+$Outer Radius:			5.0		;; max radius for attenuated damage 
+$Shockwave Speed:			0                                        ;; velocity of shockwave.  0 for none.
+$Armor Factor:			1.00
+$Shield Factor:			0.82
+$Subsystem Factor:            1.50
+$Lifetime:				20.0
+$Energy Consumed:			0.0
+$Cargo Size:			25.0
+$Homing:				YES		;; the following indented fields are only required when $Homing is YES
+	+Type:			HEAT		;; Legal: HEAT, ASPECT
+	+Turn Time:			13.85
+	+View Cone:			45.0		;; See 70/2 = 35 degrees from ahead to maintain lock.
+$LaunchSnd:				97
+$ImpactSnd:				101		;;      shockwave impact sound
+$FlyBySnd:				-1
+$Rearm Rate:				0.02
+$Flags:					( "Bomb" )
+$Trail:                                 ;; Trail cannot be set if Exhaust is set
+	+Start Width:		1.0                                       ;; Width of trail nearest missile
+	+End Width:			6.0  
+	+Start Alpha:		1.0
+	+End Alpha:			0.0
+	+Max Life:			8.0                                       ;; how many seconds before trail disappears
+	+Bitmap:				MissileTrail01				;; Bitmap used to draw trail
+$Icon:                              iconHelios
+$Anim:                              Helios
+$Impact Explosion:                 	Exp20
+$Impact Explosion Radius:		30.0
+
+
+$Name:					Ahlspiess#FastFire
++Title:					XSTR("GTM Standard Missile 13", -1)
++Description:
+XSTR(
+"Special Issue
+Capital-Based Cruise Missile
+Antimatter Warhead", 3393)
+$end_multi_text
++Tech Title:				   XSTR("GTM Standard Missile 13", -1)
++Tech Anim:					   Tech_Helios
++Tech Description:
+XSTR(
+"The GTM Standard Missile 13 is a ship-based Kinetic Kill Missile. It was designed as a first strike weapon against capital subsystems, intended to smash through armor plating and severely damage, if not completely vaporize, the targeted subststems. The weapon performs admirably in its intended role, and can go well beyond that. Its targetting system allows it to track smaller targets and engage them with minimal collateral damage, making it an excellent precision guided weapon.", -1)
+$end_multi_text
+$Model File:				SM-13.pof
+$Mass:					15500.0
+$Velocity:					1100.0
+$Fire Wait:					1.0
+$Damage:                            	1000		;; damage applied when within inner radius
+$Blast Force:                       	20.0
+$Inner Radius:				1.0		;; radius at which damage is full (0 for impact only)
+$Outer Radius:				5.0		;; max radius for attenuated damage 
+$Shockwave Speed:				0                                        ;; velocity of shockwave.  0 for none.
+$Armor Factor:				1.00
+$Shield Factor:				0.82
+$Subsystem Factor:                  1.50
+$Lifetime:					20.0
+$Energy Consumed:				0.0
+$Cargo Size:				25.0
+$Homing:				YES		;; the following indented fields are only required when $Homing is YES
+	+Type:			HEAT		;; Legal: HEAT, ASPECT
+	+Turn Time:			13.85
+	+View Cone:			45.0		;; See 70/2 = 35 degrees from ahead to maintain lock.
+$LaunchSnd:				97
+$ImpactSnd:				101		;;      shockwave impact sound
+$FlyBySnd:				-1
+$Rearm Rate:				0.02
+$Flags:					( "Bomb" )
+$Trail:                                 ;; Trail cannot be set if Exhaust is set
+	+Start Width:		1.0                                       ;; Width of trail nearest missile
+	+End Width:			6.0  
+	+Start Alpha:		1.0
+	+End Alpha:			0.0
+	+Max Life:			8.0                                       ;; how many seconds before trail disappears
+	+Bitmap:			MissileTrail01				;; Bitmap used to draw trail
+$Icon:                              iconHelios
+$Anim:                              Helios
+$Impact Explosion:                  Exp20
+$Impact Explosion Radius:		30.0
+
+
+$Name:								Stormshard
+	+Tech Title:					XSTR( "MN5 Stormshard Torpedo", -1 )
+	+Tech Anim:						none
+	+Tech Description:				XSTR( "The MN5 Stormshard is a novel torpedo intended to saturate hostile positions with nuclear tipped MIRV bomblets.", -1 )
+$end_multi_text
+$Model File:						StormshardL.pof
+$POF target LOD:					0
+$Mass:								30.0
+$Velocity:							800.0
+$Fire Wait:							80.0
+$Damage:							10
+;$Detonation Radius:					1500
+$Blast Force:						0.0
+$Inner Radius: 						1500	
+$Outer Radius:						1501
+$Shockwave Speed: 					0
+$Shockwave name:            	    shockwave01
+$Armor Factor:						1.0
+$Shield Factor:						0.1
+$Subsystem Factor:   				0.5
+$Lifetime: 							42.0
+$Energy Consumed: 					0.0
+$Cargo Size:						2.5
+$Homing:  							YES
+	+Type: 					ASPECT
+	+Turn Time:  			1.0
+	+View Cone:				360.0
+	+Min Lock Time:			4.0
+	+Lock Pixels/Sec:		25
+	+Catch-up Pixels/Sec: 	10
+	+Catch-up Penalty: 		15
+$Swarm:								6
+	+SwarmWait:		1.0
+$Free Flight Time: 					1.0
+$LaunchSnd:							325
+$ImpactSnd:							101
+$FlyBySnd:							-1
+$Rearm Rate:						0.02
++Weapon Range: 						8000
+$Flags:								( "huge" "Big Ship" "bomb" "No Dumbfire" "particle spew" "same turret cooldown" "no lifeleft penalty" "cycle" "smart spawn" "no subsystem homing" "Spawn Cyclops#Heat, 4" )
+$Trail:
+	+Start Width:	5.4
+	+End Width:		0
+	+Start Alpha:	1.0
+	+End Alpha:		0.0
+	+Max Life:		4.0
+	+Bitmap: 		missiletrail02
+$Impact Explosion: 					exp04
+$Impact Explosion Radius: 			5.8
+$Piercing Impact Explosion: 		exp04
+$Piercing Impact Radius: 			5.8
+$Piercing Impact Velocity: 			20
+$Piercing Impact Splash Velocity: 	-5
+$Piercing Impact Variance: 			20000
+$Piercing Impact Particles: 		10
+$spawn Angle:						15
+$Pspew:
+	+Count:		1
+	+Time:		1
+	+Vel:		0.0
+	+Radius:	2.9
+	+Life:		0.1
+	+Scale:		0.0
+	+Bitmap:	missilespew02
+$Thruster Flame Effect:				missilethruster02
+$Thruster Glow Effect:				missileglow02
+
+;-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+$Name:								Diamondback
+	+Tech Title:					XSTR( "SN12 Diamondback Torpedo", -1 )
+	+Tech Anim:						none
+	+Tech Description:				XSTR( "The SN12 Diamondback is an anticapital attack weapon, sending a single, high-yield nuclear device towards its target.", -1 )
+$end_multi_text
+$Model File:						StormshardL.pof
+$POF target LOD:					0
+$Mass:								30.0
+$Velocity:							800.0
+$Fire Wait:							40.0
+$Damage:							4000
+$Blast Force:						0.0
+$Inner Radius: 						50	
+$Outer Radius:						250
+$Shockwave Speed: 					75
+$Shockwave name:            	    shockwave01
+$Armor Factor:						1.0
+$Shield Factor:						0.1
+$Subsystem Factor:   				0.5
+$Lifetime: 							50.0
+$Energy Consumed: 					0.0
+$Cargo Size:						2.5
+$Homing:  							YES
+	+Type: 					HEAT
+	+Turn Time:  			2.0
+	+View Cone:				360.0
+	;+Min Lock Time:			4.0
+	;+Lock Pixels/Sec:		25
+	;+Catch-up Pixels/Sec: 	10
+	;+Catch-up Penalty: 		15
+$Free Flight Time: 					2.0
+$LaunchSnd:							325
+$ImpactSnd:							101
+$FlyBySnd:							-1
+$Rearm Rate:						0.02
++Weapon Range: 						9500
+$Flags:								( "huge" "Big Ship" "bomb" "No Dumbfire" "particle spew" "same turret cooldown" "no lifeleft penalty" "cycle" "no subsystem homing" )
+$Trail:
+	+Start Width:	5.4
+	+End Width:		0
+	+Start Alpha:	1.0
+	+End Alpha:		0.0
+	+Max Life:		4.0
+	+Bitmap: 		missiletrail01
+$Impact Explosion: 					exp04
+$Impact Explosion Radius: 			5.8
+$Piercing Impact Explosion: 		exp04
+$Piercing Impact Radius: 			5.8
+$Piercing Impact Velocity: 			20
+$Piercing Impact Splash Velocity: 	-5
+$Piercing Impact Variance: 			20000
+$Piercing Impact Particles: 		10
+$Pspew:
+	+Count:		1
+	+Time:		1
+	+Vel:		0.0
+	+Radius:	2.9
+	+Life:		0.1
+	+Scale:		0.0
+	+Bitmap:	missilespew01
+$Weapon Hitpoints:					300
+$Thruster Flame Effect:				missilethruster01
+$Thruster Glow Effect:				missileglow01
+
+
+$Name:								Ranseur
+	+Tech Title:					XSTR( "SN12A Spearfish Torpedo", -1 )
+	+Tech Anim:						none
+	+Tech Description:				XSTR( "The SN12A Spearfish improves the Diamondback design with an upgraded guidance suite, allowing it to swarm launch.  The only side effect was lowered yield on the weapon's main warhead.", -1 )
+$end_multi_text
+$Model File:						StormshardL.pof
+$POF target LOD:					0
+$Mass:								30.0
+$Velocity:							800.0
+$Fire Wait:							60.0
+$Damage:							1000
+$Blast Force:						0.0
+$Inner Radius: 						50	
+$Outer Radius:						250
+$Shockwave Speed: 					75
+$Shockwave name:            	    bomb_flare
+$Armor Factor:						1.0
+$Shield Factor:						0.1
+$Subsystem Factor:   				0.5
+$Lifetime: 							50.0
+$Energy Consumed: 					0.0
+$Cargo Size:						2.5
+$Homing:  							YES
+	+Type: 					HEAT
+	+Turn Time:  			2.0
+	+View Cone:				360.0
+	;+Min Lock Time:			4.0
+	;+Lock Pixels/Sec:		25
+	;+Catch-up Pixels/Sec: 	10
+	;+Catch-up Penalty: 		15
+$Swarm:								6
+	+SwarmWait:		2.0
+$Free Flight Time: 					1.0
+$LaunchSnd:							325
+$ImpactSnd:							101
+$FlyBySnd:							-1
+$Rearm Rate:						0.02
++Weapon Range: 						9500
+$Flags:								( "huge" "Big Ship" "bomb" "No Dumbfire" "particle spew" "same turret cooldown" "no lifeleft penalty" "cycle" "no subsystem homing" )
+$Trail:
+	+Start Width:	5.4
+	+End Width:		0
+	+Start Alpha:	1.0
+	+End Alpha:		0.0
+	+Max Life:		4.0
+	+Bitmap: 		missiletrail01
+$Impact Explosion: 					exp04
+$Impact Explosion Radius: 			5.8
+$Piercing Impact Explosion: 		exp04
+$Piercing Impact Radius: 			5.8
+$Piercing Impact Velocity: 			20
+$Piercing Impact Splash Velocity: 	-5
+$Piercing Impact Variance: 			20000
+$Piercing Impact Particles: 		10
+$Pspew:
+	+Count:		1
+	+Time:		1
+	+Vel:		0.0
+	+Radius:	2.9
+	+Life:		0.1
+	+Scale:		0.0
+	+Bitmap:	missilespew01
+$Weapon Hitpoints:					300
+$Thruster Flame Effect:				missilethruster01
+$Thruster Glow Effect:				missileglow01
+
+
+$Name:								Sovnya
+	+Tech Title:					XSTR( "SN13 Sovnya Torpedo", -1 )
+	+Tech Anim:						none
+	+Tech Description:				XSTR( "The SN13 Sovnya is an upgrade to the Diamondback weapon.  Based on a scaled down Diamondback spaceframe, the Sovnya launches in swarms of 12, carrying medium-yield nuclear devices towards its target.", -1 )
+$end_multi_text
+$Model File:						StormshardM.pof
+$POF target LOD:					0
+$Mass:								30.0
+$Velocity:							800.0
+$Fire Wait:							90.0
+$Damage:							800
+$Blast Force:						0.0
+$Inner Radius: 						50	
+$Outer Radius:						250
+$Shockwave Speed: 					75
+$Shockwave name:            	    shockwave01
+$Armor Factor:						1.0
+$Shield Factor:						0.1
+$Subsystem Factor:   				0.5
+$Lifetime: 							50.0
+$Energy Consumed: 					0.0
+$Cargo Size:						2.5
+$Homing:  							YES
+	+Type: 					HEAT
+	+Turn Time:  			2.0
+	+View Cone:				360.0
+	;+Min Lock Time:			4.0
+	;+Lock Pixels/Sec:		25
+	;+Catch-up Pixels/Sec: 	10
+	;+Catch-up Penalty: 		15
+$Swarm:								12
+	+SwarmWait:		1.0
+$Free Flight Time: 					1.0
+$LaunchSnd:							325
+$ImpactSnd:							101
+$FlyBySnd:							-1
+$Rearm Rate:						0.02
++Weapon Range: 						9500
+$Flags:								( "huge" "Big Ship" "bomb" "No Dumbfire" "particle spew" "same turret cooldown" "no lifeleft penalty" "cycle" "no subsystem homing" )
+$Trail:
+	+Start Width:	2.4
+	+End Width:		0
+	+Start Alpha:	1.0
+	+End Alpha:		0.0
+	+Max Life:		4.0
+	+Bitmap: 		missiletrail03
+$Impact Explosion: 					exp04
+$Impact Explosion Radius: 			5.8
+$Piercing Impact Explosion: 		exp04
+$Piercing Impact Radius: 			5.8
+$Piercing Impact Velocity: 			20
+$Piercing Impact Splash Velocity: 	-5
+$Piercing Impact Variance: 			20000
+$Piercing Impact Particles: 		10
+$Pspew:
+	+Count:		1
+	+Time:		1
+	+Vel:		0.0
+	+Radius:	1.5
+	+Life:		0.1
+	+Scale:		0.0
+	+Bitmap:	missilespew03
+$Weapon Hitpoints:					200
+$Thruster Flame Effect:				missilethruster03
+$Thruster Glow Effect:				missileglow03
+
+
+$Name:									Black Raven
++Title:									XSTR("TN4 Black Raven", -1)
++Description:
+XSTR(
+"Anti-capital torpedo
+Nuclear-tipped MIRV pods", -1)
+$end_multi_text
++Tech Title:				   XSTR("TN4 Black Raven Torpedo", -1)
++Tech Anim:					   Tech_Helios
++Tech Description:
+XSTR(
+"The TN4 Black Raven is the largest antifighter weapon mounted aboard the Phoenix Rising.  It deploys 5 guided autotargetting bomblets 800m from its target, proving lethal to fighter formations ", -1)
+$end_multi_text
+$Model File:							StormshardL.pof
+$Mass:									35.0
+$Velocity:								800.0
+$Fire Wait:								80.0
+$Damage:                                0                                                                                                    ;; damage applied when within inner radius
+;$Detonation Radius: 					1500
+$Blast Force:                           0.0
+$Inner Radius:							1500.0													;; radius at which damage is full (0 for impact only)
+$Outer Radius:							1501.0													;; max radius for attenuated damage 
+$Shockwave Speed:						0                                        ;; velocity of shockwave.  0 for none.
+$Armor Factor:							1.0
+$Shield Factor:							0.02
+$Subsystem Factor:                      85
+$Lifetime:								84.0
+$Energy Consumed:						0.0
+$Cargo Size:							25.0
+$Homing:								YES
+	+Type:                              ASPECT												;; Legal: HEAT, ASPECT
+	+Turn Time:                         1.5
+	+Min Lock Time:						7.0													;; Minimum lock time (in seconds)
+	+Lock Pixels/Sec:					25														;; Pixels moved per sec while locking
+	+Catch-up Pixels/Sec:				0														;; Pixels moved per sec while catching up
+	+Catch-up Penalty:					15														;; Extra pixels to move after catching up
+$Swarm:								6
+	+SwarmWait:		1.0
+$Free Flight Time: 					2.0
+$LaunchSnd:								97
+$ImpactSnd:								101													;;      shockwave impact sound
+$FlyBySnd:								-1
+$Rearm Rate:							0.02
+$Flags:									( "Bomb" "Huge" "particle spew" "spawn Bardiche#HEAT, 5" "smart spawn" "same turret cooldown" "no lifeleft penalty" "cycle" )
+$Trail:
+	+Start Width:	5.4
+	+End Width:		0
+	+Start Alpha:	1.0
+	+End Alpha:		0.0
+	+Max Life:		4.0
+	+Bitmap: 		missiletrail05
+$Impact Explosion: 					exp04
+$Impact Explosion Radius: 			5.8
+$Piercing Impact Explosion: 		exp04
+$Piercing Impact Radius: 			5.8
+$Piercing Impact Velocity: 			20
+$Piercing Impact Splash Velocity: 	-5
+$Piercing Impact Variance: 			20000
+$Piercing Impact Particles: 		10
+$spawn Angle:						15
+$Pspew:
+	+Count:		1
+	+Time:		1
+	+Vel:		0.0
+	+Radius:	2.9
+	+Life:		0.1
+	+Scale:		0.0
+	+Bitmap:	missilespew05
+$Thruster Flame Effect:				missilethruster05
+$Thruster Glow Effect:				missileglow05
+
+; ----------------------------------------------------------------------------------
+; Helios
+;
+$Name:									Takoba
++Title:									XSTR("SDM3 Takoba", -1)
++Description:
+XSTR(
+"Anti-capital torpedo
+Nuclear-tipped MIRV pods", -1)
+$end_multi_text
++Tech Title:				   XSTR("SDM3 Takoba Torpedo", -1)
++Tech Anim:					   Tech_Helios
++Tech Description:
+XSTR(
+"The SDM3 Takoba is the largest antisubsystem weapon mounted aboard the Phoenix Rising.  It deploys five guided autotargetting bomblets 800m from its target, quickly overwhelming CIWS defenses and devastating the opponent's subsystems. ", -1)
+$end_multi_text
+$Model File:							StormshardL.pof
+$Mass:									35.0
+$Velocity:								800.0
+$Fire Wait:								80.0
+$Damage:                                0                                                                                                    ;; damage applied when within inner radius
+;$Detonation Radius: 					1500
+$Blast Force:                           0.0
+$Inner Radius:							1500.0													;; radius at which damage is full (0 for impact only)
+$Outer Radius:							1501.0													;; max radius for attenuated damage 
+$Shockwave Speed:						0                                        ;; velocity of shockwave.  0 for none.
+$Armor Factor:							1.0
+$Shield Factor:							0.02
+$Subsystem Factor:                      85
+$Lifetime:								84.0
+$Energy Consumed:						0.0
+$Cargo Size:							25.0
+$Homing:								YES
+	+Type:                              ASPECT												;; Legal: HEAT, ASPECT
+	+Turn Time:                         1.5
+	+Min Lock Time:						7.0													;; Minimum lock time (in seconds)
+	+Lock Pixels/Sec:					25														;; Pixels moved per sec while locking
+	+Catch-up Pixels/Sec:				0														;; Pixels moved per sec while catching up
+	+Catch-up Penalty:					15
+$Swarm:								6															;; Extra pixels to move after catching up
+	+SwarmWait:		1.0	
+$Free Flight Time: 					2.0
+$LaunchSnd:								97
+$ImpactSnd:								101													;;      shockwave impact sound
+$FlyBySnd:								-1
+$Rearm Rate:							0.02
+$Flags:									( "Bomb" "Huge" "particle spew" "spawn Atgeir, 5" "smart spawn" "same turret cooldown" "no lifeleft penalty" "cycle" )
+$Trail:
+	+Start Width:	5.4
+	+End Width:		0
+	+Start Alpha:	1.0
+	+End Alpha:		0.0
+	+Max Life:		4.0
+	+Bitmap: 		missiletrail03
+$Impact Explosion: 					exp04
+$Impact Explosion Radius: 			5.8
+$Piercing Impact Explosion: 		exp04
+$Piercing Impact Radius: 			5.8
+$Piercing Impact Velocity: 			20
+$Piercing Impact Splash Velocity: 	-5
+$Piercing Impact Variance: 			20000
+$Piercing Impact Particles: 		10
+$spawn Angle:						15
+$Pspew:
+	+Count:		1
+	+Time:		1
+	+Vel:		0.0
+	+Radius:	2.9
+	+Life:		0.1
+	+Scale:		0.0
+	+Bitmap:	missilespew03
+$Thruster Flame Effect:				missilethruster03
+$Thruster Glow Effect:				missileglow03
+
+
+$Name:                                  @Bardiche#HEAT
++Tech Title:				XSTR("GTM-SIM 6 Masakari", -1)
++Tech Anim:					   Tech_GTM-55_Trebuchet
++Tech Description:
+XSTR(
+"The SIM 6 Masakari missile is a nuclear-tipped anti-bomber weapon. With flight characteristics similar to the Trebuchet but with higher warhead yield, it is a potent weapon against any bomber. It's only drawback is its size, longer lock time and slower turning rate.", -1)
+$end_multi_text
+$Model File:			SIM-6N.pof
+$Mass:				20.0
+$Velocity:			560.0
+$Fire Wait:			6.0
+$Damage:			700			;; damage applied when within inner radius
+$Blast Force:		160.0
+$Inner Radius:		20.0		;; radius at which damage is full (0 for impact only)
+$Outer Radius:		50.0		;; max radius for attenuated damage (0 for impact only)
+$Shockwave Speed:		20               ;; velocity of shockwave.  0 for none.
+$Armor Factor:		0.9
+$Shield Factor:		0.5
+$Subsystem Factor:	2.4
+$Lifetime:			18.0
+$Energy Consumed:		0.0		;; Energy used when fired
+$Cargo Size:		14.0		;; Amount of space taken up in weapon cargo
+$Homing:			YES		;; the following indented fields are only required when $Homing is YES
+	+Type:				HEAT		;; Legal: HEAT, ASPECT
+	+Turn Time:				8.5
+	+View Cone:									180								
+$LaunchSnd:				92              ;; The Sound it makes when fired
+$ImpactSnd:				88		;; The sound it makes when it hits something
+$FlyBySnd:				-1
+$Rearm Rate:			0.33		;; number of missiles/sec that are rearmed
+$Flags:				( "child" )
+$Trail:				;; Trail cannot be set if Exhaust is set
+	+Start Width:			0.25                                         ;; Width of trail	Nearest missile
+	+End Width:			0.7                                          ;; Width of trail before it "evaporates"
+	+Start Alpha:			1.0
+	+End Alpha:			0.0
+	+Max Life:			0.3                                          ;; how many seconds before trail disappears
+	+Bitmap:			MissileTrail01				;; Bitmap used to draw trail
+$Icon:				iconTrebuchet
+$Anim:				trebuchet
+$Impact Explosion:		ExpMissileHit1
+$Impact Explosion Radius:	20.0
+
+
+$Name:                                 Walleye#Heat
+$Model File:							StormshardL.pof
+$Mass:									25.0
+$Velocity:								95.0
+$Fire Wait:								20.0
+;; note, damage toned down until ai and turrets start shooting at bombs.
+$Damage:                                750                                                                                                    ;; damage applied when within inner radius
+$Blast Force:							1000.0
+$Inner Radius:							50.0													;; radius at which damage is full (0 for impact only)
+$Outer Radius:							100.0													;; max radius for attenuated damage (0 for impact only)
+$Shockwave Speed:						80                                        ;; velocity of shockwave.  0 for none.
+$Armor Factor:							1.0
+$Shield Factor:							0.02
+$Subsystem Factor:						0.5					;; reduced from 1.0 to 0.5 by MikeK on 8/28/99.  Player shooting one down would often blow out player's subsystems.
+$Lifetime:								25.0													;; temporary fix for problem locking onto big ships.
+$Energy Consumed:						0.0
+$Cargo Size:							15.0
+$Homing:								YES
+	+Type:                              HEAT												;; Legal: HEAT, ASPECT
+	+Turn Time:                         1.0
+	+View Cone:							180
+	$LaunchSnd:							96
+$ImpactSnd:								88
+$FlyBySnd:								-1
+$Rearm Rate:							0.05
+$Flags:									( "Bomb" "child")
+$Trail:                                                                          ;; Trail cannot be set if Exhaust is set
+	+Start Width:						0.5                                       ;; Width of trail nearest missile
+	+End Width:							1.75                                      ;; Width of trail before it "evaporates"
+	+Start Alpha:						1.0
+	+End Alpha:							0.0
+	+Max Life:                          1.5                                       ;; how many seconds before trail disappears
+	+Bitmap:							MissileTrail04										;; Bitmap used to draw trail
+
+$Icon:                                 iconbelial
+$Anim:                                 belial
+$Impact Explosion:                     ExpMissileHit1
+$Impact Explosion Radius:					15.0
+
+#End
+
+#Countermeasures
+
+$Name: GRW CM
+$Velocity: 30.0
+$Fire Wait: 0.6
+$Lifetime Min: 1.2
+$Lifetime Max: 2.4
+$LaunchSnd: 99
+$Model: GRW_CM.pof
+
+$Name: OSA CM
+$Velocity: 30.0
+$Fire Wait: 0.6
+$Lifetime Min: 1.2
+$Lifetime Max: 2.4
+$LaunchSnd: 99
+$Model: GRW_CM.pof
+
+$Name: Authority CM
+$Velocity: 30.0
+$Fire Wait: 0.6
+$Lifetime Min: 1.2
+$Lifetime Max: 2.4
+$LaunchSnd: 99
+$Model: GRW_CM.pof
+
+#End
+
+$Player Weapon Precedence: ()
