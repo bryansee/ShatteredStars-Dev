@@ -260,7 +260,7 @@ $Max Weapon Eng:        100.0
 $Hitpoints:             70000
 $Armor Type:		Heavy Armor 100
 $Shield Armor Type:			Heavy Shields 100
-$Flags:                 ( "cruiser" "generate icon" "surface shields" "in tech database" "in tech database multi" )
+$Flags:                 ( "destroyer" "generate icon" "surface shields" "in tech database" "in tech database multi" )
 $AI Class:              Captain
 $Afterburner:           NO
 $Countermeasures:       0
@@ -427,7 +427,7 @@ $Max Oclk Speed:			80.0
 $Max Weapon Eng:			100.0
 $Hitpoints: 					39000
 $Armor Type: 					Heavy Armor 100
-$Flags: 					( "cruiser" )
+$Flags: 					( "corvette" )
 $AI Class:					Captain
 $Afterburner:				NO
 $Countermeasures:			0
@@ -633,7 +633,7 @@ $Max Oclk Speed:			80.0
 $Max Weapon Eng:			100.0
 $Hitpoints: 					67000
 $Armor Type: 					Heavy Armor 100
-$Flags: 					( "corvette" )
+$Flags: 					( "destroyer" )
 $AI Class:					Captain
 $Afterburner:				NO
 $Countermeasures:			0
@@ -746,7 +746,7 @@ $Max Oclk Speed:			80.0
 $Max Weapon Eng:			100.0
 $Hitpoints: 					72000
 $Armor Type: 					Heavy Armor 100
-$Flags: 					( "corvette" )
+$Flags: 					( "destroyer" )
 $AI Class:					Captain
 $Afterburner:				NO
 $Countermeasures:			0
@@ -945,7 +945,7 @@ $Max Oclk Speed:			80.0
 $Max Weapon Eng:			100.0
 $Hitpoints:					140000
 $Armor Type: 					Heavy Armor 100
-$Flags: 					( "capital" )
+$Flags: 					( "frigate" )
 $AI Class:					Captain
 $Afterburner:				NO
 $Countermeasures:			0
@@ -1103,7 +1103,7 @@ $Max Oclk Speed:			80.0
 $Max Weapon Eng:			100.0
 $Hitpoints:					120000
 $Armor Type: 					Heavy Armor 100
-$Flags: 					( "capital" )
+$Flags: 					( "frigate" )
 $AI Class:					Captain
 $Afterburner:				NO
 $Countermeasures:			0
@@ -1761,8 +1761,8 @@ $animation:			triggered
 	+time:			1000  
 
 
-$Name:					AuB Raptor
-$Short name:            AuAssaultBomb
+$Name:					AuFB Raptor
+$Short name:            AuAssaultFBomb
 $Species:				Authority
 +Tech Description:
 XSTR("The GTB Stheno is the Alliance's Nephilim.  This monstrosity took many of the design aspects of the Medusa, and purposed them for objectives greater than that of the Ursa.  With the heaviest shielding ever fielded on a GTVA craft, advanced armor, decent thrusters, 10 primary hardpoints and 4 missile bays, the Stheno tears through capital formations with unprecedented efficiency.", -1)
@@ -1771,7 +1771,7 @@ $end_multi_text
 +Gun Mounts:      10
 +Missile Banks:   4
 
-$POF file:                      AuB_Raptor.pof
+$POF file:                      AuFB_Raptor.pof
 $Detail distance:       (0, 150, 550, 1300)
 $Show damage:           YES
 $Damage Lightning Type:			None
@@ -1780,9 +1780,9 @@ $Debris:
 $Density:               1
 $Damp:                  1.2
 $Rotdamp:               0.55
-$Max Velocity:          0.0, 0.0, 477.0
+$Max Velocity:          477.0, 477.0, 477.0
 $Rotation time:         4.5, 5.0, 5.0
-$Rear Velocity:         462.0
+$Rear Velocity:         477.0
 $Forward accel:         36.0
 $Forward decel:         27.0
 $Slide accel:           36.0
@@ -1820,7 +1820,7 @@ $Max Weapon Eng:        350.0
 $Hitpoints:                     950
 $Armor Type: 					Light Armor 100
 $Shield Armor Type:			Light Shields 100
-$Flags:                         ( "player_ship" "bomber" "generate icon" "show ship" )
+$Flags:                         ( "player_ship" "fighter/bomber" "generate icon" "show ship" )
 $AI Class:                      Captain
 $Afterburner:           YES
 	+Aburn Max Vel: 0.0, 0.0, 1295.0

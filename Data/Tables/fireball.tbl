@@ -8,12 +8,6 @@
 $Name:	exp04						; Used for the 4 little explosions before a ship explodes
 $LOD:		1
 
-;$Name:	WarpMap01				; Used for the warp in / warp out effect
-;$LOD:		1
-
-;$Name:	WarpMap02				; Used for the KNOSSOS warp in / warp out effect
-;$LOD:		1
-
 $Name:	Rock_Exp						; Used when an asteroid explodes
 $LOD:		1
 

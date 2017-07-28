@@ -1,0 +1,19 @@
+#Start
+
+$Name:	exp04
+	+Explosion_Medium
+$LOD:		1
+
+$Name:	Rock_Exp
+	+Asteroid
+$LOD:		1
+
+$Name:	exp05
+	+Explosion_Large1
+$LOD:		1
+
+$Name:	exp06
+	+Explosion_Large2
+$LOD:		1
+
+#End
