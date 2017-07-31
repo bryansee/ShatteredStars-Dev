@@ -98,10 +98,13 @@ $end_multi_text
 +Missile Banks: 2
 $POF file: GRF_Caranayodhin.pof
 $Detail distance: (0)
+$Damage Lightning Type:			None
+$Debris:
+	+Lightning Arc Percent:		0.0
 $Density: 2
 $Damp: 0.10
 $Rotdamp: 0.30
-$Max Velocity: 0.0, 0.0, 482.0
+$Max Velocity: 482.0, 482.0, 482.0
 $Rotation time: 2.5, 2.2, 2.5
 $Rear Velocity: 482.0
 $Forward accel: 16.5
@@ -125,9 +128,9 @@ $Expl damage: 15.0
 $Expl blast: 1000.0
 $Expl Propagates: NO
 $Shockwave Speed: 0.0
-$Allowed PBanks: ( "Spatha" "Shashka" "Trishula" ) ( "Spatha" "Shashka" "Trishula" ) ;( "Gadha" "Stambhana" "Parashuh" "Parashuh Mod 1" "Bhushundi" "Karavaala" "Pallavha" )
-$Allowed Dogfight PBanks: ( "Spatha" "Shashka" "Trishula" ) ( "Spatha" "Shashka" "Trishula" )
-$Default PBanks: ( "Spatha" "Shashka" )
+$Allowed PBanks: ( "Gadha" "Trishula" ) ( "Gadha" "Trishula" ) ;( "Gadha" "Stambhana" "Parashuh" "Parashuh Mod 1" "Bhushundi" "Karavaala" "Pallavha" )
+$Allowed Dogfight PBanks: ( "Gadha" "Trishula" ) ( "Gadha" "Trishula" )
+$Default PBanks: ( "Gadha" "Gadha" )
 $PBank Capacity: ( 160, 160 )
 $Allowed SBanks: ( "Meteor" "Comet" "Glaive" "Atgeir" "Voulge" "Sibyna" "Bardiche" ) ;( "Nirbhay" "Chaya" "Kalusa" "Krodha" "Kuttaka" "Bhajayati" )
 $Allowed Dogfight SBanks: ( "Meteor" "Comet" "Glaive" "Atgeir" "Voulge" "Sibyna" "Bardiche" )
@@ -139,6 +142,7 @@ $Power Output: 4.0
 $Max Oclk Speed: 514.0
 $Max Weapon Eng: 80.0
 $Hitpoints: 600
+$Support Hull Repair Rate:		0.0
 $Armor Type: 				Light Armor 100
 $Shield Armor Type:			Light Shields 100
 $Flags: ( "player_ship" "default_player_ship" "fighter" "generate icon" "show ship" "in tech database" "in tech database multi" )
@@ -215,11 +219,184 @@ $Subsystem: weapons, 20, 0
 $Subsystem: sensors, 10, 0
 $Subsystem: engine, 15, 0
 
+
+$Name: GRF Jayamalla
+$Short name: GRAssaultF
+$Species: GRW
++Type: XSTR("Advanced Assault", -1)
++Maneuverability: XSTR("Good", -1)
++Armor: XSTR("Heavy", 2941)
++Manufacturer: XSTR(" ", -1)
++Description: XSTR( " ", -1)
+$end_multi_text
++Tech Description:
+XSTR("Recently made available for combat, the Archanes is a unique chapter in fightercraft technology. It occupies a tactical space between the Phylaki and the Attis, despite its intended creation as an assault platform. The Archanes' size and incredibly durable armour plating do hinder manoeuvrability. It also boasts fewer primary hardpoints than the Phylaki. On the offhand, superior secondary capacities and a massive energy reactor improve its overall combat effectiveness. For long and dangerous missions without support available, this fighter has the best chances of survival. It is expected to eventually succeed the Phylaki, althought the recent Shivan incursion may change the minds of the Elders on this matter.", -1)
+$end_multi_text
++Length: 21 m
++Gun Mounts: 8
++Missile Banks: 2
+$POF file: GRF_Jayamalla.pof
+$Detail distance: ( 0, 500, 1200, 2400 )
+$Damage Lightning Type:			None
+$Debris:
+	+Lightning Arc Percent:		0.0
+$Density: 2
+$Damp: 0.15
+$Rotdamp: 0.35
+$Max Velocity: 474.0, 474.0, 474.0
+$Rotation time: 3.4, 2.9, 3.4
+$Rear Velocity: 4740.0
+$Forward accel: 17.6
+$Forward decel: 14.0
+$Slide accel: 17.6
+$Slide decel: 14.0
+$Glide:							YES
+	+Dynamic Glide Cap:			YES
+	+Glide Accel Mult:			-1
+$Use Newtonian Dampening:		YES
+$Autoaim FOV:					1
+	+Converging Autoaim
+	+Minimum Distance:			500.0
+$Convergence:					
+	+Automatic
+$Warpin Type:					Hyperspace
+$Warpout Type:					Hyperspace
+$Expl inner rad: 25.0
+$Expl outer rad: 75.0
+$Expl damage: 15.0
+$Expl blast: 1000.0
+$Expl Propagates: NO
+$Shockwave Speed: 0.0
+$Allowed PBanks: ( "Gadha" "Trishula" )
+$Allowed Dogfight PBanks: ( "Gadha" "Trishula" )
+$Default PBanks: ( "Gadha" "Trishula" )
+$PBank Capacity: ( 240, 240 )
+$Allowed SBanks: ( "Meteor" "Comet" "Glaive" "Atgeir" "Voulge" "Sibyna" "Bardiche" )
+$Allowed Dogfight SBanks: ( "Meteor" "Comet" "Glaive" "Atgeir" "Voulge" "Sibyna" "Bardiche" )
+$Default SBanks: ( "Meteor" "Comet" )
+$SBank Capacity: ( 80, 80 )
+$Shields: 750
+$Shield Color: 255 255 75
+$Power Output: 4.0
+$Max Oclk Speed: 494.0
+$Max Weapon Eng: 100.0
+$Hitpoints: 900
+$Support Hull Repair Rate:		0.0
+$Armor Type: 				Light Armor 100
+$Shield Armor Type:			Light Shields 100
+$Flags: ( "player_ship" "default_player_ship" "fighter" "generate icon" "show ship" "in tech database" "in tech database multi" )
+$AI Class: Captain
+$Afterburner: YES
+ +Aburn Max Vel: 0.0, 0.0, 1550.0
+ +Aburn For accel: 15.5
+ +Aburn Fuel: 350.0
+ +Aburn Burn Rate: 0.1
+ +Aburn Rec Rate: 0.0
+$Trails:
+	+Bitmap:	ABtrail
+	+Width:		1.0
+	+Alpha:		1.0
+	+Life:		2
+$Countermeasures: 35
+$Scan time: 2000
+$EngineSnd: 129
+$Closeup_pos: 0.0, 0.0, -30
+$Closeup_zoom: 0.5
+$Score: 10
+$Trail:
+	+Offset:		0.00 -0.30 -15.70
+ +Start Width: 0.1
+ +End Width: 0.05
+ +Start Alpha: 1.0
+ +End Alpha: 0.0
+ +Max Life: 2.0
+ +Spew Time: 60
+ +Bitmap: Contrail01
+$Trail:
+	+Offset:		-8.50 0.45 -9.5
+ +Start Width: 0.1
+ +End Width: 0.05
+ +Start Alpha: 1.0
+ +End Alpha: 0.0
+ +Max Life: 2.0
+ +Spew Time: 60
+ +Bitmap: Contrail01
+$Trail:
+	+Offset:		8.50 0.45 -9.5
+ +Start Width: 0.1
+ +End Width: 0.05
+ +Start Alpha: 1.0
+ +End Alpha: 0.0
+ +Max Life: 2.0
+ +Spew Time: 60
+ +Bitmap: Contrail01
+$Trail:
+	+Offset:		-10.42 -1.89 -10.50
+ +Start Width: 0.1
+ +End Width: 0.05
+ +Start Alpha: 1.0
+ +End Alpha: 0.0
+ +Max Life: 2.0
+ +Spew Time: 60
+ +Bitmap: Contrail01
+$Trail:
+	+Offset:		10.42 -1.89 -10.50
+ +Start Width: 0.1
+ +End Width: 0.05
+ +Start Alpha: 1.0
+ +End Alpha: 0.0
+ +Max Life: 2.0
+ +Spew Time: 60
+ +Bitmap: Contrail01
+$Trail:
+	+Offset:		-12.60 3.01 -9.20
+ +Start Width: 0.1
+ +End Width: 0.05
+ +Start Alpha: 1.0
+ +End Alpha: 0.0
+ +Max Life: 2.0
+ +Spew Time: 60
+ +Bitmap: Contrail01
+$Trail:
+	+Offset:		12.60 3.01 -9.20
+ +Start Width: 0.1
+ +End Width: 0.05
+ +Start Alpha: 1.0
+ +End Alpha: 0.0
+ +Max Life: 2.0
+ +Spew Time: 60
+ +Bitmap: Contrail01
+$Trail:
+	+Offset:		-11.48 -1.89 -7.16
+ +Start Width: 0.1
+ +End Width: 0.05
+ +Start Alpha: 1.0
+ +End Alpha: 0.0
+ +Max Life: 2.0
+ +Spew Time: 60
+ +Bitmap: Contrail01
+$Trail:
+	+Offset:		11.48 -1.89 -7.16
+ +Start Width: 0.1
+ +End Width: 0.05
+ +Start Alpha: 1.0
+ +End Alpha: 0.0
+ +Max Life: 2.0
+ +Spew Time: 60
+ +Bitmap: Contrail01
+$Subsystem: communication, 10, 0
+$Subsystem: navigation, 10, 0
+$Subsystem: weapons, 20, 0
+$Subsystem: sensors, 10, 0
+$Subsystem: engine01, 10, 0
+$Subsystem: engine02, 10, 0
+
+
 $Name:                  GRCv Kshatriya
 $Short name:		GRCorvette
 $Species:               GRW
 +Tech Description:
-XSTR("The GRC Senaya class was developed as one of the most powerful long-range cruisers. Not centered around fighting defensively like the Heraklion, these cruisers were built instead for conflicts where victory is absolute. Speed is the Gordia's key strength, rather than overwhelming firepower or an incredibly thick hull. Because of this trait, Gordias are capable of encircling and wearing down the enemy before eventually destroying them. This tactic is most effective within the presence of our larger, more powerful vessels such as the Pylos destroyer for fire support. The Elders have noted this as an effective method in the most recent of conflicts. The Gordia will remain a choice for future ages to come.", -1)
+XSTR("The GRCv Kshatriya class of corvettes was developed as one of the most powerful long-range cruisers. Not centered around fighting defensively like the Heraklion, these cruisers were built instead for conflicts where victory is absolute. Speed is the Gordia's key strength, rather than overwhelming firepower or an incredibly thick hull. Because of this trait, Gordias are capable of encircling and wearing down the enemy before eventually destroying them. This tactic is most effective within the presence of our larger, more powerful vessels such as the Pylos destroyer for fire support. The Elders have noted this as an effective method in the most recent of conflicts. The Gordia will remain a choice for future ages to come.", -1)
 $end_multi_text
 $POF file:              GRCv_Kshatriya.pof
 $Detail distance:       (0, 2600, 5500, 8000)
@@ -235,8 +412,8 @@ $Rotation time:         170.0, 170.0, 170.0
 $Rear Velocity:         0.0
 $Forward accel:         15.0
 $Forward decel:         10.0
-$Slide accel:           0.0
-$Slide decel:           0.0
+$Slide accel:           15.0
+$Slide decel:           10.0
 $Glide:							YES
 	+Dynamic Glide Cap:			YES
 $Use Newtonian Dampening:		YES
@@ -260,7 +437,7 @@ $Max Weapon Eng:        100.0
 $Hitpoints:             70000
 $Armor Type:		Heavy Armor 100
 $Shield Armor Type:			Heavy Shields 100
-$Flags:                 ( "destroyer" "generate icon" "surface shields" "in tech database" "in tech database multi" )
+$Flags:                 ( "corvette" "generate icon" "surface shields" "in tech database" "in tech database multi" )
 $AI Class:              Captain
 $Afterburner:           NO
 $Countermeasures:       0
@@ -337,7 +514,7 @@ $Debris:
 $Density: 1
 $Damp:                          0.2
 $Rotdamp:                       0.3
-$Max Velocity:          30.0, 30.0, 490.0
+$Max Velocity:          470.0, 470.0, 470.0
 $Rotation time:         1.5, 1.5, 1.5
 $Rear Velocity:         490.0
 $Forward accel:         1.25
@@ -796,10 +973,10 @@ $Subsystem: Turret11, 4.0, 3.0
 	$Default PBanks: ( "CW medium Turret" )
 	$Flags:						( "check hull" "use multiple guns" )
 $Subsystem: Turret12, 4.0, 3.0
-	$Default PBanks: ( "Light Particle Beam" )
+	$Default PBanks: ( "OSA Light Particle Beam" )
 	$Flags:						( "check hull" "use multiple guns" )
 $Subsystem: Turret13, 4.0, 3.0
-	$Default PBanks: ( "Light Particle Beam" )
+	$Default PBanks: ( "OSA Light Particle Beam" )
 	$Flags:						( "check hull" "use multiple guns" )
 $Subsystem: Turret14, 4.0, 3.0
 	$Default PBanks: ( "CW120mm-PLC" )
@@ -970,22 +1147,22 @@ $Subsystem: 	engine02, 			15, 0.0
 	$Engine Wash: 				Default100
 $Subsystem: 	radar01,  		3, 4.0
 $Subsystem: Turret01, 4.0, 3.0
-	$Default PBanks: ( "light Particle Beam" )
+	$Default PBanks: ( "OSA Light Particle Beam" )
 	$Flags:						( "check hull" )
 $Subsystem: Turret02, 4.0, 3.0
-	$Default PBanks: ( "light Particle Beam" )
+	$Default PBanks: ( "OSA Light Particle Beam" )
 	$Flags:						( "check hull" )
 $Subsystem: Turret03, 4.0, 3.0
-	$Default PBanks: ( "light Particle Beam" )
+	$Default PBanks: ( "OSA Light Particle Beam" )
 	$Flags:						( "check hull" )
 $Subsystem: Turret04, 4.0, 3.0
-	$Default PBanks: ( "light Particle Beam" )
+	$Default PBanks: ( "OSA Light Particle Beam" )
 	$Flags:						( "check hull" )
 $Subsystem: Turret05, 4.0, 3.0
-	$Default PBanks: ( "light Particle Beam" )
+	$Default PBanks: ( "OSA Light Particle Beam" )
 	$Flags:						( "check hull" )
 $Subsystem: Turret06, 4.0, 3.0
-	$Default PBanks: ( "light Particle Beam" )
+	$Default PBanks: ( "OSA Light Particle Beam" )
 	$Flags:						( "check hull" )
 $Subsystem: Turret07, 4.0, 3.0
 	$Default PBanks: ( "CW120mm-PLC" )
@@ -1389,13 +1566,13 @@ $Density:                       1
 $Damp:                          2.5
 $Rotdamp:                       0.4
 $Banking Constant:				0.52
-$Max Velocity:					222.0, 222.0, 473.0                  ;; in x/y/z -- z only specified forward.  use special tokens for backward movement
+$Max Velocity:					479.0, 479.0, 479.0                  ;; in x/y/z -- z only specified forward.  use special tokens for backward movement
 $Rotation time:					3.4, 3.8, 3.4
-$Rear Velocity:					473.0
+$Rear Velocity:					479.0
 $Forward accel:					18.0
 $Forward decel:					9.55
-$Slide accel:					2.0
-$Slide decel:					2.0
+$Slide accel:					18.0
+$Slide decel:					9.55
 $Glide:							YES
 	+Dynamic Glide Cap:			YES
 	+Glide Accel Mult:			-1
@@ -1427,6 +1604,7 @@ $Power Output:					5.5
 $Max Oclk Speed:				578.0
 $Max Weapon Eng:				250.0
 $Hitpoints:                     350
+$Support Hull Repair Rate:		0.0
 $Armor Type: 					Light Armor 100
 $Shield Armor Type:			Light Shields 100
 $Flags:                         ( "player_ship" "fighter" "generate icon" "show ship" "surface shields" )
@@ -1517,6 +1695,7 @@ $Power Output:					2.0
 $Max Oclk Speed:				624.0
 $Max Weapon Eng:				100.0
 $Hitpoints:                     200
+$Support Hull Repair Rate:		0.0
 $Armor Type: 					Light Armor 100
 $Shield Armor Type:			Light Shields 100
 $Flags:                         		( "fighter" "generate icon" "show ship" "surface shields" )
@@ -1765,7 +1944,7 @@ $Name:					AuFB Raptor
 $Short name:            AuAssaultFBomb
 $Species:				Authority
 +Tech Description:
-XSTR("The GTB Stheno is the Alliance's Nephilim.  This monstrosity took many of the design aspects of the Medusa, and purposed them for objectives greater than that of the Ursa.  With the heaviest shielding ever fielded on a GTVA craft, advanced armor, decent thrusters, 10 primary hardpoints and 4 missile bays, the Stheno tears through capital formations with unprecedented efficiency.", -1)
+XSTR("The AuFB Raptor is the Alliance's Nephilim.  This monstrosity took many of the design aspects of the Medusa, and purposed them for objectives greater than that of the Ursa.  With the heaviest shielding ever fielded on a GTVA craft, advanced armor, decent thrusters, 10 primary hardpoints and 4 missile bays, the Stheno tears through capital formations with unprecedented efficiency.", -1)
 $end_multi_text
 +Length:          50 m
 +Gun Mounts:      10
@@ -1780,7 +1959,7 @@ $Debris:
 $Density:               1
 $Damp:                  1.2
 $Rotdamp:               0.55
-$Max Velocity:          477.0, 477.0, 477.0
+$Max Velocity:          482.0, 482.0, 482.0
 $Rotation time:         4.5, 5.0, 5.0
 $Rear Velocity:         477.0
 $Forward accel:         36.0
@@ -1818,6 +1997,7 @@ $Power Output:          6.5
 $Max Oclk Speed:        509.0
 $Max Weapon Eng:        350.0
 $Hitpoints:                     950
+$Support Hull Repair Rate:		0.0
 $Armor Type: 					Light Armor 100
 $Shield Armor Type:			Light Shields 100
 $Flags:                         ( "player_ship" "fighter/bomber" "generate icon" "show ship" )
@@ -2434,6 +2614,170 @@ $Subsystem: 	turret21a,  		20.0, 0.0
 	$Flags: 					( "check hull" "fire on target" "target requires fov" "collide submodel")
 
 
+$Name:                          	AuCa Imperator
+$Short name:				AuCarrier
+$Species:                       	Authority
++Tech Description:
+XSTR("No information is known about this warship.", -1)
+$end_multi_text
+$POF file:				AuC_Imperator.pof
+$Detail distance:			(0, 5000, 10000, 25000)
+$Show damage:				NO
+$Density:				1
+$Damp:					0.25
+$Rotdamp:				1.50
+$Max Velocity:				0.0, 0.0, 30.0
+$Rotation time:				250.0, 250.0, 250.0
+$Rear Velocity:				0.0
+$Forward accel:				20.0
+$Forward decel:				10.0
+$Slide accel:				0.0
+$Slide decel:				0.0
+$Expl inner rad:			500.0
+$Expl outer rad:			3500.0
+$Expl damage:				250.0
+$Expl blast:				7500.0
+$Expl Propagates:			YES
+$Shockwave Speed:			750.0
+$Shockwave Count:			3
+$Default PBanks:			()
+$Default SBanks:			()
+$SBank Capacity:			()
+$Shields:				0
+$Power Output:				100.0
+$Max Oclk Speed:			30.0
+$Max Weapon Eng:			100.0
+$Hitpoints:				250000
+$Flags:					( "capital" "big damage" )
+$AI Class:				Captain
+$Afterburner:				NO
+$Countermeasures:			0
+$Scan time:                     	2000
+$EngineSnd:       			138
+$Closeup_pos:           		0.0, 0.0, -4000
+$Closeup_zoom:          		0.5
+$Score:             			1500
+$Subsystem:                     Turret01, 10, 3.0
+	$Default PBanks:        ( "Authority Heavy QD Beam" )
+$Subsystem:                     Turret02, 10, 3.0
+	$Default PBanks:        ( "Authority Heavy QD Beam" )
+$Subsystem:                     Turret03, 10, 3.0
+	$Default PBanks:        ( "Authority Heavy QD Beam" )
+$Subsystem:                     Turret04, 10, 3.0
+	$Default PBanks:        ( "Authority Heavy QD Beam" )
+$Subsystem:                     Turret05, 10, 3.0
+	$Default PBanks:        ( "Authority Light QD Beam" )
+$Subsystem:                     Turret06, 10, 2.0
+	$Default PBanks:        ( "Authority Light QD Beam" )
+$Subsystem:                     Turret07, 10, 2.0
+	$Default PBanks:        ( "Authority Light QD Beam" )
+$Subsystem:                     Turret08, 10, 2.0
+	$Default PBanks:        ( "Authority Light QD Beam" )
+$Subsystem:                     Turret09-base, 1.625, 2.0
+	$Default PBanks:        ( "Specter EMP" )
+$Subsystem:                     Turret10-base, 1.625, 2.0
+	$Default PBanks:        ( "Specter EMP" )
+$Subsystem:                     Turret11-base, 1.625, 2.0
+	$Default PBanks:        ( "Specter EMP" )
+$Subsystem:                     Turret12-base, 1.625, 2.0
+	$Default PBanks:        ( "Specter EMP" )
+$Subsystem:                     Turret13-base, 1.625, 2.0
+	$Default PBanks:        ( "Specter EMP" )
+$Subsystem:                     Turret14-base, 1.625, 2.0
+	$Default PBanks:        ( "Specter EMP" )
+$Subsystem:                     Turret15-base, 1.625, 2.0
+	$Default PBanks:        ( "Specter EMP" )
+$Subsystem:                     Turret16-base, 1.625, 2.0
+	$Default PBanks:        ( "Specter EMP" )
+$Subsystem:                     Turret17-base, 1.625, 2.0
+	$Default PBanks:        ( "Specter EMP" )
+$Subsystem:                     Turret18-base, 1.625, 2.0
+	$Default PBanks:        ( "Specter EMP" )
+$Subsystem:                     Turret19-base, 1.625, 2.0
+	$Default PBanks:        ( "Specter EMP" )
+$Subsystem:                     Turret20-base, 1.625, 2.0
+	$Default PBanks:        ( "Authority A-F BeamSlash" )
+$Subsystem:                     Turret21, 0.625, 2.0
+	$Default PBanks:        ( "Authority A-F Beam" )
+$Subsystem:                     Turret22, 0.625, 2.0
+	$Default PBanks:        ( "Authority A-F Beam" )
+$Subsystem:                     Turret23, 0.625, 2.0
+	$Default PBanks:        ( "Authority A-F Beam" )
+$Subsystem:                     Turret24, 0.625, 2.0
+	$Default PBanks:        ( "Authority A-F Beam" )
+$Subsystem:                     Turret25, 0.625, 2.0
+	$Default PBanks:        ( "Gryphon Pulse" )
+$Subsystem:                     Turret26, 0.625, 2.0
+	$Default PBanks:        ( "Gryphon Pulse" )
+$Subsystem:                     Turret27, 0.625, 2.0
+	$Default PBanks:        ( "Gryphon Pulse" )
+$Subsystem:                     Turret28, 0.625, 2.0
+	$Default PBanks:        ( "Gryphon Pulse" )
+$Subsystem:                     Turret29, 0.625, 2.0
+	$Default PBanks:        ( "Authority A-F BeamSlash" )
+$Subsystem:                     Turret30, 0.625, 2.0
+	$Default PBanks:        ( "Gryphon Pulse" )
+$Subsystem:                     Turret31, 0.625, 2.0
+	$Default PBanks:        ( "Gryphon Pulse" )
+$Subsystem:                     Turret32, 0.625, 2.0
+	$Default PBanks:        ( "Gryphon Pulse" )
+$Subsystem:                     Turret33, 0.625, 2.0
+	$Default PBanks:        ( "Gryphon Pulse" )
+$Subsystem:                     Turret34, 0.625, 2.0
+	$Default PBanks:        ( "Authority A-F BeamSlash" )
+$Subsystem:                     Turret35, 0.625, 2.0
+	$Default PBanks:        ( "Authority A-F BeamSlash" )
+$Subsystem:                     Turret36, 0.625, 2.0
+	$Default PBanks:        ( "Gryphon Pulse" )
+$Subsystem:                     Turret37, 0.625, 2.0
+	$Default PBanks:        ( "Gryphon Pulse" )
+$Subsystem:                     Turret38, 0.625, 2.0
+	$Default PBanks:        ( "Gryphon Pulse" )
+$Subsystem:                     Turret39, 0.625, 2.0
+	$Default PBanks:        ( "Gryphon Pulse" )
+$Subsystem:                     Turret40, 0.625, 2.0
+	$Default PBanks:        ( "Authority A-F Beam" )
+$Subsystem:                     Turret41, 0.625, 2.0
+	$Default PBanks:        ( "Authority A-F Beam" )
+$Subsystem:                     Turret42, 0.625, 2.0
+	$Default PBanks:        ( "Authority A-F Beam" )
+$Subsystem:                     Turret43, 0.625, 2.0
+	$Default PBanks:        ( "Authority A-F Beam" )
+$Subsystem:                     Turret44, 0.625, 2.0
+	$Default PBanks:        ( "Authority A-F Beam" )
+$Subsystem:                     Turret45, 0.625, 2.0
+	$Default PBanks:        ( "Gryphon Pulse" )
+$Subsystem:                     Turret46, 0.625, 2.0
+	$Default PBanks:        ( "Gryphon Pulse" )
+$Subsystem:                     Turret47, 0.625, 2.0
+	$Default PBanks:        ( "Gryphon Pulse" )
+$Subsystem:                     Turret48, 0.625, 2.0
+	$Default PBanks:        ( "Authority A-F BeamSlash" )
+$Subsystem:                     Turret49, 0.625, 2.0
+	$Default PBanks:        ( "Authority A-F BeamSlash" )
+$Subsystem:                     Turret50, 0.625, 2.0
+	$Default PBanks:        ( "Gryphon Pulse" )
+$Subsystem:                     Turret51, 0.625, 2.0
+	$Default PBanks:        ( "Specter EMP" )
+$Subsystem:                     Turret52, 0.625, 2.0
+	$Default PBanks:        ( "Specter EMP" )
+$Subsystem:                     Turret53, 0.625, 2.0
+	$Default PBanks:        ( "Authority A-F BeamSlash" )
+$Subsystem:                     Turret54, 0.625, 2.0
+	$Default PBanks:        ( "Authority A-F BeamSlash" )
+$Subsystem:                     navigation,     	5, 0.0
+$Subsystem:                     communications,  	5, 0.0
+$Subsystem:                     weapons,        	15, 0.0
+$Subsystem:                     sensors,        	5, 0.0
+$Subsystem:                     engine01,        	35, 0.0
+	$Engine Wash:	Default900
+$Subsystem:                     engine02,        	35, 0.0
+	$Engine Wash:	Default900
+$Subsystem:                     engine03,        	35, 0.0
+	$Engine Wash:	Default900
+$Subsystem:                     fighterbay,     	0, 0.0
+
+
 $Name: AuS Redeemer
 $Short name: AuSupport
 $Species: Authority
@@ -2448,9 +2792,9 @@ $Debris:
 $Density: 1
 $Damp:                          0.2
 $Rotdamp:                       0.3
-$Max Velocity:          30.0, 30.0, 490.0
+$Max Velocity:          470.0, 470.0, 470.0
 $Rotation time:         1.5, 1.5, 1.5
-$Rear Velocity:         490.0
+$Rear Velocity:         470.0
 $Forward accel:         1.25
 $Forward decel:         0.25
 $Slide accel:           1.0
@@ -2487,7 +2831,6 @@ $Score: 10
 $Subsystem: communication, 10, 0.0
 $Subsystem: engines, 30, 0.0
 $Subsystem: sensors, 10, 0.0
-
 
 #End
 

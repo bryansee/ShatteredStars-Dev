@@ -2,7 +2,7 @@
 ; Misc sounds section
 
 $Name:	0
-	+Filename: 	trk-loop.wav
+	+Filename: 	HUD_GRW_TrackingLoop
     +Preload: no
     +Volume: 0.40
     +Priority: High
@@ -26,7 +26,7 @@ $Name:	3
     +Priority: High
 
 $Name:	4
-	+Filename: 	ship_p.wav
+	+Filename: 	Engine_GRW_CPGeneric
     +Preload: no
     +Volume: 0.30
     +Priority: High
@@ -62,25 +62,25 @@ $Name: 8
     +Priority: High
 
 $Name: 9
-    +Filename: switch_1
+    +Filename: HUD_GRW_ELChange
     +Preload: no
     +Volume: 0.50
     +Priority: High
 
 $Name: 10
-    +Filename: beep_5
+    +Filename: HUD_GRW_ELChangeFail
     +Preload: no
     +Volume: 0.50
     +Priority: High
 
 $Name: 11
-    +Filename: switch_2
+    +Filename: HUD_GRW_ETChange
     +Preload: no
     +Volume: 0.50
     +Priority: High
 
 $Name: 12
-    +Filename: beep_5
+    +Filename: HUD_GRW_ETChangeFail
     +Preload: no
     +Volume: 0.50
     +Priority: High
@@ -146,12 +146,12 @@ $Name: 20
     +Priority: High
 
 $Name: 21
-    +Filename: AB01
+    +Filename: Engine_GRW_ABStart
     +Preload: no
     +Volume: 0.70
 
 $Name: 22
-    +Filename: afterburner
+    +Filename: Engine_GRW_ABLoop
     +Preload: no
     +Volume: 0.90
 
@@ -161,7 +161,7 @@ $Name: 23
     +Volume: 0.90
 
 $Name: 24
-    +Filename: AB02
+    +Filename: Engine_GRW_ABStop
     +Preload: no
     +Volume: 0.50
 
@@ -335,7 +335,7 @@ $Name: 49
     +Priority: High
 
 $Name: 50
-    +Filename: rev1
+    +Filename: HUD_GRW_HyperEngage
     +Preload: no
     +Volume: 0.70
 
@@ -372,12 +372,12 @@ $Name: 54
     +Volume: 0.50
 
 $Name: 55
-    +Filename: Proximity1
+    +Filename: HUD_GRW_Proximity1
     +Preload: no
     +Volume: 0.70
 
 $Name: 56
-    +Filename: Proximity2
+    +Filename: HUD_GRW_Proximity2
     +Preload: no
     +Volume: 0.70
 
@@ -817,7 +817,7 @@ $Name:	125	beam_shot2.wav,			0, 0.70, 2, 1500, 2500		; Beam shot 2
 $Name:	126	ship_a1.wav,			0, 0.60, 1, 200, 400		; Terran fighter engine (3d sound)
 $Name:	127	ship_a2.wav,			0, 0.70, 1, 300, 600		; Terran bomber engine (3d sound)
 $Name:	128	ship_a3.wav,			0, 0.80, 1, 400, 800		; Terran cruiser engine (3d sound)
-$Name:	129	ship_b1.wav,			0, 0.70, 1, 200, 400		; Vasudan fighter engine (3d sound)
+$Name:	129	ship_b1.wav,			0, 0.70, 1, 200, 400		; OSA fighter engine (3d sound)
 $Name:	130	ship_b2.wav,			0, 0.80, 1, 300, 600		; Vasudan bomber engine (3d sound)
 $Name:	131	ship_b3.wav,			0, 0.80, 1, 400, 800		; Vasudan cruiser engine (3d sound)
 $Name:	132	ship_c1.wav,			0, 0.60, 1, 200, 400		; Shivan fighter engine (3d sound)
@@ -1050,94 +1050,205 @@ $Name:	257
 
 ; Radar sounds
 
-$Name:	292
-	+Filename: 	radar-loop2
-	+Preload: 	no
-	+Volume:	1.00
-
 $Name:	293
-	+Filename: 	radar-loop1
+	+Filename: 	HUD_GRW_RadarLoop
 	+Preload: 	no
 	+Volume:	0.50
 
 $Name:	294
-	+Filename: 	radar-depart-beep
+	+Filename: 	HUD_GRW_RadarDepart
 	+Preload: 	no
 	+Volume:	1.00
 
 $Name:	295
-	+Filename: 	radar-incoming-beep
+	+Filename: 	HUD_GRW_RadarIncoming
 	+Preload: 	no
 	+Volume:	1.00
 
 #Game Sounds End
 
 #Interface Sounds Start
-$Name:	0	user_c.wav,				0, 0.70, 0					; mouse click
-$Name:	1	empty,					0, 0.70, 0					; pick up a ship icon (not used)
-$Name:	2	load01.wav,				0, 0.60, 0					; drop a ship icon on a wing slot
-$Name:	3	unload01.wav,			0, 0.60, 0					; drop a ship icon back to the list
-$Name:	4	beep_4.wav,				0, 0.70, 0					; press briefing, ship selection or weapons bar (top-left)
-$Name:	5	user_c.wav,				0, 0.70, 0					; Switching to a new screen, but not commit
-$Name:	6	beep_4.wav,				0, 0.70, 0					; help pressed
-$Name:	7	commit.wav,				0, 0.60, 0					; commit pressed
-$Name:	8	user_c.wav,				0, 0.70, 0					; prev/next pressed
-$Name:	9	user_c.wav,				0, 0.70, 0					; scroll pressed (and scroll)
-$Name:	10	fail.wav,				0, 0.70, 0					; general failure sound for any event
-$Name:	11	shipview.wav,			0, 0.50, 0					; ship animation starts (ie text and ship first appear)
-$Name:	12	main_amb.wav,			0, 0.60, 0					; ambient sound for the Terran main hall (looping)
-$Name:	13	vas_amb.wav,			0, 0.60, 0					; ambient sound for the Vasudan main hall (looping)
-$Name:	14	user_a.wav,				0, 0.70, 0					; brief stage change
-$Name:	15	user_i.wav,				0, 0.70, 0					; brief stage change fail
-$Name:	16	beep_3.wav,				0, 0.70, 0					; selet brief icon
-$Name:	17	user_o.wav,				0, 0.50, 0					; user_over (mouse over a control)
-$Name:	18	user_c.wav,				0, 0.70, 0					; user_click (mouse selects a control)
-$Name:	19	reset.wav,				0, 0.70, 0					; reset (or similar button) pressed
-$Name:	20	textdraw.wav,			0, 0.60, 0					; briefing text wipe
-$Name:	21	Lift_Mix.wav,			0, 0.50, 0					; main hall - elevator
-$Name:	22	weapview.wav,			0, 0.60, 0					; weapon animation starts
-$Name:	23	dooropen.wav,			0, 0.50, 0					; door in main hall opens
-$Name:	24	doorclose.wav,			0, 0.50, 0					; door in main hall closes
-$Name:	25	itemdraw.wav,			0, 0.50, 0					; glow in main hall opens
-$Name:	26	Crane_1.wav,			0, 0.50, 0					; main hall - crane 1
-$Name:	27	sub_amb.wav,			0, 0.60, 0					; ambient sound for menus off the main hall (looping)
-$Name:	28	user_c.wav,				0, 0.70, 0					; popup dialog box appeared
-$Name:	29	user_c.wav,				0, 0.70, 0					; popup dialog box goes away
-$Name:	30	1_yes.wav,				0, 1.00, 0					; voice clip played when volume slider changes
-$Name:	31	Crane_2.wav,			0, 0.50, 0					; main hall - crane 2
-$Name:	32	Option1.wav,			0, 0.70, 0					; main hall options - mouse on
-$Name:	33	Option2.wav,			0, 0.70, 0					; main hall options - mouse off
-$Name:	34	Techroom1.wav,			0, 0.70, 0					; main hall tech room - mouse on
-$Name:	35	Techroom2.wav,			0, 0.70, 0					; main hall tech room - mouse off
-$Name:	36	Exitopen.wav,			0, 0.60, 0					; main hall exit open
-$Name:	37	Exitclose.wav,			0, 0.60, 0					; main hall exit close
-$Name:	38	pa_1.wav,				0, 0.50, 0					; main hall random intercom 1
-$Name:	39	pa_2.wav,				0, 0.50, 0					; main hall random intercom 2
-$Name:	40	pa_3.wav,				0, 0.50, 0					; main hall random intercom 3
-$Name:	41	highlight.wav,			0, 0.40, 0					; spinning highlight in briefing
-$Name:	42	noiz.wav,				0, 0.40, 0					; static in a briefing stage cut
-$Name:	43	Camp_on.wav,			0, 0.70, 0					; main hall campaign - mouse on
-$Name:	44	Camp_off.wav,			0, 0.70, 0					; main hall campaign - mouse off
-$Name:	45	V_Hatch_Open.wav,		0, 0.70, 0					; vasudan hall - exit open
-$Name:	46	V_Hatch_Close.wav,		0, 0.70, 0					; vasudan hall - exit close
-$Name:	47	V_Roll_Open.wav,		0, 0.80, 0					; vasudan hall - hatch open
-$Name:	48	V_Roll_Close.wav,		0, 0.80, 0					; vasudan hall - hatch close
-$Name:	49	V_Lift_Up.wav,			0, 0.70, 0					; vasudan hall - lift up
-$Name:	50	V_Lift_Down.wav,		0, 0.70, 0					; vasudan hall - lift down
-$Name:	51	V_Lite_On.wav,			0, 0.70, 0					; vasudan hall - glow on
-$Name:	52	V_Lite_Off.wav,			0, 0.70, 0					; vasudan hall - glow off
-$Name:	53	Skiff.wav,				0, 0.70, 0					; vasudan hall - skiff loop
-$Name:	54	V_Map_On.wav,			0, 0.70, 0					; vasudan hall - screen on
-$Name:	55	V_Map_Off.wav,			0, 0.70, 0					; vasudan hall - screen off
-$Name:	56	V_Head_1.wav,			0, 0.70, 0					; vasudan hall - vasudan greeting
-$Name:	57	V_Head_2.wav,			0, 0.70, 0					; vasudan hall - vasudan bye
-$Name:	58	V_Pa_01.wav,			0, 0.70, 0					; vasudan hall - vasudan pa 1
-$Name:	59	V_Pa_02.wav,			0, 0.70, 0					; vasudan hall - vasudan pa 2
-$Name:	60	V_Pa_03.wav,			0, 0.70, 0					; vasudan hall - vasudan pa 3
-$Name:	61	bup.wav,				0, 0.90, 0					; bup bup bup-bup bup bup
-$Name:	62	thankyou.wav,			0, 0.90, 0					; thankyou
-$Name:	63	V_Exit_Open.wav,		0, 0.70, 0					; vasudan hall - exit open
-$Name:	64	V_Exit_Close.wav,		0, 0.70, 0					; vasudan hall - exit close
+
+$Name:	0
+	+Filename: 	UI_MouseClick
+	+Preload: 	no
+	+Volume:	0.70
+
+$Name:	2
+	+Filename: 	UI_ShipLoad
+	+Preload: 	no
+	+Volume:	0.60
+
+$Name:	3
+	+Filename: 	UI_ShipUnload
+	+Preload: 	no
+	+Volume:	0.60
+
+$Name:	4
+	+Filename: 	UI_BriefPress
+	+Preload: 	no
+	+Volume:	0.70
+
+$Name:	5
+	+Filename: 	UI_NewScreen
+	+Preload: 	no
+	+Volume:	0.70
+
+$Name:	6
+	+Filename: 	UI_Help
+	+Preload: 	no
+	+Volume:	0.70
+
+$Name:	7
+	+Filename: 	UI_Commit
+	+Preload: 	no
+	+Volume:	0.60
+
+$Name:	8
+	+Filename: 	UI_PrevNext
+	+Preload: 	no
+	+Volume:	0.70
+
+$Name:	9
+	+Filename: 	UI_Scroll
+	+Preload: 	no
+	+Volume:	0.70
+
+$Name:	10
+	+Filename: 	UI_Fail
+	+Preload: 	no
+	+Volume:	0.70
+
+$Name:	11
+	+Filename: 	shipview
+	+Preload: 	no
+	+Volume:	0.50
+
+$Name:	12
+	+Filename: 	MH_GRW_Ambient
+	+Preload: 	no
+	+Volume:	0.40
+
+$Name:	13
+	+Filename: 	MH_OSA_Ambient
+	+Preload: 	no
+	+Volume:	0.40
+
+$Name:	14
+	+Filename: 	UI_BSChange
+	+Preload: 	no
+	+Volume:	0.70
+
+$Name:	15
+	+Filename: 	UI_BSChangeFail
+	+Preload: 	no
+	+Volume:	0.70
+
+$Name:	16
+	+Filename: 	UI_SelectBriefIcon
+	+Preload: 	no
+	+Volume:	0.70
+
+$Name:	17
+	+Filename: 	UI_UserOver
+	+Preload: 	no
+	+Volume:	0.50
+
+$Name:	18
+	+Filename: 	UI_UserClick
+	+Preload: 	no
+	+Volume:	0.70
+
+$Name:	19
+	+Filename: 	UI_Reset
+	+Preload: 	no
+	+Volume:	0.70
+
+$Name:	20
+	+Filename: 	UI_TextAppear
+	+Preload: 	no
+	+Volume:	0.60
+
+$Name: 22
+   +Filename: weapview
+   +Preload: No
+   +Volume: 0.60
+
+$Name: 23
+   +Filename: MH_GRW_SlideDoorOpen
+   +Preload: No
+   +Volume: 0.75
+
+$Name: 24
+   +Filename: MH_GRW_SlideDoorClose
+   +Preload: No
+   +Volume: 0.75
+
+$Name:	28
+	+Filename: 	UI_PopupBox1
+	+Preload: 	no
+	+Volume:	0.70
+
+$Name:	29
+	+Filename: 	UI_PopupBox2
+	+Preload: 	no
+	+Volume:	0.70
+
+$Name: 30
+   +Filename: 1_yes
+   +Preload: No
+   +Volume: 1.00
+
+$Name: 32
+   +Filename: MH_GRW_ScreenOn2
+   +Preload: No
+   +Volume: 0.45
+
+$Name: 34
+   +Filename: MH_GRW_TechDoorOpen
+   +Preload: No
+   +Volume: 0.95
+
+$Name: 35
+   +Filename: MH_GRW_TechDoorClose
+   +Preload: No
+   +Volume: 0.95
+
+$Name: 36
+   +Filename: MH_GRW_ElevatorUp
+   +Preload: No
+   +Volume: 0.85
+
+$Name: 37
+   +Filename: MH_GRW_ElevatorDown
+   +Preload: No
+   +Volume: 0.85
+
+$Name: 38
+   +Filename: MH_GRW_PA_1
+   +Preload: No
+   +Volume: 0.50
+
+$Name: 39
+   +Filename: MH_GRW_PA_2
+   +Preload: No
+   +Volume: 0.50
+
+$Name: 40
+   +Filename: MH_GRW_PA_3
+   +Preload: No
+   +Volume: 0.50
+
+$Name:	41
+	+Filename: 	UI_Highlight
+	+Preload: 	no
+	+Volume:	0.40
+
+$Name:	42
+	+Filename: 	UI_BriefSwitch
+	+Preload: 	no
+	+Volume:	0.40
+
 #Interface Sounds End
 
 #Flyby Sounds Start

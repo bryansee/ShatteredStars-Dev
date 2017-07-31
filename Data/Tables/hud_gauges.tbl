@@ -1,6 +1,7 @@
 $Load Retail Configuration: No	
 $Max Directives:					8
 $Max Escort Ships:					15
+$Wireframe Targetbox: 3
 $Scale Gauges: no
 
 #Gauge Config

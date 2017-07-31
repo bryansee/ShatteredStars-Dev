@@ -1,5 +1,44 @@
 #Primary Weapons
 
+$Name:                          @Gadha
++Title:                         XSTR("GRW Gadha", -1)
++Description:
+XSTR(
+"Plasma Bolt Cannon
+Level 1 Damage
+Standard Issue", -1)
+$end_multi_text
++Tech Title:                    XSTR("GRW Gadha", -1)
++Tech Anim:                     none
++Tech Description:
+XSTR("The primary weapon of many Earth Alliance fighters is the Pulsed Plasma Cannon. The basis of the gun involves firing consecutive bursts of highly concentrated plasma pulses through a chaingun like firing mechanism. The results are devastating against even the most heavily reinforced armor plating, causing significant degradation of the hull material. A 30mm varient is used on the Badger's rear turret system that is incapable of supplying the power needed for a more significant weapon.", -1)
+$end_multi_text
+$Model File:						none
+@Laser Bitmap:						Gadha_Bitmap
+@Laser Glow:						Gadha_Glow
+@Laser Color:						53, 253, 121
+@Laser Color2:						19, 153, 44
+@Laser Length:						10.0
+@Laser Head Radius:					0.90
+@Laser Tail Radius:					0.90
+$Mass:								0.5
+$Velocity:                    1200
+$Fire Wait:                   0.15
+$Damage:                      13
+$Armor Factor:                1.0
+$Shield Factor:               0.95
+$Subsystem Factor:            0.26
+$Lifetime:                    1.04
+$Energy Consumed:             0.26
+$Cargo Size:                  0.0
+$Homing:                      NO
+$LaunchSnd:                   76
+$ImpactSnd:                   85
++Weapon Range:                1250
+$Flags:                       ( "player allowed" "cycle" "in tech database" )
+$Impact Explosion:              exp20
+$Impact Explosion Radius:       1.0
+
 
 $Name:		Trishula
 	+Title:							XSTR( "GRW Trishula Flak Gun", -1 )
@@ -11,7 +50,7 @@ $end_multi_text
 	+Tech Description:				XSTR( "The GRW Trishula Flak Gun is developed as a derivative of our current warship-mounted flak systems. It invokes metastable probability constellations out of the quantum vacuum. When perturbed, they decay, triggering a destructive local vacuum event. Notably effective against warheads.", -1 )
 $end_multi_text
 $Model File:						none
-@Laser Bitmap:						Shashka
+@Laser Bitmap:						Shashka_Bitmap
 @Laser Glow:						Shashka_Glow
 @Laser Color:						110, 30, 255
 @Laser Color2:						10, 30, 255
@@ -64,13 +103,13 @@ $Name:		Spatha
 	+Tech Description:				XSTR( "Authority Spatha directed-energy weapon systems emit highly focused energy, transferring that energy in particle bursts to a target to damage it. Recently, they appear to contain sophisticated quantum computational systems which allow the burst to be programmed on the atomic level. The resultant attack can actually alter the probabilistic waveforms of baryonic matter and trigger zero-point energy microbursts. This system is used by the Haalaahala to devastating effect.", -1 )
 $end_multi_text
 $Model File:						none
-@Laser Bitmap:						Spatha
+@Laser Bitmap:						Spatha_Bitmap
 @Laser Glow:						Spatha_Glow
-@Laser Color:						250, 250, 250
-@Laser Color2:						150, 150, 150
-@Laser Length:						10.0
-@Laser Head Radius:					0.90
-@Laser Tail Radius:					0.90
+@Laser Color:                 60, 85, 132
+@Laser Color2:                23, 39, 72
+@Laser Length:                8.0
+@Laser Head Radius:           2.3 
+@Laser Tail Radius:           2.3
 $Velocity:							1350.0
 $Fire Wait:							0.23
 $Damage:							16
@@ -78,18 +117,18 @@ $Damage Type: 						NormalWeapon
 $Armor Factor:						1.0
 $Shield Factor:						1.0
 $Subsystem Factor:					0.4
-$Lifetime:							1.83
+$Lifetime:							0.83
 $Energy Consumed:					0.25
 $Cargo Size:						0.0
 $Homing:							NO
 $LaunchSnd:							100
 $ImpactSnd:							85
 +Weapon Range:						1125
-$Flags: 							( "cycle" "player allowed" "Supercap" )
+$Flags: 							( "cycle" "player allowed" "particle spew" "Supercap" )
 $Trail:
 	+Start Width:	0.35
 	+End Width:		0.1
-	+Start Alpha:	0.4
+	+Start Alpha:	0.7
 	+End Alpha:		0.0
 	+Max Life:		0.07
 	+Bitmap:		Spatha_Trail
@@ -98,6 +137,14 @@ $Anim:								Flail2
 ;$Impact Effect:						BulldogImpact
 ;$Piercing Impact Effect:			BulldogPImpact
 $Muzzleflash: 						Rmuzzle
+$Pspew: 
++Count: 1 
++Time: 45
++Vel: 1.0
++Radius: 0.85
++Life: 0.05
++Scale: 0.48
++Bitmap: Spatha_Pspew
 
 
 $Name: Shashka
@@ -106,7 +153,7 @@ $Name: Shashka
 	+Tech Description:				XSTR( "Authority Badger weapons are an improved version of the Bulldog. Analysis of captured Authority fighters has revealed that these weapons are incredibly sophisticated on the technological level, capable of outmatching even our best weapons systems.", -1 )
 $end_multi_text
 $Model File: none
-@Laser Bitmap:						Shashka
+@Laser Bitmap:						Shashka_Bitmap
 @Laser Glow:						Shashka_Glow
 @Laser Color:						250, 250, 250
 @Laser Color2:						150, 150, 150
@@ -122,7 +169,7 @@ $Detonation Range:					1234
 $Armor Factor:						1.0
 $Shield Factor:						1.0
 $Subsystem Factor:					0.4
-$Lifetime:							1.83
+$Lifetime:							1.03
 $Energy Consumed:					1.0
 $Cargo Size:						0.0
 $Homing:							NO
@@ -133,7 +180,7 @@ $Flags: ( "cycle" "player allowed" "stream" "Supercap" )
 $Trail:
 	+Start Width:	0.35
 	+End Width:		0.1
-	+Start Alpha:	0.4
+	+Start Alpha:	0.7
 	+End Alpha:		0.0
 	+Max Life:		0.07
 	+Bitmap:		Shashka_Trail
@@ -142,6 +189,7 @@ $Anim:								Flail2
 ;$Impact Effect:						BadgerImpact
 ;$Piercing Impact Effect:			BadgerPImpact
 $Muzzleflash: 	Rmuzzle
+
 
 $Name:		CmnWlth PDTurret
 $Model File:						none
@@ -1539,7 +1587,7 @@ $BeamInfo:
             +Flicker:                 0.1
             +Zadd:                    2.0
 
-$Name:                        Light Particle Beam
+$Name:                        OSA Light Particle Beam
 $Model File:                  none
 @Laser Bitmap:                none
 @Laser Color:                 200, 100, 30
@@ -1605,7 +1653,7 @@ $BeamInfo:
             +Flicker:                 0.1
             +Zadd:                    2.0
 
-$Name:                        Light Particle BeamSLASH
+$Name:                        OSA Light Particle BeamSLASH
 $Model File:                  none
 @Laser Bitmap:                none
 @Laser Color:                 200, 30, 30
@@ -1856,6 +1904,286 @@ $BeamInfo:
 	$Section:
 		+Width:			8.0
 		+Texture:		BlueFade
+		+RGBA Inner:	255 255 255 255
+		+RGBA Outer:	150 150 150 10
+		+Flicker:		0.35
+		+Zadd:			1
+
+
+$Name:		Authority Light QD Beam
+	+Tech Title:					XSTR( "Authority Light QD Beam", -1 )
+	+Tech Description:				XSTR( "The Thorn Lance light beam system, mounted on Hyperion cruisers as their primary direct-fire weapons system, is the weakest of the next-generation beam systems. Nonetheless, it offers marked improvement in firepower over previous light beams, and its draw on the cruiser's systems overall is low. Cool-running, easy to maintain, and reasonably powerful, the Thorn Lance suffers only in that it is mounted on a fragile vessel.", -1 )
+$end_multi_text
+$Model File:						none
+@Laser Bitmap:						laserglow01
+@Laser Color:						88, 176, 249
+@Laser Length:						0.0
+@Laser Head Radius:					0.3
+@Laser Tail Radius:					0.3
+$Mass:								100.0
+$Velocity:							1750.0
+$Fire Wait:							40.0
+$Damage:							320
+$Damage Type: 						HugeBeam
+$Armor Factor:						1.0
+$Shield Factor:						1.0
+$Subsystem Factor:					1.0
+$Lifetime:							25
+$Energy Consumed:					0.40
+$Cargo Size:						0.0
+$Homing:							NO
+$LaunchSnd:							TEI_Shot
+$ImpactSnd:							88
++Weapon Range:						4500
+$Flags: 							( "Big Ship" "huge" "beam" "same turret cooldown" )
+$Impact Explosion: 					exp04
+$Impact Explosion Radius: 			20
+$BeamInfo:
+	+Type:									0
+	+Life:									2.5
+	+Warmup:								1500
+	+Warmdown:								5150
+	+Radius:								40.0
+	+PCount:								40
+	+PRadius:								3.0
+	+PAngle:								60.0
+	+PAni:									particle_Blue
+	+Miss Factor:							1.4 1.3 1.2 1.1 1.0
+	+BeamSound:							W_Auth_SQDB
+	+WarmupSound:							beam_up2
+	+WarmdownSound:							beam_down
+	+Muzzleglow:							BlueBeamGlow2
+	+Shots:									0
+	+ShrinkFactor:							0.0
+	+ShrinkPct:								0.0
+	+BeamWidth: 							25.0
+	+Beam Flash Effect: 					capflash
+	+Beam Flash Radius: 					12.5
+	+Beam Piercing Effect: 					exp06
+	+Beam Piercing Radius: 					12.5
+	+Beam Piercing Effect Velocity: 		200
+	+Beam Piercing Splash Effect Velocity: 	-20
+	+Beam Piercing Effect Variance: 		0.01
+	$Section:
+		+Width:			7
+		+Texture:		SBlueCore
+		+RGBA Inner:	255 255 255 255
+		+RGBA Outer:	150 150 150 10
+		+Flicker:		0.1
+		+Zadd:			8
+		+Tile Factor:	9, 1
+		+Translation:	-18
+	$Section:
+		+Width:			14
+		+Texture:		SBlueHaze1
+		+RGBA Inner:	160 160 0 255
+		+RGBA Outer:	60 60 0 10
+		+Flicker:		0.15
+		+Zadd:			6
+		+Tile Factor:	12, 1
+		+Translation:	-10
+	$Section:
+		+Width:			25.0
+		+Texture:		SBlueHaze2
+		+RGBA Inner:	255 255 255 255
+		+RGBA Outer:	150 150 150 10
+		+Flicker:		0.25
+		+Zadd:			3
+		+Tile Factor:	12, 1
+		+Translation:	-6
+	$Section:
+		+Width:			40.0
+		+Texture:		BlueFade
+		+RGBA Inner:	255 255 255 255
+		+RGBA Outer:	150 150 150 10
+		+Flicker:		0.35
+		+Zadd:			1
+
+
+
+$Name:		Authority Medium QD Beam
+	+Tech Title:					XSTR( "'Aurora Wake' Beam System", -1 )
+	+Tech Description:				XSTR( "A powerful mid-range direct-fire beam system, the 'Aurora Wake' was one of the first products of the Threat Exigency Initiative's drive to produce more powerful beam cannons. Mounted on most next-generation Alliance warships as a battery weapon, the 'Aurora Wake' supplements its own dedicated reactors with feeds from the ship's drives. Prone to overheating, this system is perhaps the most cantankerous of the next-generation beams. Mass issues encountered while mounting the beam on the Chimera corvette led to that vessel's relatively thin armor plating. Nonetheless, the 'Aurora Wake' was the first beam weapon that enabled the GTVA to emulate Shivan-style shock jump tactics.", -1 )
+$end_multi_text
+$Model File:						none
+@Laser Bitmap:						laserglow01
+@Laser Color:						88, 176, 249
+@Laser Length:						0.0
+@Laser Head Radius:					0.3
+@Laser Tail Radius:					0.3
+$Mass:								100.0
+$Velocity:							1800.0
+$Fire Wait:							35.0
+$Damage:							900
+$Damage Type: 						HugeBeam
+$Armor Factor:						1.0
+$Shield Factor:						1.0
+$Subsystem Factor:					1.0
+$Lifetime:							25.0
+$Energy Consumed:					0.40
+$Cargo Size:						0.0
+$Homing:							NO
+$LaunchSnd:							TEI_Shot
+$ImpactSnd:							88
++Weapon Range:						4500
+$Flags: 							( "Big Ship" "huge" "beam" "same turret cooldown" )
+$Impact Explosion: 					exp04
+$Impact Explosion Radius: 			25
+$BeamInfo:
+	+Type:									0
+	+Life:									4.0
+	+Warmup:								1500
+	+Warmdown:								5150
+	+Radius:								44.0
+	+PCount:								25
+	+PRadius:								2.8
+	+PAngle:								60.0
+	+PAni:									particle_blue
+	+Miss Factor:							1.4 1.3 1.2 1.1 1.0
+	+BeamSound:							W_Auth_SQDB
+	+WarmupSound:							beam_up2
+	+WarmdownSound:							beam_down
+	+Muzzleglow:							BlueBeamGlow2
+	+Shots:									0
+	+ShrinkFactor:							0.0
+	+ShrinkPct:								0.0
+	+BeamWidth: 							30.0
+	+Beam Flash Effect: 					capflash
+	+Beam Flash Radius: 					15.0
+	+Beam Piercing Effect: 					exp06
+	+Beam Piercing Radius: 					15.0
+	+Beam Piercing Effect Velocity: 		200
+	+Beam Piercing Splash Effect Velocity: 	-20
+	+Beam Piercing Effect Variance: 		0.01
+	$Section:
+		+Width:			9
+		+Texture:		BlueBeam3Core
+		+RGBA Inner:	255 255 255 255
+		+RGBA Outer:	150 150 150 10
+		+Flicker:		0.0
+		+Zadd:			8
+		+Tile Factor:	12, 1
+		+Translation:	-18
+	$Section:
+		+Width:			14
+		+Texture:		BlueBeam4Core
+		+RGBA Inner:	160 160 0 255
+		+RGBA Outer:	60 60 0 10
+		+Flicker:		0.05
+		+Zadd:			6
+		+Tile Factor:	12, 1
+		+Translation:	-13
+	$Section:
+		+Width:			18.0
+		+Texture:		BlueBeam2CoreHaze
+		+RGBA Inner:	255 255 255 255
+		+RGBA Outer:	150 150 150 10
+		+Flicker:		0.2
+		+Zadd:			4
+		+Tile Factor:	12, 1
+		+Translation:	-7
+	$Section:
+		+Width:			30.0
+		+Texture:		SBlueHaze2
+		+RGBA Inner:	255 0 0 255
+		+RGBA Outer:	60 0 0 10
+		+Flicker:		0.1
+		+Zadd:			2
+		+Tile Factor:	12, 1
+		+Translation:	-3
+	$Section:
+		+Width:			50.0
+		+Texture:		BlueFade
+		+RGBA Inner:	255 255 255 255
+		+RGBA Outer:	150 150 150 10
+		+Flicker:		0.35
+		+Zadd:			1
+
+
+$Name:		Authority Heavy QD Beam
+	+Tech Title:					XSTR( "'Ice Queen' Heavy Beam", -1 )
+	+Tech Description:				XSTR( "The Titan-class destroyer and Bellerophon-class corvette mount three 'Ice Queen' heavy beams on spinal mounts. These systems have the ability to decimate destroyer-class targets in only a few salvoes. Drawing massive amounts of power from dedicated meson reactors, the Ice Queen offers an overwhelming direct-fire solution to targets in the frontal arc. The system's beam emitters are easily damaged, but they can be replaced in days.", -1 )
+$end_multi_text
+$Model File:						none
+@Laser Bitmap:						laserglow01
+@Laser Color:						88, 176, 249
+@Laser Length:						0.0
+@Laser Head Radius:					0.3
+@Laser Tail Radius:					0.3
+$Mass:								100.0
+$Velocity:							1800.0
+$Fire Wait:							30.0
+$Damage:							1500
+$Damage Type: 						HugeBeam
+$Armor Factor:						1.0
+$Shield Factor:						1.0
+$Subsystem Factor:					1.0
+$Lifetime:							25.0
+$Energy Consumed:					0.40
+$Cargo Size:						0.0
+$Homing:							NO
+$LaunchSnd:							TEI_Shot
+$ImpactSnd:							88
++Weapon Range:						8250
+$Flags: 							( "Big Ship" "huge" "beam" "same turret cooldown" )
+$Impact Explosion: 					exp04
+$Impact Explosion Radius: 			32.5
+$BeamInfo:
+	+Type:									0
+	+Life:									4.0
+	+Warmup:								2600
+	+Warmdown:								5150
+	+Radius:								55.0
+	+PCount:								30
+	+PRadius:								3.0
+	+PAngle:								60.0
+	+PAni:									particle_Blue
+	+Miss Factor:							1.4 1.3 1.2 1.1 1.0
+	+BeamSound:							TEI_BBlue
+	+WarmupSound:							beam_up
+	+WarmdownSound:							beam_down
+	+Muzzleglow:							BlueBeamGlow2
+	+Shots:									0
+	+ShrinkFactor:							0.0
+	+ShrinkPct:								0.0
+	+BeamWidth: 							50.0
+	+Beam Flash Effect: 					capflash
+	+Beam Flash Radius: 					25.0
+	+Beam Piercing Effect: 					exp06
+	+Beam Piercing Radius: 					25.0
+	+Beam Piercing Effect Velocity: 		200
+	+Beam Piercing Splash Effect Velocity: 	-20
+	+Beam Piercing Effect Variance: 		0.01
+	$Section:
+		+Width:			40.0
+		+Texture:		taiicorebeam
+		+RGBA Inner:	160 160 0 255
+		+RGBA Outer:	60 60 0 10
+		+Flicker:		0.07
+		+Zadd:			7
+		+Tile Factor:	160, 1
+		+Translation:	-0.2
+	$Section:
+		+Width:			35.0
+		+Texture:		BBlueHaze2
+		+RGBA Inner:	160 160 0 255
+		+RGBA Outer:	60 60 0 10
+		+Flicker:		0.15
+		+Zadd:			3
+		+Tile Factor:	70, 1
+		+Translation:	-0.7
+	$Section:
+		+Width:			55.0
+		+Texture:		BlueLightning
+		+RGBA Inner:	160 160 0 255
+		+RGBA Outer:	60 60 0 10
+		+Flicker:		0
+		+Zadd:			5
+		+Tile Factor:	55, 1
+		+Translation:	-0.15
+	$Section:
+		+Width:			65.0
+		+Texture:		taiiglowbeam
 		+RGBA Inner:	255 255 255 255
 		+RGBA Outer:	150 150 150 10
 		+Flicker:		0.35

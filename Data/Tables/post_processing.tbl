@@ -81,7 +81,7 @@ $AlwaysOn:		YES
 $Density:		0.5
 $Falloff:		1.0
 $Weight:		0.02
-$Intensity:		0.5
-$Sample Number:		100
+$Intensity:		0.25
+$Sample Number:		200
 
 #End
