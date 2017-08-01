@@ -2193,6 +2193,66 @@ $BeamInfo:
 
 #Secondary Weapons
 
+$Name: Kalusa
++Title: XSTR("GRW Kalusa", -1)
++Description:
+XSTR(
+"Standard Issue
+Fast Target Lock", -1)
+$end_multi_text
++Tech Title: XSTR("GRW Kalusa", -1)
++Tech Anim: techwrath
++Tech Description:
+XSTR("The GRW SIM-114 Astra Standard Interception Missile is the ninth generation of our series of standard issue all-aspect seeking missiles used across the ages in vast numbers of battles. It is built for delivering a precisely-aimed, highly-damaging blow. Since its inception, the Wrath has been highly useful for eliminating fighters and crippling bombers. Unless a combatant wishes to have the weapon used as a dumbfire, it requires that aspect lock be achieved on the target before being launched. Not doing so makes the Wrath much less effective. Many warriors include the Wrath as part of their preferred selection of armaments for combat.", -1)
+$end_multi_text
+$Model File: GRW_Kalusa.pof
+$Mass: 10.0
+$Velocity: 1300.0
+$Fire Wait: 2.0
+$Damage: 50
+$Damage Type: 						NormalWeapon
+$Blast Force: 50.0
+$Inner Radius: 20.0
+$Outer Radius: 40.0 
+$Shockwave Speed: 0
+$Armor Factor: 1.0
+$Shield Factor: 0.5
+$Subsystem Factor: 0.7
+$Lifetime: 5.0
+$Energy Consumed: 0.0
+$Cargo Size: 2.0
+$Homing: YES
+ +Type: ASPECT
+ +Turn Time: 1.0
+ +Min Lock Time: 1.7
+ +Lock Pixels/Sec: 80
+ +Catch-up Pixels/Sec: 100
+ +Catch-up Penalty: 35
+$LaunchSnd: 91
+$ImpactSnd: 88
+$FlyBySnd: -1
+$Rearm Rate: 2.5
+$Flags: ( "player allowed" )
+$Trail:
+ +Start Width: 0.35
+ +End Width: 0.35
+ +Start Alpha: 1.0
+ +End Alpha: 0.0
+ +Max Life: 1
+ +Bitmap: MissileTrail01
+$Icon:                              none
+$Impact Explosion: ExpMissileHit1
+$Impact Explosion Radius: 10.0
+$Piercing Impact Explosion: exp06 
+$Piercing Impact Radius: 4.0 
+$Piercing Impact Velocity: 20 
+$Piercing Impact Splash Velocity: -5 
+$Piercing Impact Variance: 0.1 
+$Piercing Impact Particles: 5 
+$Thruster Flame Effect: missilethruster01 
+$Thruster Glow Effect: missileglow01 
+
+
 $Name:                                 Meteor
 +Title:                                XSTR("TM-5D Mora Swarm Missile", -1)
 +Description:
@@ -3085,9 +3145,9 @@ $Thruster Glow Effect:				missileglow01
 
 
 $Name:								Ranseur
-	+Tech Title:					XSTR( "SN12A Spearfish Torpedo", -1 )
+	+Tech Title:					XSTR( "SN12A Ranseur Torpedo", -1 )
 	+Tech Anim:						none
-	+Tech Description:				XSTR( "The SN12A Spearfish improves the Diamondback design with an upgraded guidance suite, allowing it to swarm launch.  The only side effect was lowered yield on the weapon's main warhead.", -1 )
+	+Tech Description:				XSTR( "The SN12A Ranseur improves the Diamondback design with an upgraded guidance suite, allowing it to swarm launch.  The only side effect was lowered yield on the weapon's main warhead.", -1 )
 $end_multi_text
 $Model File:						StormshardL.pof
 $POF target LOD:					0
