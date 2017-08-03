@@ -1427,51 +1427,51 @@ $FOF: 								5.0
 $Shots:								12
 
 
-$Name:                          GRW A-F Beam
-$Model File:                    none ; laser1-1.pof
-@Laser Bitmap:                  laserglow01
-@Laser Color:					136, 243, 249
-@Laser Length:					0.0
-@Laser Head Radius:				0.60
-@Laser Tail Radius:				0.60
-$Mass:                          100.0
-$Velocity:                      1000.0          ;; speed of the weapon (initially) -- may or may not change
-$Fire Wait:                     5.5             ;; in seconds
-$Damage:                        14				;; NOTE: for beam weapons this is kind of a "continuous" damage applied every few fractions of a second that the beam is on.
-$Damage Type:		NormalWeapon
-$Armor Factor:                  1.0
-$Shield Factor:                 1.0
-$Subsystem Factor:              1.0
-$Lifetime:                      50.0            ;; How long this thing lives
-$Energy Consumed:               0.30            ;; Energy used when fired
-$Cargo Size:                    0.0             ;; Amount of space taken up in weapon cargo
-$Homing:                        NO
-$LaunchSnd:                     124             ;; The sound it makes when fired
-$ImpactSnd:                     88             ;; The sound it makes when it hits something
-+Weapon Range:					1800			;; Limit to range at which weapon will actively target object
-$Flags:                         ("Big Ship" "beam")
-$Impact Explosion:			exp04
+$Name:		GRW A-F Beam
+$Model File:						none
+@Laser Bitmap:						laserglow01
+@Laser Color: 						20, 150, 100
+@Laser Length:						0.0
+@Laser Head Radius:					0.60
+@Laser Tail Radius:					0.60
+$Mass:								100.0
+$Velocity:							1000.0
+$Fire Wait:							5.0
+$Damage:							15
+$Damage Type: 						SmallBeam
+$Armor Factor:						1.0
+$Shield Factor:						1.0
+$Subsystem Factor:					2.0
+$Lifetime:							50.0
+$Energy Consumed:					0.30
+$Cargo Size:						0.0
+$Homing:							NO
+$LaunchSnd:							124
+$ImpactSnd:							88
++Weapon Range:						1800
+$Flags: 							( "Big Ship" "beam" )
+$Impact Explosion: 					exp04
 $Impact Explosion Radius: 			5
 $BeamInfo:
-	+Type:						3				;; 0 - 4 are valid #'s
-	+Life:			  			1.9				;; how long it lasts once the beam is actually firing
-	+Warmup:		  			1000			;; warmup time in ms
-	+Warmdown:					1000			;; warmdown time in ms
-	+Radius:								10.0		;20.0
-	+PCount:								24		;12
-	+PRadius:								2.4		;1.2
-	+PAngle:					65.0			;; angle of the random "cone" where the particles are generated
-	+PAni:						particle_blue	;; particle ani
-	+Miss Factor:				1.9 1.8 1.7 1.6 1.5		;; magic # - higher == miss more (only really applicable to type 0 and type 3 beams)
-	+BeamSound:					149				;; the looping beam-firing sound
-	+WarmupSound:				150				;; associated warmup sound
-	+WarmdownSound:				161				;; associated warmdown sound
-	+Muzzleglow:				BlueBeamGlow2	;; muzzle glow bitmap
-	+Shots:						2				;; only used for TYPE 3 beams
-	+ShrinkFactor:				0.0			;; what percentage of lifetime where beam starts shrinking (0.1 == 10% life left)
-	+ShrinkPct:					0.0			;; what percentage of max width we subtract per second
+	+Type:									3
+	+Life:									1.9
+	+Warmup:								1000
+	+Warmdown:								1000
+	+Radius:								10.0
+	+PCount:								24
+	+PRadius:								2.4
+	+PAngle:								65.0
+	+PAni:									particle_blue
+	+Miss Factor:							1.9 1.8 1.7 1.6 1.5
+	+BeamSound:								149				;; the looping beam-firing sound
+	+WarmupSound:							150				;; associated warmup sound
+	+WarmdownSound:							161				;; associated warmdown sound
+	+Muzzleglow:							BlueBeamGlow2	;; muzzle glow bitmap
+	+Shots:									2
+	+ShrinkFactor:							0.0
+	+ShrinkPct:								0.0
 	+BeamWidth: 							10.0
-	+Beam Piercing Effect:					exp06
+	+Beam Piercing Effect: 					exp06
 	+Beam Piercing Radius: 					5.0
 	+Beam Piercing Effect Velocity:			25
 	+Beam Piercing Splash Effect Velocity:	-2.5
@@ -1519,6 +1519,94 @@ $BeamInfo:
 		+RGBA Outer:	150 150 150 10
 		+Flicker:		0.35
 		+Zadd:			1
+
+
+$Name:		GRW Light Photon Beam
+$Model File:						none
+@Laser Bitmap:						laserglow01
+@Laser Color: 						20, 150, 100
+@Laser Length:						0.0
+@Laser Head Radius:					0.30
+@Laser Tail Radius:					0.30
+$Mass:								100.0
+$Velocity:							1000.0
+$Fire Wait:							25.0
+$Damage:							400
+$Damage Type: 						HugeBeam
+$Armor Factor:						1.0
+$Shield Factor:						1.0
+$Subsystem Factor:					0.4
+$Lifetime:							30.0
+$Energy Consumed:					0.30
+$Cargo Size:						0.0
+$Homing:							NO
+$LaunchSnd:							124
+$ImpactSnd:							88
++Weapon Range:						3700
+$Flags: 							( "Big Ship" "huge" "beam" "same turret cooldown" )
+$Impact Explosion: 					exp04
+$Impact Explosion Radius: 			17.5
+$BeamInfo:
+	+Type:									0
+	+Life:									6.0
+	+Warmup:								2500
+	+Warmdown:								1500
+	+Radius:								35.0
+	+PCount:								25
+	+PRadius:								3.0
+	+PAngle:								65.0
+	+PAni:									particle_turq
+	+Miss Factor:							1.4 1.3 1.2 1.1 1.0
+	+BeamSound:								304
+	+WarmupSound:							303
+	+WarmdownSound:							305
+	+Muzzleglow:							vbeamglow
+	+Shots:									0
+	+ShrinkFactor:							0.1
+	+ShrinkPct:								1.8
+	+BeamWidth: 							23.0
+	+Beam Flash Effect: 					capflash
+	+Beam Flash Radius: 					11.5
+	+Beam Piercing Effect: 					exp06
+	+Beam Piercing Radius: 					11.5
+	+Beam Piercing Effect Velocity: 		200
+	+Beam Piercing Splash Effect Velocity: 	-20
+	+Beam Piercing Effect Variance: 		0.01
+	$Section:
+		+Width:			7
+		+Texture:		SBlueCore
+		+RGBA Inner:	255 255 255 255
+		+RGBA Outer:	150 150 150 10
+		+Flicker:		0.1
+		+Zadd:			8
+		+Tile Factor:	9, 1
+		+Translation:	-18
+	$Section:
+		+Width:			14
+		+Texture:		SBlueHaze1
+		+RGBA Inner:	160 160 0 255
+		+RGBA Outer:	60 60 0 10
+		+Flicker:		0.15
+		+Zadd:			6
+		+Tile Factor:	12, 1
+		+Translation:	-10
+	$Section:
+		+Width:			25.0
+		+Texture:		SBlueHaze2
+		+RGBA Inner:	255 255 255 255
+		+RGBA Outer:	150 150 150 10
+		+Flicker:		0.25
+		+Zadd:			3
+		+Tile Factor:	12, 1
+		+Translation:	-6
+	$Section:
+		+Width:			40.0
+		+Texture:		BlueFade
+		+RGBA Inner:	255 255 255 255
+		+RGBA Outer:	150 150 150 10
+		+Flicker:		0.35
+		+Zadd:			1
+;end
 
 
 $Name:                        Heavy Particle Beam
@@ -2614,7 +2702,7 @@ $Impact Explosion:		ExpMissileHit1
 $Impact Explosion Radius:	20.0
 
 $Name: 		Warhammer
-$Model File:						UEM_Apocalypse.pof
+$Model File:						StormshardL.pof ; UEM_Apocalypse.pof
 $POF target LOD:					0
 $Mass:								20.0
 $Velocity:							300.0
@@ -2681,7 +2769,7 @@ $Thruster Flame Effect:				missilethruster01
 $Thruster Glow Effect:				missileglow01
 
 $Name: 		CW Hellfire
-$Model File:						UEM_WarhammerB.pof
+$Model File:						StormshardM.pof ; UEM_WarhammerB.pof
 $POF target LOD:					0
 $Mass:								2.0
 $Velocity:							1900.0
@@ -2737,7 +2825,7 @@ $Thruster Flame Effect:				missilethruster01
 $Thruster Glow Effect:				missileglow01
 
 $Name: 		Hammer
-$Model File:						UEM_WarhammerB.pof
+$Model File:						StormshardM.pof ; UEM_WarhammerB.pof
 $POF target LOD:					0
 $Mass:								20.0
 $Velocity:							500.0
@@ -2801,7 +2889,7 @@ $Thruster Flame Effect:				missilethruster01
 $Thruster Glow Effect:				missileglow01
 
 $Name: 		Harrier
-$Model File:						UEM_WarhammerB.pof
+$Model File:						StormshardM.pof ; UEM_WarhammerB.pof
 $POF target LOD:					0
 $Mass:								20.0
 $Velocity:							300.0

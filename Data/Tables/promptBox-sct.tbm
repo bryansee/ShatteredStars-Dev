@@ -1,0 +1,403 @@
+#Conditional Hooks
+$Application: FS2_Open
+
+$On Game Init:
+[
+
+PromptBox = {}
+
+function PromptBox:Init()
+
+	self.OK = true
+	self.Enabled = false
+	self.Gauges = {}
+	self.CurrentRes = {width=gr.getScreenWidth(),height=gr.getScreenHeight()}
+	
+	if self.CurrentRes.width / self.CurrentRes.height > 1.5 then --its widescreen
+			--x and y should be the position from the hud gauge table, offset should be how far apart the options are
+		self.Gauges["base"] = {name = "proBox", x = 328, y = 340, width = 768, height = 225} 
+		self.Gauges["option"] = {name = "msgLine", x = 352, y = 402, width = 720, height = 25, offset = 25}
+		self.BaseRes = {width=1440, height=900} -- base res as defined in the table
+	else --its full screen
+		self.Gauges["base"] = {name = "proBox", x = 128, y = 300, width = 768, height = 225}
+		self.Gauges["option"] = {name = "msgLine", x = 148, y = 362, width = 720, height = 25, offset = 25}
+		self.BaseRes = {width=1024, height=768}
+	end
+	
+	self.ActiveLine = {1,1,1,1,1} --By default, all lines are active
+	self.Options = {"PromptBoxOpt1","PromptBoxOpt2","PromptBoxOpt3","PromptBoxOpt4","PromptBoxOpt5"} --Names of the hud gauges in a table
+	self.UnlockTime = -1 --Just a delay to not have the player fire when they select something
+	self.NumOptions = 0 --How many options the player can hover or click
+	self.Choice = 0 --The value that goes back to FRED
+	self.LastValue = 0 --The last item we've hovered over
+	self.PlayerMouse = io.MouseControlStatus --The player's mouse control as set in the options menu
+	self.LastFrameMouse = false --The value of the left mouse button last frame
+	self.HoverOver = false --Checks if we've hovered over anything
+	self.FreeMode = false --If true lets the player bring up the interface with Alt-C
+	self.AllowPause = false --If true sets time compression
+	
+end
+
+function PromptBox:ScaleScreenCoords(value, xy) --Scale the x,y coordinates when we're on a non-base resolution
+
+	local new_value
+	
+	if xy == 0 then
+		new_value = (self.CurrentRes.width / self.BaseRes.width) * value
+	elseif xy == 1 then
+		new_value = (self.CurrentRes.height / self.BaseRes.height) * value
+	end
+	
+	return new_value
+
+end
+
+function PromptBox:SetMsgGaugeVisible(visible)
+
+	local retailGauges
+	local customGauges
+	
+	self.Enabled = visible
+
+	if visible then
+		customGauges = "true"
+		retailGauges = "false"
+		ad.playGameSound(29) --The sound that plays when you bring up the PromptBox
+	else
+		customGauges = "false"
+		retailGauges = "true"
+		self.Choice = 0
+	end
+	
+		mn.runSEXP("hud-gauge-set-active !PromptBox! ".. customGauges)
+		mn.runSEXP("hud-gauge-set-active !PromptBoxOpt1! ".. customGauges)
+		mn.runSEXP("hud-gauge-set-active !PromptBoxOpt2! ".. customGauges)
+		mn.runSEXP("hud-gauge-set-active !PromptBoxOpt3! ".. customGauges)
+		mn.runSEXP("hud-gauge-set-active !PromptBoxOpt4! ".. customGauges)
+		mn.runSEXP("hud-gauge-set-active !PromptBoxOpt5! ".. customGauges)
+		mn.runSEXP("hud-activate-gauge-type !Center reticle! ".. retailGauges)
+		mn.runSEXP("hud-activate-gauge-type !Lock indicator! ".. retailGauges)
+		mn.runSEXP("hud-activate-gauge-type !Threat indicator! ".. retailGauges)
+		mn.runSEXP("hud-activate-gauge-type !Throttle! ".. retailGauges)
+		mn.runSEXP("hud-activate-gauge-type !Weapon energy! ".. retailGauges)
+		mn.runSEXP("hud-activate-gauge-type !Afterburner energy! ".. retailGauges)
+		mn.runSEXP("hud-activate-gauge-type !Mini shield! ".. retailGauges)
+		
+	local playerName = hv.Player.Name
+
+	if visible then
+		if self.PlayerMouse then
+			io.MouseControlStatus = false
+		end
+		
+		mn.runSEXP("lock-primary-weapon !"..playerName.."!")
+		mn.runSEXP("lock-secondary-weapon !"..playerName.."!")
+		mn.runSEXP("lock-afterburner !"..playerName.."!")
+		mn.runSEXP("ignore-key !-1! !C!")
+	else
+		if self.PlayerMouse then
+			io.MouseControlStatus = true
+		end
+
+	end
+	
+	if PromptBox.AllowPause == true then
+		if visible then
+			mn.runSEXP("set-time-compression !1!")
+		else
+			mn.runSEXP("set-time-compression !100!")
+		end
+	end
+
+end
+
+function PromptBox:LeftMouseReleased()
+
+	if self.LastFrameMouse == true and io.isMouseButtonDown(MOUSE_LEFT_BUTTON) == false then
+		return true
+	end
+		self.LastFrameMouse = io.isMouseButtonDown(MOUSE_LEFT_BUTTON)
+		return false
+
+end
+
+function PromptBox:PlayHoverSound(value)
+
+	if self.LastValue ~= value then
+		ad.playInterfaceSound(17)
+		self.LastValue = value
+		return
+	end
+		self.LastValue = value
+
+end
+
+function PromptBox:UnlockWeapons()
+
+	local playerName = hv.Player.Name
+
+		mn.runSEXP("unlock-primary-weapon !"..playerName.."!")
+		mn.runSEXP("unlock-secondary-weapon !"..playerName.."!")
+		mn.runSEXP("unlock-afterburner !"..playerName.."!")
+		mn.runSEXP("ignore-key !0! !C!")
+		
+		self.UnlockTime = -1
+
+end
+
+function PromptBox:GetBoundingBox(LineNumber)
+
+	local x1, x2, y1, y2
+	
+	x1 = self:ScaleScreenCoords(self.Gauges["option"].x+15,0)
+	y1 = self:ScaleScreenCoords((self.Gauges["option"].y+15 ) + ( ( LineNumber - 1 ) * self.Gauges["option"].offset),1)
+	x2 = self:ScaleScreenCoords((self.Gauges["option"].x + self.Gauges["option"].width) - 15,0)
+	y2 = self:ScaleScreenCoords((self.Gauges["option"].y+15 + (self.Gauges["option"].height) ) + ( ( LineNumber - 1 ) * self.Gauges["option"].offset),1)
+		
+	return x1, y1, x2, y2
+
+end
+
+function PromptBox:IsHovering()
+
+	local mouseX = io.getMouseX()
+	local mouseY = io.getMouseY()
+	local x1, y1, x2, y2
+		
+	for i=1, 5 do
+	
+		mn.runSEXP("hud-set-frame !"..self.Options[i].."! !0!")
+		
+	end
+	
+	self.HoverOver = false
+	
+	if self.NumOptions > 0 then
+	
+		for i=1, self.NumOptions do
+		
+			x1, y1, x2, y2 = self:GetBoundingBox(i)
+			
+			if mouseX > x1 and mouseX < x2 and mouseY > y1 and mouseY < y2 and self.ActiveLine[i] == 1 then
+			
+			self.HoverOver = true --just checking if we hovered over anything
+			
+			
+				if io.isMouseButtonDown(MOUSE_LEFT_BUTTON) == false then
+					self:PlayHoverSound(i)
+					mn.runSEXP("hud-set-frame !"..self.Options[i].."! !1!")
+				end
+
+				if io.isMouseButtonDown(MOUSE_LEFT_BUTTON) == true then
+					mn.runSEXP("hud-set-frame !"..self.Options[i].."! !2!")
+				end
+
+				if self:LeftMouseReleased() then					
+					proBoxSet(-1)
+					ad.playInterfaceSound(7)
+					return i
+				end
+				
+			end
+		end
+		
+		if self.HoverOver == false then --if we didn't hover over anything, we should reset these last frame things
+			self.LastFrameMouse = false
+			self.LastValue = 0
+		end
+	
+	end
+	
+	return 0
+
+end
+
+function proBoxInit()
+
+	PromptBox:Init()
+
+end
+
+function proBoxOn()
+
+	if PromptBox.OK then
+		PromptBox:SetMsgGaugeVisible(true)
+	end
+	
+end
+
+function proBoxOff()
+
+	if PromptBox.OK then
+		PromptBox:SetMsgGaugeVisible(false)
+	end
+	
+end
+
+function proBoxInFreeMode()
+
+	if PromptBox.OK then
+		if PromptBox.FreeMode == true then
+			return 1
+		else
+			return 0
+		end
+	end
+
+end
+
+function proBoxSet(options)
+
+if type(options) == "number" then
+
+	if PromptBox.OK then
+	
+		if options > 5 then
+			options = 5
+		end
+		
+		PromptBox.NumOptions = options	
+		PromptBox.LastFrameMouse = false
+		PromptBox.LastValue = 0
+		PromptBox.ActiveLine = {1,1,1,1,1}
+
+		if options == -1 then -- -1 basically resets everything for the FREDder
+		
+			proBoxClear()
+			PromptBox.UnlockTime = mn.getMissionTime() + 1
+						
+			if PromptBox.AllowPause == true then
+				mn.runSEXP("set-time-compression !100!")
+			end
+			
+		end
+		
+	end
+
+else
+
+ba.error("proBoxSet() wasn't called with a number! FIX IT!")
+
+end
+
+end
+
+function proBoxLock(line)
+
+if type(line) == "number" then
+	if PromptBox.OK then
+		PromptBox.ActiveLine[line] = 0
+	end
+else
+ba.error("proBoxLock() wasn't called with a number! FIX IT!")
+end
+
+end
+
+function proBoxModeFree()
+	
+	if PromptBox.OK then
+		PromptBox.FreeMode = true
+	end
+
+end
+
+function proBoxModeLock()
+	
+	if PromptBox.OK then
+		PromptBox.FreeMode = false
+	end
+
+end
+
+function proBoxAllowPause()
+	
+	if PromptBox.OK then
+		PromptBox.AllowPause = true
+	end
+
+end
+
+function proBoxDisallowPause()
+	
+	if PromptBox.OK then
+		PromptBox.AllowPause = false
+	end
+
+end
+
+function proBoxValue()
+
+	if PromptBox.OK then
+		if PromptBox.Enabled == true then		
+			return PromptBox.Choice
+		else
+			return 0
+		end
+	else
+		return 0
+	end
+
+end
+
+function proBoxClear() --just clears the lines
+
+	mn.runSEXP("hud-set-text !PromptBox! ! !")
+	mn.runSEXP("hud-set-text !PromptBoxOpt1! ! !")
+	mn.runSEXP("hud-set-text !PromptBoxOpt2! ! !")
+	mn.runSEXP("hud-set-text !PromptBoxOpt3! ! !")
+	mn.runSEXP("hud-set-text !PromptBoxOpt4! ! !")
+	mn.runSEXP("hud-set-text !PromptBoxOpt5! ! !")
+
+end
+]
+
+$State: GS_STATE_GAME_PLAY
+
+$On Gameplay Start:
+[
+	PromptBox:Init()
+]
+
+$On Frame:
+[
+	if PromptBox.OK then
+		if PromptBox.Enabled == true then
+			io.setCursorHidden(false)
+			PromptBox.Choice = PromptBox:IsHovering()
+		end		
+		
+		if PromptBox.UnlockTime < mn.getMissionTime() and PromptBox.UnlockTime ~= -1 then
+			PromptBox:UnlockWeapons()
+		end
+				
+	end
+]
+
+$On Key Pressed:
+[
+
+	if PromptBox.OK then
+		if hv.Key == "Alt-C" then
+			if PromptBox.FreeMode == true then
+				if PromptBox.Enabled == true then
+					PromptBox:SetMsgGaugeVisible(false)
+					PromptBox:UnlockWeapons()
+				else
+					PromptBox:SetMsgGaugeVisible(true)
+				end
+			end
+		end
+	end
+]
+
+$On Mission End:
+[
+	if PromptBox.OK then -- Give mouse controls back if we didn't yet
+		if PromptBox.PlayerMouse == true and io.MouseControlStatus == false then
+			io.MouseControlStatus = true
+		end
+	end
+]
+
+#End

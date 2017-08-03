@@ -1,19 +1,28 @@
-$Name: Unnamed
+$Name: Shattered Stars Tech Demo
 $Type: single
++Description:
+ XSTR("Shattered Stars Tech Demo", -1)
+$end_multi_text
 $Flags: 0
 
 
-+Starting Ships: ( "GRF Caranayodhin"  "GRF Jayamalla" )
++Starting Ships: ( "GRF Caranayodhin"  "GRF Jayamalla"  "AuF Berserker"  "AuF Gladiator"  "AuF Streltsy"  "AuFB Raptor" )
 
-+Starting Weapons: ( "Gadha"  "Trishula" )
++Starting Weapons: ( "Gadha"  "Trishula"  "Spatha"  "Shashka"  "Kalusa"  "Meteor"  "Comet"  "Glaive"  "Atgeir"  "Voulge"  "Sibyna"  "Bardiche" )
 
 
 $Mission: sp-test.fs2
 +Flags: 0
 +Main Hall: 
 +Formula: ( cond
+   (
+      ( is-previous-event-true 
+         "sp-test.fs2" 
+         "End campaign" 
+      )
+      ( end-of-campaign )
+   )
    ( ( true ) ( next-mission "sp-test.fs2" ) )
-   ( ( true ) ( end-of-campaign ) )
 )
 
 +Level: 0

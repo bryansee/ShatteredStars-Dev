@@ -4,13 +4,13 @@ $Version: 0.10
 $Name:  XSTR("The Authority Ambush", -1)
 $Author: BDSee
 $Created: 11/12/14 at 19:22:58
-$Modified: 08/01/17 at 03:41:34
+$Modified: 08/03/17 at 23:20:45
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
 
 $Mission Desc:
- XSTR("The fighters are called back to protect the Farrell and her escorts against the Authority attack.", -1)
+ XSTR("The fighters are sortied to protect the Farrell and her escorts against the Authority attack.", -1)
 $end_multi_text
 +Game Type Flags: 1
 +Flags: 131200
@@ -22,11 +22,11 @@ $end_multi_text
 +Hull Repair Ceiling: 0.000000
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: 571.279541, 25435.285156, -24407.519531
++Viewer pos: 4617.666504, 5727.539063, -6407.229004
 +Viewer orient:
-	0.999761, -0.000000, -0.021852,
-	0.016794, 0.639812, 0.768348,
-	0.013981, -0.768532, 0.639659
+	0.022266, 0.000001, 0.999752,
+	-0.932381, 0.360881, 0.020765,
+	-0.360792, -0.932612, 0.008036
 
 $Starting wing names: ( "Brahma" "Vishnu" "Rama" )
 $Squadron wing names: ( "Brahma" "Vishnu" "Rama" "Krishna" "Durga" )
@@ -35,6 +35,14 @@ $Team-versus-team wing names: ( "Brahma" "Vishnu" )
 $Skybox Model: env-skybox-sol.pof
 
 $AI Profile: SS
+
+#Sexp_variables
+
+$Variables:
+(
+		0		"!sptStage"		"0"		"number"
+		1		"saveexist"		"0"		"number"
+)
 
 #Command Briefing
 
@@ -109,20 +117,34 @@ $end_multi_text
 
 $Starting Shipname: Brahma 1
 $Ship Choices: (
+	"GRF Jayamalla"	8
+	"AuF Berserker"	8
+	"AuF Gladiator"	8
+	"AuF Streltsy"	8
+	"AuFB Raptor"	8
 )
 
 +Weaponry Pool: (
-	"Gadha"	1
-	"Trishula"	1
-	"Meteor"	80
+	"Gadha"	24
+	"Trishula"	24
+	"Spatha"	8
+	"Shashka"	8
+	"Kalusa"	960
+	"Meteor"	100
+	"Comet"	480
+	"Glaive"	100
+	"Atgeir"	100
+	"Voulge"	100
+	"Sibyna"	100
+	"Bardiche"	100
 )
 
-#Objects		;! 161 total
+#Objects		;! 175 total
 
 $Name: Brahma 1		;! Object #0
 $Class: GRF Caranayodhin
 $Team: Friendly
-$Location: -900.517090, 0.000795, -15506.859375
+$Location: -437.236206, 108.946045, -15391.875977
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -134,7 +156,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Gadha" "Trishula" )
-+Secondary Banks: ( "Meteor" "Meteor" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -203,7 +224,7 @@ $Determination: 10
 $Name: Brahma 2		;! Object #2
 $Class: GRF Caranayodhin
 $Team: Friendly
-$Location: -961.312500, 0.000794, -15527.693359
+$Location: -467.824829, 224.184448, -15921.142578
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -214,8 +235,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "" "" )
-+Secondary Banks: ( "" "" )
++Primary Banks: ( "Gadha" "Trishula" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -231,7 +251,7 @@ $Determination: 10
 $Name: Brahma 3		;! Object #3
 $Class: GRF Caranayodhin
 $Team: Friendly
-$Location: -856.325684, 0.000791, -15527.808594
+$Location: -521.780762, -112.709351, -15769.611328
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -242,8 +262,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "" "" )
-+Secondary Banks: ( "" "" )
++Primary Banks: ( "Gadha" "Trishula" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -259,7 +278,7 @@ $Determination: 10
 $Name: Brahma 4		;! Object #4
 $Class: GRF Caranayodhin
 $Team: Friendly
-$Location: -791.976074, 0.000796, -15525.650391
+$Location: -791.976074, 109.801697, -15525.650391
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -270,8 +289,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "" "" )
-+Secondary Banks: ( "" "" )
++Primary Banks: ( "Gadha" "Trishula" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -287,7 +305,7 @@ $Determination: 10
 $Name: Vishnu 1		;! Object #5
 $Class: GRF Caranayodhin
 $Team: Friendly
-$Location: -973.287109, 0.000788, -15601.685547
+$Location: -419.667480, 327.576904, -16633.251953
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -298,8 +316,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "" "" )
-+Secondary Banks: ( "" "" )
++Primary Banks: ( "Gadha" "Trishula" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -315,7 +332,7 @@ $Determination: 10
 $Name: Vishnu 2		;! Object #6
 $Class: GRF Caranayodhin
 $Team: Friendly
-$Location: -1059.746094, 0.000807, -15641.488281
+$Location: -268.081299, -225.571777, -16034.556641
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -326,8 +343,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "" "" )
-+Secondary Banks: ( "" "" )
++Primary Banks: ( "Gadha" "Trishula" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -343,7 +359,7 @@ $Determination: 10
 $Name: Vishnu 3		;! Object #7
 $Class: GRF Caranayodhin
 $Team: Friendly
-$Location: -907.677246, 0.000777, -15648.326172
+$Location: -704.498657, -248.533203, -16964.019531
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -354,8 +370,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "" "" )
-+Secondary Banks: ( "" "" )
++Primary Banks: ( "Gadha" "Trishula" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -371,7 +386,7 @@ $Determination: 10
 $Name: Vishnu 4		;! Object #8
 $Class: GRF Caranayodhin
 $Team: Friendly
-$Location: -806.613770, 0.000774, -15627.572266
+$Location: -105.369141, 247.181213, -15789.405273
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -382,8 +397,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "" "" )
-+Secondary Banks: ( "" "" )
++Primary Banks: ( "Gadha" "Trishula" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -399,7 +413,7 @@ $Determination: 10
 $Name: Krishna 1		;! Object #9
 $Class: GRF Jayamalla
 $Team: Friendly
-$Location: -1275.216797, 0.000823, -15665.962891
+$Location: -366.754028, -345.548828, -17900.302734
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -426,7 +440,7 @@ $Determination: 10
 $Name: Krishna 2		;! Object #10
 $Class: GRF Jayamalla
 $Team: Friendly
-$Location: -1353.949219, 0.000799, -15758.306641
+$Location: -403.967651, -215.660156, -16659.095703
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -453,7 +467,7 @@ $Determination: 10
 $Name: Krishna 3		;! Object #11
 $Class: GRF Jayamalla
 $Team: Friendly
-$Location: -1207.927734, 0.000799, -15758.306641
+$Location: -146.747070, 480.705811, -16444.996094
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -480,7 +494,7 @@ $Determination: 10
 $Name: Krishna 4		;! Object #12
 $Class: GRF Jayamalla
 $Team: Friendly
-$Location: -1262.347656, 0.000766, -15807.634766
+$Location: -954.547607, 240.662659, -16546.791016
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -507,7 +521,7 @@ $Determination: 10
 $Name: Krishna 5		;! Object #13
 $Class: GRF Jayamalla
 $Team: Friendly
-$Location: -1414.099854, 0.000765, -15870.212891
+$Location: -500.133301, 170.666260, -17034.126953
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -534,7 +548,7 @@ $Determination: 10
 $Name: Krishna 6		;! Object #14
 $Class: GRF Jayamalla
 $Team: Friendly
-$Location: -1122.824219, 0.000817, -15876.044922
+$Location: -102.686523, 185.847656, -16992.396484
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -561,7 +575,7 @@ $Determination: 10
 $Name: Durga 1		;! Object #15
 $Class: GRF Caranayodhin
 $Team: Friendly
-$Location: -1783.535156, 0.000845, -15622.455078
+$Location: -809.632690, 430.131378, -16031.076172
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -588,7 +602,7 @@ $Determination: 10
 $Name: Durga 2		;! Object #16
 $Class: GRF Caranayodhin
 $Team: Friendly
-$Location: -1849.339844, 0.000812, -15697.658203
+$Location: -90.710449, -148.902100, -17566.318359
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -615,7 +629,7 @@ $Determination: 10
 $Name: Durga 3		;! Object #17
 $Class: GRF Caranayodhin
 $Team: Friendly
-$Location: -1715.867188, 0.000808, -15728.353516
+$Location: -654.686523, 562.589722, -16415.042969
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -642,7 +656,7 @@ $Determination: 10
 $Name: Durga 4		;! Object #18
 $Class: GRF Caranayodhin
 $Team: Friendly
-$Location: -1783.134766, 0.000766, -15784.806641
+$Location: -886.166748, -326.422974, -16433.269531
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -669,7 +683,7 @@ $Determination: 10
 $Name: Durga 5		;! Object #19
 $Class: GRF Caranayodhin
 $Team: Friendly
-$Location: -1951.847900, 0.000806, -15847.365234
+$Location: -602.585876, 170.450195, -17479.189453
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -696,7 +710,7 @@ $Determination: 10
 $Name: Durga 6		;! Object #20
 $Class: GRF Caranayodhin
 $Team: Friendly
-$Location: -1689.267578, 0.000763, -15887.009766
+$Location: -932.028076, -118.152588, -16040.259766
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -2391,7 +2405,10 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: turret32
 +Subsystem: turret33
 $Arrival Location: Hyperspace
-$Arrival Cue: ( is-destroyed-delay 26 "Bravo" ) 
+$Arrival Cue: ( is-event-true-delay 
+   "3 - Capships arriving" 
+   5 
+)
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
@@ -3121,10 +3138,9 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: turret53
 +Subsystem: turret54
 $Arrival Location: Hyperspace
-$Arrival Cue: ( is-destroyed-delay 
-   33 
-   "Endurance" 
-   "India" 
+$Arrival Cue: ( is-event-true-delay 
+   "4 - Denunciator arrives" 
+   7 
 )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
@@ -3994,7 +4010,7 @@ $Determination: 10
 $Name: Rama 1		;! Object #139
 $Class: GRF Caranayodhin
 $Team: Friendly
-$Location: -960.900391, 0.015470, -15738.720703
+$Location: -617.078247, 156.099365, -16342.692383
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -4005,8 +4021,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "" "" )
-+Secondary Banks: ( "" "" )
++Primary Banks: ( "Gadha" "Trishula" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -4022,7 +4037,7 @@ $Determination: 10
 $Name: Rama 2		;! Object #140
 $Class: GRF Caranayodhin
 $Team: Friendly
-$Location: -1009.095825, 0.015479, -15782.412109
+$Location: -184.136230, -231.935059, -16781.068359
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -4033,8 +4048,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "" "" )
-+Secondary Banks: ( "" "" )
++Primary Banks: ( "Gadha" "Trishula" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -4050,7 +4064,7 @@ $Determination: 10
 $Name: Rama 3		;! Object #141
 $Class: GRF Caranayodhin
 $Team: Friendly
-$Location: -897.494629, 0.015451, -15782.689453
+$Location: -897.494629, 196.163330, -15782.689453
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -4061,8 +4075,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "" "" )
-+Secondary Banks: ( "" "" )
++Primary Banks: ( "Gadha" "Trishula" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -4078,7 +4091,7 @@ $Determination: 10
 $Name: Rama 4		;! Object #142
 $Class: GRF Caranayodhin
 $Team: Friendly
-$Location: -947.232422, 0.015451, -15845.337891
+$Location: -974.355957, 419.394775, -17091.458984
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -4089,8 +4102,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "" "" )
-+Secondary Banks: ( "" "" )
++Primary Banks: ( "Gadha" "Trishula" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -4432,7 +4444,6 @@ $Orientation:
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 33
 +Initial Hull: 100
 +Initial Shields: 100
 +Subsystem: Pilot
@@ -4493,7 +4504,6 @@ $Orientation:
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 33
 +Initial Hull: 100
 +Initial Shields: 100
 +Subsystem: Pilot
@@ -4541,7 +4551,6 @@ $Orientation:
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 33
 +Initial Hull: 100
 +Initial Shields: 100
 +Subsystem: Pilot
@@ -4589,7 +4598,6 @@ $Orientation:
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 33
 +Initial Hull: 100
 +Initial Shields: 100
 +Subsystem: Pilot
@@ -4646,7 +4654,6 @@ $Orientation:
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 33
 +Initial Hull: 100
 +Initial Shields: 100
 +Subsystem: Pilot
@@ -4682,10 +4689,10 @@ $Determination: 10
 +Use Table Score:
 +Score: 500
 
-$Name: GRCv Padichar 162		;! Object #160
+$Name: McBride		;! Object #160
 $Class: OSD Olympia
 $Team: Friendly
-$Location: -10975.085938, 0.003118, -11757.224609
+$Location: -3973.934082, 0.001953, -5799.363281
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -4729,6 +4736,957 @@ $Determination: 10
 +Group: 0
 +Use Table Score:
 +Score: 500
+
+$Name: Delhi		;! Object #161
+$Class: GRCv Kshatriya
+$Team: Friendly
+$Location: -829.077087, 605.920410, -5314.167969
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Subsystem: Pilot
++Subsystem: turret01
++Subsystem: turret02
++Subsystem: turret03
++Subsystem: turret04
++Subsystem: turret05
++Subsystem: turret06
++Subsystem: turret07
++Subsystem: turret08
++Subsystem: turret09
++Subsystem: turret10
++Subsystem: turret11
++Subsystem: turret12
++Subsystem: turret13
++Subsystem: turret14
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "escort" )
++Flags2: ( )
++Respawn priority: 0
++Escort priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 250
+
+$Name: Ranjit		;! Object #162
+$Class: GRCv Kshatriya
+$Team: Friendly
+$Location: -3551.306641, 1094.210938, -5389.395996
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Subsystem: Pilot
++Subsystem: turret01
++Subsystem: turret02
++Subsystem: turret03
++Subsystem: turret04
++Subsystem: turret05
++Subsystem: turret06
++Subsystem: turret07
++Subsystem: turret08
++Subsystem: turret09
++Subsystem: turret10
++Subsystem: turret11
++Subsystem: turret12
++Subsystem: turret13
++Subsystem: turret14
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "escort" )
++Flags2: ( )
++Respawn priority: 0
++Escort priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 250
+
+$Name: Madraspatnam		;! Object #163
+$Class: GRCv Kshatriya
+$Team: Friendly
+$Location: -3657.582764, -326.276367, -6786.197266
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Subsystem: Pilot
++Subsystem: turret01
++Subsystem: turret02
++Subsystem: turret03
++Subsystem: turret04
++Subsystem: turret05
++Subsystem: turret06
++Subsystem: turret07
++Subsystem: turret08
++Subsystem: turret09
++Subsystem: turret10
++Subsystem: turret11
++Subsystem: turret12
++Subsystem: turret13
++Subsystem: turret14
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "escort" )
++Flags2: ( )
++Respawn priority: 0
++Escort priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 250
+
+$Name: Compellor		;! Object #164
+$Class: AuFg Vulture
+$Team: Hostile
+$Location: 3479.699951, -680.000000, -2395.300049
+$Orientation:
+	-0.322836, 0.000000, 0.946455,
+	0.054081, 0.998366, 0.018447,
+	-0.944908, 0.057141, -0.322309
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 15
++Initial Hull: 100
++Subsystem: Pilot
++Subsystem: turret01-base
++Subsystem: turret02-base
++Subsystem: turret03-base
++Subsystem: turret04-base
++Subsystem: turret05
++Subsystem: turret06
++Subsystem: turret07
++Subsystem: turret08-base
++Subsystem: turret09-base
++Subsystem: turret10-base
++Subsystem: turret11-base
++Subsystem: turret12-base
++Subsystem: turret13-base
++Subsystem: turret14-base
++Subsystem: turret15-base
++Subsystem: turret16-base
++Subsystem: turret17-base
++Subsystem: turret18-base
++Subsystem: turret19-base
++Subsystem: Turret20a
++Subsystem: Turret21a
+$Arrival Location: Hyperspace
+$Arrival Cue: ( is-event-true-delay 
+   "5 - Frigates" 
+   ( rand 8 15 ) 
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "escort" )
++Flags2: ( )
++Respawn priority: 0
++Escort priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 500
+
+$Name: Marauder		;! Object #165
+$Class: AuFg Vulture
+$Team: Hostile
+$Location: 3300.211670, 648.215332, -6252.473633
+$Orientation:
+	0.356787, 0.000000, 0.934186,
+	-0.163636, 0.984539, 0.062496,
+	-0.919743, -0.175164, 0.351271
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 15
++Initial Hull: 100
++Subsystem: Pilot
++Subsystem: turret01-base
++Subsystem: turret02-base
++Subsystem: turret03-base
++Subsystem: turret04-base
++Subsystem: turret05
++Subsystem: turret06
++Subsystem: turret07
++Subsystem: turret08-base
++Subsystem: turret09-base
++Subsystem: turret10-base
++Subsystem: turret11-base
++Subsystem: turret12-base
++Subsystem: turret13-base
++Subsystem: turret14-base
++Subsystem: turret15-base
++Subsystem: turret16-base
++Subsystem: turret17-base
++Subsystem: turret18-base
++Subsystem: turret19-base
++Subsystem: Turret20a
++Subsystem: Turret21a
+$Arrival Location: Hyperspace
+$Arrival Cue: ( has-arrived-delay 0 "Compellor" ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "escort" )
++Flags2: ( )
++Respawn priority: 0
++Escort priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 500
+
+$Name: Eclipse		;! Object #166
+$Class: AuC Imperator
+$Team: Hostile
+$Location: -2726.428223, -746.317139, 4538.749023
+$Orientation:
+	-0.984000, 0.155564, -0.086868,
+	0.169683, 0.966900, -0.190565,
+	0.054348, -0.202256, -0.977824
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
++Subsystem: turret01
++Subsystem: turret02
++Subsystem: turret03
++Subsystem: turret04
++Subsystem: turret05
++Subsystem: turret06
++Subsystem: turret07
++Subsystem: turret08
++Subsystem: turret09-base
++Subsystem: turret10-base
++Subsystem: turret11-base
++Subsystem: turret12-base
++Subsystem: turret13-base
++Subsystem: turret14-base
++Subsystem: turret15-base
++Subsystem: turret16-base
++Subsystem: turret17-base
++Subsystem: turret18-base
++Subsystem: turret19-base
++Subsystem: turret20-base
++Subsystem: turret21
++Subsystem: turret22
++Subsystem: turret23
++Subsystem: turret24
++Subsystem: turret25
++Subsystem: turret26
++Subsystem: turret27
++Subsystem: turret28
++Subsystem: turret29
++Subsystem: turret30
++Subsystem: turret31
++Subsystem: turret32
++Subsystem: turret33
++Subsystem: turret34
++Subsystem: turret35
++Subsystem: turret36
++Subsystem: turret37
++Subsystem: turret38
++Subsystem: turret39
++Subsystem: turret40
++Subsystem: turret41
++Subsystem: turret42
++Subsystem: turret43
++Subsystem: turret44
++Subsystem: turret45
++Subsystem: turret46
++Subsystem: turret47
++Subsystem: turret48
++Subsystem: turret49
++Subsystem: turret50
++Subsystem: turret51
++Subsystem: turret52
++Subsystem: turret53
++Subsystem: turret54
+$Arrival Location: Hyperspace
+$Arrival Cue: ( is-event-true-delay 
+   "6 - More capships arriving" 
+   2 
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-shields" "invulnerable" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 1500
+
+$Name: AuC Imperator 167		;! Object #167
+$Class: AuC Imperator
+$Team: Hostile
+$Location: -7360.487793, 0.003418, 9878.276367
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
++Subsystem: turret01
++Subsystem: turret02
++Subsystem: turret03
++Subsystem: turret04
++Subsystem: turret05
++Subsystem: turret06
++Subsystem: turret07
++Subsystem: turret08
++Subsystem: turret09-base
++Subsystem: turret10-base
++Subsystem: turret11-base
++Subsystem: turret12-base
++Subsystem: turret13-base
++Subsystem: turret14-base
++Subsystem: turret15-base
++Subsystem: turret16-base
++Subsystem: turret17-base
++Subsystem: turret18-base
++Subsystem: turret19-base
++Subsystem: turret20-base
++Subsystem: turret21
++Subsystem: turret22
++Subsystem: turret23
++Subsystem: turret24
++Subsystem: turret25
++Subsystem: turret26
++Subsystem: turret27
++Subsystem: turret28
++Subsystem: turret29
++Subsystem: turret30
++Subsystem: turret31
++Subsystem: turret32
++Subsystem: turret33
++Subsystem: turret34
++Subsystem: turret35
++Subsystem: turret36
++Subsystem: turret37
++Subsystem: turret38
++Subsystem: turret39
++Subsystem: turret40
++Subsystem: turret41
++Subsystem: turret42
++Subsystem: turret43
++Subsystem: turret44
++Subsystem: turret45
++Subsystem: turret46
++Subsystem: turret47
++Subsystem: turret48
++Subsystem: turret49
++Subsystem: turret50
++Subsystem: turret51
++Subsystem: turret52
++Subsystem: turret53
++Subsystem: turret54
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-shields" "invulnerable" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 1500
+
+$Name: AuC Imperator 168		;! Object #168
+$Class: AuC Imperator
+$Team: Hostile
+$Location: 250.274048, 0.003418, 7395.059570
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
++Subsystem: turret01
++Subsystem: turret02
++Subsystem: turret03
++Subsystem: turret04
++Subsystem: turret05
++Subsystem: turret06
++Subsystem: turret07
++Subsystem: turret08
++Subsystem: turret09-base
++Subsystem: turret10-base
++Subsystem: turret11-base
++Subsystem: turret12-base
++Subsystem: turret13-base
++Subsystem: turret14-base
++Subsystem: turret15-base
++Subsystem: turret16-base
++Subsystem: turret17-base
++Subsystem: turret18-base
++Subsystem: turret19-base
++Subsystem: turret20-base
++Subsystem: turret21
++Subsystem: turret22
++Subsystem: turret23
++Subsystem: turret24
++Subsystem: turret25
++Subsystem: turret26
++Subsystem: turret27
++Subsystem: turret28
++Subsystem: turret29
++Subsystem: turret30
++Subsystem: turret31
++Subsystem: turret32
++Subsystem: turret33
++Subsystem: turret34
++Subsystem: turret35
++Subsystem: turret36
++Subsystem: turret37
++Subsystem: turret38
++Subsystem: turret39
++Subsystem: turret40
++Subsystem: turret41
++Subsystem: turret42
++Subsystem: turret43
++Subsystem: turret44
++Subsystem: turret45
++Subsystem: turret46
++Subsystem: turret47
++Subsystem: turret48
++Subsystem: turret49
++Subsystem: turret50
++Subsystem: turret51
++Subsystem: turret52
++Subsystem: turret53
++Subsystem: turret54
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-shields" "invulnerable" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 1500
+
+$Name: AuC Imperator 169		;! Object #169
+$Class: AuC Imperator
+$Team: Hostile
+$Location: 3405.419922, 0.003418, 10273.504883
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
++Subsystem: turret01
++Subsystem: turret02
++Subsystem: turret03
++Subsystem: turret04
++Subsystem: turret05
++Subsystem: turret06
++Subsystem: turret07
++Subsystem: turret08
++Subsystem: turret09-base
++Subsystem: turret10-base
++Subsystem: turret11-base
++Subsystem: turret12-base
++Subsystem: turret13-base
++Subsystem: turret14-base
++Subsystem: turret15-base
++Subsystem: turret16-base
++Subsystem: turret17-base
++Subsystem: turret18-base
++Subsystem: turret19-base
++Subsystem: turret20-base
++Subsystem: turret21
++Subsystem: turret22
++Subsystem: turret23
++Subsystem: turret24
++Subsystem: turret25
++Subsystem: turret26
++Subsystem: turret27
++Subsystem: turret28
++Subsystem: turret29
++Subsystem: turret30
++Subsystem: turret31
++Subsystem: turret32
++Subsystem: turret33
++Subsystem: turret34
++Subsystem: turret35
++Subsystem: turret36
++Subsystem: turret37
++Subsystem: turret38
++Subsystem: turret39
++Subsystem: turret40
++Subsystem: turret41
++Subsystem: turret42
++Subsystem: turret43
++Subsystem: turret44
++Subsystem: turret45
++Subsystem: turret46
++Subsystem: turret47
++Subsystem: turret48
++Subsystem: turret49
++Subsystem: turret50
++Subsystem: turret51
++Subsystem: turret52
++Subsystem: turret53
++Subsystem: turret54
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-shields" "invulnerable" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 1500
+
+$Name: AuC Imperator 170		;! Object #170
+$Class: AuC Imperator
+$Team: Hostile
+$Location: 6898.421875, 0.003418, 9091.995117
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
++Subsystem: turret01
++Subsystem: turret02
++Subsystem: turret03
++Subsystem: turret04
++Subsystem: turret05
++Subsystem: turret06
++Subsystem: turret07
++Subsystem: turret08
++Subsystem: turret09-base
++Subsystem: turret10-base
++Subsystem: turret11-base
++Subsystem: turret12-base
++Subsystem: turret13-base
++Subsystem: turret14-base
++Subsystem: turret15-base
++Subsystem: turret16-base
++Subsystem: turret17-base
++Subsystem: turret18-base
++Subsystem: turret19-base
++Subsystem: turret20-base
++Subsystem: turret21
++Subsystem: turret22
++Subsystem: turret23
++Subsystem: turret24
++Subsystem: turret25
++Subsystem: turret26
++Subsystem: turret27
++Subsystem: turret28
++Subsystem: turret29
++Subsystem: turret30
++Subsystem: turret31
++Subsystem: turret32
++Subsystem: turret33
++Subsystem: turret34
++Subsystem: turret35
++Subsystem: turret36
++Subsystem: turret37
++Subsystem: turret38
++Subsystem: turret39
++Subsystem: turret40
++Subsystem: turret41
++Subsystem: turret42
++Subsystem: turret43
++Subsystem: turret44
++Subsystem: turret45
++Subsystem: turret46
++Subsystem: turret47
++Subsystem: turret48
++Subsystem: turret49
++Subsystem: turret50
++Subsystem: turret51
++Subsystem: turret52
++Subsystem: turret53
++Subsystem: turret54
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-shields" "invulnerable" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 1500
+
+$Name: AuC Imperator 171		;! Object #171
+$Class: AuC Imperator
+$Team: Hostile
+$Location: -4979.900879, 0.003418, 9752.951172
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
++Subsystem: turret01
++Subsystem: turret02
++Subsystem: turret03
++Subsystem: turret04
++Subsystem: turret05
++Subsystem: turret06
++Subsystem: turret07
++Subsystem: turret08
++Subsystem: turret09-base
++Subsystem: turret10-base
++Subsystem: turret11-base
++Subsystem: turret12-base
++Subsystem: turret13-base
++Subsystem: turret14-base
++Subsystem: turret15-base
++Subsystem: turret16-base
++Subsystem: turret17-base
++Subsystem: turret18-base
++Subsystem: turret19-base
++Subsystem: turret20-base
++Subsystem: turret21
++Subsystem: turret22
++Subsystem: turret23
++Subsystem: turret24
++Subsystem: turret25
++Subsystem: turret26
++Subsystem: turret27
++Subsystem: turret28
++Subsystem: turret29
++Subsystem: turret30
++Subsystem: turret31
++Subsystem: turret32
++Subsystem: turret33
++Subsystem: turret34
++Subsystem: turret35
++Subsystem: turret36
++Subsystem: turret37
++Subsystem: turret38
++Subsystem: turret39
++Subsystem: turret40
++Subsystem: turret41
++Subsystem: turret42
++Subsystem: turret43
++Subsystem: turret44
++Subsystem: turret45
++Subsystem: turret46
++Subsystem: turret47
++Subsystem: turret48
++Subsystem: turret49
++Subsystem: turret50
++Subsystem: turret51
++Subsystem: turret52
++Subsystem: turret53
++Subsystem: turret54
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-shields" "invulnerable" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 1500
+
+$Name: AuC Imperator 172		;! Object #172
+$Class: AuC Imperator
+$Team: Hostile
+$Location: -7684.365723, 0.003418, 4662.779297
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
++Subsystem: turret01
++Subsystem: turret02
++Subsystem: turret03
++Subsystem: turret04
++Subsystem: turret05
++Subsystem: turret06
++Subsystem: turret07
++Subsystem: turret08
++Subsystem: turret09-base
++Subsystem: turret10-base
++Subsystem: turret11-base
++Subsystem: turret12-base
++Subsystem: turret13-base
++Subsystem: turret14-base
++Subsystem: turret15-base
++Subsystem: turret16-base
++Subsystem: turret17-base
++Subsystem: turret18-base
++Subsystem: turret19-base
++Subsystem: turret20-base
++Subsystem: turret21
++Subsystem: turret22
++Subsystem: turret23
++Subsystem: turret24
++Subsystem: turret25
++Subsystem: turret26
++Subsystem: turret27
++Subsystem: turret28
++Subsystem: turret29
++Subsystem: turret30
++Subsystem: turret31
++Subsystem: turret32
++Subsystem: turret33
++Subsystem: turret34
++Subsystem: turret35
++Subsystem: turret36
++Subsystem: turret37
++Subsystem: turret38
++Subsystem: turret39
++Subsystem: turret40
++Subsystem: turret41
++Subsystem: turret42
++Subsystem: turret43
++Subsystem: turret44
++Subsystem: turret45
++Subsystem: turret46
++Subsystem: turret47
++Subsystem: turret48
++Subsystem: turret49
++Subsystem: turret50
++Subsystem: turret51
++Subsystem: turret52
++Subsystem: turret53
++Subsystem: turret54
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-shields" "invulnerable" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 1500
+
+$Name: AuC Imperator 173		;! Object #173
+$Class: AuC Imperator
+$Team: Hostile
+$Location: -7630.610352, 0.003418, 18024.529297
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
++Subsystem: turret01
++Subsystem: turret02
++Subsystem: turret03
++Subsystem: turret04
++Subsystem: turret05
++Subsystem: turret06
++Subsystem: turret07
++Subsystem: turret08
++Subsystem: turret09-base
++Subsystem: turret10-base
++Subsystem: turret11-base
++Subsystem: turret12-base
++Subsystem: turret13-base
++Subsystem: turret14-base
++Subsystem: turret15-base
++Subsystem: turret16-base
++Subsystem: turret17-base
++Subsystem: turret18-base
++Subsystem: turret19-base
++Subsystem: turret20-base
++Subsystem: turret21
++Subsystem: turret22
++Subsystem: turret23
++Subsystem: turret24
++Subsystem: turret25
++Subsystem: turret26
++Subsystem: turret27
++Subsystem: turret28
++Subsystem: turret29
++Subsystem: turret30
++Subsystem: turret31
++Subsystem: turret32
++Subsystem: turret33
++Subsystem: turret34
++Subsystem: turret35
++Subsystem: turret36
++Subsystem: turret37
++Subsystem: turret38
++Subsystem: turret39
++Subsystem: turret40
++Subsystem: turret41
++Subsystem: turret42
++Subsystem: turret43
++Subsystem: turret44
++Subsystem: turret45
++Subsystem: turret46
++Subsystem: turret47
++Subsystem: turret48
++Subsystem: turret49
++Subsystem: turret50
++Subsystem: turret51
++Subsystem: turret52
++Subsystem: turret53
++Subsystem: turret54
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-shields" "invulnerable" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 1500
+
+$Name: AuC Imperator 174		;! Object #174
+$Class: AuC Imperator
+$Team: Hostile
+$Location: -33.940674, 0.003418, 15470.625000
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
++Subsystem: turret01
++Subsystem: turret02
++Subsystem: turret03
++Subsystem: turret04
++Subsystem: turret05
++Subsystem: turret06
++Subsystem: turret07
++Subsystem: turret08
++Subsystem: turret09-base
++Subsystem: turret10-base
++Subsystem: turret11-base
++Subsystem: turret12-base
++Subsystem: turret13-base
++Subsystem: turret14-base
++Subsystem: turret15-base
++Subsystem: turret16-base
++Subsystem: turret17-base
++Subsystem: turret18-base
++Subsystem: turret19-base
++Subsystem: turret20-base
++Subsystem: turret21
++Subsystem: turret22
++Subsystem: turret23
++Subsystem: turret24
++Subsystem: turret25
++Subsystem: turret26
++Subsystem: turret27
++Subsystem: turret28
++Subsystem: turret29
++Subsystem: turret30
++Subsystem: turret31
++Subsystem: turret32
++Subsystem: turret33
++Subsystem: turret34
++Subsystem: turret35
++Subsystem: turret36
++Subsystem: turret37
++Subsystem: turret38
++Subsystem: turret39
++Subsystem: turret40
++Subsystem: turret41
++Subsystem: turret42
++Subsystem: turret43
++Subsystem: turret44
++Subsystem: turret45
++Subsystem: turret46
++Subsystem: turret47
++Subsystem: turret48
++Subsystem: turret49
++Subsystem: turret50
++Subsystem: turret51
++Subsystem: turret52
++Subsystem: turret53
++Subsystem: turret54
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-shields" "invulnerable" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 1500
 
 #Wings		;! 28 total
 
@@ -4917,7 +5875,10 @@ $Wave Threshold: 0
 $Special Ship: 0		;! Bravo 1
 
 $Arrival Location: Hyperspace
-$Arrival Cue: ( is-destroyed-delay 0 "Alpha" ) 
+$Arrival Cue: ( is-event-true-delay 
+   "2 - New wave" 
+   3 
+)
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Ships: (		;! 6 total
@@ -5290,10 +6251,97 @@ $Ships: (		;! 6 total
 $AI Goals: ( goals ( ai-chase-any 200 ) )
 +Flags: ( )
 
-#Events		;! 28 total
+#Events		;! 44 total
 
-$Formula: ( when ( true ) ( do-nothing ) ) 
+$Formula: ( when 
+   ( true ) 
+   ( script-eval "proBoxAllowPause()" ) 
+   ( script-eval "saveexist()" ) 
+)
 +Name: Initial Events
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( = @saveexist[0] 1 ) 
+      ( = @!sptStage[0] 0 ) 
+      ( is-event-true-msecs-delay 
+         "Initial Events" 
+         1 
+      )
+   )
+   ( script-eval "proBoxOn()" ) 
+   ( script-eval "proBoxSet(2)" ) 
+   ( hud-set-message 
+      "PromptBox" 
+      "Saved Checkpoint Detected" 
+   )
+   ( hud-set-message 
+      "PromptBoxOpt1" 
+      "Start from beginning" 
+   )
+   ( hud-set-message 
+      "PromptBoxOpt2" 
+      "Start from capital ship attack" 
+   )
+)
++Name: Stage 0 - Check for Saved Data
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( or 
+         ( and 
+            ( is-event-true-delay 
+               "Stage 0 - Check for Saved Data" 
+               0 
+            )
+            ( = 
+               ( script-eval-num "proBoxValue()" ) 
+               1 
+            )
+         )
+         ( = @saveexist[0] 0 ) 
+      )
+      ( is-event-true-msecs-delay 
+         "Initial Events" 
+         1 
+      )
+      ( = @!sptStage[0] 0 ) 
+   )
+   ( script-eval "proBoxOff()" ) 
+   ( modify-variable @!sptStage[0] 1 ) 
+)
++Name: Go to Beginning
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Stage 0 - Check for Saved Data" 
+         0 
+      )
+      ( = 
+         ( script-eval-num "proBoxValue()" ) 
+         2 
+      )
+      ( = @!sptStage[0] 0 ) 
+   )
+   ( script-eval "proBoxOff()" ) 
+   ( modify-variable @!sptStage[0] 4 ) 
+)
++Name: Go to Capital Ship Attack
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( = @!sptStage[0] 1 ) 
+   ( do-nothing ) 
+)
++Name: 1 - Under attack
 +Repeat Count: 1
 +Interval: 1
 
@@ -5304,6 +6352,20 @@ $Formula: ( when
 +Name: Beam Free
 +Repeat Count: 1
 +Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( not 
+         ( is-destroyed-delay 0 "Farrell" ) 
+      )
+      ( has-departed-delay 0 "Farrell" ) 
+   )
+   ( do-nothing ) 
+)
++Name: Protect Farrell
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Protect Farrell", -1)
 
 $Formula: ( when 
    ( true ) 
@@ -5343,6 +6405,31 @@ $Formula: ( when
 +Interval: 1
 
 $Formula: ( when 
+   ( and 
+      ( is-destroyed-delay 43 "Alpha" ) 
+      ( percent-ships-destroyed 
+         50 
+         "Delta" 
+         "Foxtrot" 
+         "Charlie" 
+         "Echo" 
+      )
+   )
+   ( modify-variable @!sptStage[0] 2 ) 
+)
++Name: Get ready
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( = @!sptStage[0] 2 ) 
+   ( do-nothing ) 
+)
++Name: 2 - New wave
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
    ( has-arrived-delay 0 "Bravo" ) 
    ( send-message 
       "Farrell" 
@@ -5366,6 +6453,31 @@ $Formula: ( when
 +Repeat Count: 1
 +Interval: 1
 +Chained: 9
+
+$Formula: ( when 
+   ( and 
+      ( is-destroyed-delay 26 "Bravo" ) 
+      ( percent-ships-destroyed 
+         66 
+         "Hotel" 
+         "Mike" 
+         "Golf" 
+         "Papa" 
+      )
+   )
+   ( modify-variable @!sptStage[0] 3 ) 
+)
++Name: Next stage
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( = @!sptStage[0] 3 ) 
+   ( do-nothing ) 
+)
++Name: 3 - Capships arriving
++Repeat Count: 1
++Interval: 1
 
 $Formula: ( when 
    ( has-arrived-delay 0 "Endurance" ) 
@@ -5401,6 +6513,26 @@ $Formula: ( when
    )
 )
 +Name: Iota arrives
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-destroyed-delay 
+      33 
+      "Endurance" 
+      "India" 
+   )
+   ( modify-variable @!sptStage[0] 4 ) 
+)
++Name: Denunciator arriving
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( = @!sptStage[0] 4 ) 
+   ( do-nothing ) 
+)
++Name: 4 - Denunciator arrives
 +Repeat Count: 1
 +Interval: 1
 
@@ -5557,6 +6689,82 @@ $Formula: ( when ( true ) ( end-mission ) )
 +Chained: 3
 
 $Formula: ( when 
+   ( is-destroyed-delay 6 "Denunciator" ) 
+   ( training-msg "Checkpoint Reached" ) 
+   ( script-eval "saveship('Brahma 1')" ) 
+   ( script-eval "saveship('Brahma 2')" ) 
+   ( script-eval "saveship('Brahma 3')" ) 
+   ( script-eval "saveship('Brahma 4')" ) 
+   ( script-eval "saveship('Vishnu 1')" ) 
+   ( script-eval "saveship('Vishnu 2')" ) 
+   ( script-eval "saveship('Vishnu 3')" ) 
+   ( script-eval "saveship('Vishnu 4')" ) 
+)
++Name: CHECKPOINT SAVE
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-event-true-delay 
+      "Go to Capital Ship Attack" 
+      0 
+   )
+   ( script-eval "loadship('Brahma 1')" ) 
+   ( script-eval "loadship('Brahma 2')" ) 
+   ( script-eval "loadship('Brahma 3')" ) 
+   ( script-eval "loadship('Brahma 4')" ) 
+   ( script-eval "loadship('Vishnu 1')" ) 
+   ( script-eval "loadship('Vishnu 2')" ) 
+   ( script-eval "loadship('Vishnu 3')" ) 
+   ( script-eval "loadship('Vishnu 4')" ) 
+   ( fade-in 2500 ) 
+   ( when 
+      ( < ( hits-left "Alpha 1" ) 50 ) 
+      ( set-subsystem-strength 
+         "Alpha 1" 
+         "Hull" 
+         50 
+      )
+   )
+)
++Name: CHECKPOINT LOAD
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-destroyed-delay 28 "Denunciator" ) 
+   ( modify-variable @!sptStage[0] 5 ) 
+)
++Name: Frigates arriving
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( = @!sptStage[0] 5 ) 
+   ( do-nothing ) 
+)
++Name: 5 - Frigates
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( = @!sptStage[0] 6 ) 
+   ( do-nothing ) 
+)
++Name: 6 - More capships arriving
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( script-eval "deleteshipsavefile()" ) 
+)
++Name: Delete savefile
++Repeat Count: 1
++Interval: 1
++Chained: 0
+
+$Formula: ( when 
    ( has-arrived-delay 0 "Brahma 1" ) 
    ( send-message 
       "Farrell" 
@@ -5600,17 +6808,11 @@ $Formula: ( when ( true ) ( fade-out ) )
 +Interval: 1
 +Chained: 35
 
-$Formula: ( when ( true ) ( end-mission ) ) 
-+Name: End mission
-+Repeat Count: 1
-+Interval: 1
-+Chained: 3
-
 $Formula: ( when 
-   ( has-arrived-delay 0 "Eclipse" ) 
-   ( do-nothing ) 
+   ( = @!sptStage[0] 6 ) 
+   ( end-campaign ) 
 )
-+Name: May continue
++Name: End campaign
 +Repeat Count: 1
 +Interval: 1
 
@@ -5618,7 +6820,7 @@ $Formula: ( when
 
 $Type: Primary
 +Name: Defend Farrell
-$MessageNew:  XSTR("Defend the OSFg Farrell", -1)
+$MessageNew:  XSTR("Defend the OSFg Farrell and its fleet", -1)
 $end_multi_text
 $Formula: ( and 
    ( not 
@@ -5630,33 +6832,58 @@ $Formula: ( and
 #Waypoints		;! 0 lists total
 
 
-#Messages		;! 20 total
+#Messages		;! 24 total
 
+
+$Name: Checkpoint Reached
+$Team: -1
+$MessageNew:  XSTR("Checkpoint Reached", -1)
+$end_multi_text
+
+$Name: Saved Checkpoint Detected
+$Team: -1
+$MessageNew:  XSTR("Checkpoint Save Detected", -1)
+$end_multi_text
+
+$Name: Start from beginning
+$Team: -1
+$MessageNew:  XSTR("Start from beginning", -1)
+$end_multi_text
+
+$Name: Start from capital ship attack
+$Team: -1
+$MessageNew:  XSTR("Start from Capital ship attack", -1)
+$end_multi_text
 
 $Name: Fighters away
 $Team: -1
 $MessageNew:  XSTR("All fighters away. Good luck out there, pilots!", -1)
 $end_multi_text
++Wave Name: Emptymsg.ogg
 
 $Name: Watch your fire
 $Team: -1
-$MessageNew:  XSTR("Watch your fire, we don't want to hit each other. And be careful of the flak guns on the two cruisers.", -1)
+$MessageNew:  XSTR("Watch your fire, we don't want to hit each other.", -1)
 $end_multi_text
++Wave Name: Emptymsg.ogg
 
 $Name: Farrell 70
 $Team: -1
 $MessageNew:  XSTR("This is the Farrell. We're taking a pounding here. Buy us more time.", -1)
 $end_multi_text
++Wave Name: Emptymsg.ogg
 
 $Name: Farrell 50
 $Team: -1
 $MessageNew:  XSTR("Hull integrity is dropping. Damages and breaches reported at multiple decks. We can't take many more hits.", -1)
 $end_multi_text
++Wave Name: Emptymsg.ogg
 
 $Name: Farrell 20
 $Team: -1
 $MessageNew:  XSTR("We're taking critical hull damage. We won't last any longer!", -1)
 $end_multi_text
++Wave Name: Emptymsg.ogg
 
 $Name: Farrell destroyed - Fail
 $Team: -1
@@ -5667,71 +6894,85 @@ $Name: New wave coming from under
 $Team: -1
 $MessageNew:  XSTR("Our sensors detect a new Authority wave coming in off our bow! Intercept them at once!", -1)
 $end_multi_text
++Wave Name: Emptymsg.ogg
 
 $Name: Give 'em all
 $Team: -1
 $MessageNew:  XSTR("All units, let's give them all what we've got. The humans at the Colony on Earth are counting on us.", -1)
 $end_multi_text
++Wave Name: Emptymsg.ogg
 
 $Name: Another wave
 $Team: -1
 $MessageNew:  XSTR("Heads up! Another wave of Authority ships approaching!", -1)
 $end_multi_text
++Wave Name: Emptymsg.ogg
 
 $Name: Endurance arrived
 $Team: -1
-$MessageNew:  XSTR("The Authority corvette has just arrived! The AUCv Endurance! Fighters, maintain defensive position while we sortie a wing of Shuuro fighter-bombers to attack it.", -1)
+$MessageNew:  XSTR("The Authority corvette has just arrived! The AuFg Endurance!  Fighters, maintain defensive position while we sortie the additional wings to assist.", -1)
 $end_multi_text
-
-$Name: Colony transmission
-$Team: -1
-$MessageNew:  XSTR("All units, we have received a live transmission from the Colony on Earth. The humans there are fleeing from an invasion by the Authority oppressors. We'll play this through your comm channels.", -1)
-$end_multi_text
-
-$Name: Colony transmission 2
-$Team: -1
-$MessageNew:  XSTR("Government officials have issued a Colony-wide state of emergency. All civilians are to evacuate their homes immediately and head to the nearest No Zone shelters outside The Colony border. Officials are urging everyone to comply with the evacuation orders. Continued bombings on Resistance holdouts...", -1)
-$end_multi_text
++Wave Name: Emptymsg.ogg
 
 $Name: Endurance destroyed
 $Team: -1
 $MessageNew:  XSTR("We have taken down the Endurance.", -1)
 $end_multi_text
-
-$Name: Vanshi arrives
-$Team: -1
-$MessageNew:  XSTR("This is the GRD Vanshi of the 3rd Fleet. We have orders to mop up the Authority stragglers here in the Kuiper belt, and we will not move out from the field of engagement. We are sending in a repair team over the Farrell.", -1)
-$end_multi_text
++Wave Name: Emptymsg.ogg
 
 $Name: Iota arrives
 $Team: -1
-$MessageNew:  XSTR("This is Indra wing. We're starting an attack run on the Endurance.", -1)
+$MessageNew:  XSTR("This is Indra wing.  We're starting an attack run on the Endurance.", -1)
 $end_multi_text
++Wave Name: Emptymsg.ogg
 
 $Name: Denunciator arrived
 $Team: -1
-$MessageNew:  XSTR("Our sensors have picked up another hostile capital ship in the area. The AuD Denunciator. Watch out for anti-fighter defenses, pilots.", -1)
+$MessageNew:  XSTR("Our sensors have picked up another hostile capital ship in the area.  The AuD Denunciator.  Watch out for anti-fighter defenses, pilots.", -1)
 $end_multi_text
++Wave Name: Emptymsg.ogg
+
+$Name: Colony transmission
+$Team: -1
+$MessageNew:  XSTR("All units, we have received a live transmission from the Colony on Earth.  The humans there are fleeing from an invasion by the Authority oppressors. We'll play this through your comm channels.", -1)
+$end_multi_text
++Wave Name: Emptymsg.ogg
+
+$Name: Colony transmission 2
+$Team: -1
+$MessageNew:  XSTR("Government officials have issued a Colony-wide state of emergency.  All civilians are to evacuate their homes immediately and head to the nearest No Zone shelters outside The Colony border.  Officials are urging everyone to comply with the evacuation orders.  Continued bombings on Resistance holdouts...", -1)
+$end_multi_text
++Wave Name: ph_tr2012_1.ogg
 
 $Name: Denunciator destroyed
 $Team: -1
 $MessageNew:  XSTR("The Denunciator is going down!", -1)
 $end_multi_text
++Wave Name: Emptymsg.ogg
+
+$Name: Frigates arrived
+$Team: -1
+$MessageNew:  XSTR("Two Authority frigates have entered the field of engagement!  The Marauder and the Compellor!", -1)
+$end_multi_text
++Wave Name: Emptymsg.ogg
 
 $Name: More capships arriving
 $Team: -1
-$MessageNew:  XSTR("Reading more Authority capital ships entering the area. The Eclipse, and two battleships, the Emancipator and Maleficent. Oh, God. Clear the area, fighters. We're not going to make it.", -1)
+$MessageNew:  XSTR("Reading more Authority capital ships entering the area.  The Eclipse, and two battleships, the Emancipator and Maleficent.  Oh, God.  Clear the area, fighters. We're not going to make it.", -1)
 $end_multi_text
++Wave Name: Emptymsg.ogg
 
 $Name: Farrell abandon ship
 $Team: -1
 $MessageNew:  XSTR("Farrell, all hands are to abandon ship immediately! Other ships are to depart and regroup.", -1)
 $end_multi_text
++Wave Name: Emptymsg.ogg
 
 $Name: Farrell destroyed
 $Team: -1
 $MessageNew:  XSTR("The Farrell's going down!", -1)
 $end_multi_text
++Wave Name: Emptymsg.ogg
 
 #Reinforcements		;! 0 total
 

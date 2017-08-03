@@ -447,13 +447,13 @@ $Closeup_pos:           0.0, 0.0, -420
 $Closeup_zoom:          0.5
 $Score:				    250
 $Subsystem: turret01,5,1.0
-	$Default PBanks:        ( "Authority A-F BeamSlash" )
+	$Default PBanks:        ( "GRW Light Photon Beam" )
         $Flags: 		( "check hull" )
 $Subsystem: turret02,5,1.0
-	$Default PBanks:        ( "Authority A-F BeamSlash" )
+	$Default PBanks:        ( "GRW Light Photon Beam" )
         $Flags: 		( "check hull" )
 $Subsystem: turret03,5,1.0
-	$Default PBanks:        ( "Authority A-F BeamSlash" )
+	$Default PBanks:        ( "GRW Light Photon Beam" )
         $Flags: 		( "check hull" )
 $Subsystem: turret04,4,0.0 
 	$Default PBanks: 	( "CW88mm-PLC" )
