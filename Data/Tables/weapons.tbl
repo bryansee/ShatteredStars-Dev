@@ -191,6 +191,74 @@ $Anim:								Flail2
 $Muzzleflash: 	Rmuzzle
 
 
+$Name: Gada PD
+$Model File: none
+@Laser Bitmap:						Gadha_Bitmap
+@Laser Glow:						Gadha_Glow
+@Laser Color: 110, 30, 255
+@Laser Color2: 10, 30, 255
+@Laser Length: 15.0
+@Laser Head Radius: 4.5
+@Laser Tail Radius: 4.5
+$Mass: 3.0
+$Velocity: 300.0 
+$Fire Wait: 2.4
+$Damage: 200
+$Damage Type: 						NormalWeapon
+$Armor Factor: 1.0
+$Shield Factor: 0.2
+$Subsystem Factor: 0.75
+$Lifetime: 12.0
+$Energy Consumed: 0.30
+$Cargo Size: 0.0
+$Homing: NO
+$LaunchSnd: 164
+$ImpactSnd: 85 
+$Flags: ( "Big Ship" "same turret cooldown" )
+$Icon: none
+$Anim: none
+$Impact Explosion: Exp20
+$Impact Explosion Radius: 5.0
+$Muzzleflash: Bmuzzle 
+
+$Name: Gandiva PD
+$Model File: none
+@Laser Bitmap:						Gadha_Bitmap
+@Laser Glow:						Gadha_Glow
+@Laser Color: 0, 0, 255
+@Laser Color2: 50, 50, 255
+@Laser Length: 20.0
+@Laser Head Radius: 6.0
+@Laser Tail Radius: 6.0
+$Mass: 3.5
+$Velocity: 500.0 
+$Fire Wait: 2.0
+$Damage: 200
+$Damage Type: 						NormalWeapon
+$Armor Factor: 1.0
+$Shield Factor: 0.5
+$Subsystem Factor: 0.5
+$Lifetime: 5.5
+$Energy Consumed: 0.30
+$Cargo Size: 0.0
+$Homing: NO
+$LaunchSnd: 171
+$ImpactSnd: 85 
+$Flags: ( "Big Ship" "same turret cooldown" )
+$Trail:
+ +Start Width: 2.0 
+ +End Width: 2.0  
+ +Start Alpha: 0.5
+ +End Alpha: 0.0
+ +Max Life: 0.5 
+ +Bitmap: AESBeam1CoreHaze 
+$Icon: none
+$Anim: none
+$Impact Explosion: Exp20
+$Impact Explosion Radius: 10.0
+$Muzzleflash: Bmuzzle2
+
+
 $Name:		CmnWlth PDTurret
 $Model File:						none
 @Laser Bitmap:						gattler

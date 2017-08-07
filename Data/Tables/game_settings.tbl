@@ -1,0 +1,38 @@
+#GAME SETTINGS
+
+$Minimum version:
++Major: 3
++Minor: 7
++Build: 5
++Revision: 20170724
+
+#CAMPAIGN SETTINGS
+
+$Default Campaign File Name: SP_Main
+
+#HUD SETTINGS
+
+$Directive Wait Time: 0
+$Cutscene camera displays HUD: True
+$Full color head animations: True
+
+#SEXP SETTINGS
+
+$Loop SEXPs Then Arguments: True
+$Use Alternate Chaining Behavior: True
+
+#GRAPHICS SETTINGS
+
+$Briefing Window FOV: 0.0
+
+#OTHER SETTINGS
+
+$Fixed Turret Collisions: True
+$Damage Impacted Subsystem First: True
+$Default ship select effect: off
+$Default weapon select effect: off
+$Weapons inherit parent collision group: True
+$Flight controls follow eyepoint orientation: True
+$Beams Use Damage Factors: True
+
+#END

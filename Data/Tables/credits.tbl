@@ -1,59 +1,76 @@
+$Music: Credits
+$Number of Images: 46
 $SCP Credits position: end
 
-XSTR("Shattered Stars:", -1)
-XSTR("All of my thanks to:", -1)
+XSTR("Shattered Stars", -1)
 
-Axem: WoD would not have been what it is without my favorite Canadian. Super thanks for the various scripts (VN script!) for your play testing and your Modeling (Ascension, Starlight, Breaker and such)
-Swifty: Multilock! Shadows! All those super cool coding things!
-Wizard Valathil: Helping me out with so many coding related issues and requests that I lost count!
-DahBlount: Remaking the Ray MkIII and the Kaze, making them far better looking.
-Hades: Modelling the Guardian Angel, Dragonfly and Caliburn. Pretty good for a 12 year old.
-Mpgrey: For his tremendous and dedicated spelling/grammar checking effort. 
-AndrewofDoom: Various models (Ray MkII, Lord, Grazhdanin etc.)
-Droid803: Also various models (Volya, Rhino, Peacekeeper, Duke, Elephant etc.)  
-Sab0o: Texturing (Zy capital ships, Ascension) and the Colony model.
-AtomicClucker: Cavalier model
-Thaeris: Concept art for the Dragonfly
-General Battuta: Nominative Strikeforce Lead (Chief Executive Associative Search Design)
+XSTR("Team and Contributors", -1)
 
-XSTR("Additional model credits:", -1)
+Darius
+Esarai
+Nyctaeus
+Bryan See
+Starbug
 
-Blackwolf: Gas refinery, modular bits.
-Shivan Hunter: Rocks
-Fightermedic: Big asteroids
-TaristinL: Supplydrone
-Aldo: Shilo
-mjn.mixael: Incoming message head ani, Maintenance drones
-Wing Commander saga: Asteroid base, parts of the Stardock.
+XSTR("FreeSpace 2 Source Code Project Team and Contributors", -1)
 
-XSTR("Music used:", -1)
+"Bobboau"
+Samuel "Swifty" Cho
+Joe "Righteous1" Dowd
+Edward "Inquisitor" Gardner
+Cliff "Chief1983" Gordon
+Mike "penguin" Harris
+Hassan "Karajorma" Kazmi
+"Mysterial"
+"m!m"
+"niffiwan"
+"PhReAk"
+Dennis "DTP" Pedersen
+Joel "Axem" Reimer
+Taylor Richards
+Ian "Goober5000" Warfield
+Fabian "The E" Woltermann
 
-Kyoukai Senjou no Horizon (Horizon on the Middle of Nowhere) OST, Battle music
-Muv Luv OST, VN tracks and Briefing
-A few Gundam wing tracks, Ambient
+XSTR("Hard Light Productions Staff", -1)
 
-(Disclaimer: I do not own the music used in Wings of Dawn. They belong to their rightful owners.)
+Alex "Thunder" Avery
 
-XSTR("Voice clips used:", -1)
+XSTR("Original FreeSpace/FreeSpace 2 Team", -1)
 
-Voice clips from Artifical Academy 1 and 2 (H-game by illusion)
-Elf All Stars ~ Datsui-Jan 3 (Mahjong game by Elf)
-and Kamidori Alchemy Meister (By Eushully)
+Mark Allender
+Dave Andsager
+Dave Baranec
+Jim Boone
+Frank Capezzuto III
+Mike Comet
+Jeff Farris
+Peter Han
+Jason Hoffoss
+Brad Johnson
+Mike Kulas
+Neil Kumar
+Alan Lawrance
+Duncan McPherson
+Adam Pletcher
+Jason Scott
+Sandeep Shekar
+John Slagel
+Mitri Van
+Dan Wentz
+Jasen Whiteside
 
-XSTR("Interior Backgrounds made in Space Engineers with many many mods:", -1) 
-Various objects by:
-kolt16
-David Lasher
-PetterHammerman
-sanchinachi666
-Ciesson ZA
-TumbleTV
-UncleSte
-Serialtasted
-Frozeur
-NHG
+XSTR("Shattered Stars is dedicated to:", -1)
 
-    and many more!
+XSTR("FSO Open License Attributions:", -1)
 
+SDL 2.0 and newer are available under the zlib license:
+
+This software is provided 'as-is', without any express or implied warranty.  In no event will the authors be held liable for any damages arising from the use of this software.
+
+Permission is granted to anyone to use this software for any purpose, including commercial applications, and to alter it and redistribute it freely, subject to the following restrictions:
+
+1. The origin of this software must not be misrepresented; you must not claim that you wrote the original software. If you use this software in a product, an acknowledgment in the product documentation would be appreciated but is not required.
+2. Altered source versions must be plainly marked as such, and must not be misrepresented as being the original software.
+3. This notice may not be removed or altered from any source distribution.
 
 #end

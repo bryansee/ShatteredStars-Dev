@@ -500,6 +500,120 @@ $Subsystem:                     engine03,                 7.5,0.0
 	$Engine Wash: 				Default100
 
 
+$Name: GRCv Jitendriyam
+$Short name: GRCorvette
+$Species: GRW
++Tech Description: The mighty Iraklion enfroncer is the most powerfull class of cruiser ever deployed by the Ancients. Unlike Heraklion and Malia classes, the Iraklion is equipped with three primary pulse cannons, providing significant push against cruiser and corvette sized targets. Additionally, the Heraklion is able to successfully defent itself from bomber strikes with lots of poinr-defence turrets. Three independent engine subsystem makes the cruiser almost invulnerable for disabling. Exact specification of Iraklion is still debatable. We are also unsure about age of the Iraklion. It seems to be designed after defeat of the Lucifer, to ensure peace in outer systems of the Ancients, and be backbone of their Eradication Fleets alongside with Chryssi-class destroyers and Mochlos corvettes. 
+$end_multi_text
+$POF file: GRCv_Jitendriyam.pof
+$Detail distance: (0, 1600, 3500, 5000)
+$Show damage: YES
+$Density: 1
+$Damp: 0.2
+$Rotdamp: 2.0
+$Max Velocity: 370.0, 370.0, 370.0
+$Rotation time: 90.0, 90.0, 80.0
+$Rear Velocity: 370.0
+$Forward accel: 9.0
+$Forward decel: 5.0
+$Slide accel: 0.0
+$Slide decel: 0.0
+$Expl inner rad: 150.0
+$Expl outer rad: 750.0
+$Expl damage: 100.0
+$Expl blast: 11000.0
+$Expl Propagates: YES
+$Shockwave Speed: 400.0
+$Shockwave Count: 2
+$Default PBanks: ()
+$Default SBanks: ()
+$SBank Capacity: ()
+$Shields: 0
+$Power Output: 100.0
+$Max Oclk Speed: 60.0
+$Max Weapon Eng: 100.0
+$Hitpoints: 26000
+$Flags: ( "corvette" "in tech database" "in tech database multi" )
+$AI Class: Captain
+$Afterburner: NO
+$Countermeasures: 0
+$Scan time: 2000
+$EngineSnd: 130
+$Closeup_pos: 0.0, 0.0, -600
+$Closeup_zoom: 0.5
+$Score: 800
+$Subsystem: turret01, 4, 1.0
+	$Alt Subsystem Name: Cannon Turret
+	$Default PBanks: ( "GRW Light Photon Beam" )
+        $Flags: 	 ( "check hull" )
+$Subsystem: turret02, 4, 1.0
+	$Alt Subsystem Name: Cannon Turret
+	$Default PBanks: ( "GRW Light Photon Beam" )
+        $Flags: 	 ( "check hull" )
+$Subsystem: turret03, 4, 1.0
+	$Alt Subsystem Name: Cannon Turret
+	$Default PBanks: ( "GRW Light Photon Beam" )
+        $Flags: 	 ( "check hull" )
+$Subsystem: turret04,0.833,1.0
+ 	$Default PBanks: ( "Gada PD" )
+        $Flags: 	 ( "check hull" )
+$Subsystem: turret05,0.833,1.0
+ 	$Default PBanks: ( "Gadha" )
+        $Flags: 	 ( "check hull" )
+$Subsystem: turret06,0.833,1.0
+ 	$Default PBanks: ( "Gadha" )
+        $Flags: 	 ( "check hull" )
+$Subsystem: turret07,0.833,1.0
+ 	$Default PBanks: ( "Gada PD" )
+        $Flags: 	 ( "check hull" )
+$Subsystem: turret08,0.833,1.0
+ 	$Default PBanks: ( "Gada PD" )
+        $Flags: 	 ( "check hull" )
+$Subsystem: turret09,0.833,1.0
+ 	$Default PBanks: ( "Gadha" )
+        $Flags: 	 ( "check hull" )
+$Subsystem: turret10,0.833,1.0
+ 	$Default PBanks: ( "Gadha" )
+        $Flags: 	 ( "check hull" )
+$Subsystem: turret11,0.833,1.0
+ 	$Default PBanks: ( "Gada PD" )
+        $Flags: 	 ( "check hull" )
+$Subsystem: turret12,0.833,1.0
+ 	$Default PBanks: ( "Gada PD" )
+        $Flags: 	 ( "check hull" )
+$Subsystem: turret13,1.5,1.0
+ 	$Default PBanks: ( "Gada PD" )
+        $Flags: 	 ( "check hull" )
+$Subsystem: turret14,1.5,1.0
+ 	$Default PBanks: ( "Gada PD" )
+        $Flags: 	 ( "check hull" )
+$Subsystem: turret15,1.5,1.0
+ 	$Default PBanks: ( "Gada PD" )
+        $Flags: 	 ( "check hull" )
+$Subsystem: turret16,1.5,1.0
+ 	$Default PBanks: ( "Gadha" )
+        $Flags: 	 ( "check hull" )
+$Subsystem: turret17,1.5,1.0
+ 	$Default PBanks: ( "Gadha" )
+        $Flags: 	 ( "check hull" )
+$Subsystem: turret18,1.5,1.0
+ 	$Default PBanks: ( "Gadha" )
+        $Flags: 	 ( "check hull" )
+$Subsystem: turret19,1.5,1.0
+ 	$Default PBanks: ( "Gadha" )
+        $Flags: 	 ( "check hull" )
+$Subsystem: engine01, 5,0.0
+	$Engine Wash: 				Default100
+$Subsystem: engine02, 5,0.0
+	$Engine Wash: 				Default100
+$Subsystem: engine03, 5,0.0
+	$Engine Wash: 				Default100
+$Subsystem: communication, 5,0.0
+$Subsystem: sensors, 5,0.0
+$Subsystem: navigation, 5,0.0
+$Subsystem: weapons, 5,0.0
+
+
 $Name: GRS Caarayat
 $Short name: GRSupport
 $Species: GRW

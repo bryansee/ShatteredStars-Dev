@@ -29,39 +29,30 @@
 
 $Persona: GRWPilot1	  
 $Type: wingman
-+GRW
 
 $Persona: GRWPilot2
 $Type: wingman
-+GRW
 
 $Persona: GRWPilot3
 $Type: wingman
-+GRW
 
 $Persona: GRWPilot4
 $Type: wingman
-+GRW
 
 $Persona: GRWPilot5
 $Type: wingman
-+GRW
 
 $Persona: GRWPilot6
 $Type: wingman
-+GRW
 
 $Persona: GRWPilot7
 $Type: wingman
-+GRW
 
 $Persona: GRWPilot8
 $Type: wingman
-+GRW
 
 $Persona: GRWPilot9
 $Type: wingman
-+GRW
 
 $Persona: AuthorityPilot1
 $Type: wingman
@@ -101,15 +92,12 @@ $Type: wingman
 
 $Persona: Support Ship
 $Type: support
-+GRW
 
 $Persona: Large Ship
 $Type: large
-+GRW
 
 $Persona: GRW Command
 $Type: Command
-+GRW
 
 #Messages
 
@@ -1562,7 +1550,7 @@ $Message: XSTR("Pilot neutralised!", 2864)
 
 
 $Name: Player Dead
-$Message: XSTR("We've lost one of their own. Damn it!", 2865)
+$Message: XSTR("We've lost one of their own.  Fuck it!", 2865)
 +Persona: GRWPilot6
 ;+Avi Name: Ancient_ani
 +Wave Name: Emptymsg.ogg
@@ -1722,7 +1710,7 @@ $Message: XSTR("Damn I'm really better!", 2873)
 ;; REARM ......................................................................................
 
 $Name: Rearm
-$Message: XSTR("All armaments depleted! Calling in for support!", 2874)
+$Message: XSTR("All armaments depleted!  Calling in for support!", 2874)
 +Persona: GRWPilot1
 ;+Avi Name: Ancient_ani
 +Wave Name: Emptymsg.ogg
@@ -1743,14 +1731,14 @@ $Message: XSTR("Support, need more ammunition here!", 2876)
 
 
 $Name: Rearm
-$Message: XSTR("All ordnance have been expended! Calling in support!", 2877)
+$Message: XSTR("All ordnance have been expended!  Calling in support!", 2877)
 +Persona: GRWPilot4
 ;+Avi Name: Ancient_ani
 +Wave Name: Emptymsg.ogg
 
 
 $Name: Rearm
-$Message: XSTR("I need to rearm! Requesting support ship!", 2878)
+$Message: XSTR("I need to rearm!  Requesting support ship!", 2878)
 +Persona: GRWPilot5
 ;+Avi Name: Ancient_ani
 +Wave Name: Emptymsg.ogg
@@ -1764,21 +1752,21 @@ $Message: XSTR("Fuck! My ammunition has been depleted!", 2879)
 
 
 $Name: Rearm
-$Message: XSTR("Ordnance has gone dry! Get support here pronto!", 2880)
+$Message: XSTR("Ordnance has gone dry!  Get support here pronto!", 2880)
 +Persona: GRWPilot7
 ;+Avi Name: Ancient_ani
 +Wave Name: Emptymsg.ogg
 
 
 $Name: Rearm
-$Message: XSTR("I'm out of ammunition! Calling in some support!", 2880)
+$Message: XSTR("I'm out of ammunition!  Calling in some support!", 2880)
 +Persona: GRWPilot8
 ;+Avi Name: Ancient_ani
 +Wave Name: Emptymsg.ogg
 
 
 $Name: Rearm
-$Message: XSTR("My banks have dried up! Requesting support!", 2880)
+$Message: XSTR("My banks have dried up!  Requesting support!", 2880)
 +Persona: GRWPilot9
 ;+Avi Name: Ancient_ani
 +Wave Name: Emptymsg.ogg
@@ -1787,35 +1775,35 @@ $Message: XSTR("My banks have dried up! Requesting support!", 2880)
 ;; REPAIR .....................................................................................
 
 $Name: Repair
-$Message: XSTR("Systems damaged! Get support here!", 2881)
+$Message: XSTR("Systems damaged!  Get support here!", 2881)
 +Persona: GRWPilot1
 ;+Avi Name: Ancient_ani
 +Wave Name: Emptymsg.ogg
 
 
 $Name: Repair
-$Message: XSTR("Systems are heavily damaged! I need urgent repair!", 2882)
+$Message: XSTR("Systems are heavily damaged!  I need urgent repair!", 2882)
 +Persona: GRWPilot2
 ;+Avi Name: Ancient_ani
 +Wave Name: Emptymsg.ogg
 
 
 $Name: Repair
-$Message: XSTR("Subsystems have failed! I need support immediately!", 2883)
+$Message: XSTR("Subsystems have failed!  I need support immediately!", 2883)
 +Persona: GRWPilot3
 ;+Avi Name: Ancient_ani
 +Wave Name: Emptymsg.ogg
 
 
 $Name: Repair
-$Message: XSTR("I need subsystem repairs! Requesting support now!", 2884)
+$Message: XSTR("I need subsystem repairs!  Requesting support now!", 2884)
 +Persona: GRWPilot4
 ;+Avi Name: Ancient_ani
 +Wave Name: Emptymsg.ogg
 
 
 $Name: Repair
-$Message: XSTR("Subsystems damaged! Calling in support!", 2885)
+$Message: XSTR("Subsystems damaged!  Calling in support!", 2885)
 +Persona: GRWPilot5
 ;+Avi Name: Ancient_ani
 +Wave Name: Emptymsg.ogg
